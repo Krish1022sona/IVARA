@@ -1,33 +1,38 @@
 from src.memory import add_memory
-from src.retrieval import retrieve
 
-
-add_memory(
-    "I started learning Python in 2024.",
-    "2024-06-10",
-    "conversation_001",
-    "fact",
-    0.8
-)
-
-add_memory(
-    "I built a neural network for Tic Tac Toe.",
-    "2025-07-10",
-    "conversation_002",
+memory = add_memory(
+    "I built an LSTM using PyTorch.",
+    "2026-08-16",
+    "day2_test",
     "project",
-    0.9
+    0.9,
+    entities=[
+        {
+            "name": "LSTM",
+            "type": "Technology",
+            "confidence": 1.0
+        },
+        {
+            "name": "PyTorch",
+            "type": "Technology",
+            "confidence": 1.0
+        }
+    ],
+    topics=[
+        {
+            "name": "Machine Learning",
+            "confidence": 0.95
+        }
+    ],
+    relationships=[
+        {
+            "source": "User",
+            "relation": "uses",
+            "target": "PyTorch",
+            "confidence": 1.0,
+            "origin": "explicit"
+        }
+    ]
 )
 
-add_memory(
-    "I learned PyTorch and used it for machine learning projects.",
-    "2025-08-15",
-    "conversation_003",
-    "skill",
-    0.8
-)
-
-
-results = retrieve("What ML projects have I built?", k=3)
-
-for memory in results:
-    print(memory)
+print(memory)

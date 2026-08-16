@@ -1,0 +1,20 @@
+{
+  "types": [
+    "Person",
+    "Organization",
+    "Project",
+    "Technology",
+    "Skill",
+    "Concept",
+    "Goal",
+    "Event",
+    "Place",
+    "Object"
+  ],
+
+  "special_entities": {
+    "SELF": {
+      "type": "Person"
+    }
+  }
+}

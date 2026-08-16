@@ -198,5 +198,41 @@
     "source": "day1_test",
     "type": "preference",
     "importance": 0.7
+  },
+  {
+    "id": "m026",
+    "text": "I built an LSTM using PyTorch.",
+    "timestamp": "2026-08-16",
+    "source": "day2_test",
+    "type": "project",
+    "importance": 0.9,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "name": "LSTM",
+        "type": "Technology",
+        "confidence": 1.0
+      },
+      {
+        "name": "PyTorch",
+        "type": "Technology",
+        "confidence": 1.0
+      }
+    ],
+    "topics": [
+      {
+        "name": "Machine Learning",
+        "confidence": 0.95
+      }
+    ],
+    "relationships": [
+      {
+        "source": "User",
+        "relation": "uses",
+        "target": "PyTorch",
+        "confidence": 1.0,
+        "origin": "explicit"
+      }
+    ]
   }
 ]

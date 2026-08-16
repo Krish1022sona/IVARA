@@ -1,0 +1,103 @@
+{
+  "relationships": {
+    "friend_of": {
+      "inverse": "friend_of"
+    },
+    "best_friend_of": {
+      "inverse": "best_friend_of"
+    },
+    "knows": {
+      "inverse": "knows"
+    },
+
+    "parent_of": {
+      "inverse": "child_of"
+    },
+    "child_of": {
+      "inverse": "parent_of"
+    },
+    "sibling_of": {
+      "inverse": "sibling_of"
+    },
+    "family_of": {
+      "inverse": "family_of"
+    },
+
+    "colleague_of": {
+      "inverse": "colleague_of"
+    },
+    "mentor_of": {
+      "inverse": "student_of"
+    },
+    "student_of": {
+      "inverse": "mentor_of"
+    },
+
+    "has_skill": {
+      "inverse": "skill_of"
+    },
+    "has_goal": {
+      "inverse": "goal_of"
+    },
+    "has_preference": {
+      "inverse": "preference_of"
+    },
+    "likes": {
+      "inverse": "liked_by"
+    },
+    "dislikes": {
+      "inverse": "disliked_by"
+    },
+    "interested_in": {
+      "inverse": "interest_of"
+    },
+
+    "worked_on": {
+      "inverse": "worked_on_by"
+    },
+    "built": {
+      "inverse": "built_by"
+    },
+    "contributed_to": {
+      "inverse": "contributed_to_by"
+    },
+    "participated_in": {
+      "inverse": "has_participant"
+    },
+    "uses": {
+      "inverse": "used_by"
+    },
+    "created": {
+      "inverse": "created_by"
+    },
+    "maintains": {
+      "inverse": "maintained_by"
+    },
+
+    "related_to": {
+      "inverse": "related_to"
+    },
+    "part_of": {
+      "inverse": "contains"
+    },
+    "supports": {
+      "inverse": "supported_by"
+    },
+    "depends_on": {
+      "inverse": "dependency_of"
+    },
+
+    "before": {
+      "inverse": "after"
+    },
+    "after": {
+      "inverse": "before"
+    },
+    "supersedes": {
+      "inverse": "superseded_by"
+    },
+    "contradicts": {
+      "inverse": "contradicts"
+    }
+  }
+}
