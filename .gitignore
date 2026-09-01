@@ -24,3 +24,7 @@ modules/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# assets and ppts
+PPT/
+assets/
