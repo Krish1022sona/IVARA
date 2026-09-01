@@ -1,0 +1,35 @@
+[
+  {
+    "id": "e001",
+    "canonical_name": "PyTorch",
+    "aliases": [
+      "pytorch"
+    ],
+    "types": [
+      "Technology",
+      "Framework"
+    ]
+  },
+  {
+    "id": "e002",
+    "canonical_name": "Python",
+    "aliases": [
+      "python"
+    ],
+    "types": [
+      "Technology",
+      "ProgrammingLanguage"
+    ]
+  },
+  {
+    "id": "e003",
+    "canonical_name": "Tata Motors",
+    "aliases": [
+      "tata motors"
+    ],
+    "types": [
+      "Organization",
+      "Company"
+    ]
+  }
+]

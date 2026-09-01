@@ -1,63 +1,10 @@
 {
-  "relationship_rules": {
-    "parent_of": {
-      "source_types": ["Person"],
-      "target_types": ["Person"]
-    },
-
-    "child_of": {
-      "source_types": ["Person"],
-      "target_types": ["Person"]
-    },
-
-    "friend_of": {
-      "source_types": ["Person"],
-      "target_types": ["Person"]
-    },
-
-    "best_friend_of": {
-      "source_types": ["Person"],
-      "target_types": ["Person"]
-    },
-
-    "has_skill": {
-      "source_types": ["Person"],
-      "target_types": ["Skill", "Technology", "Concept"]
-    },
-
-    "has_goal": {
-      "source_types": ["Person"],
-      "target_types": ["Goal", "Concept"]
-    },
-
-    "worked_on": {
-      "source_types": ["Person"],
-      "target_types": ["Project"]
-    },
-
-    "built": {
-      "source_types": ["Person"],
-      "target_types": ["Project", "Object"]
-    },
-
-    "uses": {
-      "source_types": ["Person", "Project"],
-      "target_types": ["Technology", "Object"]
-    },
-
-    "participated_in": {
-      "source_types": ["Person"],
-      "target_types": ["Event"]
-    },
-
-    "part_of": {
-      "source_types": ["Object", "Project", "Concept", "Technology"],
-      "target_types": ["Project", "Organization", "Concept"]
-    },
-
-    "related_to": {
-      "source_types": ["*"],
-      "target_types": ["*"]
-    }
+  "rules": {
+    "entity_must_have_name": true,
+    "entity_must_have_type": true,
+    "relationship_must_have_source": true,
+    "relationship_must_have_target": true,
+    "relationship_must_have_predicate": true,
+    "relationship_must_have_evidence": true
   }
 }

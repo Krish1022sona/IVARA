@@ -28,6 +28,7 @@ def add_memory(
         "type": type,
         "importance": importance,
         "confidence": confidence,
+
         "entities": entities or [],
         "topics": topics or [],
         "relationships": relationships or []

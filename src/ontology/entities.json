@@ -1,20 +1,29 @@
 {
-  "types": [
-    "Person",
-    "Organization",
-    "Project",
-    "Technology",
-    "Skill",
-    "Concept",
-    "Goal",
-    "Event",
-    "Place",
-    "Object"
-  ],
+  "entity": {
+    "required": [
+      "id",
+      "canonical_name",
+      "types"
+    ],
+    "properties": [
+      "aliases",
+      "custom_properties"
+    ]
+  },
+
+  "type": {
+    "required": [
+      "name"
+    ],
+    "properties": [
+      "parent",
+      "aliases"
+    ]
+  },
 
   "special_entities": {
     "SELF": {
-      "type": "Person"
+      "types": ["Person"]
     }
   }
 }

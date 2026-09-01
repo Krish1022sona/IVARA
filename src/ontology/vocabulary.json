@@ -1,0 +1,14 @@
+{
+  "types": {
+    "Person": {
+      "aliases": [
+        "person",
+        "human",
+        "user"
+      ],
+      "parent": null
+    }
+  },
+
+  "predicates": {}
+}

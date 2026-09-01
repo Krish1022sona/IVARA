@@ -10,18 +10,13 @@ def load_json(filename):
         return json.load(f)
 
 
-def load_entity_types():
-    return load_json("entities.json")["types"]
+def load_entity_schema():
+    return load_json("entities.json")
 
 
-def load_relationships():
-    return load_json("relationships.json")["relationships"]
+def load_relationship_schema():
+    return load_json("relationships.json")
 
 
 def load_rules():
-    return load_json("rules.json")["relationship_rules"]
-
-if __name__ == "__main__":
-    print(load_entity_types())
-    print(load_relationships())
-    print(load_rules())
+    return load_json("rules.json")

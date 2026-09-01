@@ -1,237 +1,146 @@
 [
   {
     "id": "m001",
-    "text": "I started learning Python in 2024.",
-    "timestamp": "2024-06-10",
-    "source": "day1_test",
+    "text": "I worked with Rahul on our SIH project.",
+    "timestamp": "2026-09-01",
+    "source": "day2_demo",
     "type": "fact",
-    "importance": 0.8
-  },
-  {
-    "id": "m002",
-    "text": "I built a Tic Tac Toe neural network from scratch.",
-    "timestamp": "2025-07-10",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.9
-  },
-  {
-    "id": "m003",
-    "text": "I trained an LSTM model on Tata Motors stock data.",
-    "timestamp": "2025-08-01",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.9
-  },
-  {
-    "id": "m004",
-    "text": "I learned PyTorch for deep learning.",
-    "timestamp": "2025-07-20",
-    "source": "day1_test",
-    "type": "skill",
-    "importance": 0.8
-  },
-  {
-    "id": "m005",
-    "text": "I implemented an Iris classifier neural network from scratch.",
-    "timestamp": "2025-07-25",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.8
-  },
-  {
-    "id": "m006",
-    "text": "I studied Transformers and attention mechanisms.",
-    "timestamp": "2025-07-08",
-    "source": "day1_test",
-    "type": "learning",
-    "importance": 0.8
-  },
-  {
-    "id": "m007",
-    "text": "I learned about LSTMs and recurrent neural networks.",
-    "timestamp": "2025-07-09",
-    "source": "day1_test",
-    "type": "learning",
-    "importance": 0.8
-  },
-  {
-    "id": "m008",
-    "text": "I built a Flutter movie app using the TMDB API.",
-    "timestamp": "2025-05-12",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.7
-  },
-  {
-    "id": "m009",
-    "text": "I learned C++ and practiced data structures.",
-    "timestamp": "2024-12-01",
-    "source": "day1_test",
-    "type": "skill",
-    "importance": 0.7
-  },
-  {
-    "id": "m010",
-    "text": "I solved many LeetCode problems using dynamic programming.",
-    "timestamp": "2025-06-15",
-    "source": "day1_test",
-    "type": "achievement",
-    "importance": 0.8
-  },
-  {
-    "id": "m011",
-    "text": "I practiced sliding window and two pointer techniques.",
-    "timestamp": "2025-06-20",
-    "source": "day1_test",
-    "type": "learning",
-    "importance": 0.7
-  },
-  {
-    "id": "m012",
-    "text": "I contributed to coding projects with GitHub.",
-    "timestamp": "2025-06-25",
-    "source": "day1_test",
-    "type": "skill",
-    "importance": 0.6
-  },
-  {
-    "id": "m013",
-    "text": "I started learning web development.",
-    "timestamp": "2026-06-01",
-    "source": "day1_test",
-    "type": "learning",
-    "importance": 0.8
-  },
-  {
-    "id": "m014",
-    "text": "I learned Tailwind CSS and responsive design.",
-    "timestamp": "2026-06-10",
-    "source": "day1_test",
-    "type": "skill",
-    "importance": 0.7
-  },
-  {
-    "id": "m015",
-    "text": "I play games on my PS5.",
-    "timestamp": "2025-04-01",
-    "source": "day1_test",
-    "type": "hobby",
-    "importance": 0.6
-  },
-  {
-    "id": "m016",
-    "text": "I have played Ghost of Tsushima.",
-    "timestamp": "2025-04-05",
-    "source": "day1_test",
-    "type": "hobby",
-    "importance": 0.5
-  },
-  {
-    "id": "m017",
-    "text": "I enjoy playing Wuthering Waves.",
-    "timestamp": "2025-05-01",
-    "source": "day1_test",
-    "type": "hobby",
-    "importance": 0.5
-  },
-  {
-    "id": "m018",
-    "text": "I play guitar and piano.",
-    "timestamp": "2025-03-01",
-    "source": "day1_test",
-    "type": "hobby",
-    "importance": 0.6
-  },
-  {
-    "id": "m019",
-    "text": "I am learning to play the flute.",
-    "timestamp": "2025-03-15",
-    "source": "day1_test",
-    "type": "hobby",
-    "importance": 0.5
-  },
-  {
-    "id": "m020",
-    "text": "I built a biometric attendance system using Arduino.",
-    "timestamp": "2025-02-10",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.9
-  },
-  {
-    "id": "m021",
-    "text": "The attendance system used a fingerprint sensor and RTC.",
-    "timestamp": "2025-02-15",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.8
-  },
-  {
-    "id": "m022",
-    "text": "I worked on a smart walking cane project with GPS and fall detection.",
-    "timestamp": "2025-01-20",
-    "source": "day1_test",
-    "type": "project",
-    "importance": 0.8
-  },
-  {
-    "id": "m023",
-    "text": "I enjoy learning difficult problems just for fun.",
-    "timestamp": "2024-08-01",
-    "source": "day1_test",
-    "type": "preference",
-    "importance": 0.7
-  },
-  {
-    "id": "m024",
-    "text": "I bought a router for my hostel room.",
-    "timestamp": "2025-01-05",
-    "source": "day1_test",
-    "type": "random",
-    "importance": 0.3
-  },
-  {
-    "id": "m025",
-    "text": "I like science and experimenting with new technology.",
-    "timestamp": "2024-09-01",
-    "source": "day1_test",
-    "type": "preference",
-    "importance": 0.7
-  },
-  {
-    "id": "m026",
-    "text": "I built an LSTM using PyTorch.",
-    "timestamp": "2026-08-16",
-    "source": "day2_test",
-    "type": "project",
-    "importance": 0.9,
+    "importance": 0.8,
     "confidence": 1.0,
     "entities": [
       {
-        "name": "LSTM",
-        "type": "Technology",
-        "confidence": 1.0
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
       },
       {
-        "name": "PyTorch",
-        "type": "Technology",
-        "confidence": 1.0
+        "mention": "Rahul",
+        "entity_id": null,
+        "canonical_name": "Rahul",
+        "types": [
+          "person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.25960633158683777,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SIH project",
+        "entity_id": null,
+        "canonical_name": "SIH project",
+        "types": [
+          "project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.2762526571750641,
+        "method": "new",
+        "status": "candidate"
       }
     ],
     "topics": [
       {
-        "name": "Machine Learning",
-        "confidence": 0.95
+        "name": "collaboration",
+        "confidence": 1.0
+      },
+      {
+        "name": "project",
+        "confidence": 1.0
       }
     ],
     "relationships": [
       {
-        "source": "User",
-        "relation": "uses",
-        "target": "PyTorch",
-        "confidence": 1.0,
+        "source": {
+          "type": "entity",
+          "id": "self"
+        },
+        "predicate": "worked_with",
+        "target": {
+          "type": "candidate",
+          "mention": "Rahul",
+          "types": [
+            "person"
+          ]
+        },
+        "confidence": 0.95,
         "origin": "explicit"
+      },
+      {
+        "source": {
+          "type": "entity",
+          "id": "self"
+        },
+        "predicate": "worked_on",
+        "target": {
+          "type": "candidate",
+          "mention": "SIH project",
+          "types": [
+            "project"
+          ]
+        },
+        "confidence": 0.95,
+        "origin": "explicit"
+      },
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "Rahul",
+          "types": [
+            "person"
+          ]
+        },
+        "predicate": "worked_on",
+        "target": {
+          "type": "candidate",
+          "mention": "SIH project",
+          "types": [
+            "project"
+          ]
+        },
+        "confidence": 0.95,
+        "origin": "explicit"
+      },
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "SIH project",
+          "types": [
+            "project"
+          ]
+        },
+        "predicate": "owned_by",
+        "target": {
+          "type": "entity",
+          "id": "self"
+        },
+        "confidence": 0.8,
+        "origin": "inferred"
+      },
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "SIH project",
+          "types": [
+            "project"
+          ]
+        },
+        "predicate": "owned_by",
+        "target": {
+          "type": "candidate",
+          "mention": "Rahul",
+          "types": [
+            "person"
+          ]
+        },
+        "confidence": 0.8,
+        "origin": "inferred"
       }
     ]
   }
