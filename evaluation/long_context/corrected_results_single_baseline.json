@@ -1,0 +1,1211 @@
+{
+  "system_type": "baseline",
+  "mode": "single",
+  "k": 3,
+  "total_cases": 48,
+  "answerable_cases_count": 44,
+  "unanswerable_cases_count": 4,
+  "retrieval": {
+    "standard_precision_at_k_answerable": 0.3333,
+    "standard_precision_at_k_overall": 0.3055,
+    "set_precision_answerable": 1.0,
+    "recall_at_k_answerable": 0.8239
+  },
+  "fact_accuracy": {
+    "rubric_accuracy": 0.9375,
+    "avg_rubric_fact_score": 0.9375,
+    "legacy_heuristic_fact_score": 0.5739
+  },
+  "abstention": {
+    "unanswerable_total": 4,
+    "answerable_total": 44,
+    "true_positives_abstained": 4,
+    "false_positives_abstained": 2,
+    "false_negatives_hallucinated": 0,
+    "true_negatives_answered": 42,
+    "abstention_precision": 0.6667,
+    "abstention_recall": 1.0,
+    "abstention_f1": 0.8,
+    "false_abstention_rate_on_answerables": 0.0455,
+    "hallucination_rate_on_unanswerables": 0.0
+  },
+  "cases": [
+    {
+      "id": "q01",
+      "category": "direct_factual_recall",
+      "question": "What programming language was used to implement the data ingestion pipeline for Project Chronos?",
+      "actual_status": "partial",
+      "actual_answer": "The data ingestion pipeline for Project\u202fChronos was implemented in Rust.",
+      "gold_answer": "Rust was used to implement the ingestion pipeline for Project Chronos to guarantee zero-cost abstractions and strict thread safety.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.318,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Rust",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q02",
+      "category": "direct_factual_recall",
+      "question": "Who was hired on September 15, 2025 to serve as Product Manager for Project Nexus?",
+      "actual_status": "partial",
+      "actual_answer": "David K. Miller",
+      "gold_answer": "David K. Miller was hired on September 15, 2025 as the Product Manager for Project Nexus.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.175,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified David K. Miller",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q03",
+      "category": "direct_factual_recall",
+      "question": "What technologies were selected as the primary software stack for Project Aegis?",
+      "actual_status": "partial",
+      "actual_answer": "Project Aegis selected C++ and PyTorch as its primary software stack.",
+      "gold_answer": "Project Aegis chose C++ and PyTorch as its primary software stack.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.6,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified C++ and PyTorch",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q04",
+      "category": "direct_factual_recall",
+      "question": "On what date did Sarah Lin join Aetheria Labs?",
+      "actual_status": "answered",
+      "actual_answer": "Sarah Lin joined Aetheria Labs on June 20, 2025.",
+      "gold_answer": "Sarah Lin joined Aetheria Labs on June 20, 2025 as a junior data engineer.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.72,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified June 20, 2025",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q05",
+      "category": "entity_alias_resolution",
+      "question": "Which team member is known across the engineering floor as 'Marc', and what was his role on Project Chronos?",
+      "actual_status": "partial",
+      "actual_answer": "The team member known across the engineering floor as \"Marc\" is Marcus Vance, and he served as the lead distributed systems engineer on Project Chronos.",
+      "gold_answer": "Marcus Vance is known as 'Marc'. He was the lead distributed systems engineer on Project Chronos.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.622,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Marcus Vance",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q06",
+      "category": "entity_alias_resolution",
+      "question": "What is the nickname of Dr. Elena Rostova at Aetheria Labs, and what is her official role?",
+      "actual_status": "partial",
+      "actual_answer": "Dr. Elena\u202fRostova\u2019s nickname at Aetheria Labs is \u201cThe Oracle,\u201d and her official role is Chief Scientist.",
+      "gold_answer": "Dr. Elena Rostova is nicknamed 'The Oracle' and is the Chief Scientist at Aetheria Labs.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.525,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Elena Rostova",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q07",
+      "category": "entity_alias_resolution",
+      "question": "Who is 'Vik', and what was his personal connection to the narrator?",
+      "actual_status": "partial",
+      "actual_answer": "Vik is Vikram\u202fPatel, the lead full\u2011stack UI architect at Aetheria Labs. He is a close personal friend of the narrator, having maintained a friendship since their undergraduate days, and has collaborated with the narrator on visual telemetry dashboards and later on the Nexus graph\u2011visualization workbench.",
+      "gold_answer": "Vik is Vikram Patel, who has been a close personal friend of the narrator since their undergraduate university days.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.636,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Vikram Patel",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q08",
+      "category": "entity_alias_resolution",
+      "question": "Which engineer is referred to as 'Thorne', and what company does he work for?",
+      "actual_status": "partial",
+      "actual_answer": "The engineer referred to as 'Thorne' is Marcus Thorne, a senior security and infrastructure architect who works for Vanguard Robotics.",
+      "gold_answer": "Marcus Thorne is referred to as 'Thorne', and he is the senior security and infrastructure architect at Vanguard Robotics.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Marcus Thorne at Vanguard",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q09",
+      "category": "relationship_retrieval",
+      "question": "What is the relationship between Dr. Aris Thorne and Marcus Thorne?",
+      "actual_status": "partial",
+      "actual_answer": "Dr.\u202fAris\u202fThorne is Marcus\u202fThorne\u2019s father.  Marcus is the senior security and infrastructure architect at Vanguard Robotics, and Dr.\u202fAris\u202fThorne is a retired Cambridge academic who advises the OpenCognition Consortium.",
+      "gold_answer": "Dr. Aris Thorne is the father of Marcus Thorne.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified parent/child relationship",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q10",
+      "category": "relationship_retrieval",
+      "question": "Who reported directly to Marcus Vance at Aetheria Labs?",
+      "actual_status": "partial",
+      "actual_answer": "Sarah Lin reported directly to Marcus Vance at Aetheria Labs.",
+      "gold_answer": "Sarah Lin reported directly to Marcus Vance (Marc).",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Marcus Vance as manager",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q11",
+      "category": "relationship_retrieval",
+      "question": "Who co-founded Project Nexus with Dr. Elena Rostova?",
+      "actual_status": "partial",
+      "actual_answer": "The co\u2011founder of Project Nexus alongside Dr. Elena\u202fRostova is the narrator (the speaker of the evidence).",
+      "gold_answer": "The narrator (I / SELF) co-founded Project Nexus with Dr. Elena Rostova, serving as Principal Systems Architect.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.318,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified co-founder role",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q12",
+      "category": "relationship_retrieval",
+      "question": "Which company did Julian Mercer represent when signing the Project Aegis agreement?",
+      "actual_status": "partial",
+      "actual_answer": "Julian Mercer represented Vanguard Robotics when signing the Project Aegis agreement.",
+      "gold_answer": "Julian Mercer represented Vanguard Robotics, where he served as Director of Operations.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.389,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Vanguard Robotics",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q13",
+      "category": "multi_hop_reasoning",
+      "question": "What programming language was used by the person who mentored Sarah Lin?",
+      "actual_status": "partial",
+      "actual_answer": "The person who mentored Sarah Lin, Marcus Vance, used the programming language Rust.",
+      "gold_answer": "Rust was used by Marcus Vance, who mentored and supervised Sarah Lin.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.56,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Rust through multi-hop",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q14",
+      "category": "multi_hop_reasoning",
+      "question": "What role does the father of Marcus Thorne hold, and what organization is he affiliated with?",
+      "actual_status": "partial",
+      "actual_answer": "Dr. Aris\u202fThorne, the father of Marcus\u202fThorne, is a retired Cambridge academic who serves as an advisor to the OpenCognition Consortium.",
+      "gold_answer": "Dr. Aris Thorne is a retired Cambridge academic and serves as an advisor to the OpenCognition Consortium.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Aris Thorne / Cambridge",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q15",
+      "category": "multi_hop_reasoning",
+      "question": "Which graph database technology was adopted by the project co-founded by 'The Oracle'?",
+      "actual_status": "partial",
+      "actual_answer": "The project co\u2011founded by Dr. Elena Rostova (the Oracle) adopted Neo4j as its graph database technology.",
+      "gold_answer": "Neo4j was adopted by Project Nexus, which was co-founded and led by Dr. Elena Rostova ('The Oracle').",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.35,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Neo4j",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q16",
+      "category": "multi_hop_reasoning",
+      "question": "What visualization layer technology was built by the narrator's college friend?",
+      "actual_status": "partial",
+      "actual_answer": "The narrator\u2019s college friend, Vikram\u202fPatel, built the real\u2011time visualization layer using Python backend endpoints.",
+      "gold_answer": "Vikram Patel, the narrator's college friend, built the real-time visualization layer using Python backend endpoints.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.592,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Vikram Patel / UI",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q17",
+      "category": "multi_evidence_questions",
+      "question": "Which projects described in the story utilized PyTorch as part of their technical stack?",
+      "actual_status": "answered",
+      "actual_answer": "The projects that used PyTorch are:\n1. Project Chronos \u2013 the time\u2011series anomaly detection platform at Aetheria Labs.\n2. Project Aegis \u2013 the edge\u2011compatible sensory perception stack for Vanguard Robotics.\n3. Project Nexus \u2013 the neuro\u2011symbolic reasoning engine at Aetheria Labs.",
+      "gold_answer": "Project Chronos, Project Aegis, and Project Nexus all utilized PyTorch.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.3333,
+      "legacy_fact_score": 0.912,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified 3/3 PyTorch projects",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q18",
+      "category": "multi_evidence_questions",
+      "question": "What was Priya Sharma's complete career trajectory from January 2025 through October 2025?",
+      "actual_status": "partial",
+      "actual_answer": "Priya Sharma began January\u202f2025 as the machine\u2011learning researcher on Project\u202fChronos, where she focused on custom temporal convolutional kernels. After the July\u202f28,\u202f2025 production handover, she stepped away from Chronos for a planned two\u2011month research rotation exploring symbolic knowledge representations. On October\u202f10,\u202f2025 she completed that sabbatical and joined Project\u202fNexus as Lead Neuro\u2011Symbolic Model Engineer, contributing to the hybrid reasoning network.",
+      "gold_answer": "Priya Sharma started on Project Chronos in January 2025 working on temporal attention. After Chronos shipped in late July/August 2025, she took a two-month research rotation exploring symbolic representations, and then on October 10, 2025, joined Project Nexus as Lead Neuro-Symbolic Model Engineer.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.3333,
+      "legacy_fact_score": 0.525,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Covered Priya trajectory",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q19",
+      "category": "multi_evidence_questions",
+      "question": "Who served as product managers across Project Chronos and Project Nexus, and when did the leadership transition occur?",
+      "actual_status": "partial",
+      "actual_answer": "Chloe Bennett served as the product manager for Project\u202fChronos until she stepped down on August\u202f5,\u202f2025. The product\u2011management role for Project\u202fNexus was filled by David\u202fK.\u202fMiller, who began serving in that capacity on September\u202f15,\u202f2025.",
+      "gold_answer": "Chloe Bennett served as Technical Product Manager for Project Chronos until stepping down on August 5, 2025. David K. Miller was hired on September 15, 2025 as Product Manager for Project Nexus.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.3333,
+      "legacy_fact_score": 0.595,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified both PMs",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q20",
+      "category": "multi_evidence_questions",
+      "question": "Which engineers worked together on Project Chronos initially, and which of those specific engineers later collaborated on Project Nexus?",
+      "actual_status": "partial",
+      "actual_answer": "Initially, Project\u202fChronos was worked on by Marcus\u202fVance, Priya\u202fSharma, and Chloe\u202fBennett. Of those three, only Priya\u202fSharma later collaborated on Project\u202fNexus.",
+      "gold_answer": "The initial Chronos team included the narrator (SELF), Marcus Vance, Priya Sharma, and Chloe Bennett. Later on Project Nexus, only the narrator and Priya Sharma collaborated together from that group (Marcus Vance remained on Chronos and Chloe Bennett departed).",
+      "supporting_memory_ids": [
+        "m001",
+        "m001",
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.25,
+      "legacy_fact_score": 0.493,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Priya Sharma",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q21",
+      "category": "temporal_reasoning",
+      "question": "When was Project Chronos started, and when was its final production deployment completed?",
+      "actual_status": "answered",
+      "actual_answer": "Project Chronos was started on January\u202f14,\u202f2025 and its final production deployment was completed on July\u202f28,\u202f2025.",
+      "gold_answer": "Project Chronos was initiated on January 14, 2025, and reached final production deployment on July 28, 2025.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.86,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Chronos timeline",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q22",
+      "category": "temporal_reasoning",
+      "question": "When was the Tokyo International AI Systems Symposium originally scheduled to take place, and what was its rescheduled date?",
+      "actual_status": "partial",
+      "actual_answer": "The Tokyo International AI Systems Symposium was originally scheduled to take place on **November\u202f25,\u202f2025**. It was rescheduled to **March\u202f18,\u202f2026**.",
+      "gold_answer": "It was originally scheduled for November 25, 2025, but was postponed to March 18, 2026.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.6,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified postponement / March date",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q23",
+      "category": "temporal_reasoning",
+      "question": "Between August 6, 2025 and October 9, 2025, what was Priya Sharma's working status?",
+      "actual_status": "partial",
+      "actual_answer": "Between August\u202f6\u202f2025 and October\u202f9\u202f2025, Priya\u202fSharma was on a planned two\u2011month research rotation exploring symbolic knowledge representations, having concluded her duties on Project\u202fChronos and before rejoining Project\u202fNexus on October\u202f10.",
+      "gold_answer": "Priya Sharma was on a planned two-month research rotation / sabbatical exploring symbolic knowledge representations.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.573,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified research rotation",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q24",
+      "category": "temporal_reasoning",
+      "question": "When was Project Hyperion announced, and when was it officially cancelled?",
+      "actual_status": "partial",
+      "actual_answer": "Project Hyperion was announced on **April\u202f18,\u202f2025** and was officially cancelled on **June\u202f12,\u202f2025**.",
+      "gold_answer": "Project Hyperion was announced on April 18, 2025, and officially cancelled on June 12, 2025.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified cancellation date",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q25",
+      "category": "similar_entity_distractors",
+      "question": "Compare Elena Rostova and Elena Ramos: what are their respective employers and technical domains?",
+      "actual_status": "partial",
+      "actual_answer": "Elena\u202fRostova works for Aetheria Labs and focuses on mathematical logic and neuro\u2011symbolic AI. Elena\u202fRamos works for Vanguard Robotics and specializes in embedded FPGA motor\u2011controller sensor design.",
+      "gold_answer": "Dr. Elena Rostova is Chief Scientist at Aetheria Labs focusing on neuro-symbolic AI and logic, while Elena Ramos is Lead Robotics Hardware Engineer at Vanguard Robotics designing FPGA motor controller sensors.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.385,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Distinguished employers",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q26",
+      "category": "similar_entity_distractors",
+      "question": "Compare Marcus Vance and Marcus Thorne: which company does each work for, and what are their respective roles?",
+      "actual_status": "answered",
+      "actual_answer": "Marcus Vance works for Aetheria Labs as the lead distributed systems engineer. Marcus Thorne works for Vanguard Robotics as the senior security and infrastructure architect.",
+      "gold_answer": "Marcus Vance works at Aetheria Labs as lead distributed systems engineer, whereas Marcus Thorne works at Vanguard Robotics as senior security and infrastructure architect.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.959,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Distinguished Marcus Vance from Marcus Thorne",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q27",
+      "category": "similar_entity_distractors",
+      "question": "Did Elena Ramos contribute to the design of the neuro-symbolic knowledge graph in Project Nexus?",
+      "actual_status": "partial",
+      "actual_answer": "No, Elena Ramos did not contribute to the design of the neuro\u2011symbolic knowledge graph in Project Nexus.",
+      "gold_answer": "No. Elena Ramos works at Vanguard Robotics on robotics hardware. Project Nexus was co-founded by Dr. Elena Rostova at Aetheria Labs.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.25,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly rejected collaboration",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q28",
+      "category": "similar_entity_distractors",
+      "question": "Did Marcus Thorne write Rust ingestion code for Project Chronos?",
+      "actual_status": "answered",
+      "actual_answer": "No. The Rust ingestion pipeline for Project\u202fChronos was written by Marcus\u202fVance (Marc), the lead distributed\u2011systems engineer on the Chronos team. Marcus\u202fThorne, the security and infrastructure architect at Vanguard Robotics, was not involved in Chronos development.",
+      "gold_answer": "No. Marcus Vance wrote the Rust ingestion code for Project Chronos. Marcus Thorne is an infrastructure/security architect at Vanguard Robotics on Project Aegis.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.85,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly attributed Rust pipeline to Vance",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q29",
+      "category": "cross_project_reasoning",
+      "question": "Did Marcus Vance ever contribute code to Project Aegis alongside Vanguard Robotics?",
+      "actual_status": "partial",
+      "actual_answer": "No. Marcus Vance did not contribute code to Project Aegis alongside Vanguard Robotics.",
+      "gold_answer": "No. Although Elena Ramos reached out to consult Marcus Vance, Vanguard's security architect Marcus Thorne formally vetoed cross-company code sharing due to IP restrictions, so Marcus Vance never contributed to Aegis.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.191,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified IP veto / No",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q30",
+      "category": "cross_project_reasoning",
+      "question": "Did Dr. Elena Rostova contribute to Project Chronos before co-founding Project Nexus?",
+      "actual_status": "partial",
+      "actual_answer": "No, Dr. Elena\u202fRostova did not contribute to Project\u202fChronos before co\u2011founding Project\u202fNexus.",
+      "gold_answer": "No. Dr. Elena Rostova had stayed completely aloof from Project Chronos prior to co-founding Project Nexus.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.382,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly noted Rostova was not involved",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q31",
+      "category": "cross_project_reasoning",
+      "question": "Which engineer worked on Chronos telemetry visualization and later built the dynamic graph visualization workbench for Nexus?",
+      "actual_status": "partial",
+      "actual_answer": "Vikram\u202fPatel",
+      "gold_answer": "Vikram Patel ('Vik') built the visualization layer for Chronos and later the dynamic graph visualization workbench for Nexus.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.108,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified Vikram Patel",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q32",
+      "category": "cross_project_reasoning",
+      "question": "How did the technical stacks of Project Chronos and Project Nexus differ in terms of persistence and programming languages?",
+      "actual_status": "answered",
+      "actual_answer": "Project\u202fChronos was built with a dual\u2011language stack: the deep\u2011learning components used PyTorch (Python) while the ingestion pipeline was written in Rust for thread safety and performance.  The project\u2019s persistence layer is not described in the available evidence.\n\nProject\u202fNexus, by contrast, uses Python and PyTorch for its differentiable components and relies on Neo4j as a semantic\u2011graph persistence store to hold knowledge\u2011graph data.\n\nThus, Chronos\u2019 stack centers on Rust\u2011based ingestion and PyTorch, with no explicit persistence technology mentioned, whereas Nexus combines Python/PyTorch with Neo4j for graph persistence.",
+      "gold_answer": "Project Chronos used Rust for ingestion and PyTorch for models; Project Nexus used Python and PyTorch for models and Neo4j for semantic graph persistence.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.9,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Contrasted Rust vs Python/Neo4j",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q33",
+      "category": "partial_evidence",
+      "question": "What throughput and latency figures were achieved by Project Chronos, and what was its exact monetary budget?",
+      "actual_status": "partial",
+      "actual_answer": "Project Chronos achieved a throughput of ten million data points per second and sub\u2011millisecond anomaly detection latencies.",
+      "gold_answer": "Project Chronos achieved an ingestion throughput of ten million data points per second with sub-millisecond anomaly detection latencies. However, the exact monetary budget is not recorded in the memory.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.689,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified throughput metrics",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q34",
+      "category": "partial_evidence",
+      "question": "What specific university did Vikram Patel attend with the narrator, and what degree did he graduate with?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "I do not have sufficient recorded memories to answer that question.",
+      "gold_answer": "The memories state that Vikram Patel and the narrator have been close friends since their undergraduate days at university, but the specific name of the university and his degree are not mentioned.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.047,
+      "rubric_fact_score": 0.0,
+      "rubric_passed": false,
+      "rubric_reason": "Falsely abstained on an answerable question",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q35",
+      "category": "partial_evidence",
+      "question": "What type of hardware does Elena Ramos design, and what specific FPGA chip model does she use?",
+      "actual_status": "partial",
+      "actual_answer": "Elena\u202fRamos designs embedded FPGA motor\u2011controller sensors for Vanguard Robotics.",
+      "gold_answer": "Elena Ramos designs embedded FPGA motor controller sensors for industrial robot arms, but the specific FPGA chip model or part number is not recorded.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified FPGA / sensor details",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q36",
+      "category": "partial_evidence",
+      "question": "What responsibilities did David K. Miller assume for Project Nexus, and what exact funding amount did he secure?",
+      "actual_status": "partial",
+      "actual_answer": "David\u202fK.\u202fMiller was hired as the Product Manager for Project Nexus. In that role he aligned the project\u2019s research milestones with upcoming commercial grant deadlines.",
+      "gold_answer": "David K. Miller took charge as Product Manager for Project Nexus and aligned research milestones with upcoming commercial grant deadlines, but the exact funding or grant dollar amount is not recorded.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.79,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Identified PM role",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q37",
+      "category": "negative_counterfactual",
+      "question": "How many cryptocurrency trading models did Project Hyperion deploy to production?",
+      "actual_status": "partial",
+      "actual_answer": "Project Hyperion deployed zero cryptocurrency trading models to production.",
+      "gold_answer": "Zero models. Project Hyperion was officially cancelled on June 12, 2025 before any code was committed or models trained.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.311,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly identified zero models deployed",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q38",
+      "category": "negative_counterfactual",
+      "question": "Did Project Chronos use COBOL in its ingestion pipeline?",
+      "actual_status": "answered",
+      "actual_answer": "No. Project\u202fChronos\u2019 ingestion pipeline was built in Rust, not COBOL.",
+      "gold_answer": "No. The mention of COBOL was a malicious prompt injection inside a pull request that was caught and purged during code review. Chronos used Rust for ingestion.",
+      "supporting_memory_ids": [
+        "m001",
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 0.5,
+      "legacy_fact_score": 0.462,
+      "rubric_fact_score": 0.0,
+      "rubric_passed": false,
+      "rubric_reason": "Failed Rust/COBOL check",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q39",
+      "category": "negative_counterfactual",
+      "question": "Is Bob currently the Chief Executive Officer of Aetheria Labs?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "I do not have sufficient evidence to determine whether Bob is currently the Chief Executive Officer of Aetheria Labs.",
+      "gold_answer": "No. The claim that 'Bob is the CEO' was a fabricated prompt injection attempt purged from a pull request. The story does not name Bob as CEO.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.0,
+      "rubric_fact_score": 0.0,
+      "rubric_passed": false,
+      "rubric_reason": "Falsely abstained on an answerable question",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q40",
+      "category": "negative_counterfactual",
+      "question": "Did Dr. Aris Thorne supervise the implementation of the sensory perception stack in Project Aegis?",
+      "actual_status": "partial",
+      "actual_answer": "No. Dr.\u202fAris\u202fThorne had no involvement in Project\u202fAegis, and therefore did not supervise the implementation of its sensory perception stack.",
+      "gold_answer": "No. Dr. Aris Thorne is a retired Cambridge academic with no involvement whatsoever in engineering operations.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.175,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Rejected Aris Thorne supervision",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q41",
+      "category": "unanswerable_abstention",
+      "question": "What was the annual salary and equity compensation package offered to David K. Miller when he joined Aetheria Labs?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "I do not have sufficient recorded memories to determine the annual salary and equity compensation package offered to David K. Miller when he joined Aetheria Labs.",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The compensation details for David K. Miller are not mentioned in the memory store.",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.0,
+      "set_precision": 0.0,
+      "recall_at_k": null,
+      "legacy_fact_score": 1.0,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly abstained on unanswerable question",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q42",
+      "category": "unanswerable_abstention",
+      "question": "What operating system was installed on the industrial robot arms manufactured by Vanguard Robotics?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "I do not have sufficient recorded memories to determine the operating system installed on the industrial robot arms manufactured by Vanguard Robotics.",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The operating system of the robot arms is not recorded.",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.0,
+      "set_precision": 0.0,
+      "recall_at_k": null,
+      "legacy_fact_score": 1.0,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly abstained on unanswerable question",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q43",
+      "category": "unanswerable_abstention",
+      "question": "Which medical facility or country did Chloe Bennett travel to for her medical sabbatical?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The memory does not specify where Chloe Bennett traveled for her sabbatical.",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.0,
+      "set_precision": 0.0,
+      "recall_at_k": null,
+      "legacy_fact_score": 1.0,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly abstained on unanswerable question",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q44",
+      "category": "unanswerable_abstention",
+      "question": "What was the exact hardware model and vendor of the GPU cluster used for training Project Nexus?",
+      "actual_status": "insufficient_evidence",
+      "actual_answer": "I do not have sufficient recorded memories to answer that question.",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The memory mentions GPU clusters but does not specify the hardware model or vendor.",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.0,
+      "set_precision": 0.0,
+      "recall_at_k": null,
+      "legacy_fact_score": 1.0,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Correctly abstained on unanswerable question",
+      "citation_validity": 1.0,
+      "citation_support_precision": 1.0
+    },
+    {
+      "id": "q45",
+      "category": "citation_grounding",
+      "question": "What reason did the steering committee give for postponing the International AI Systems Symposium in Tokyo?",
+      "actual_status": "partial",
+      "actual_answer": "The steering committee postponed the International AI Systems Symposium because of extensive venue renovations and logistical complications in Tokyo.",
+      "gold_answer": "The symposium was postponed due to extensive venue renovations and logistical complications in Tokyo.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.7,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Grounding tokens matched 8/8",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q46",
+      "category": "citation_grounding",
+      "question": "What specific anomaly detection throughput and latency did Project Chronos achieve upon delivery?",
+      "actual_status": "partial",
+      "actual_answer": "Project Chronos achieved a throughput of ten million data points per second and sub\u2011millisecond anomaly detection latencies upon delivery.",
+      "gold_answer": "Project Chronos achieved a throughput of ten million data points per second with sub-millisecond anomaly detection latencies.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.636,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Grounding tokens matched 10/11",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q47",
+      "category": "citation_grounding",
+      "question": "What were Sarah Lin's primary responsibilities when she joined the Chronos team?",
+      "actual_status": "partial",
+      "actual_answer": "When Sarah Lin joined the Chronos team, she was tasked with taking ownership of the Kafka partition schemas and assisting Marcus Vance in tuning the Rust telemetry decoders.",
+      "gold_answer": "Sarah Lin took ownership of Kafka partition schemas and assisted Marcus Vance in tuning Rust telemetry decoders.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.636,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Grounding tokens matched 10/11",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    },
+    {
+      "id": "q48",
+      "category": "citation_grounding",
+      "question": "What was Dr. Elena Rostova's reaction to the four-month postponement of the Tokyo symposium?",
+      "actual_status": "partial",
+      "actual_answer": "Dr. Elena\u202fRostova viewed the postponement as a positive development, noting that the additional four months would give the team time to validate their benchmark results across larger open\u2011source ontologies.",
+      "gold_answer": "Dr. Elena Rostova noted that the extra four months would allow the team to validate their benchmark results across larger open-source ontologies.",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "standard_precision_at_k": 0.3333,
+      "set_precision": 1.0,
+      "recall_at_k": 1.0,
+      "legacy_fact_score": 0.513,
+      "rubric_fact_score": 1.0,
+      "rubric_passed": true,
+      "rubric_reason": "Grounding tokens matched 11/15",
+      "citation_validity": 0.0,
+      "citation_support_precision": 0.0
+    }
+  ]
+}

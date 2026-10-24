@@ -1,0 +1,64 @@
+{
+  "multi_episode": {
+    "extraction": {
+      "entity_precision": 0.5238,
+      "entity_recall": 0.88,
+      "entity_f1": 0.6567,
+      "total_extracted_entities": 42,
+      "gold_entities_count": 25,
+      "relationship_precision": 0.0,
+      "relationship_recall": 0.0,
+      "relationship_f1": 0.0,
+      "total_extracted_triples": 3,
+      "gold_relationships_count": 30,
+      "evidence_grounding_accuracy": 1.0,
+      "total_extracted_relationships": 3,
+      "grounded_relationships_count": 3
+    },
+    "ivara_pipeline": {
+      "avg_retrieval_recall": 0.694,
+      "avg_retrieval_precision": 0.43,
+      "avg_fact_score": 0.526,
+      "abstention_f1": 0.5,
+      "abstention_false_positive_rate": 0.0
+    },
+    "ordinary_vector_baseline": {
+      "avg_retrieval_recall": 0.747,
+      "avg_retrieval_precision": 0.34,
+      "avg_fact_score": 0.55,
+      "abstention_f1": 0.533,
+      "abstention_false_positive_rate": 0.0
+    }
+  },
+  "single_episode": {
+    "extraction": {
+      "entity_precision": 0.9615,
+      "entity_recall": 1.0,
+      "entity_f1": 0.9804,
+      "total_extracted_entities": 26,
+      "gold_entities_count": 25,
+      "relationship_precision": 0.0,
+      "relationship_recall": 0.0,
+      "relationship_f1": 0.0,
+      "total_extracted_triples": 4,
+      "gold_relationships_count": 30,
+      "evidence_grounding_accuracy": 1.0,
+      "total_extracted_relationships": 4,
+      "grounded_relationships_count": 4
+    },
+    "ivara_pipeline": {
+      "avg_retrieval_recall": 0.321,
+      "avg_retrieval_precision": 0.417,
+      "avg_fact_score": 0.415,
+      "abstention_f1": 0.222,
+      "abstention_false_positive_rate": 0.0
+    },
+    "ordinary_vector_baseline": {
+      "avg_retrieval_recall": 0.755,
+      "avg_retrieval_precision": 0.917,
+      "avg_fact_score": 0.558,
+      "abstention_f1": 0.8,
+      "abstention_false_positive_rate": 0.0
+    }
+  }
+}

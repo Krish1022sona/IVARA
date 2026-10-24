@@ -7,8 +7,192 @@
         "user"
       ],
       "parent": null
+    },
+    "Organization": {
+      "aliases": [
+        "organization",
+        "org",
+        "institution"
+      ],
+      "parent": null
+    },
+    "Company": {
+      "aliases": [
+        "company",
+        "corporation"
+      ],
+      "parent": "Organization"
+    },
+    "Technology": {
+      "aliases": [
+        "technology",
+        "tech"
+      ],
+      "parent": null
+    },
+    "Framework": {
+      "aliases": [
+        "framework"
+      ],
+      "parent": "Technology"
+    },
+    "ProgrammingLanguage": {
+      "aliases": [
+        "programming language",
+        "language"
+      ],
+      "parent": "Technology"
+    },
+    "Project": {
+      "aliases": [
+        "project"
+      ],
+      "parent": null
+    },
+    "Skill": {
+      "aliases": [
+        "skill"
+      ],
+      "parent": null
+    },
+    "Concept": {
+      "aliases": [
+        "concept"
+      ],
+      "parent": null
+    },
+    "Location": {
+      "aliases": [
+        "location",
+        "city",
+        "place"
+      ],
+      "parent": null
+    },
+    "Role": {
+      "aliases": [
+        "role",
+        "title",
+        "position"
+      ],
+      "parent": null
     }
   },
 
-  "predicates": {}
+  "predicates": {
+    "worked_with": {
+      "aliases": [
+        "worked with",
+        "collaborated with",
+        "colleague of",
+        "reunited with"
+      ],
+      "inverse": "worked_with"
+    },
+    "worked_on": {
+      "aliases": [
+        "worked on",
+        "built",
+        "developed",
+        "assigned to",
+        "co-founded",
+        "spearheaded",
+        "initiated",
+        "launched"
+      ],
+      "inverse": "worked_on_by"
+    },
+    "worked_on_by": {
+      "aliases": [
+        "worked on by",
+        "built by",
+        "launched by"
+      ],
+      "inverse": "worked_on"
+    },
+    "employed_by": {
+      "aliases": [
+        "employed by",
+        "works at",
+        "works for",
+        "joined"
+      ],
+      "inverse": "employs"
+    },
+    "employs": {
+      "aliases": [
+        "employs",
+        "hired",
+        "has member",
+        "comprised of"
+      ],
+      "inverse": "employed_by"
+    },
+    "has_role": {
+      "aliases": [
+        "role",
+        "holds role",
+        "served as",
+        "serves as"
+      ],
+      "inverse": "role_of"
+    },
+    "role_of": {
+      "aliases": [
+        "role of"
+      ],
+      "inverse": "has_role"
+    },
+    "uses": {
+      "aliases": [
+        "uses",
+        "utilizes",
+        "used",
+        "uses_framework",
+        "uses_language"
+      ],
+      "inverse": "used_by"
+    },
+    "used_by": {
+      "aliases": [
+        "used by"
+      ],
+      "inverse": "uses"
+    },
+    "owned_by": {
+      "aliases": [
+        "owned by",
+        "belongs_to"
+      ],
+      "inverse": "owns"
+    },
+    "owns": {
+      "aliases": [
+        "owns",
+        "possesses"
+      ],
+      "inverse": "owned_by"
+    },
+    "friend_of": {
+      "aliases": [
+        "friend",
+        "friend of"
+      ],
+      "inverse": "friend_of"
+    },
+    "parent_of": {
+      "aliases": [
+        "parent",
+        "parent of"
+      ],
+      "inverse": "child_of"
+    },
+    "child_of": {
+      "aliases": [
+        "child",
+        "child of"
+      ],
+      "inverse": "parent_of"
+    }
+  }
 }

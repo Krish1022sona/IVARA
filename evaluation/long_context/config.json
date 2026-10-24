@@ -1,0 +1,33 @@
+{
+  "benchmark_name": "IVARA Long-Context Memory Benchmark",
+  "version": "1.0.0",
+  "model": "gpt-oss",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "seed": 42,
+  "retrieval": {
+    "default_k": 3,
+    "evaluated_k_values": [3, 5],
+    "relevance_threshold": 0.35,
+    "baseline_relevance_threshold": null
+  },
+  "answering": {
+    "temperature": 0,
+    "system_prompt": "ANSWERING_SYSTEM_PROMPT"
+  },
+  "paths": {
+    "story": "evaluation/long_context/story.md",
+    "gold_annotations": "evaluation/long_context/gold_annotations.json",
+    "questions": "evaluation/long_context/questions.json",
+    "single_episode": {
+      "dir": "evaluation/long_context/single_episode",
+      "memories_path": "evaluation/long_context/single_episode/memories.json",
+      "entities_path": "evaluation/long_context/single_episode/entities.json"
+    },
+    "multi_episode": {
+      "dir": "evaluation/long_context/multi_episode",
+      "memories_path": "evaluation/long_context/multi_episode/memories.json",
+      "entities_path": "evaluation/long_context/multi_episode/entities.json"
+    },
+    "reports_dir": "evaluation/long_context/reports"
+  }
+}

@@ -10,13 +10,17 @@ memories = [
 ]
 
 
-for text in memories:
+def main():
+    for text in memories:
+        print("=" * 100)
+        print(text)
+        print()
 
-    print("=" * 100)
-    print(text)
-    print()
+        result = extract_knowledge(text)
 
-    result = extract_knowledge(text)
+        print(result.model_dump_json(indent=2))
+        print()
 
-    print(result.model_dump_json(indent=2))
-    print()
+
+if __name__ == "__main__":
+    main()

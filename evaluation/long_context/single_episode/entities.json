@@ -1,0 +1,277 @@
+[
+  {
+    "id": "e_self",
+    "canonical_name": "SELF",
+    "aliases": [
+      "I",
+      "me",
+      "my",
+      "SELF"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_marcus_vance",
+    "canonical_name": "Marcus Vance",
+    "aliases": [
+      "Marc",
+      "Marcus Vance"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_priya_sharma",
+    "canonical_name": "Priya Sharma",
+    "aliases": [
+      "Priya Sharma",
+      "Priya"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_chloe_bennett",
+    "canonical_name": "Chloe Bennett",
+    "aliases": [
+      "Chloe Bennett",
+      "Chloe"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_elena_rostova",
+    "canonical_name": "Dr. Elena Rostova",
+    "aliases": [
+      "Dr. Elena Rostova",
+      "Elena Rostova",
+      "The Oracle"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_elena_ramos",
+    "canonical_name": "Elena Ramos",
+    "aliases": [
+      "Elena Ramos"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_marcus_thorne",
+    "canonical_name": "Marcus Thorne",
+    "aliases": [
+      "Marcus Thorne",
+      "Thorne"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_aris_thorne",
+    "canonical_name": "Dr. Aris Thorne",
+    "aliases": [
+      "Dr. Aris Thorne",
+      "Aris Thorne"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_vikram_patel",
+    "canonical_name": "Vikram Patel",
+    "aliases": [
+      "Vikram Patel",
+      "Vik"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_sarah_lin",
+    "canonical_name": "Sarah Lin",
+    "aliases": [
+      "Sarah Lin"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_david_miller",
+    "canonical_name": "David K. Miller",
+    "aliases": [
+      "David K. Miller",
+      "David Miller",
+      "David"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_julian_mercer",
+    "canonical_name": "Julian Mercer",
+    "aliases": [
+      "Julian Mercer"
+    ],
+    "types": [
+      "Person"
+    ]
+  },
+  {
+    "id": "e_aetheria",
+    "canonical_name": "Aetheria Labs",
+    "aliases": [
+      "Aetheria Labs",
+      "Aetheria"
+    ],
+    "types": [
+      "Organization",
+      "Company"
+    ]
+  },
+  {
+    "id": "e_vanguard",
+    "canonical_name": "Vanguard Robotics",
+    "aliases": [
+      "Vanguard Robotics",
+      "Vanguard"
+    ],
+    "types": [
+      "Organization",
+      "Company"
+    ]
+  },
+  {
+    "id": "e_opencog",
+    "canonical_name": "OpenCognition Consortium",
+    "aliases": [
+      "OpenCognition Consortium"
+    ],
+    "types": [
+      "Organization"
+    ]
+  },
+  {
+    "id": "e_chronos",
+    "canonical_name": "Project Chronos",
+    "aliases": [
+      "Project Chronos",
+      "Chronos"
+    ],
+    "types": [
+      "Project"
+    ]
+  },
+  {
+    "id": "e_aegis",
+    "canonical_name": "Project Aegis",
+    "aliases": [
+      "Project Aegis",
+      "Aegis"
+    ],
+    "types": [
+      "Project"
+    ]
+  },
+  {
+    "id": "e_hyperion",
+    "canonical_name": "Project Hyperion",
+    "aliases": [
+      "Project Hyperion",
+      "Hyperion"
+    ],
+    "types": [
+      "Project"
+    ]
+  },
+  {
+    "id": "e_nexus",
+    "canonical_name": "Project Nexus",
+    "aliases": [
+      "Project Nexus",
+      "Nexus"
+    ],
+    "types": [
+      "Project"
+    ]
+  },
+  {
+    "id": "e_pytorch",
+    "canonical_name": "PyTorch",
+    "aliases": [
+      "PyTorch"
+    ],
+    "types": [
+      "Technology",
+      "Framework"
+    ]
+  },
+  {
+    "id": "e_rust",
+    "canonical_name": "Rust",
+    "aliases": [
+      "Rust"
+    ],
+    "types": [
+      "Technology",
+      "ProgrammingLanguage"
+    ]
+  },
+  {
+    "id": "e_python",
+    "canonical_name": "Python",
+    "aliases": [
+      "Python"
+    ],
+    "types": [
+      "Technology",
+      "ProgrammingLanguage"
+    ]
+  },
+  {
+    "id": "e_cpp",
+    "canonical_name": "C++",
+    "aliases": [
+      "C++"
+    ],
+    "types": [
+      "Technology",
+      "ProgrammingLanguage"
+    ]
+  },
+  {
+    "id": "e_neo4j",
+    "canonical_name": "Neo4j",
+    "aliases": [
+      "Neo4j"
+    ],
+    "types": [
+      "Technology"
+    ]
+  },
+  {
+    "id": "e_kafka",
+    "canonical_name": "Kafka",
+    "aliases": [
+      "Kafka"
+    ],
+    "types": [
+      "Technology"
+    ]
+  }
+]

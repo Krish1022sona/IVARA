@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "benchmark": "IVARA Long-Context Memory Benchmark",
+    "version": "1.0.0",
+    "description": "Independent gold standard annotations derived manually from the synthetic story without model influence."
+  },
+  "canonical_entities": [
+    {"id": "e_self", "canonical_name": "SELF", "types": ["Person"], "aliases": ["I", "me", "my", "SELF"], "affiliation": "Aetheria Labs", "role": "Principal AI Systems Lead"},
+    {"id": "e_marcus_vance", "canonical_name": "Marcus Vance", "types": ["Person"], "aliases": ["Marc", "Marcus Vance"], "affiliation": "Aetheria Labs", "role": "Lead Distributed Systems Engineer"},
+    {"id": "e_priya_sharma", "canonical_name": "Priya Sharma", "types": ["Person"], "aliases": ["Priya Sharma", "Priya"], "affiliation": "Aetheria Labs", "role": "Senior ML / Lead Neuro-Symbolic Engineer"},
+    {"id": "e_chloe_bennett", "canonical_name": "Chloe Bennett", "types": ["Person"], "aliases": ["Chloe Bennett", "Chloe"], "affiliation": "Aetheria Labs", "role": "Technical Product Manager (left Aug 2025)"},
+    {"id": "e_elena_rostova", "canonical_name": "Dr. Elena Rostova", "types": ["Person"], "aliases": ["Dr. Elena Rostova", "Elena Rostova", "The Oracle"], "affiliation": "Aetheria Labs", "role": "Chief Scientist"},
+    {"id": "e_elena_ramos", "canonical_name": "Elena Ramos", "types": ["Person"], "aliases": ["Elena Ramos"], "affiliation": "Vanguard Robotics", "role": "Lead Robotics Hardware Engineer"},
+    {"id": "e_marcus_thorne", "canonical_name": "Marcus Thorne", "types": ["Person"], "aliases": ["Marcus Thorne", "Thorne"], "affiliation": "Vanguard Robotics", "role": "Senior Security & Infrastructure Architect"},
+    {"id": "e_aris_thorne", "canonical_name": "Dr. Aris Thorne", "types": ["Person"], "aliases": ["Dr. Aris Thorne", "Aris Thorne"], "affiliation": "OpenCognition Consortium", "role": "Advisor / Emeritus Professor"},
+    {"id": "e_vikram_patel", "canonical_name": "Vikram Patel", "types": ["Person"], "aliases": ["Vikram Patel", "Vik"], "affiliation": "Aetheria Labs", "role": "Lead Full-Stack UI Architect"},
+    {"id": "e_sarah_lin", "canonical_name": "Sarah Lin", "types": ["Person"], "aliases": ["Sarah Lin"], "affiliation": "Aetheria Labs", "role": "Junior Data Engineer"},
+    {"id": "e_david_miller", "canonical_name": "David K. Miller", "types": ["Person"], "aliases": ["David K. Miller", "David Miller", "David"], "affiliation": "Aetheria Labs", "role": "Product Manager (joined Sep 2025)"},
+    {"id": "e_julian_mercer", "canonical_name": "Julian Mercer", "types": ["Person"], "aliases": ["Julian Mercer"], "affiliation": "Vanguard Robotics", "role": "Director of Operations"},
+    {"id": "e_aetheria", "canonical_name": "Aetheria Labs", "types": ["Organization", "Company"], "aliases": ["Aetheria Labs", "Aetheria"]},
+    {"id": "e_vanguard", "canonical_name": "Vanguard Robotics", "types": ["Organization", "Company"], "aliases": ["Vanguard Robotics", "Vanguard"]},
+    {"id": "e_opencog", "canonical_name": "OpenCognition Consortium", "types": ["Organization"], "aliases": ["OpenCognition Consortium"]},
+    {"id": "e_chronos", "canonical_name": "Project Chronos", "types": ["Project"], "aliases": ["Project Chronos", "Chronos"]},
+    {"id": "e_aegis", "canonical_name": "Project Aegis", "types": ["Project"], "aliases": ["Project Aegis", "Aegis"]},
+    {"id": "e_hyperion", "canonical_name": "Project Hyperion", "types": ["Project"], "aliases": ["Project Hyperion", "Hyperion"]},
+    {"id": "e_nexus", "canonical_name": "Project Nexus", "types": ["Project"], "aliases": ["Project Nexus", "Nexus"]},
+    {"id": "e_pytorch", "canonical_name": "PyTorch", "types": ["Technology", "Framework"], "aliases": ["PyTorch"]},
+    {"id": "e_rust", "canonical_name": "Rust", "types": ["Technology", "ProgrammingLanguage"], "aliases": ["Rust"]},
+    {"id": "e_python", "canonical_name": "Python", "types": ["Technology", "ProgrammingLanguage"], "aliases": ["Python"]},
+    {"id": "e_cpp", "canonical_name": "C++", "types": ["Technology", "ProgrammingLanguage"], "aliases": ["C++"]},
+    {"id": "e_neo4j", "canonical_name": "Neo4j", "types": ["Technology"], "aliases": ["Neo4j"]},
+    {"id": "e_kafka", "canonical_name": "Kafka", "types": ["Technology"], "aliases": ["Kafka"]}
+  ],
+  "gold_relationships": [
+    {
+      "source": "SELF",
+      "predicate": "worked_on",
+      "target": "Project Chronos",
+      "origin": "explicit",
+      "evidence": "I officially initiated Project Chronos at Aetheria Labs",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to 2025-07-28"
+    },
+    {
+      "source": "Marcus Vance",
+      "predicate": "worked_on",
+      "target": "Project Chronos",
+      "origin": "explicit",
+      "evidence": "Our engineering squad comprised three key colleagues: Marcus Vance... Marc and I decided on the technical foundations",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to ongoing"
+    },
+    {
+      "source": "Priya Sharma",
+      "predicate": "worked_on",
+      "target": "Project Chronos",
+      "origin": "explicit",
+      "evidence": "Priya was exclusively assigned to Chronos, focusing on custom temporal convolutional kernels",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to 2025-08-05"
+    },
+    {
+      "source": "Chloe Bennett",
+      "predicate": "worked_on",
+      "target": "Project Chronos",
+      "origin": "explicit",
+      "evidence": "Chloe Bennett, who served as our dedicated technical product manager... Chloe established a strict milestone schedule",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to 2025-08-05"
+    },
+    {
+      "source": "Project Chronos",
+      "predicate": "uses",
+      "target": "PyTorch",
+      "origin": "explicit",
+      "evidence": "We chose PyTorch for deep recurrent and transformer-based neural architectures",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14"
+    },
+    {
+      "source": "Project Chronos",
+      "predicate": "uses",
+      "target": "Rust",
+      "origin": "explicit",
+      "evidence": "Marc insisted on implementing the ingestion pipeline using Rust",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14"
+    },
+    {
+      "source": "SELF",
+      "predicate": "worked_with",
+      "target": "Marcus Vance",
+      "origin": "explicit",
+      "evidence": "Our engineering squad comprised three key colleagues: Marcus Vance... Marc and I decided",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to ongoing"
+    },
+    {
+      "source": "SELF",
+      "predicate": "worked_with",
+      "target": "Priya Sharma",
+      "origin": "explicit",
+      "evidence": "Our engineering squad comprised three key colleagues... Priya Sharma",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to ongoing"
+    },
+    {
+      "source": "SELF",
+      "predicate": "worked_with",
+      "target": "Chloe Bennett",
+      "origin": "explicit",
+      "evidence": "Our engineering squad comprised three key colleagues... Chloe Bennett",
+      "episode": "Episode 1",
+      "time_interval": "2025-01-14 to 2025-08-05"
+    },
+    {
+      "source": "Elena Ramos",
+      "predicate": "worked_on",
+      "target": "Project Aegis",
+      "origin": "explicit",
+      "evidence": "Julian introduced their lead robotics hardware engineer, Elena Ramos... Project Aegis aimed to build an edge-compatible sensory perception stack",
+      "episode": "Episode 2",
+      "time_interval": "2025-03-03 to ongoing"
+    },
+    {
+      "source": "Marcus Thorne",
+      "predicate": "worked_on",
+      "target": "Project Aegis",
+      "origin": "explicit",
+      "evidence": "Vanguard Robotics assigned their senior security and infrastructure architect, Marcus Thorne",
+      "episode": "Episode 2",
+      "time_interval": "2025-03-03 to ongoing"
+    },
+    {
+      "source": "Project Aegis",
+      "predicate": "uses",
+      "target": "C++",
+      "origin": "explicit",
+      "evidence": "Project Aegis chose C++ and PyTorch as its primary software stack",
+      "episode": "Episode 2",
+      "time_interval": "2025-03-03"
+    },
+    {
+      "source": "Project Aegis",
+      "predicate": "uses",
+      "target": "PyTorch",
+      "origin": "explicit",
+      "evidence": "Project Aegis chose C++ and PyTorch as its primary software stack",
+      "episode": "Episode 2",
+      "time_interval": "2025-03-03"
+    },
+    {
+      "source": "Dr. Aris Thorne",
+      "predicate": "parent_of",
+      "target": "Marcus Thorne",
+      "origin": "explicit",
+      "evidence": "Thorne's father is Dr. Aris Thorne, a retired Cambridge academic",
+      "episode": "Episode 2",
+      "time_interval": "permanent"
+    },
+    {
+      "source": "Sarah Lin",
+      "predicate": "worked_with",
+      "target": "Marcus Vance",
+      "origin": "explicit",
+      "evidence": "Sarah Lin joined Aetheria Labs as a junior data engineer reporting directly to Marc",
+      "episode": "Episode 4",
+      "time_interval": "2025-06-20 to ongoing"
+    },
+    {
+      "source": "Sarah Lin",
+      "predicate": "worked_on",
+      "target": "Project Chronos",
+      "origin": "explicit",
+      "evidence": "took ownership of our Kafka partition schemas and assisted Marc in tuning our Rust telemetry decoders",
+      "episode": "Episode 4",
+      "time_interval": "2025-06-20 to ongoing"
+    },
+    {
+      "source": "Sarah Lin",
+      "predicate": "uses",
+      "target": "Kafka",
+      "origin": "explicit",
+      "evidence": "took ownership of our Kafka partition schemas",
+      "episode": "Episode 4",
+      "time_interval": "2025-06-20"
+    },
+    {
+      "source": "Vikram Patel",
+      "predicate": "friend_of",
+      "target": "SELF",
+      "origin": "explicit",
+      "evidence": "my close friend Vikram Patel—widely known as 'Vik', with whom I have maintained a close personal friendship since our undergraduate days at university",
+      "episode": "Episode 4",
+      "time_interval": "permanent"
+    },
+    {
+      "source": "Vikram Patel",
+      "predicate": "uses",
+      "target": "Python",
+      "origin": "explicit",
+      "evidence": "built the real-time visualization layer using Python backend endpoints",
+      "episode": "Episode 4",
+      "time_interval": "2025-06-20"
+    },
+    {
+      "source": "Dr. Elena Rostova",
+      "predicate": "worked_on",
+      "target": "Project Nexus",
+      "origin": "explicit",
+      "evidence": "Dr. Elena Rostova approached me on August 18, 2025, to co-found Project Nexus... Elena Rostova took the helm as Project Director and scientific lead",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18 to ongoing"
+    },
+    {
+      "source": "SELF",
+      "predicate": "worked_on",
+      "target": "Project Nexus",
+      "origin": "explicit",
+      "evidence": "co-found Project Nexus... while I assumed the role of Principal Systems Architect",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18 to ongoing"
+    },
+    {
+      "source": "SELF",
+      "predicate": "worked_with",
+      "target": "Dr. Elena Rostova",
+      "origin": "explicit",
+      "evidence": "Dr. Elena Rostova approached me on August 18, 2025, to co-found Project Nexus... working with her on Nexus was an exhilarating intellectual transition",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18 to ongoing"
+    },
+    {
+      "source": "Project Nexus",
+      "predicate": "uses",
+      "target": "Python",
+      "origin": "explicit",
+      "evidence": "We decided to build Nexus using Python and PyTorch for the differentiable components, complemented by Neo4j for semantic graph persistence",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18"
+    },
+    {
+      "source": "Project Nexus",
+      "predicate": "uses",
+      "target": "PyTorch",
+      "origin": "explicit",
+      "evidence": "We decided to build Nexus using Python and PyTorch",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18"
+    },
+    {
+      "source": "Project Nexus",
+      "predicate": "uses",
+      "target": "Neo4j",
+      "origin": "explicit",
+      "evidence": "complemented by Neo4j for semantic graph persistence",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18"
+    },
+    {
+      "source": "Vikram Patel",
+      "predicate": "worked_on",
+      "target": "Project Nexus",
+      "origin": "explicit",
+      "evidence": "Vikram Patel immediately joined us to construct the dynamic graph visualization workbench",
+      "episode": "Episode 6",
+      "time_interval": "2025-08-18 to ongoing"
+    },
+    {
+      "source": "David K. Miller",
+      "predicate": "worked_on",
+      "target": "Project Nexus",
+      "origin": "explicit",
+      "evidence": "Aetheria Labs hired David K. Miller on September 15, 2025... took charge as the Product Manager for Project Nexus",
+      "episode": "Episode 7",
+      "time_interval": "2025-09-15 to ongoing"
+    },
+    {
+      "source": "Priya Sharma",
+      "predicate": "worked_on",
+      "target": "Project Nexus",
+      "origin": "explicit",
+      "evidence": "Priya Sharma completed her research sabbatical and officially joined Project Nexus as our Lead Neuro-Symbolic Model Engineer",
+      "episode": "Episode 8",
+      "time_interval": "2025-10-10 to ongoing"
+    },
+    {
+      "source": "Priya Sharma",
+      "predicate": "worked_with",
+      "target": "Dr. Elena Rostova",
+      "origin": "explicit",
+      "evidence": "now working under Dr. Elena Rostova's scientific direction alongside David K. Miller",
+      "episode": "Episode 8",
+      "time_interval": "2025-10-10 to ongoing"
+    },
+    {
+      "source": "Priya Sharma",
+      "predicate": "uses",
+      "target": "Neo4j",
+      "origin": "explicit",
+      "evidence": "Priya made immediate breakthroughs by bridging PyTorch tensor embeddings with Neo4j entity graphs",
+      "episode": "Episode 8",
+      "time_interval": "2025-10-10"
+    }
+  ],
+  "negative_facts_and_abstentions": [
+    {
+      "fact": "Project Hyperion produced working code",
+      "truth_value": false,
+      "reason": "Project Hyperion was officially cancelled on June 12, 2025 before any code was committed or models trained."
+    },
+    {
+      "fact": "Marcus Vance worked on Project Aegis",
+      "truth_value": false,
+      "reason": "Marcus Thorne formally vetoed cross-company code sharing due to IP restrictions; Marcus Vance never contributed to Aegis."
+    },
+    {
+      "fact": "Marcus Vance worked on Project Nexus",
+      "truth_value": false,
+      "reason": "Marcus Vance remained focused on Chronos and mentoring Sarah Lin; he never participated in Nexus."
+    },
+    {
+      "fact": "Dr. Elena Rostova worked on Project Chronos",
+      "truth_value": false,
+      "reason": "Dr. Elena Rostova stayed completely aloof from Project Chronos."
+    },
+    {
+      "fact": "Elena Ramos works at Aetheria Labs",
+      "truth_value": false,
+      "reason": "Elena Ramos is employed by Vanguard Robotics in Detroit as a hardware engineer."
+    },
+    {
+      "fact": "Dr. Elena Rostova works at Vanguard Robotics",
+      "truth_value": false,
+      "reason": "Dr. Elena Rostova is Chief Scientist at Aetheria Labs in Boston."
+    },
+    {
+      "fact": "Marcus Thorne works at Aetheria Labs",
+      "truth_value": false,
+      "reason": "Marcus Thorne is employed by Vanguard Robotics."
+    },
+    {
+      "fact": "Project Chronos was built using COBOL",
+      "truth_value": false,
+      "reason": "COBOL was part of a malicious prompt injection attempt caught and purged during code review; Chronos was built in Rust and PyTorch."
+    },
+    {
+      "fact": "Bob is the CEO of Aetheria Labs",
+      "truth_value": false,
+      "reason": "Part of a purged malicious prompt injection string; unsupported and fabricated."
+    },
+    {
+      "fact": "The Tokyo Symposium took place in November 2025",
+      "truth_value": false,
+      "reason": "The symposium was postponed on November 12, 2025 to March 18, 2026."
+    },
+    {
+      "fact": "Chloe Bennett managed Project Nexus",
+      "truth_value": false,
+      "reason": "Chloe Bennett left Aetheria Labs on August 5, 2025 before Project Nexus began; David K. Miller was PM for Nexus."
+    },
+    {
+      "fact": "Dr. Aris Thorne contributed to software development",
+      "truth_value": false,
+      "reason": "Dr. Aris Thorne is a retired Cambridge academic with no involvement in engineering operations."
+    }
+  ]
+}

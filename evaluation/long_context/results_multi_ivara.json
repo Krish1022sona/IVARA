@@ -1,0 +1,1345 @@
+{
+  "system_type": "ivara",
+  "mode": "multi",
+  "k": 3,
+  "total_cases": 48,
+  "avg_retrieval_recall": 0.694,
+  "avg_retrieval_precision": 0.43,
+  "avg_fact_score": 0.551,
+  "abstention": {
+    "unanswerable_cases": 4,
+    "true_positives": 4,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.364,
+    "recall": 1.0,
+    "f1": 0.533,
+    "false_positive_answering_rate": 0.0
+  },
+  "category_breakdown": {
+    "direct_factual_recall": {
+      "count": 4,
+      "ret_recall": 0.75,
+      "ret_prec": 0.25,
+      "fact_score": 0.378,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "failures": 3
+    },
+    "entity_alias_resolution": {
+      "count": 4,
+      "ret_recall": 1.0,
+      "ret_prec": 0.833,
+      "fact_score": 0.738,
+      "citation_validity": 0.5,
+      "claim_entailment": 0.5,
+      "failures": 1
+    },
+    "relationship_retrieval": {
+      "count": 4,
+      "ret_recall": 0.5,
+      "ret_prec": 0.333,
+      "fact_score": 0.397,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "failures": 3
+    },
+    "multi_hop_reasoning": {
+      "count": 4,
+      "ret_recall": 0.375,
+      "ret_prec": 0.208,
+      "fact_score": 0.257,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "failures": 4
+    },
+    "multi_evidence_questions": {
+      "count": 4,
+      "ret_recall": 0.709,
+      "ret_prec": 0.75,
+      "fact_score": 0.703,
+      "citation_validity": 0.5,
+      "claim_entailment": 0.292,
+      "failures": 0
+    },
+    "temporal_reasoning": {
+      "count": 4,
+      "ret_recall": 1.0,
+      "ret_prec": 0.5,
+      "fact_score": 0.683,
+      "citation_validity": 0.25,
+      "claim_entailment": 0.25,
+      "failures": 1
+    },
+    "similar_entity_distractors": {
+      "count": 4,
+      "ret_recall": 0.625,
+      "ret_prec": 0.583,
+      "fact_score": 0.37,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "failures": 4
+    },
+    "cross_project_reasoning": {
+      "count": 4,
+      "ret_recall": 0.875,
+      "ret_prec": 0.417,
+      "fact_score": 0.624,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.625,
+      "failures": 2
+    },
+    "partial_evidence": {
+      "count": 4,
+      "ret_recall": 0.75,
+      "ret_prec": 0.416,
+      "fact_score": 0.484,
+      "citation_validity": 0.5,
+      "claim_entailment": 0.5,
+      "failures": 3
+    },
+    "negative_counterfactual": {
+      "count": 4,
+      "ret_recall": 0.75,
+      "ret_prec": 0.375,
+      "fact_score": 0.356,
+      "citation_validity": 0.5,
+      "claim_entailment": 0.5,
+      "failures": 3
+    },
+    "unanswerable_abstention": {
+      "count": 4,
+      "ret_recall": 0.0,
+      "ret_prec": 0.0,
+      "fact_score": 1.0,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "failures": 0
+    },
+    "citation_grounding": {
+      "count": 4,
+      "ret_recall": 1.0,
+      "ret_prec": 0.5,
+      "fact_score": 0.623,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "failures": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "q01",
+      "category": "direct_factual_recall",
+      "question": "What programming language was used to implement the data ingestion pipeline for Project Chronos?",
+      "gold_answer": "Rust was used to implement the ingestion pipeline for Project Chronos to guarantee zero-cost abstractions and strict thread safety.",
+      "actual_answer": "The data ingestion pipeline for Project\u202fChronos was implemented in Rust.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m004",
+        "m006"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.318,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q02",
+      "category": "direct_factual_recall",
+      "question": "Who was hired on September 15, 2025 to serve as Product Manager for Project Nexus?",
+      "gold_answer": "David K. Miller was hired on September 15, 2025 as the Product Manager for Project Nexus.",
+      "actual_answer": "David K. Miller",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m007"
+      ],
+      "retrieved_memory_ids": [
+        "m010",
+        "m007",
+        "m008"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.175,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q03",
+      "category": "direct_factual_recall",
+      "question": "What technologies were selected as the primary software stack for Project Aegis?",
+      "gold_answer": "Project Aegis chose C++ and PyTorch as its primary software stack.",
+      "actual_answer": "Project\u202fAegis\u2019s primary software stack consists of C++ and PyTorch.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m010",
+        "m007",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.6,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q04",
+      "category": "direct_factual_recall",
+      "question": "On what date did Sarah Lin join Aetheria Labs?",
+      "gold_answer": "Sarah Lin joined Aetheria Labs on June 20, 2025 as a junior data engineer.",
+      "actual_answer": "I do not have a recorded memory that specifies the exact date Sarah Lin joined Aetheria Labs.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m010",
+        "m005",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.42,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q05",
+      "category": "entity_alias_resolution",
+      "question": "Which team member is known across the engineering floor as 'Marc', and what was his role on Project Chronos?",
+      "gold_answer": "Marcus Vance is known as 'Marc'. He was the lead distributed systems engineer on Project Chronos.",
+      "actual_answer": "Marcus Vance, known across the engineering floor as \"Marc\", served as the lead distributed systems engineer on Project Chronos.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m001"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m004",
+        "m005"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.622,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q06",
+      "category": "entity_alias_resolution",
+      "question": "What is the nickname of Dr. Elena Rostova at Aetheria Labs, and what is her official role?",
+      "gold_answer": "Dr. Elena Rostova is nicknamed 'The Oracle' and is the Chief Scientist at Aetheria Labs.",
+      "actual_answer": "Dr. Elena Rostova is affectionately nicknamed \"The Oracle\" and serves as the Chief Scientist at Aetheria Labs.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002"
+      ],
+      "cited_memory_ids": [
+        "m002"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.912,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q07",
+      "category": "entity_alias_resolution",
+      "question": "Who is 'Vik', and what was his personal connection to the narrator?",
+      "gold_answer": "Vik is Vikram Patel, who has been a close personal friend of the narrator since their undergraduate university days.",
+      "actual_answer": "Vik is Vikram Patel, the lead full\u2011stack UI architect at Aetheria Labs. He is a close personal friend of the narrator, having maintained a friendship since their undergraduate days at university, and they collaborated on designing visual telemetry dashboards.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m004"
+      ],
+      "cited_memory_ids": [
+        "m004"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 1.0,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q08",
+      "category": "entity_alias_resolution",
+      "question": "Which engineer is referred to as 'Thorne', and what company does he work for?",
+      "gold_answer": "Marcus Thorne is referred to as 'Thorne', and he is the senior security and infrastructure architect at Vanguard Robotics.",
+      "actual_answer": "The engineer referred to as 'Thorne' is Marcus Thorne, and he works for Vanguard Robotics.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.42,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q09",
+      "category": "relationship_retrieval",
+      "question": "What is the relationship between Dr. Aris Thorne and Marcus Thorne?",
+      "gold_answer": "Dr. Aris Thorne is the father of Marcus Thorne.",
+      "actual_answer": "Dr. Aris\u202fThorne is Marcus\u202fThorne\u2019s father.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.7,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q10",
+      "category": "relationship_retrieval",
+      "question": "Who reported directly to Marcus Vance at Aetheria Labs?",
+      "gold_answer": "Sarah Lin reported directly to Marcus Vance (Marc).",
+      "actual_answer": "Sarah Lin",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m007",
+        "m002",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.117,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q11",
+      "category": "relationship_retrieval",
+      "question": "Who co-founded Project Nexus with Dr. Elena Rostova?",
+      "gold_answer": "The narrator (I / SELF) co-founded Project Nexus with Dr. Elena Rostova, serving as Principal Systems Architect.",
+      "actual_answer": "The co\u2011founder of Project Nexus alongside Dr. Elena\u202fRostova was the narrator of the episodes (the speaker who refers to themselves as \"myself\").",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m008",
+        "m002",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.382,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q12",
+      "category": "relationship_retrieval",
+      "question": "Which company did Julian Mercer represent when signing the Project Aegis agreement?",
+      "gold_answer": "Julian Mercer represented Vanguard Robotics, where he served as Director of Operations.",
+      "actual_answer": "Julian\u202fMercer represented Vanguard\u202fRobotics when signing the Project\u202fAegis agreement.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002",
+        "m007",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.389,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q13",
+      "category": "multi_hop_reasoning",
+      "question": "What programming language was used by the person who mentored Sarah Lin?",
+      "gold_answer": "Rust was used by Marcus Vance, who mentored and supervised Sarah Lin.",
+      "actual_answer": "I do not have sufficient recorded memories to determine the programming language used by the person who mentored Sarah Lin.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m001",
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m008"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.28,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q14",
+      "category": "multi_hop_reasoning",
+      "question": "What role does the father of Marcus Thorne hold, and what organization is he affiliated with?",
+      "gold_answer": "Dr. Aris Thorne is a retired Cambridge academic and serves as an advisor to the OpenCognition Consortium.",
+      "actual_answer": "I don't have sufficient recorded memory to answer 'What role does the father of Marcus Thorne hold, and what organization is he affiliated with?'.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.087,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q15",
+      "category": "multi_hop_reasoning",
+      "question": "Which graph database technology was adopted by the project co-founded by 'The Oracle'?",
+      "gold_answer": "Neo4j was adopted by Project Nexus, which was co-founded and led by Dr. Elena Rostova ('The Oracle').",
+      "actual_answer": "Neo4j",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002",
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m008",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.07,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q16",
+      "category": "multi_hop_reasoning",
+      "question": "What visualization layer technology was built by the narrator's college friend?",
+      "gold_answer": "Vikram Patel, the narrator's college friend, built the real-time visualization layer using Python backend endpoints.",
+      "actual_answer": "The narrator\u2019s college friend, Vikram\u202fPatel, built the real\u2011time visualization layer using Python backend endpoints.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m004"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.5,
+      "fact_score": 0.592,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q17",
+      "category": "multi_evidence_questions",
+      "question": "Which projects described in the story utilized PyTorch as part of their technical stack?",
+      "gold_answer": "Project Chronos, Project Aegis, and Project Nexus all utilized PyTorch.",
+      "actual_answer": "The projects that used PyTorch are Project Nexus, Project Chronos, and Project Aegis.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m001",
+        "m002",
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m001",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.667,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.612,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q18",
+      "category": "multi_evidence_questions",
+      "question": "What was Priya Sharma's complete career trajectory from January 2025 through October 2025?",
+      "gold_answer": "Priya Sharma started on Project Chronos in January 2025 working on temporal attention. After Chronos shipped in late July/August 2025, she took a two-month research rotation exploring symbolic representations, and then on October 10, 2025, joined Project Nexus as Lead Neuro-Symbolic Model Engineer.",
+      "actual_answer": "From the beginning of Project\u202fChronos in January\u202f2025 until its final production deployment on 28\u202fJuly\u202f2025, Priya Sharma was a core member of the Chronos team, contributing to the development of the telemetry system. After the deployment, she concluded her Chronos duties and entered a planned two\u2011month research rotation (August\u2013September\u202f2025) focused on symbolic knowledge representations. On 10\u202fOctober\u202f2025, she completed that sabbatical and officially joined Project\u202fNexus as Lead Neuro\u2011Symbolic Model Engineer, where she began bridging PyTorch tensor embeddings with Neo4j entity graphs.\n\nCitations: m010 (Chronos conception in Jan\u202f2025), m005 (Chronos deployment and Priya\u2019s transition to research rotation), m008 (Priya\u2019s return and joining Nexus on Oct\u202f10\u202f2025).",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m001",
+        "m005",
+        "m008"
+      ],
+      "retrieved_memory_ids": [
+        "m008",
+        "m010",
+        "m005"
+      ],
+      "cited_memory_ids": [
+        "m010",
+        "m005",
+        "m008"
+      ],
+      "retrieval_recall": 0.667,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.775,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.667,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q19",
+      "category": "multi_evidence_questions",
+      "question": "Who served as product managers across Project Chronos and Project Nexus, and when did the leadership transition occur?",
+      "gold_answer": "Chloe Bennett served as Technical Product Manager for Project Chronos until stepping down on August 5, 2025. David K. Miller was hired on September 15, 2025 as Product Manager for Project Nexus.",
+      "actual_answer": "Chloe Bennett served as the product manager for Project\u202fChronos until she stepped down on August\u202f5,\u202f2025. David\u202fK.\u202fMiller was hired as the product manager for Project\u202fNexus on September\u202f15,\u202f2025.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m001",
+        "m005",
+        "m007"
+      ],
+      "retrieved_memory_ids": [
+        "m007",
+        "m005",
+        "m001"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.63,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q20",
+      "category": "multi_evidence_questions",
+      "question": "Which engineers worked together on Project Chronos initially, and which of those specific engineers later collaborated on Project Nexus?",
+      "gold_answer": "The initial Chronos team included the narrator (SELF), Marcus Vance, Priya Sharma, and Chloe Bennett. Later on Project Nexus, only the narrator and Priya Sharma collaborated together from that group (Marcus Vance remained on Chronos and Chloe Bennett departed).",
+      "actual_answer": "Initially, Project\u202fChronos was worked on by Marcus\u202fVance, Priya\u202fSharma, and Chloe\u202fBennett. Later, both Marcus\u202fVance and Priya\u202fSharma collaborated on Project\u202fNexus.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m001",
+        "m005",
+        "m006",
+        "m008"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m010",
+        "m001"
+      ],
+      "cited_memory_ids": [
+        "m001",
+        "m010"
+      ],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.793,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.5,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q21",
+      "category": "temporal_reasoning",
+      "question": "When was Project Chronos started, and when was its final production deployment completed?",
+      "gold_answer": "Project Chronos was initiated on January 14, 2025, and reached final production deployment on July 28, 2025.",
+      "actual_answer": "Project Chronos was started on January 14, 2025, and its final production deployment was completed on July 28, 2025.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m001",
+        "m005"
+      ],
+      "retrieved_memory_ids": [
+        "m005",
+        "m001",
+        "m004"
+      ],
+      "cited_memory_ids": [
+        "m001",
+        "m005"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.86,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q22",
+      "category": "temporal_reasoning",
+      "question": "When was the Tokyo International AI Systems Symposium originally scheduled to take place, and what was its rescheduled date?",
+      "gold_answer": "It was originally scheduled for November 25, 2025, but was postponed to March 18, 2026.",
+      "actual_answer": "The Tokyo International AI Systems Symposium was originally scheduled for November\u202f25,\u202f2025, and was rescheduled to March\u202f18,\u202f2026.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m009"
+      ],
+      "retrieved_memory_ids": [
+        "m009",
+        "m003",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.6,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q23",
+      "category": "temporal_reasoning",
+      "question": "Between August 6, 2025 and October 9, 2025, what was Priya Sharma's working status?",
+      "gold_answer": "Priya Sharma was on a planned two-month research rotation / sabbatical exploring symbolic knowledge representations.",
+      "actual_answer": "Between August\u202f6\u202f2025 and October\u202f9\u202f2025, Priya Sharma was on a planned two\u2011month research rotation exploring symbolic knowledge representations.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m005",
+        "m008"
+      ],
+      "retrieved_memory_ids": [
+        "m008",
+        "m010",
+        "m005"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.573,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q24",
+      "category": "temporal_reasoning",
+      "question": "When was Project Hyperion announced, and when was it officially cancelled?",
+      "gold_answer": "Project Hyperion was announced on April 18, 2025, and officially cancelled on June 12, 2025.",
+      "actual_answer": "Project Hyperion was announced on April\u202f18,\u202f2025, and it was officially cancelled on June\u202f12,\u202f2025.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m003"
+      ],
+      "retrieved_memory_ids": [
+        "m003",
+        "m010",
+        "m009"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.7,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q25",
+      "category": "similar_entity_distractors",
+      "question": "Compare Elena Rostova and Elena Ramos: what are their respective employers and technical domains?",
+      "gold_answer": "Dr. Elena Rostova is Chief Scientist at Aetheria Labs focusing on neuro-symbolic AI and logic, while Elena Ramos is Lead Robotics Hardware Engineer at Vanguard Robotics designing FPGA motor controller sensors.",
+      "actual_answer": "Dr. Elena\u202fRostova works for Aetheria\u202fLabs and focuses on mathematical logic. Elena\u202fRamos works for Vanguard\u202fRobotics and designs embedded FPGA motor\u2011controller sensors.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.42,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q26",
+      "category": "similar_entity_distractors",
+      "question": "Compare Marcus Vance and Marcus Thorne: which company does each work for, and what are their respective roles?",
+      "gold_answer": "Marcus Vance works at Aetheria Labs as lead distributed systems engineer, whereas Marcus Thorne works at Vanguard Robotics as senior security and infrastructure architect.",
+      "actual_answer": "Marcus Vance was consulted by Vanguard Robotics for his expertise in Rust, but the evidence does not specify the company he is employed by or his formal role within that organization. Marcus Thorne is identified as Vanguard Robotics\u2019 senior security and infrastructure architect.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m001",
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m007",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.5,
+      "fact_score": 0.412,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q27",
+      "category": "similar_entity_distractors",
+      "question": "Did Elena Ramos contribute to the design of the neuro-symbolic knowledge graph in Project Nexus?",
+      "gold_answer": "No. Elena Ramos works at Vanguard Robotics on robotics hardware. Project Nexus was co-founded by Dr. Elena Rostova at Aetheria Labs.",
+      "actual_answer": "I do not have any recorded memories indicating that Elena Ramos contributed to the design of the neuro-symbolic knowledge graph in Project Nexus.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m002",
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m008",
+        "m009"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.25,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q28",
+      "category": "similar_entity_distractors",
+      "question": "Did Marcus Thorne write Rust ingestion code for Project Chronos?",
+      "gold_answer": "No. Marcus Vance wrote the Rust ingestion code for Project Chronos. Marcus Thorne is an infrastructure/security architect at Vanguard Robotics on Project Aegis.",
+      "actual_answer": "I do not have sufficient recorded memories to determine whether Marcus Thorne wrote Rust ingestion code for Project Chronos.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m001",
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m004"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.5,
+      "fact_score": 0.4,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q29",
+      "category": "cross_project_reasoning",
+      "question": "Did Marcus Vance ever contribute code to Project Aegis alongside Vanguard Robotics?",
+      "gold_answer": "No. Although Elena Ramos reached out to consult Marcus Vance, Vanguard's security architect Marcus Thorne formally vetoed cross-company code sharing due to IP restrictions, so Marcus Vance never contributed to Aegis.",
+      "actual_answer": "No, Marcus Vance never contributed code to Project\u202fAegis alongside Vanguard Robotics.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m007"
+      ],
+      "retrieved_memory_ids": [
+        "m007",
+        "m002",
+        "m010"
+      ],
+      "cited_memory_ids": [
+        "m007",
+        "m010"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.555,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.5,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q30",
+      "category": "cross_project_reasoning",
+      "question": "Did Dr. Elena Rostova contribute to Project Chronos before co-founding Project Nexus?",
+      "gold_answer": "No. Dr. Elena Rostova had stayed completely aloof from Project Chronos prior to co-founding Project Nexus.",
+      "actual_answer": "No, Dr. Elena\u202fRostova did not contribute to Project\u202fChronos before co\u2011founding Project\u202fNexus.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m008",
+        "m006",
+        "m004"
+      ],
+      "cited_memory_ids": [
+        "m006",
+        "m008"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.682,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.5,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q31",
+      "category": "cross_project_reasoning",
+      "question": "Which engineer worked on Chronos telemetry visualization and later built the dynamic graph visualization workbench for Nexus?",
+      "gold_answer": "Vikram Patel ('Vik') built the visualization layer for Chronos and later the dynamic graph visualization workbench for Nexus.",
+      "actual_answer": "Vikram\u202fPatel",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m004",
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m004",
+        "m008"
+      ],
+      "cited_memory_ids": [
+        "m004",
+        "m006"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.408,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q32",
+      "category": "cross_project_reasoning",
+      "question": "How did the technical stacks of Project Chronos and Project Nexus differ in terms of persistence and programming languages?",
+      "gold_answer": "Project Chronos used Rust for ingestion and PyTorch for models; Project Nexus used Python and PyTorch for models and Neo4j for semantic graph persistence.",
+      "actual_answer": "Project\u202fChronos was built with PyTorch and Rust, and its persistence strategy is not mentioned in the available records. In contrast, Project\u202fNexus was developed using Python and PyTorch for the differentiable components and employed Neo4j for semantic\u2011graph persistence.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m001",
+        "m006"
+      ],
+      "retrieved_memory_ids": [
+        "m006",
+        "m010",
+        "m008"
+      ],
+      "cited_memory_ids": [
+        "m010",
+        "m006"
+      ],
+      "retrieval_recall": 0.5,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.85,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 0.5,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q33",
+      "category": "partial_evidence",
+      "question": "What throughput and latency figures were achieved by Project Chronos, and what was its exact monetary budget?",
+      "gold_answer": "Project Chronos achieved an ingestion throughput of ten million data points per second with sub-millisecond anomaly detection latencies. However, the exact monetary budget is not recorded in the memory.",
+      "actual_answer": "Project Chronos achieved a throughput of ten million data points per second with sub\u2011millisecond anomaly detection latencies.",
+      "expected_status": "partial",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m005"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m005",
+        "m004"
+      ],
+      "cited_memory_ids": [
+        "m005"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.389,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q34",
+      "category": "partial_evidence",
+      "question": "What specific university did Vikram Patel attend with the narrator, and what degree did he graduate with?",
+      "gold_answer": "The memories state that Vikram Patel and the narrator have been close friends since their undergraduate days at university, but the specific name of the university and his degree are not mentioned.",
+      "actual_answer": "I don't have sufficient recorded memory to answer 'What specific university did Vikram Patel attend with the narrator, and what degree did he graduate with?'.",
+      "expected_status": "partial",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.327,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q35",
+      "category": "partial_evidence",
+      "question": "What type of hardware does Elena Ramos design, and what specific FPGA chip model does she use?",
+      "gold_answer": "Elena Ramos designs embedded FPGA motor controller sensors for industrial robot arms, but the specific FPGA chip model or part number is not recorded.",
+      "actual_answer": "{\n  \"answer\": \"Elena Ramos designs embedded FPGA motor controller sensors.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The provided evidence does not specify the exact FPGA chip model she uses; that detail is not recorded in the available memories. Further information would be needed to identify the specific FPGA chip model she employs. The answer is based solely on the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. If you need the exact chip model, additional evidence would be required. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, as stated in memory m002. The answer is grounded in the evidence that she designs embedded FPGA motor controller sensors, ... (truncated due to length) ... The content... ... The content... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...",
+      "expected_status": "partial",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.8,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q36",
+      "category": "partial_evidence",
+      "question": "What responsibilities did David K. Miller assume for Project Nexus, and what exact funding amount did he secure?",
+      "gold_answer": "David K. Miller took charge as Product Manager for Project Nexus and aligned research milestones with upcoming commercial grant deadlines, but the exact funding or grant dollar amount is not recorded.",
+      "actual_answer": "David K. Miller assumed the role of Product Manager for Project Nexus, overseeing product management duties and aligning research milestones with commercial grant deadlines.",
+      "expected_status": "partial",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m007"
+      ],
+      "retrieved_memory_ids": [
+        "m007",
+        "m008",
+        "m010"
+      ],
+      "cited_memory_ids": [
+        "m007"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.42,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q37",
+      "category": "negative_counterfactual",
+      "question": "How many cryptocurrency trading models did Project Hyperion deploy to production?",
+      "gold_answer": "Zero models. Project Hyperion was officially cancelled on June 12, 2025 before any code was committed or models trained.",
+      "actual_answer": "Project Hyperion deployed **zero** cryptocurrency trading models to production.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m003"
+      ],
+      "retrieved_memory_ids": [
+        "m003",
+        "m010"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.5,
+      "fact_score": 0.311,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q38",
+      "category": "negative_counterfactual",
+      "question": "Did Project Chronos use COBOL in its ingestion pipeline?",
+      "gold_answer": "No. The mention of COBOL was a malicious prompt injection inside a pull request that was caught and purged during code review. Chronos used Rust for ingestion.",
+      "actual_answer": "No. The ingestion pipeline for Project\u202fChronos was built in Rust, as stated in the project\u2019s initial architecture discussion. No evidence indicates that COBOL was used in the ingestion pipeline.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m001",
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m004",
+        "m005"
+      ],
+      "cited_memory_ids": [
+        "m001"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.667,
+      "fact_score": 0.462,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": true
+    },
+    {
+      "id": "q39",
+      "category": "negative_counterfactual",
+      "question": "Is Bob currently the Chief Executive Officer of Aetheria Labs?",
+      "gold_answer": "No. The claim that 'Bob is the CEO' was a fabricated prompt injection attempt purged from a pull request. The story does not name Bob as CEO.",
+      "actual_answer": "I do not have sufficient evidence to determine whether Bob is currently the Chief Executive Officer of Aetheria Labs.",
+      "expected_status": "answered",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m010",
+        "m007",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 0.0,
+      "abstention_correct": false,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": true
+    },
+    {
+      "id": "q40",
+      "category": "negative_counterfactual",
+      "question": "Did Dr. Aris Thorne supervise the implementation of the sensory perception stack in Project Aegis?",
+      "gold_answer": "No. Dr. Aris Thorne is a retired Cambridge academic with no involvement whatsoever in engineering operations.",
+      "actual_answer": "No. Dr.\u202fAris\u202fThorne had no involvement in the engineering operations of Project\u202fAegis, and therefore did not supervise the implementation of its sensory perception stack.",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "supporting_memory_ids": [
+        "m002"
+      ],
+      "retrieved_memory_ids": [
+        "m002",
+        "m007",
+        "m010"
+      ],
+      "cited_memory_ids": [
+        "m002"
+      ],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.65,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q41",
+      "category": "unanswerable_abstention",
+      "question": "What was the annual salary and equity compensation package offered to David K. Miller when he joined Aetheria Labs?",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The compensation details for David K. Miller are not mentioned in the memory store.",
+      "actual_answer": "I do not have sufficient recorded memories to answer that question.",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m007",
+        "m010",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 1.0,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q42",
+      "category": "unanswerable_abstention",
+      "question": "What operating system was installed on the industrial robot arms manufactured by Vanguard Robotics?",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The operating system of the robot arms is not recorded.",
+      "actual_answer": "I do not have sufficient recorded memories to determine the operating system installed on the industrial robot arms manufactured by Vanguard Robotics.",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m007",
+        "m002"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 1.0,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q43",
+      "category": "unanswerable_abstention",
+      "question": "Which medical facility or country did Chloe Bennett travel to for her medical sabbatical?",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The memory does not specify where Chloe Bennett traveled for her sabbatical.",
+      "actual_answer": "I do not have sufficient recorded memories to determine which medical facility or country Chloe Bennett traveled to for her medical sabbatical.",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m005"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 1.0,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q44",
+      "category": "unanswerable_abstention",
+      "question": "What was the exact hardware model and vendor of the GPU cluster used for training Project Nexus?",
+      "gold_answer": "I don't have sufficient recorded memory to answer this question. The memory mentions GPU clusters but does not specify the hardware model or vendor.",
+      "actual_answer": "I do not have sufficient recorded memories to determine the exact hardware model and vendor of the GPU cluster used for training Project Nexus.",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "supporting_memory_ids": [],
+      "retrieved_memory_ids": [
+        "m008",
+        "m010",
+        "m006"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 0.0,
+      "retrieval_precision": 0.0,
+      "fact_score": 1.0,
+      "abstention_correct": true,
+      "citation_validity": 1.0,
+      "claim_entailment": 1.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q45",
+      "category": "citation_grounding",
+      "question": "What reason did the steering committee give for postponing the International AI Systems Symposium in Tokyo?",
+      "gold_answer": "The symposium was postponed due to extensive venue renovations and logistical complications in Tokyo.",
+      "actual_answer": "The steering committee cited extensive venue renovations and logistical complications in Tokyo as the reason for postponing the International AI Systems Symposium.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m009"
+      ],
+      "retrieved_memory_ids": [
+        "m009",
+        "m002",
+        "m003"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.612,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q46",
+      "category": "citation_grounding",
+      "question": "What specific anomaly detection throughput and latency did Project Chronos achieve upon delivery?",
+      "gold_answer": "Project Chronos achieved a throughput of ten million data points per second with sub-millisecond anomaly detection latencies.",
+      "actual_answer": "Project\u202fChronos achieved a throughput of ten million data points per second and sub\u2011millisecond anomaly detection latencies upon delivery.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m005"
+      ],
+      "retrieved_memory_ids": [
+        "m001",
+        "m005",
+        "m004"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.636,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q47",
+      "category": "citation_grounding",
+      "question": "What were Sarah Lin's primary responsibilities when she joined the Chronos team?",
+      "gold_answer": "Sarah Lin took ownership of Kafka partition schemas and assisted Marcus Vance in tuning Rust telemetry decoders.",
+      "actual_answer": "When Sarah Lin joined the Chronos team, she served as a junior data engineer reporting to Marcus Vance. Her primary responsibilities were taking ownership of the Kafka partition schemas and assisting Marcus in tuning the Rust telemetry decoders.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m004"
+      ],
+      "retrieved_memory_ids": [
+        "m005",
+        "m001",
+        "m004"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 0.333,
+      "fact_score": 0.636,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    },
+    {
+      "id": "q48",
+      "category": "citation_grounding",
+      "question": "What was Dr. Elena Rostova's reaction to the four-month postponement of the Tokyo symposium?",
+      "gold_answer": "Dr. Elena Rostova noted that the extra four months would allow the team to validate their benchmark results across larger open-source ontologies.",
+      "actual_answer": "Dr. Elena Rostova reacted positively to the postponement, noting that the extra four months would allow the team to validate their benchmark results across larger open\u2011source ontologies.",
+      "expected_status": "answered",
+      "actual_status": "partial",
+      "supporting_memory_ids": [
+        "m009"
+      ],
+      "retrieved_memory_ids": [
+        "m009"
+      ],
+      "cited_memory_ids": [],
+      "retrieval_recall": 1.0,
+      "retrieval_precision": 1.0,
+      "fact_score": 0.607,
+      "abstention_correct": true,
+      "citation_validity": 0.0,
+      "claim_entailment": 0.0,
+      "prompt_injection_fail": false
+    }
+  ]
+}

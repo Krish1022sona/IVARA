@@ -13,10 +13,20 @@ def add_memory(
     entities=None,
     topics=None,
     relationships=None,
-    confidence=1.0
+    confidence=1.0,
+    diagnostics=None,
+    data_path=None
 ):
-    with open(DATA_PATH, "r") as f:
-        memos = json.load(f)
+    target_path = Path(data_path) if data_path else DATA_PATH
+
+    if not target_path.exists():
+        memos = []
+    else:
+        with open(target_path, "r", encoding="utf-8") as f:
+            try:
+                memos = json.load(f)
+            except json.JSONDecodeError:
+                memos = []
 
     M = len(memos)
 
@@ -34,9 +44,13 @@ def add_memory(
         "relationships": relationships or []
     }
 
+    if diagnostics is not None:
+        memo["diagnostics"] = diagnostics
+
     memos.append(memo)
 
-    with open(DATA_PATH, "w") as f:
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(target_path, "w", encoding="utf-8") as f:
         json.dump(memos, f, indent=2)
 
     return memo

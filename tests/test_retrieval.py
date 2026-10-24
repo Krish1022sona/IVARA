@@ -13,10 +13,15 @@ queries = [
     "What have I done with web development?"
 ]
 
-for query in queries:
-    print("\nQUERY:", query)
+def main():
+    for query in queries:
+        print("\nQUERY:", query)
 
-    results = retrieve(query, k=3)
+        results = retrieve(query, k=3)
 
-    for i, memory in enumerate(results, 1):
-        print(f"{i}. {memory['text']}")
+        for i, memory in enumerate(results, 1):
+            print(f"{i}. {memory['text']}")
+
+
+if __name__ == "__main__":
+    main()
