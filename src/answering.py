@@ -129,7 +129,9 @@ def answer_question(
     model: str = "gpt-oss",
     llm_caller: Callable[[str, str], Any] | None = None,
     use_graph: bool = False,
-    graph_store: Any | None = None
+    graph_store: Any | None = None,
+    use_decomposition: bool = False,
+    decomposition_max_subquestions: int = 3
 ) -> dict[str, Any]:
     """
     Answer a personal-memory question with verifiable evidence grounding and abstention.
@@ -151,6 +153,8 @@ def answer_question(
         llm_caller: Optional callable (prompt, system_prompt) -> json_str | dict for offline testing.
         use_graph: Whether to use graph-assisted retrieval (default False).
         graph_store: Optional SQLiteGraphStore instance for graph-assisted retrieval.
+        use_decomposition: Whether to apply query decomposition prior to retrieval (default False).
+        decomposition_max_subquestions: Maximum subquestions when decomposition is triggered (default 3).
 
     Returns:
         Structured response dictionary containing status, answer, citations,
@@ -173,7 +177,20 @@ def answer_question(
     if use_graph and graph_store is not None:
         from .graph.retrieval import GraphAssistedRetriever
         retriever = GraphAssistedRetriever(graph_store)
-        context = retriever.retrieve(clean_query, k=k)
+        if use_decomposition:
+            from .query.decomposition import QueryDecomposer
+            decomposer = QueryDecomposer(
+                model=model,
+                max_subquestions=decomposition_max_subquestions,
+                llm_caller=llm_caller
+            )
+            decomposed = decomposer.decompose(clean_query)
+            if decomposed.is_decomposed:
+                context = retriever.retrieve_decomposed(clean_query, decomposed, k=k)
+            else:
+                context = retriever.retrieve(clean_query, k=k)
+        else:
+            context = retriever.retrieve(clean_query, k=k)
     else:
         context = retrieve_with_context(
             clean_query,
@@ -212,7 +229,7 @@ def answer_question(
                 {"role": "user", "content": user_prompt}
             ],
             format=AnswerPayload.model_json_schema(),
-            options={"temperature": 0, "num_ctx": 16384, "num_predict": 4096}
+            options={"temperature": 0, "num_ctx": 4096, "num_predict": 1024}
         )
         raw_response = response.message.content
 
@@ -299,6 +316,7 @@ def answer_question(
         "status": final_status,
         "answer": payload.answer.strip(),
         "citations": valid_citations,
+        "rejected_citation_ids": rejected_ids,
         "inferred_claims": inferred_claims,
         "limitations": combined_limitations,
         "retrieved_context": context

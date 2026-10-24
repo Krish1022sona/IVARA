@@ -454,6 +454,220 @@ class GraphAssistedRetriever:
 
         return "\n".join(lines)
 
+    def retrieve_decomposed(
+        self,
+        query: str,
+        decomposed: Any,
+        k: int = 3,
+        max_evidence_per_subquery: int = 3,
+        max_total_chunks: int = 5,
+        max_total_triples: int = 15
+    ) -> dict[str, Any]:
+        """
+        Execute multi-subquery retrieval (Config E), aggregating evidence across
+        decomposed subquestions with deterministic score fusion, provenance preservation,
+        and selective graph relationship discovery.
+        """
+        clean_query = query.strip()
+        subquestions = getattr(decomposed, "subquestions", [clean_query])
+        if not subquestions:
+            subquestions = [clean_query]
+
+        diagnostics = {
+            "mode": "decomposed_hybrid_graph",
+            "original_query": clean_query,
+            "subquestions": subquestions,
+            "subquestion_count": len(subquestions),
+            "retrieval_calls": 0,
+            "graph_hops_total": 0,
+            "subquery_results": []
+        }
+
+        # Track chunks across subqueries: chunk_id -> info
+        all_candidate_chunks: dict[str, dict[str, Any]] = {}
+        all_direct_facts: list[dict[str, Any]] = []
+        all_inferred_facts: list[dict[str, Any]] = []
+        seen_fact_sigs: set[tuple] = set()
+
+        for sq in subquestions:
+            diagnostics["retrieval_calls"] += 1
+            sq_clean = sq.strip()
+
+            # Selective graph relationship traversal: if subquestion asks about relations, enable 1-hop traversal
+            is_relational = bool(re.search(r"\b(who|mentor|father|advisor|parent|relationship|co-found|with|collaborate)\b", sq_clean.lower()))
+
+            if is_relational:
+                sub_res = self.retrieve(
+                    sq_clean,
+                    k=max_evidence_per_subquery,
+                    mode="full_graph_assisted",
+                    use_graph_expansion=True,
+                    max_traversal_nodes=8,
+                    max_traversal_depth=1,
+                    include_triples=True
+                )
+                diag = sub_res.get("diagnostics", {})
+                diagnostics["graph_hops_total"] += len(diag.get("graph_edges_traversed", []))
+            else:
+                sub_res = self.retrieve(
+                    sq_clean,
+                    k=max_evidence_per_subquery,
+                    mode="chunked_hybrid",
+                    use_graph_expansion=False,
+                    include_triples=True
+                )
+
+            diagnostics["subquery_results"].append({
+                "subquestion": sq_clean,
+                "is_relational": is_relational,
+                "retrieved_chunk_ids": [c["chunk_id"] for c in sub_res.get("retrieved_chunks", [])],
+                "retrieved_memory_ids": [m["id"] for m in sub_res.get("retrieved_memories", [])]
+            })
+
+            # Process chunks
+            for ch in sub_res.get("retrieved_chunks", []):
+                cid = ch["chunk_id"]
+                score = ch.get("score", 0.0)
+                if cid not in all_candidate_chunks:
+                    all_candidate_chunks[cid] = {
+                        "chunk_obj": ch,
+                        "scores": [score],
+                        "matched_subqueries": [sq_clean]
+                    }
+                else:
+                    all_candidate_chunks[cid]["scores"].append(score)
+                    if sq_clean not in all_candidate_chunks[cid]["matched_subqueries"]:
+                        all_candidate_chunks[cid]["matched_subqueries"].append(sq_clean)
+
+            # Process triples from direct_evidence
+            for dev in sub_res.get("direct_evidence", []):
+                for f in dev.get("direct_facts", []):
+                    sig = (f.get("subject"), f.get("predicate"), f.get("object"), f.get("memory_id"))
+                    if sig not in seen_fact_sigs:
+                        seen_fact_sigs.add(sig)
+                        all_direct_facts.append(f)
+
+            for inf in sub_res.get("inferred_evidence", []):
+                sig = (inf.get("statement"), inf.get("evidence"))
+                if sig not in seen_fact_sigs:
+                    seen_fact_sigs.add(sig)
+                    all_inferred_facts.append(inf)
+
+        if not all_candidate_chunks:
+            empty_resp = self._empty_response(clean_query)
+            empty_resp["diagnostics"] = diagnostics
+            return empty_resp
+
+        # Compute fused score for each chunk
+        fused_chunks = []
+        for cid, data in all_candidate_chunks.items():
+            ch = data["chunk_obj"]
+            scores = data["scores"]
+            matched_sqs = data["matched_subqueries"]
+            # Base score: max score across matching subqueries
+            # Co-occurrence reinforcement: +0.005 per additional matching subquery
+            fused_score = max(scores) + (0.005 * (len(matched_sqs) - 1))
+            ch_copy = dict(ch)
+            ch_copy["score"] = round(fused_score, 5)
+            ch_copy["matched_subqueries"] = matched_sqs
+            fused_chunks.append(ch_copy)
+
+        # Rank all unique chunks by fused score
+        fused_chunks.sort(key=lambda x: x["score"], reverse=True)
+
+        # Select top chunks, ensuring diverse parent episode representation
+        selected_chunk_objs = []
+        seen_memory_ids = set()
+        for ch in fused_chunks:
+            mid = ch.get("memory_id")
+            if mid not in seen_memory_ids:
+                seen_memory_ids.add(mid)
+                selected_chunk_objs.append(ch)
+            elif len(selected_chunk_objs) < max_total_chunks:
+                selected_chunk_objs.append(ch)
+
+            if len(seen_memory_ids) >= k and len(selected_chunk_objs) >= max_total_chunks:
+                break
+
+        # Cap triples
+        selected_direct_facts = all_direct_facts[:max_total_triples]
+        selected_inferred_facts = all_inferred_facts[:5]
+
+        # Format context text with subquestions listed
+        context_lines = [
+            f"Query: {clean_query}",
+            "Subquestions Analyzed:"
+        ]
+        for i, sq in enumerate(subquestions, 1):
+            context_lines.append(f"  {i}. {sq}")
+        context_lines.append(f"Status: Sufficient evidence ({len(selected_chunk_objs)} relevant chunks found across subqueries)\n")
+        context_lines.append("--- DIRECTLY SUPPORTED EVIDENCE (CHUNKS) ---")
+
+        for ch in selected_chunk_objs:
+            ts_str = f", timestamp: {ch['timestamp']}" if ch.get('timestamp') else ""
+            sq_tag = f" (Relevant to: '{ch['matched_subqueries'][0]}')" if ch.get('matched_subqueries') else ""
+            context_lines.append(f"[{ch['chunk_id']} | Source: {ch['memory_id']}]{ts_str} (score: {ch['score']:.4f}){sq_tag}: \"{ch['text']}\"")
+
+        if selected_direct_facts:
+            context_lines.append("\n--- VERIFIED RELATIONSHIP TRIPLES ---")
+            for f in selected_direct_facts:
+                ev_str = f" (evidence: \"{f['evidence']}\" in [{f.get('chunk_id') or f.get('memory_id')}])" if f.get('evidence') else ""
+                context_lines.append(f"  * Fact: {f['statement']}{ev_str}")
+
+        if selected_inferred_facts:
+            context_lines.append("\n--- INFERRED RELATIONSHIPS (UNVERIFIED / DERIVED) ---")
+            for inf in selected_inferred_facts:
+                context_lines.append(f"  * [Inferred] {inf['statement']} (derived from premise: \"{inf.get('evidence')}\")")
+
+        context_text = "\n".join(context_lines)
+
+        # Build direct_evidence with chunk mapping and facts
+        direct_evidence = []
+        for ch in selected_chunk_objs:
+            ch_facts = [f for f in selected_direct_facts if f.get("chunk_id") == ch["chunk_id"] or f.get("memory_id") == ch["memory_id"]]
+            direct_evidence.append({
+                "memory_id": ch["memory_id"],
+                "chunk_id": ch["chunk_id"],
+                "text": ch["text"],
+                "char_start": ch.get("char_start", 0),
+                "char_end": ch.get("char_end", len(ch["text"])),
+                "timestamp": ch.get("timestamp"),
+                "score": ch["score"],
+                "matched_subqueries": ch.get("matched_subqueries", []),
+                "direct_facts": ch_facts
+            })
+
+        # Collect unique parent memory records
+        unique_memory_ids = list(dict.fromkeys(ch["memory_id"] for ch in selected_chunk_objs))
+        retrieved_memories = []
+        for m_id in unique_memory_ids:
+            memo_node = self.memory_by_id.get(m_id) or self.store.get_node(m_id)
+            if memo_node:
+                retrieved_memories.append({
+                    "id": m_id,
+                    "text": memo_node.properties.get("text", ""),
+                    "timestamp": memo_node.properties.get("timestamp"),
+                    "source": memo_node.properties.get("source"),
+                    "score": max((ch["score"] for ch in selected_chunk_objs if ch["memory_id"] == m_id), default=0.0)
+                })
+
+        diagnostics["total_evidence_chunks"] = len(selected_chunk_objs)
+        diagnostics["total_verified_triples"] = len(selected_direct_facts)
+        diagnostics["total_inferred_triples"] = len(selected_inferred_facts)
+
+        return {
+            "query": clean_query,
+            "has_sufficient_evidence": len(selected_chunk_objs) > 0,
+            "status": "sufficient_evidence" if selected_chunk_objs else "insufficient_evidence",
+            "direct_evidence": direct_evidence,
+            "inferred_evidence": selected_inferred_facts,
+            "retrieved_chunks": selected_chunk_objs,
+            "retrieved_memories": retrieved_memories,
+            "retrieved_memories_count": len(retrieved_memories),
+            "context_text": context_text,
+            "diagnostics": diagnostics
+        }
+
     def _empty_response(self, query: str) -> dict[str, Any]:
         return {
             "query": query,
@@ -467,3 +681,4 @@ class GraphAssistedRetriever:
             "context_text": f"Query: {query}\nStatus: Insufficient evidence in personal memory store.",
             "diagnostics": {}
         }
+
