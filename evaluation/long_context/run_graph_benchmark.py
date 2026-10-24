@@ -74,6 +74,15 @@ def evaluate_retrieval_configuration(
     latencies = []
     expanded_counts = []
 
+    # Prepare memories and vector index for episode-level baseline (Config A)
+    memo_texts = [m.get("text", "") for m in memories]
+    memo_embs = np.array([get_embedding(t) for t in memo_texts], dtype="float32") if memo_texts else None
+    memo_index = None
+    if memo_embs is not None and memo_embs.ndim == 2 and memo_embs.shape[0] > 0:
+        faiss.normalize_L2(memo_embs)
+        memo_index = faiss.IndexFlatIP(memo_embs.shape[1])
+        memo_index.add(memo_embs)
+
     # Prepare chunks and vector index for chunked configurations
     chunk_nodes = store.get_nodes_by_type("chunk")
     chunk_texts = [c.properties.get("text", "") for c in chunk_nodes]
@@ -99,10 +108,17 @@ def evaluate_retrieval_configuration(
 
         # Configuration Logic:
         if config_name == "config_a_vector_baseline":
-            # Episode-level vector search
-            raw = vector_retrieve(query, k=k, min_score=None, memories=memories)
-            retrieved_memory_ids = [m["id"] for m in raw]
-            nodes_expanded = len(raw)
+            # Episode-level vector search with pre-indexed FAISS
+            if memo_index is not None:
+                q_emb = np.array([get_embedding(query)], dtype="float32")
+                faiss.normalize_L2(q_emb)
+                scores, idxs = memo_index.search(q_emb, min(k, len(memories)))
+                retrieved_memory_ids = [memories[idx]["id"] for idx in idxs[0] if idx >= 0]
+                nodes_expanded = len(idxs[0])
+            else:
+                raw = vector_retrieve(query, k=k, min_score=None, memories=memories)
+                retrieved_memory_ids = [m["id"] for m in raw]
+                nodes_expanded = len(raw)
 
         elif config_name == "config_b_chunked_vector":
             # FAISS vector search over chunks with RRF
@@ -244,6 +260,11 @@ def run_answering_evaluation(
     rubric_pass_rate = sum(1 for c in cases if c["rubric_passed"]) / len(cases)
     avg_cit_validity = sum(c["citation_validity"] for c in cases) / len(cases)
 
+    ans_cases_list = [c for c in cases if c.get("supporting_memory_ids")]
+    cases_with_citations = [c for c in cases if c.get("cited_memory_ids")]
+    cit_precision = sum(c["citation_validity"] for c in cases_with_citations) / len(cases_with_citations) if cases_with_citations else 1.0
+    cit_coverage = len(cases_with_citations) / len(ans_cases_list) if ans_cases_list else 0.0
+
     # Category breakdown
     cat_summary = {}
     for c in cases:
@@ -262,7 +283,9 @@ def run_answering_evaluation(
 
     return {
         "rubric_accuracy": round(rubric_pass_rate, 4),
-        "citation_validity": round(avg_cit_validity, 4),
+        "citation_validity_strict": round(avg_cit_validity, 4),
+        "citation_precision": round(cit_precision, 4),
+        "citation_coverage": round(cit_coverage, 4),
         "abstention": abstention_stats,
         "category_breakdown": cat_summary,
         "cases": cases
