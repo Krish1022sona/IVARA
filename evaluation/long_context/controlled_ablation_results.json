@@ -1,0 +1,2974 @@
+{
+  "A_vector_baseline": {
+    "config_name": "A_vector_baseline",
+    "recall_at_k": 0.8277,
+    "precision_at_k": 0.3788,
+    "set_precision_at_k": 0.3788,
+    "median_latency_ms": 4.25,
+    "mean_latency_ms": 4.3,
+    "avg_nodes_expanded": 3.33,
+    "avg_triples_expanded": 0.0,
+    "cases": [
+      {
+        "id": "q01",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q02",
+        "retrieved_memory_ids": [
+          "m010",
+          "m007",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q03",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q04",
+        "retrieved_memory_ids": [
+          "m010",
+          "m005",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q05",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q06",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q07",
+        "retrieved_memory_ids": [
+          "m004",
+          "m008",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q08",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q09",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q10",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q11",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q12",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q13",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q14",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q15",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q16",
+        "retrieved_memory_ids": [
+          "m004",
+          "m006",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q17",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 1.0,
+        "set_precision": 1.0,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q18",
+        "retrieved_memory_ids": [
+          "m008",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 0
+      },
+      {
+        "id": "q19",
+        "retrieved_memory_ids": [
+          "m007",
+          "m005",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m007"
+        ],
+        "standard_precision_at_k": 1.0,
+        "set_precision": 1.0,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q20",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m006",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.25,
+        "num_triples": 0
+      },
+      {
+        "id": "q21",
+        "retrieved_memory_ids": [
+          "m005",
+          "m004",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q22",
+        "retrieved_memory_ids": [
+          "m009",
+          "m003",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q23",
+        "retrieved_memory_ids": [
+          "m008",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q24",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q25",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q26",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q27",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q28",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q29",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q30",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m006"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q31",
+        "retrieved_memory_ids": [
+          "m006",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q32",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q33",
+        "retrieved_memory_ids": [
+          "m002",
+          "m001",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q34",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q35",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q36",
+        "retrieved_memory_ids": [
+          "m007",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q37",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q38",
+        "retrieved_memory_ids": [
+          "m004",
+          "m001",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q39",
+        "retrieved_memory_ids": [
+          "m010",
+          "m007",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q40",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q41",
+        "retrieved_memory_ids": [
+          "m007",
+          "m010",
+          "m002"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q42",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q43",
+        "retrieved_memory_ids": [
+          "m005",
+          "m010",
+          "m004"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q44",
+        "retrieved_memory_ids": [
+          "m008",
+          "m010",
+          "m006"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q45",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m003"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q46",
+        "retrieved_memory_ids": [
+          "m001",
+          "m005",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q47",
+        "retrieved_memory_ids": [
+          "m005",
+          "m001",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q48",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      }
+    ]
+  },
+  "B_hybrid_vector_bm25": {
+    "config_name": "B_hybrid_vector_bm25",
+    "recall_at_k": 0.911,
+    "precision_at_k": 0.4091,
+    "set_precision_at_k": 0.4091,
+    "median_latency_ms": 4.26,
+    "mean_latency_ms": 4.33,
+    "avg_nodes_expanded": 3.27,
+    "avg_triples_expanded": 0.0,
+    "cases": [
+      {
+        "id": "q01",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q02",
+        "retrieved_memory_ids": [
+          "m007",
+          "m010",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q03",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q04",
+        "retrieved_memory_ids": [
+          "m010",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q05",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q06",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q07",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q08",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q09",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q10",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q11",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q12",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q13",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q14",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q15",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q16",
+        "retrieved_memory_ids": [
+          "m004",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q17",
+        "retrieved_memory_ids": [
+          "m001",
+          "m006",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 1.0,
+        "set_precision": 1.0,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q18",
+        "retrieved_memory_ids": [
+          "m010",
+          "m008",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 0
+      },
+      {
+        "id": "q19",
+        "retrieved_memory_ids": [
+          "m001",
+          "m007",
+          "m006"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m007"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 0
+      },
+      {
+        "id": "q20",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m006",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.25,
+        "num_triples": 0
+      },
+      {
+        "id": "q21",
+        "retrieved_memory_ids": [
+          "m005",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q22",
+        "retrieved_memory_ids": [
+          "m009",
+          "m001",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q23",
+        "retrieved_memory_ids": [
+          "m008",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q24",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q25",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q26",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q27",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q28",
+        "retrieved_memory_ids": [
+          "m001",
+          "m007",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q29",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m003"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q30",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q31",
+        "retrieved_memory_ids": [
+          "m006",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q32",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q33",
+        "retrieved_memory_ids": [
+          "m002",
+          "m005",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q34",
+        "retrieved_memory_ids": [
+          "m004",
+          "m010",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q35",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q36",
+        "retrieved_memory_ids": [
+          "m007",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q37",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q38",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 0
+      },
+      {
+        "id": "q39",
+        "retrieved_memory_ids": [
+          "m010",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q40",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q41",
+        "retrieved_memory_ids": [
+          "m007",
+          "m010",
+          "m004"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q42",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q43",
+        "retrieved_memory_ids": [
+          "m005",
+          "m010",
+          "m001"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q44",
+        "retrieved_memory_ids": [
+          "m008",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 0
+      },
+      {
+        "id": "q45",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q46",
+        "retrieved_memory_ids": [
+          "m001",
+          "m005",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q47",
+        "retrieved_memory_ids": [
+          "m005",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      },
+      {
+        "id": "q48",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 0
+      }
+    ]
+  },
+  "C_hybrid_verified_triples": {
+    "config_name": "C_hybrid_verified_triples",
+    "recall_at_k": 0.911,
+    "precision_at_k": 0.4091,
+    "set_precision_at_k": 0.4091,
+    "median_latency_ms": 9.75,
+    "mean_latency_ms": 9.99,
+    "avg_nodes_expanded": 3.27,
+    "avg_triples_expanded": 12.08,
+    "cases": [
+      {
+        "id": "q01",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q02",
+        "retrieved_memory_ids": [
+          "m007",
+          "m010",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q03",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q04",
+        "retrieved_memory_ids": [
+          "m010",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q05",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q06",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q07",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q08",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 10
+      },
+      {
+        "id": "q09",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q10",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q11",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q12",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q13",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 9
+      },
+      {
+        "id": "q14",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q15",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q16",
+        "retrieved_memory_ids": [
+          "m004",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q17",
+        "retrieved_memory_ids": [
+          "m001",
+          "m006",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 1.0,
+        "set_precision": 1.0,
+        "recall_at_k": 1.0,
+        "num_triples": 11
+      },
+      {
+        "id": "q18",
+        "retrieved_memory_ids": [
+          "m010",
+          "m008",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 14
+      },
+      {
+        "id": "q19",
+        "retrieved_memory_ids": [
+          "m001",
+          "m007",
+          "m006"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m007"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 13
+      },
+      {
+        "id": "q20",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m006",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.25,
+        "num_triples": 14
+      },
+      {
+        "id": "q21",
+        "retrieved_memory_ids": [
+          "m005",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q22",
+        "retrieved_memory_ids": [
+          "m009",
+          "m001",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q23",
+        "retrieved_memory_ids": [
+          "m008",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q24",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q25",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q26",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q27",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 11
+      },
+      {
+        "id": "q28",
+        "retrieved_memory_ids": [
+          "m001",
+          "m007",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q29",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m003"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 12
+      },
+      {
+        "id": "q30",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q31",
+        "retrieved_memory_ids": [
+          "m006",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 11
+      },
+      {
+        "id": "q32",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 14
+      },
+      {
+        "id": "q33",
+        "retrieved_memory_ids": [
+          "m002",
+          "m005",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q34",
+        "retrieved_memory_ids": [
+          "m004",
+          "m010",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q35",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q36",
+        "retrieved_memory_ids": [
+          "m007",
+          "m008",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q37",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q38",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 5
+      },
+      {
+        "id": "q39",
+        "retrieved_memory_ids": [
+          "m010",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q40",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q41",
+        "retrieved_memory_ids": [
+          "m007",
+          "m010",
+          "m004"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 14
+      },
+      {
+        "id": "q42",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 14
+      },
+      {
+        "id": "q43",
+        "retrieved_memory_ids": [
+          "m005",
+          "m010",
+          "m001"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 14
+      },
+      {
+        "id": "q44",
+        "retrieved_memory_ids": [
+          "m008",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 14
+      },
+      {
+        "id": "q45",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 9
+      },
+      {
+        "id": "q46",
+        "retrieved_memory_ids": [
+          "m001",
+          "m005",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q47",
+        "retrieved_memory_ids": [
+          "m005",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 9
+      },
+      {
+        "id": "q48",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      }
+    ]
+  },
+  "D_hybrid_traversal_triples": {
+    "config_name": "D_hybrid_traversal_triples",
+    "recall_at_k": 0.8333,
+    "precision_at_k": 0.3712,
+    "set_precision_at_k": 0.3712,
+    "median_latency_ms": 11.97,
+    "mean_latency_ms": 12.21,
+    "avg_nodes_expanded": 14.9,
+    "avg_triples_expanded": 11.83,
+    "cases": [
+      {
+        "id": "q01",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q02",
+        "retrieved_memory_ids": [
+          "m001",
+          "m006",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 11
+      },
+      {
+        "id": "q03",
+        "retrieved_memory_ids": [
+          "m002",
+          "m009",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q04",
+        "retrieved_memory_ids": [
+          "m004",
+          "m010",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q05",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q06",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q07",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q08",
+        "retrieved_memory_ids": [
+          "m002",
+          "m001",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q09",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q10",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q11",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q12",
+        "retrieved_memory_ids": [
+          "m002",
+          "m001",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q13",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 13
+      },
+      {
+        "id": "q14",
+        "retrieved_memory_ids": [
+          "m002",
+          "m004",
+          "m007"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q15",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q16",
+        "retrieved_memory_ids": [
+          "m004",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q17",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m004"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 10
+      },
+      {
+        "id": "q18",
+        "retrieved_memory_ids": [
+          "m001",
+          "m010",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.6667,
+        "num_triples": 14
+      },
+      {
+        "id": "q19",
+        "retrieved_memory_ids": [
+          "m001",
+          "m006",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.3333,
+        "num_triples": 11
+      },
+      {
+        "id": "q20",
+        "retrieved_memory_ids": [
+          "m006",
+          "m001",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005",
+          "m006",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 0.5,
+        "num_triples": 11
+      },
+      {
+        "id": "q21",
+        "retrieved_memory_ids": [
+          "m005",
+          "m004",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 5
+      },
+      {
+        "id": "q22",
+        "retrieved_memory_ids": [
+          "m009",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 9
+      },
+      {
+        "id": "q23",
+        "retrieved_memory_ids": [
+          "m008",
+          "m001",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m005",
+          "m008"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 14
+      },
+      {
+        "id": "q24",
+        "retrieved_memory_ids": [
+          "m003",
+          "m001",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q25",
+        "retrieved_memory_ids": [
+          "m002",
+          "m009",
+          "m006"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q26",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q27",
+        "retrieved_memory_ids": [
+          "m006",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q28",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m002"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 10
+      },
+      {
+        "id": "q29",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m003"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q30",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q31",
+        "retrieved_memory_ids": [
+          "m006",
+          "m004",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m004",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.6667,
+        "set_precision": 0.6667,
+        "recall_at_k": 1.0,
+        "num_triples": 11
+      },
+      {
+        "id": "q32",
+        "retrieved_memory_ids": [
+          "m002",
+          "m006",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m006"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 14
+      },
+      {
+        "id": "q33",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q34",
+        "retrieved_memory_ids": [
+          "m004",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q35",
+        "retrieved_memory_ids": [
+          "m002",
+          "m010",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q36",
+        "retrieved_memory_ids": [
+          "m006",
+          "m007",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m007"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q37",
+        "retrieved_memory_ids": [
+          "m003",
+          "m010",
+          "m001"
+        ],
+        "supporting_memory_ids": [
+          "m003"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q38",
+        "retrieved_memory_ids": [
+          "m001",
+          "m002",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m001",
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 0.5,
+        "num_triples": 5
+      },
+      {
+        "id": "q39",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": 0.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q40",
+        "retrieved_memory_ids": [
+          "m002",
+          "m007",
+          "m010"
+        ],
+        "supporting_memory_ids": [
+          "m002"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 14
+      },
+      {
+        "id": "q41",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m001"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 13
+      },
+      {
+        "id": "q42",
+        "retrieved_memory_ids": [
+          "m007",
+          "m002",
+          "m010"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 14
+      },
+      {
+        "id": "q43",
+        "retrieved_memory_ids": [
+          "m001",
+          "m005",
+          "m007"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 13
+      },
+      {
+        "id": "q44",
+        "retrieved_memory_ids": [
+          "m006",
+          "m008",
+          "m001"
+        ],
+        "supporting_memory_ids": [],
+        "standard_precision_at_k": 0.0,
+        "set_precision": 0.0,
+        "recall_at_k": null,
+        "num_triples": 11
+      },
+      {
+        "id": "q45",
+        "retrieved_memory_ids": [
+          "m004",
+          "m009",
+          "m002"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      },
+      {
+        "id": "q46",
+        "retrieved_memory_ids": [
+          "m001",
+          "m004",
+          "m005"
+        ],
+        "supporting_memory_ids": [
+          "m005"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 5
+      },
+      {
+        "id": "q47",
+        "retrieved_memory_ids": [
+          "m004",
+          "m005",
+          "m008"
+        ],
+        "supporting_memory_ids": [
+          "m004"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 9
+      },
+      {
+        "id": "q48",
+        "retrieved_memory_ids": [
+          "m002",
+          "m008",
+          "m009"
+        ],
+        "supporting_memory_ids": [
+          "m009"
+        ],
+        "standard_precision_at_k": 0.3333,
+        "set_precision": 0.3333,
+        "recall_at_k": 1.0,
+        "num_triples": 13
+      }
+    ]
+  }
+}

@@ -133,7 +133,8 @@ class GraphAssistedRetriever:
         use_graph_expansion: bool = True,
         mode: str = "full_graph_assisted",
         max_traversal_nodes: int = 15,
-        max_traversal_depth: int = 2
+        max_traversal_depth: int = 2,
+        include_triples: bool | None = None
     ) -> dict[str, Any]:
         """
         Execute candidate retrieval, RRF score fusion, graph expansion, and evidence assembly.
@@ -313,58 +314,64 @@ class GraphAssistedRetriever:
         inferred_facts = []
         seen_fact_signatures = set()
 
-        # Check relationships connected to entities mentioned in selected chunks or seeds
-        relevant_entity_ids = set(entity_seeds)
-        for ch in selected_chunk_objs:
-            ch_node = self.chunk_by_id.get(ch["chunk_id"])
-            if ch_node:
-                relevant_entity_ids.update(ch_node.properties.get("entity_ids", []))
-            # Also discover entities linked in the store directly to this chunk (mentions or grounds)
-            chunk_edges = self.store.get_outgoing_edges(ch["chunk_id"])
-            for ce in chunk_edges:
-                if ce.edge_type == "mentions_entity" or ce.edge_type.startswith("grounds_"):
-                    relevant_entity_ids.add(ce.target_id)
+        should_extract_triples = (
+            include_triples if include_triples is not None
+            else (mode not in ("chunked_vector", "chunked_hybrid"))
+        )
 
-        # Query semantic edges connected to relevant entities
-        for ent_id in relevant_entity_ids:
-            edges = self.store.get_outgoing_edges(ent_id) + self.store.get_incoming_edges(ent_id)
-            for e in edges:
-                # Filter out internal/structural edges
-                if e.edge_type in ("contains_chunk", "adjacent_to", "contains_memory", "mentions_entity", "precedes"):
-                    continue
-                if e.edge_type.startswith("grounds_"):
-                    continue
+        if should_extract_triples:
+            # Check relationships connected to entities mentioned in selected chunks or seeds
+            relevant_entity_ids = set(entity_seeds)
+            for ch in selected_chunk_objs:
+                ch_node = self.chunk_by_id.get(ch["chunk_id"])
+                if ch_node:
+                    relevant_entity_ids.update(ch_node.properties.get("entity_ids", []))
+                # Also discover entities linked in the store directly to this chunk (mentions or grounds)
+                chunk_edges = self.store.get_outgoing_edges(ch["chunk_id"])
+                for ce in chunk_edges:
+                    if ce.edge_type == "mentions_entity" or ce.edge_type.startswith("grounds_"):
+                        relevant_entity_ids.add(ce.target_id)
 
-                # Ensure endpoints are Entity nodes
-                src_node = self.store.get_node(e.source_id)
-                tgt_node = self.store.get_node(e.target_id)
-                if not src_node or not tgt_node:
-                    continue
-                if src_node.node_type != "entity" or tgt_node.node_type != "entity":
-                    continue
+            # Query semantic edges connected to relevant entities
+            for ent_id in relevant_entity_ids:
+                edges = self.store.get_outgoing_edges(ent_id) + self.store.get_incoming_edges(ent_id)
+                for e in edges:
+                    # Filter out internal/structural edges
+                    if e.edge_type in ("contains_chunk", "adjacent_to", "contains_memory", "mentions_entity", "precedes"):
+                        continue
+                    if e.edge_type.startswith("grounds_"):
+                        continue
 
-                sig = (src_node.label, e.edge_type, tgt_node.label, e.memory_id)
-                if sig in seen_fact_signatures:
-                    continue
-                seen_fact_signatures.add(sig)
+                    # Ensure endpoints are Entity nodes
+                    src_node = self.store.get_node(e.source_id)
+                    tgt_node = self.store.get_node(e.target_id)
+                    if not src_node or not tgt_node:
+                        continue
+                    if src_node.node_type != "entity" or tgt_node.node_type != "entity":
+                        continue
 
-                fact_obj = {
-                    "statement": f"{src_node.label} {e.edge_type} {tgt_node.label}",
-                    "subject": src_node.label,
-                    "predicate": e.edge_type,
-                    "object": tgt_node.label,
-                    "memory_id": e.memory_id,
-                    "chunk_id": e.chunk_id,
-                    "evidence": e.evidence,
-                    "confidence": e.confidence,
-                    "origin": e.origin,
-                    "timestamp": e.timestamp
-                }
+                    sig = (src_node.label, e.edge_type, tgt_node.label, e.memory_id)
+                    if sig in seen_fact_signatures:
+                        continue
+                    seen_fact_signatures.add(sig)
 
-                if e.origin == "inferred":
-                    inferred_facts.append(fact_obj)
-                else:
-                    direct_facts.append(fact_obj)
+                    fact_obj = {
+                        "statement": f"{src_node.label} {e.edge_type} {tgt_node.label}",
+                        "subject": src_node.label,
+                        "predicate": e.edge_type,
+                        "object": tgt_node.label,
+                        "memory_id": e.memory_id,
+                        "chunk_id": e.chunk_id,
+                        "evidence": e.evidence,
+                        "confidence": e.confidence,
+                        "origin": e.origin,
+                        "timestamp": e.timestamp
+                    }
+
+                    if e.origin == "inferred":
+                        inferred_facts.append(fact_obj)
+                    else:
+                        direct_facts.append(fact_obj)
 
         # 8. Build Evidence Context Lines (Chunk-Level, Not Full Episode Text)
         context_text = self._format_chunk_context(clean_query, selected_chunk_objs, direct_facts, inferred_facts)
