@@ -110,7 +110,8 @@ def process_and_store_memory(
     importance,
     memory_store_path=None,
     entity_store_path=None,
-    extraction=None
+    extraction=None,
+    graph_store=None
 ):
     # Extract knowledge (or use provided extraction model)
     if extraction is None:
@@ -141,5 +142,104 @@ def process_and_store_memory(
         diagnostics=knowledge.get("diagnostics"),
         data_path=memory_store_path
     )
+
+    # Extract temporal claims from text with provenance pointing to memory ID
+    from ..temporal.claim import build_claims_from_text
+    extracted_claims = build_claims_from_text(
+        text=text,
+        session_id=str(source or memory["id"]),
+        chunk_id=memory["id"],
+        recorded_at=timestamp
+    )
+    claims_data = [c.to_dict() for c in extracted_claims]
+    memory["temporal_claims"] = claims_data
+
+    # Update graph store if supplied
+    if graph_store is not None and extracted_claims:
+        from ..temporal.supersession import TemporalSupersessionEngine
+        from ..graph.schema import TemporalClaim, GraphNode, GraphEdge
+        engine = TemporalSupersessionEngine()
+
+        existing_claims = []
+        if hasattr(graph_store, "get_nodes_by_type"):
+            for cn in graph_store.get_nodes_by_type("claim"):
+                p = cn.properties
+                existing_claims.append(TemporalClaim(
+                    claim_id=cn.id,
+                    subject=p.get("subject", ""),
+                    predicate=p.get("predicate", ""),
+                    object=p.get("object", ""),
+                    valid_from=p.get("valid_from"),
+                    valid_to=p.get("valid_to"),
+                    recorded_at=p.get("recorded_at"),
+                    source_chunk_id=p.get("source_chunk_id"),
+                    is_explicit=p.get("is_explicit", True),
+                    confidence=p.get("confidence", 1.0),
+                    supersedes_claim_id=p.get("supersedes_claim_id"),
+                    evidence=p.get("evidence"),
+                    properties=dict(p)
+                ))
+
+        claims_by_id = {c.claim_id: c for c in existing_claims}
+        for c in extracted_claims:
+            claims_by_id[c.claim_id] = c
+        combined = list(claims_by_id.values())
+        processed = engine.process_claims(combined)
+
+        nodes = [c.to_graph_node() for c in processed]
+
+        # Ensure memory container node exists in store to satisfy foreign keys
+        if not graph_store.get_node(memory["id"]):
+            nodes.append(GraphNode(
+                id=memory["id"],
+                node_type="memory",
+                label=f"Memory {memory['id']}",
+                properties={"text": text, "timestamp": timestamp, "source": source}
+            ))
+
+        edges = []
+        for c in processed:
+            src_node_id = c.source_chunk_id or memory["id"]
+            edges.append(GraphEdge(
+                id=f"edge_claim_{src_node_id}_{c.claim_id}",
+                source_id=src_node_id,
+                target_id=c.claim_id,
+                edge_type="has_claim",
+                origin="explicit" if c.is_explicit else "inferred",
+                confidence=c.confidence,
+                timestamp=c.valid_from or c.recorded_at,
+                properties={
+                    "valid_from": c.valid_from,
+                    "valid_to": c.valid_to,
+                    "recorded_at": c.recorded_at
+                }
+            ))
+            if c.supersedes_claim_id:
+                edges.append(GraphEdge(
+                    id=f"edge_sup_{c.claim_id}_{c.supersedes_claim_id}",
+                    source_id=c.claim_id,
+                    target_id=c.supersedes_claim_id,
+                    edge_type="supersedes",
+                    origin="explicit" if c.is_explicit else "inferred",
+                    confidence=c.confidence,
+                    evidence=c.evidence,
+                    timestamp=c.valid_from or c.recorded_at,
+                    properties={
+                        "valid_from": c.valid_from,
+                        "valid_to": c.valid_to,
+                        "recorded_at": c.recorded_at,
+                        "reason": c.properties.get("supersession_reason")
+                    }
+                ))
+        if hasattr(graph_store, "batch_upsert"):
+            graph_store.batch_upsert(nodes=nodes, edges=edges)
+        elif hasattr(graph_store, "upsert_nodes_batch"):
+            graph_store.upsert_nodes_batch(nodes)
+            graph_store.upsert_edges_batch(edges)
+        else:
+            for n in nodes:
+                graph_store.upsert_node(n)
+            for e in edges:
+                graph_store.upsert_edge(e)
 
     return memory

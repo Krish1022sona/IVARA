@@ -1,0 +1,12 @@
+{
+  "arm": "ARM_5_CORE_INTELLIGENCE",
+  "arm_name": "IVARA Core Intelligence (Integrated Reasoning)",
+  "total_instances": 40,
+  "overall_accuracy": 60.0,
+  "answerable_accuracy": 57.89,
+  "abstention_accuracy": 100.0,
+  "abstentions_correct": 2,
+  "total_abstentions": 2,
+  "answerable_correct": 22,
+  "total_answerable": 38
+}

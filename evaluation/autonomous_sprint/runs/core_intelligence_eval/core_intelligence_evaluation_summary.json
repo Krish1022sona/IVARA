@@ -1,0 +1,189 @@
+{
+  "evaluation_tier": "fresh_heldout_40",
+  "benchmark_status": "diagnostic_only_not_official_longmemeval",
+  "sample_size": 40,
+  "models": {
+    "generator": "gpt-oss:latest",
+    "judge": "VladimirGav/gemma4-26b-16GB-VRAM:latest",
+    "judge_status": "diagnostic_local_gemma_not_official"
+  },
+  "runtimes_seconds": {
+    "generation": 0.09,
+    "judging": 0.0,
+    "total": 0.09
+  },
+  "arms": {
+    "ARM_1_BASELINE": {
+      "total": 40,
+      "overall_correct": 21,
+      "overall_pct": 52.5,
+      "overall_ci": [
+        0.375,
+        0.6706
+      ],
+      "ans_total": 38,
+      "ans_correct": 19,
+      "ans_pct": 50.0,
+      "ans_ci": [
+        0.3485,
+        0.6515
+      ],
+      "unans_total": 2,
+      "unans_correct": 2,
+      "unans_pct": 100.0,
+      "task_types": {
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "pct": 37.5
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "pct": 40.0
+        },
+        "knowledge-update": {
+          "total": 8,
+          "correct": 3,
+          "pct": 37.5
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "pct": 100.0
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "pct": 100.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 2,
+          "pct": 25.0
+        }
+      },
+      "avg_latency_s": 6.56
+    },
+    "ARM_4_UNIFIED_HYBRID": {
+      "total": 40,
+      "overall_correct": 23,
+      "overall_pct": 57.5,
+      "overall_ci": [
+        0.422,
+        0.7149
+      ],
+      "ans_total": 38,
+      "ans_correct": 21,
+      "ans_pct": 55.26,
+      "ans_ci": [
+        0.3971,
+        0.6985
+      ],
+      "unans_total": 2,
+      "unans_correct": 2,
+      "unans_pct": 100.0,
+      "task_types": {
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "pct": 37.5
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "pct": 40.0
+        },
+        "knowledge-update": {
+          "total": 8,
+          "correct": 4,
+          "pct": 50.0
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "pct": 100.0
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "pct": 100.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 3,
+          "pct": 37.5
+        }
+      },
+      "avg_latency_s": 6.86
+    },
+    "ARM_5_CORE_INTELLIGENCE": {
+      "total": 40,
+      "overall_correct": 24,
+      "overall_pct": 60.0,
+      "overall_ci": [
+        0.446,
+        0.7365
+      ],
+      "ans_total": 38,
+      "ans_correct": 22,
+      "ans_pct": 57.89,
+      "ans_ci": [
+        0.4219,
+        0.7215
+      ],
+      "unans_total": 2,
+      "unans_correct": 2,
+      "unans_pct": 100.0,
+      "task_types": {
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "pct": 37.5
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "pct": 40.0
+        },
+        "knowledge-update": {
+          "total": 8,
+          "correct": 6,
+          "pct": 75.0
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "pct": 100.0
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "pct": 100.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 2,
+          "pct": 25.0
+        }
+      },
+      "avg_latency_s": 6.43
+    }
+  },
+  "paired_comparison_arm5_vs_arm4": {
+    "paired_wins": 2,
+    "paired_losses": 1,
+    "paired_ties": 37,
+    "contingency_table": [
+      [
+        22,
+        1
+      ],
+      [
+        2,
+        15
+      ]
+    ],
+    "mcnemar_p_value": 1.0
+  }
+}

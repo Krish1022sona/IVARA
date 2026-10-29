@@ -1,0 +1,27 @@
+{
+  "evaluation_title": "IVARA 6-Arm Controlled Diagnostic Evaluation",
+  "evaluation_tier": "diagnostic_sample",
+  "benchmark_status": "diagnostic_only_not_official_longmemeval",
+  "timestamp": "2026-10-29 16:31:22",
+  "git_branch": "research/evaluation-baseline",
+  "git_commit": "885298c73cd0257653c49cb81d958f49ad8a0da4",
+  "sample_path": "evaluation\\autonomous_sprint\\runs\\finalization_sprint\\fresh_heldout_40.json",
+  "sample_sha256": "5a42338eb5758b7a73c8357b6a3e223b68d38ef27368ada03617865a04cacf53",
+  "answering_model": "gpt-oss:latest",
+  "judge_model": "VladimirGav/gemma4-26b-16GB-VRAM:latest",
+  "retrieval_k": 5,
+  "max_context_tokens": 1500,
+  "arms_evaluated": {
+    "ARM_5_CORE_INTELLIGENCE": {
+      "name": "IVARA Core Intelligence (Integrated Reasoning)",
+      "use_ontology": true,
+      "use_chunk_graph": false,
+      "min_edge_relevance": 0.5,
+      "direct_seed_temporal": true,
+      "enable_temporal": true,
+      "dynamic_graph_fallback": true,
+      "max_chunks_per_session": 1,
+      "description": "Integrated core intelligence: Ontology + direct-seed temporal with event priority, session diversity retrieval, evidence gate, and contradiction analysis."
+    }
+  }
+}

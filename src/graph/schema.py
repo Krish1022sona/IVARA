@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 class GraphNode(BaseModel):
     """Base schema for any node in the IVARA Memory Graph."""
     id: str = Field(description="Unique, stable node identifier")
-    node_type: Literal["chunk", "memory", "entity", "episode"] = Field(description="Logical node classification")
+    node_type: Literal["chunk", "memory", "entity", "episode", "claim"] = Field(description="Logical node classification")
     label: str = Field(description="Human-readable label or entity name")
     properties: dict[str, Any] = Field(default_factory=dict, description="Arbitrary attributes and metadata")
 
@@ -106,3 +106,48 @@ class GraphEdge(BaseModel):
     chunk_id: str | None = Field(default=None, description="Supporting chunk ID")
     timestamp: str | None = Field(default=None, description="Valid time or event date")
     properties: dict[str, Any] = Field(default_factory=dict, description="Additional edge metadata")
+
+
+class TemporalClaim(BaseModel):
+    """
+    Minimal, backward-compatible temporal claim representation for IVARA facts and state updates.
+    Preserves subject-predicate-object structure, validity intervals, recorded time, provenance,
+    and explicit supersession links.
+    """
+    claim_id: str = Field(description="Unique, stable claim identifier, e.g. claim_d4e1f8a2")
+    subject: str = Field(description="Subject entity or mention, e.g. 'self', 'user'")
+    predicate: str = Field(description="Relationship predicate, e.g. 'lives_in', 'works_at', 'has_hobby'")
+    object: str = Field(description="Object entity or value, e.g. 'Delhi', 'Pune'")
+    valid_from: str | None = Field(default=None, description="When the claim became true (ISO date/year or None)")
+    valid_to: str | None = Field(default=None, description="When the claim ceased being true (ISO date/year or None)")
+    recorded_at: str | None = Field(default=None, description="When IVARA recorded the claim (session timestamp)")
+    source_chunk_id: str | None = Field(default=None, description="Provenance chunk ID")
+    is_explicit: bool = Field(default=True, description="Whether directly stated (True) or inferred (False)")
+    confidence: float = Field(default=1.0, ge=0.0, le=1.0, description="Extraction confidence score")
+    supersedes_claim_id: str | None = Field(default=None, description="ID of previous claim genuinely updated/superseded")
+    evidence: str | None = Field(default=None, description="Verbatim text span supporting this claim")
+    properties: dict[str, Any] = Field(default_factory=dict, description="Additional metadata, e.g. conflict_status, is_current")
+
+    def to_graph_node(self) -> GraphNode:
+        return GraphNode(
+            id=self.claim_id,
+            node_type="claim",
+            label=f"{self.subject} {self.predicate} {self.object}",
+            properties={
+                "subject": self.subject,
+                "predicate": self.predicate,
+                "object": self.object,
+                "valid_from": self.valid_from,
+                "valid_to": self.valid_to,
+                "recorded_at": self.recorded_at,
+                "source_chunk_id": self.source_chunk_id,
+                "is_explicit": self.is_explicit,
+                "confidence": self.confidence,
+                "supersedes_claim_id": self.supersedes_claim_id,
+                "evidence": self.evidence,
+                **self.properties
+            }
+        )
+
+    def to_dict(self) -> dict[str, Any]:
+        return self.model_dump()

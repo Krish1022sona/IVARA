@@ -258,6 +258,111 @@ class MemoryGraphBuilder:
                     properties={"prev_time": raw_prev, "next_time": raw_next}
                 ))
 
+        # 4. Extract and resolve temporal claims across memories
+        from ..temporal.claim import build_claims_from_text
+        from ..temporal.supersession import TemporalSupersessionEngine
+        from .schema import TemporalClaim
+
+        all_extracted_claims: list[TemporalClaim] = []
+        for memo in memories:
+            m_id = memo.get("id", "m000")
+            m_text = memo.get("text", "")
+            m_ts = memo.get("timestamp")
+
+            memo_claims = memo.get("temporal_claims")
+            if memo_claims:
+                for mc in memo_claims:
+                    if isinstance(mc, dict):
+                        all_extracted_claims.append(TemporalClaim(**mc))
+                    elif isinstance(mc, TemporalClaim):
+                        all_extracted_claims.append(mc)
+            else:
+                extracted = build_claims_from_text(
+                    text=m_text,
+                    session_id=m_id,
+                    chunk_id=m_id,
+                    recorded_at=m_ts
+                )
+                all_extracted_claims.extend(extracted)
+
+        # Merge with existing claims in store for cross-batch supersession
+        existing_claims: list[TemporalClaim] = []
+        if hasattr(self.store, "get_nodes_by_type"):
+            for cn in self.store.get_nodes_by_type("claim"):
+                p = cn.properties
+                existing_claims.append(TemporalClaim(
+                    claim_id=cn.id,
+                    subject=p.get("subject", ""),
+                    predicate=p.get("predicate", ""),
+                    object=p.get("object", ""),
+                    valid_from=p.get("valid_from"),
+                    valid_to=p.get("valid_to"),
+                    recorded_at=p.get("recorded_at"),
+                    source_chunk_id=p.get("source_chunk_id"),
+                    is_explicit=p.get("is_explicit", True),
+                    confidence=p.get("confidence", 1.0),
+                    supersedes_claim_id=p.get("supersedes_claim_id"),
+                    evidence=p.get("evidence"),
+                    properties=dict(p)
+                ))
+
+        claims_by_id = {c.claim_id: c for c in existing_claims}
+        for c in all_extracted_claims:
+            claims_by_id[c.claim_id] = c
+        combined_claims = list(claims_by_id.values())
+
+        if combined_claims:
+            engine = TemporalSupersessionEngine()
+            processed_claims = engine.process_claims(combined_claims)
+
+            claim_nodes = []
+            claim_edges = []
+            for claim in processed_claims:
+                claim_nodes.append(claim.to_graph_node())
+                if claim.source_chunk_id:
+                    claim_edges.append(GraphEdge(
+                        id=f"edge_claim_{claim.source_chunk_id}_{claim.claim_id}",
+                        source_id=claim.source_chunk_id,
+                        target_id=claim.claim_id,
+                        edge_type="has_claim",
+                        origin="explicit" if claim.is_explicit else "inferred",
+                        confidence=claim.confidence,
+                        timestamp=claim.valid_from or claim.recorded_at,
+                        properties={
+                            "valid_from": claim.valid_from,
+                            "valid_to": claim.valid_to,
+                            "recorded_at": claim.recorded_at
+                        }
+                    ))
+                if claim.supersedes_claim_id:
+                    claim_edges.append(GraphEdge(
+                        id=f"edge_sup_{claim.claim_id}_{claim.supersedes_claim_id}",
+                        source_id=claim.claim_id,
+                        target_id=claim.supersedes_claim_id,
+                        edge_type="supersedes",
+                        origin="explicit" if claim.is_explicit else "inferred",
+                        confidence=claim.confidence,
+                        evidence=claim.evidence,
+                        timestamp=claim.valid_from or claim.recorded_at,
+                        properties={
+                            "valid_from": claim.valid_from,
+                            "valid_to": claim.valid_to,
+                            "recorded_at": claim.recorded_at,
+                            "reason": claim.properties.get("supersession_reason")
+                        }
+                    ))
+
+            if hasattr(self.store, "batch_upsert"):
+                self.store.batch_upsert(nodes=claim_nodes, edges=claim_edges)
+            elif hasattr(self.store, "upsert_nodes_batch"):
+                self.store.upsert_nodes_batch(claim_nodes)
+                self.store.upsert_edges_batch(claim_edges)
+            else:
+                for n in claim_nodes:
+                    self.store.upsert_node(n)
+                for e in claim_edges:
+                    self.store.upsert_edge(e)
+
         return {
             "nodes_count": self.store.count_nodes(),
             "edges_count": self.store.count_edges()

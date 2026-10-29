@@ -15,7 +15,8 @@ def add_memory(
     relationships=None,
     confidence=1.0,
     diagnostics=None,
-    data_path=None
+    data_path=None,
+    temporal_claims=None
 ):
     target_path = Path(data_path) if data_path else DATA_PATH
 
@@ -43,6 +44,9 @@ def add_memory(
         "topics": topics or [],
         "relationships": relationships or []
     }
+
+    if temporal_claims is not None:
+        memo["temporal_claims"] = temporal_claims
 
     if diagnostics is not None:
         memo["diagnostics"] = diagnostics
