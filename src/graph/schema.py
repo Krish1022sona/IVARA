@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 class GraphNode(BaseModel):
     """Base schema for any node in the IVARA Memory Graph."""
     id: str = Field(description="Unique, stable node identifier")
-    node_type: Literal["chunk", "memory", "entity", "episode", "claim"] = Field(description="Logical node classification")
+    node_type: Literal["chunk", "memory", "entity", "episode", "claim", "event"] = Field(description="Logical node classification")
     label: str = Field(description="Human-readable label or entity name")
     properties: dict[str, Any] = Field(default_factory=dict, description="Arbitrary attributes and metadata")
 

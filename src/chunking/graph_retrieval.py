@@ -15,6 +15,7 @@ import numpy as np
 
 from .turn_chunker import TurnChunk
 from .ontology_retrieval import OntologyGuidedChunkRetriever
+from .retrieval import select_session_mmr_chunks
 from ..graph.schema import GraphNode, GraphEdge, EntityNode, EpisodeNode
 from ..graph.store import SQLiteGraphStore
 from ..graph.traversal import traverse_relevance_guided
@@ -245,6 +246,59 @@ class TurnGraphBuilder:
                     )
                     edges_to_insert[e_sup.id] = e_sup
 
+        # 6. Extract and build temporal event nodes and relationships
+        from ..temporal.event_extractor import TemporalEventExtractor
+        from ..temporal.relationship_builder import TemporalRelationshipBuilder
+
+        event_extractor = TemporalEventExtractor()
+        all_events = []
+        for chunk in chunks:
+            c_events = event_extractor.extract_events_from_chunk(
+                text=chunk.text,
+                session_id=chunk.session_id,
+                chunk_id=chunk.chunk_id,
+                recorded_at=chunk.timestamp
+            )
+            all_events.extend(c_events)
+
+        unique_events = {e.event_id: e for e in all_events}
+        for evt in unique_events.values():
+            evt_node = evt.to_graph_node()
+            nodes_to_insert[evt_node.id] = evt_node
+            # Link chunk -> event (contains_event)
+            if evt.turn_id:
+                e_link = GraphEdge(
+                    id=f"edge_has_evt_{evt.turn_id}_{evt.event_id}",
+                    source_id=evt.turn_id,
+                    target_id=evt.event_id,
+                    edge_type="contains_event",
+                    origin="explicit",
+                    confidence=evt.confidence,
+                    chunk_id=evt.turn_id,
+                    timestamp=evt.valid_from or evt.recorded_at
+                )
+                edges_to_insert[e_link.id] = e_link
+
+            # Link event -> entity if entity node exists
+            for ent_id in evt.entity_ids:
+                if ent_id in nodes_to_insert:
+                    e_ent = GraphEdge(
+                        id=f"edge_evt_ent_{evt.event_id}_{ent_id}",
+                        source_id=evt.event_id,
+                        target_id=ent_id,
+                        edge_type="mentions_entity",
+                        origin="explicit",
+                        confidence=evt.confidence,
+                        timestamp=evt.valid_from or evt.recorded_at
+                    )
+                    edges_to_insert[e_ent.id] = e_ent
+
+        rel_builder = TemporalRelationshipBuilder()
+        temporal_edges = rel_builder.build_relationships(list(unique_events.values()))
+        for tedge in temporal_edges:
+            g_edge = tedge.to_graph_edge()
+            edges_to_insert[g_edge.id] = g_edge
+
         node_list = list(nodes_to_insert.values())
         edge_list = list(edges_to_insert.values())
 
@@ -372,10 +426,13 @@ class TurnGraphRetriever:
         k: int = 5,
         min_score: float | None = None,
         max_traversal_depth: int = 1,
-        max_traversal_nodes: int = 15
+        max_traversal_nodes: int = 15,
+        use_session_mmr: bool = True,
+        mmr_lambda: float = 0.25,
+        mmr_pool_size: int = 15
     ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         """
-        Execute query-conditioned, bounded graph chunk retrieval.
+        Execute query-conditioned, bounded graph chunk retrieval with Session-Aware MMR.
         Returns:
             (retrieved_chunks, graph_diagnostics)
         """
@@ -384,7 +441,10 @@ class TurnGraphRetriever:
             return [], {}
 
         # 1. Direct Hybrid (+ optional Ontology) Candidate Generation using unified ChunkRetriever
-        seed_candidates = self.seed_retriever.retrieve(clean_query, k=max(k * 2, 10), min_score=None)
+        search_k = max(k * 3, mmr_pool_size) if use_session_mmr else max(k * 2, 10)
+        seed_candidates = self.seed_retriever.retrieve(
+            clean_query, k=search_k, min_score=None, use_session_mmr=False
+        )
         if not seed_candidates:
             return [], {
                 "expansion_executed": False,
@@ -416,6 +476,9 @@ class TurnGraphRetriever:
         # If expansion is not needed or store has no nodes, return clean seed candidates
         if not should_expand or self.store is None or self.store.count_nodes() == 0:
             filtered = [c for c in seed_candidates if min_score is None or c["score"] >= min_score]
+            if use_session_mmr and len(filtered) > k:
+                pool = filtered[:max(k, mmr_pool_size)]
+                return select_session_mmr_chunks(pool, k=k, lambda_penalty=mmr_lambda), diagnostics
             return filtered[:k], diagnostics
 
         # 3. Bounded 1-Hop Graph Expansion from Top Seed Chunks
@@ -502,8 +565,35 @@ class TurnGraphRetriever:
                                         "decayed_score": round(decayed_score, 4)
                                     })
 
+                # Safe Edge Filter 4: contains_event -> EventNode -> TemporalEdge -> other EventNode -> other chunk
+                elif edge.edge_type == "contains_event" and neighbor_node.node_type == "event":
+                    evt_neighbors = self.store.get_neighbors(neighbor_node.id, direction="both")
+                    for e_evt, evt_target in evt_neighbors:
+                        edges_traversed += 1
+                        if evt_target.node_type == "event" and e_evt.edge_type in ("OCCURRED_BEFORE", "OCCURRED_AFTER", "SUPERSEDES", "INVALIDATES"):
+                            # Get chunks containing target event
+                            target_evt_neighbors = self.store.get_neighbors(evt_target.id, direction="both")
+                            for e_chk, chk_target in target_evt_neighbors:
+                                edges_traversed += 1
+                                if chk_target.node_type == "chunk" and chk_target.id != s_cid:
+                                    decayed_score = s_score * (self.gamma_decay ** 2)
+                                    if chk_target.id not in graph_candidates or decayed_score > graph_candidates[chk_target.id]["decayed_score"]:
+                                        graph_candidates[chk_target.id] = {
+                                            "decayed_score": decayed_score,
+                                            "source_seed_id": s_cid,
+                                            "edge_type": f"temporal:{e_evt.edge_type}",
+                                            "node": chk_target
+                                        }
+                                        diagnostics["traversed_details"].append({
+                                            "from": s_cid,
+                                            "via_event": neighbor_node.label,
+                                            "to": chk_target.id,
+                                            "edge": e_evt.edge_type,
+                                            "decayed_score": round(decayed_score, 4)
+                                        })
+
                 # Safe Edge Filter 3: semantic relational edges (worked_with, worked_on, employed_by, uses)
-                elif edge.edge_type not in ("contains_chunk", "adjacent_to", "mentions_entity"):
+                elif edge.edge_type not in ("contains_chunk", "adjacent_to", "mentions_entity", "contains_event"):
                     if neighbor_node.node_type == "chunk":
                         decayed_score = s_score * self.gamma_decay
                         if neighbor_node.id not in graph_candidates or decayed_score > graph_candidates[neighbor_node.id]["decayed_score"]:
@@ -610,10 +700,16 @@ class TurnGraphRetriever:
             )
         )
 
-        final_results = [
+        valid_candidates = [
             c for c in merged_results
             if min_score is None or c["score"] >= min_score
-        ][:k]
+        ]
+
+        if use_session_mmr and len(valid_candidates) > k:
+            pool = valid_candidates[:max(k, mmr_pool_size)]
+            final_results = select_session_mmr_chunks(pool, k=k, lambda_penalty=mmr_lambda)
+        else:
+            final_results = valid_candidates[:k]
 
         diagnostics["nodes_expanded"] = nodes_expanded
         diagnostics["edges_traversed"] = edges_traversed

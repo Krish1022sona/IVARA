@@ -1,5 +1,8 @@
-from typing import Literal
-from ollama import chat
+from typing import Any, Callable, Literal
+try:
+    from ollama import chat
+except ImportError:
+    chat = None
 from pydantic import BaseModel, Field
 
 
@@ -55,10 +58,27 @@ Rules:
 
 
 
-def extract_knowledge(text: str) -> Extraction:
+def extract_knowledge(
+    text: str,
+    model: str = "gpt-oss",
+    llm_caller: Callable[[str, str], Any] | None = None
+) -> Extraction:
+    if llm_caller is not None:
+        raw = llm_caller(f"Extract knowledge from this memory:\n\n{text}", SYSTEM_PROMPT)
+        if isinstance(raw, Extraction):
+            return raw
+        elif isinstance(raw, dict):
+            return Extraction(**raw)
+        elif isinstance(raw, str):
+            return Extraction.model_validate_json(raw)
+        else:
+            raise ValueError(f"Unsupported llm_caller output type: {type(raw)}")
+
+    if chat is None:
+        raise RuntimeError("Ollama is not available and no llm_caller was supplied.")
 
     response = chat(
-        model="gpt-oss",
+        model=model,
         messages=[
             {
                 "role": "system",

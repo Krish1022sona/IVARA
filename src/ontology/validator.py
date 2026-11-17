@@ -13,7 +13,10 @@ from .vocabulary import (
     get_inverse_predicate,
     is_valid_type,
     is_valid_predicate,
-    is_type_compatible
+    is_type_compatible,
+    validate_predicate,
+    normalize_predicate_name,
+    PredicateValidationResult
 )
 
 
@@ -202,18 +205,27 @@ def validate_extracted_relationship(rel, memory_text=None, rules=None, vocabular
         if not source or not isinstance(source, str) or not source.strip():
             result.add_error("Extracted relationship must have a non-empty 'source'.")
 
+    # Target check
+    if active_rules.get("relationship_must_have_target", True):
+        if not target or not isinstance(target, str) or not target.strip():
+            result.add_error("Extracted relationship must have a non-empty 'target'.")
+
+    # Self-loop check
+    if source and target and isinstance(source, str) and isinstance(target, str):
+        if source.strip().lower() == target.strip().lower():
+            result.add_error(f"Extracted relationship cannot have identical source and target ('{source.strip()}').")
+
     # Predicate check
     if active_rules.get("relationship_must_have_predicate", True):
         if not relation or not isinstance(relation, str) or not relation.strip():
             result.add_error("Extracted relationship must have a non-empty 'relation' or 'predicate'.")
         else:
-            if not is_valid_predicate(relation, vocabulary):
-                result.add_error(f"Relationship predicate '{relation}' is not registered in vocabulary.")
-
-    # Target check
-    if active_rules.get("relationship_must_have_target", True):
-        if not target or not isinstance(target, str) or not target.strip():
-            result.add_error("Extracted relationship must have a non-empty 'target'.")
+            allow_ow = active_rules.get("open_world_predicates", False)
+            pred_res = validate_predicate(relation, vocabulary=vocabulary, allow_open_world=allow_ow)
+            if not pred_res.is_valid:
+                result.add_error(pred_res.error or f"Relationship predicate '{relation}' is invalid.")
+            elif pred_res.status == "open_world":
+                result.add_warning(pred_res.warning or f"Relationship predicate '{relation}' accepted under open-world ontology.")
 
     # Confidence check
     if confidence is not None:
@@ -285,8 +297,20 @@ def validate_resolved_relationship(rel, memory_text=None, rules=None, vocabulary
     # Validate predicate
     if not predicate or not isinstance(predicate, str) or not predicate.strip():
         result.add_error("Resolved relationship must have a non-empty 'predicate'.")
-    elif not is_valid_predicate(predicate, vocabulary):
-        result.add_error(f"Resolved predicate '{predicate}' is not registered in vocabulary.")
+    else:
+        allow_ow = active_rules.get("open_world_predicates", False)
+        pred_res = validate_predicate(predicate, vocabulary=vocabulary, allow_open_world=allow_ow)
+        if not pred_res.is_valid:
+            result.add_error(pred_res.error or f"Resolved predicate '{predicate}' is invalid.")
+        elif pred_res.status == "open_world":
+            result.add_warning(pred_res.warning or f"Resolved predicate '{predicate}' accepted under open-world ontology.")
+
+    # Endpoint self-loop check
+    if isinstance(source, dict) and isinstance(target, dict):
+        src_ref = source.get("id") or source.get("mention")
+        tgt_ref = target.get("id") or target.get("mention")
+        if src_ref and tgt_ref and str(src_ref).strip().lower() == str(tgt_ref).strip().lower():
+            result.add_error(f"Resolved relationship cannot have identical source and target endpoints ('{src_ref}').")
 
     # Validate target endpoint reference
     if not target or not isinstance(target, dict):
@@ -421,18 +445,18 @@ def is_valid_entity_type(entity_type: str) -> bool:
     return is_valid_type(entity_type)
 
 
-def is_valid_relationship(relation: str) -> bool:
+def is_valid_relationship(relation: str, allow_open_world: bool = False) -> bool:
     """
-    Check if predicate is registered in the ontology vocabulary.
+    Check if predicate is registered in the ontology vocabulary (or valid under open-world if enabled).
     """
-    return is_valid_predicate(relation)
+    return is_valid_predicate(relation, allow_open_world=allow_open_world)
 
 
-def is_valid_relationship_types(relation: str, source_type: str, target_type: str) -> bool:
+def is_valid_relationship_types(relation: str, source_type: str, target_type: str, allow_open_world: bool = False) -> bool:
     """
     Validate that relation and both endpoint types are valid according to the ontology.
     """
-    if not is_valid_predicate(relation):
+    if not is_valid_predicate(relation, allow_open_world=allow_open_world):
         return False
     if not is_valid_type(source_type):
         return False

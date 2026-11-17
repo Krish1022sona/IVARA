@@ -158,6 +158,7 @@ def prepare_evidence_context(query: str, retrieved_memories: list[dict]) -> dict
             "direct_evidence": [],
             "inferred_evidence": [],
             "entities": [],
+            "retrieved_memories": [],
             "retrieved_memories_count": 0,
             "context_text": f"Query: {query}\nStatus: Insufficient evidence in personal memory store."
         }
@@ -258,6 +259,7 @@ def prepare_evidence_context(query: str, retrieved_memories: list[dict]) -> dict
         "direct_evidence": direct_evidence,
         "inferred_evidence": inferred_evidence,
         "entities": list(seen_entities.values()),
+        "retrieved_memories": retrieved_memories,
         "retrieved_memories_count": len(retrieved_memories),
         "context_text": context_text
     }

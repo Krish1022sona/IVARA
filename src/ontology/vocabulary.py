@@ -1,8 +1,168 @@
+from dataclasses import dataclass
 import json
 from pathlib import Path
+import re
+from typing import Literal, Optional
 
 
 VOCAB_PATH = Path(__file__).parent / "vocabulary.json"
+
+DISALLOWED_STOP_WORDS = {
+    "in", "on", "at", "to", "with", "by", "under", "of", "about", "for",
+    "from", "is", "was", "are", "were", "has", "had", "have", "the", "a",
+    "an", "and", "or", "but", "so", "as", "than", "over", "into", "it"
+}
+
+DISALLOWED_META_TOKENS = {
+    "type", "status", "id", "name", "data", "value", "property", "attribute",
+    "key", "field", "item", "entity", "relationship", "relation", "predicate",
+    "null", "none", "unknown", "object", "subject", "true", "false"
+}
+
+
+@dataclass
+class PredicateValidationResult:
+    """Structured outcome of predicate validation distinguishing canonical, open-world, and invalid states."""
+    is_valid: bool
+    status: Literal["canonical", "open_world", "invalid"]
+    canonical_predicate: Optional[str]
+    raw_predicate: str
+    normalized_predicate: str
+    error: Optional[str] = None
+    warning: Optional[str] = None
+
+    def __bool__(self):
+        return self.is_valid
+
+
+def normalize_predicate_name(name: str) -> str:
+    """
+    Standardize a predicate string:
+    - Split camelCase boundaries (e.g. 'worksAt' -> 'works_At')
+    - Replace whitespace, hyphens, slashes, and periods with underscores
+    - Strip disallowed characters
+    - Lowercase and collapse consecutive underscores
+    """
+    if not isinstance(name, str):
+        return ""
+    # Split camelCase
+    s = re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", name.strip())
+    # Replace non-alphanumeric separators with underscores
+    s = re.sub(r"[\s\-\/\.]+", "_", s)
+    # Strip any characters other than letters, numbers, and underscores
+    s = re.sub(r"[^a-zA-Z0-9_]", "", s)
+    # Lowercase and collapse underscores
+    s = re.sub(r"_+", "_", s.lower()).strip("_")
+    return s
+
+
+def validate_predicate_structure(name: str) -> tuple[bool, str, Optional[str]]:
+    """
+    Validate the syntactic and semantic structure of an open-world predicate candidate.
+    Returns (is_valid, normalized_name, error_reason).
+    """
+    if not name or not isinstance(name, str):
+        return False, "", "Predicate must be a non-empty string."
+
+    # Check for invalid raw characters (SQL, HTML, punctuation, injection artifacts)
+    if re.search(r"[<>;!@#$%^&*()[\]\\/|+=~`\"']", name):
+        return False, "", f"Predicate '{name}' contains illegal punctuation or formatting characters."
+
+    # Check for SQL/script commands or injection patterns
+    if re.search(r"\b(drop|select|delete|insert|update|table|script|exec|union)\b", name.lower()):
+        return False, "", f"Predicate '{name}' contains disallowed command or injection tokens."
+
+    norm = normalize_predicate_name(name)
+    if not norm:
+        return False, "", "Predicate contains no valid alphanumeric characters."
+
+    if len(norm) < 2:
+        return False, norm, f"Predicate '{norm}' is too short (minimum 2 characters required)."
+
+    if len(norm) > 64:
+        return False, norm, f"Predicate '{norm}' exceeds maximum length of 64 characters."
+
+    if not re.match(r"^[a-z][a-z0-9_]*$", norm):
+        return False, norm, f"Predicate '{norm}' must start with a lowercase letter and contain only alphanumeric characters and underscores."
+
+    if norm in DISALLOWED_STOP_WORDS:
+        return False, norm, f"Predicate '{name}' is a pure preposition or stop-word and cannot represent a meaningful relationship."
+
+    if norm in DISALLOWED_META_TOKENS:
+        return False, norm, f"Predicate '{name}' is a generic metadata token, not a valid relationship type."
+
+    return True, norm, None
+
+
+def validate_predicate(
+    name: str,
+    vocabulary: dict = None,
+    allow_open_world: bool = True
+) -> PredicateValidationResult:
+    """
+    Validate a predicate against the canonical ontology and open-world structural constraints.
+    Distinguishes:
+      - 'canonical': Matches explicit vocabulary entry or alias.
+      - 'open_world': Structurally sound and semantically meaningful relationship outside vocabulary.
+      - 'invalid': Malformed, empty, stop-word, or non-relational noise.
+    """
+    if not name or not isinstance(name, str) or not name.strip():
+        return PredicateValidationResult(
+            is_valid=False,
+            status="invalid",
+            canonical_predicate=None,
+            raw_predicate=str(name or ""),
+            normalized_predicate="",
+            error="Relationship must have a non-empty 'relation' or 'predicate'."
+        )
+
+    raw_str = name.strip()
+    norm = normalize_predicate_name(raw_str)
+
+    # 1. Check Canonical Vocabulary (closed-world / known aliases)
+    canonical = get_canonical_predicate(raw_str, vocabulary)
+    if canonical:
+        return PredicateValidationResult(
+            is_valid=True,
+            status="canonical",
+            canonical_predicate=canonical,
+            raw_predicate=raw_str,
+            normalized_predicate=norm
+        )
+
+    # 2. Check Open-World Structural Validation
+    is_valid_struct, norm_struct, err_reason = validate_predicate_structure(raw_str)
+    if not is_valid_struct:
+        return PredicateValidationResult(
+            is_valid=False,
+            status="invalid",
+            canonical_predicate=None,
+            raw_predicate=raw_str,
+            normalized_predicate=norm_struct,
+            error=err_reason
+        )
+
+    # If open-world is permitted, accept as open_world predicate
+    if allow_open_world:
+        return PredicateValidationResult(
+            is_valid=True,
+            status="open_world",
+            canonical_predicate=norm_struct,
+            raw_predicate=raw_str,
+            normalized_predicate=norm_struct,
+            warning=f"Predicate '{norm_struct}' accepted under open-world ontology."
+        )
+
+    # If open-world is disabled, reject as unregistered
+    return PredicateValidationResult(
+        is_valid=False,
+        status="invalid",
+        canonical_predicate=None,
+        raw_predicate=raw_str,
+        normalized_predicate=norm_struct,
+        error=f"Relationship predicate '{raw_str}' is not registered in vocabulary."
+    )
+
 
 
 def load_vocabulary():
@@ -87,7 +247,9 @@ def get_canonical_predicate(name: str, vocabulary: dict = None) -> str | None:
     return None
 
 
-def is_valid_predicate(name: str, vocabulary: dict = None) -> bool:
+def is_valid_predicate(name: str, vocabulary: dict = None, allow_open_world: bool = False) -> bool:
+    if allow_open_world:
+        return validate_predicate(name, vocabulary=vocabulary, allow_open_world=True).is_valid
     return get_canonical_predicate(name, vocabulary) is not None
 
 
@@ -96,11 +258,15 @@ def get_inverse_predicate(name: str, vocabulary: dict = None) -> str | None:
         vocabulary = load_vocabulary()
 
     canonical = get_canonical_predicate(name, vocabulary)
-    if not canonical:
-        return None
+    if canonical:
+        pred_info = vocabulary.get("predicates", {}).get(canonical, {})
+        return pred_info.get("inverse")
 
-    pred_info = vocabulary.get("predicates", {}).get(canonical, {})
-    return pred_info.get("inverse")
+    # Symmetric open-world predicates
+    norm = normalize_predicate_name(name)
+    if norm in ("roommate_of", "has_sibling", "friend_of", "married_to", "partner_in", "collaborated_with"):
+        return norm
+    return None
 
 
 def is_type_compatible(

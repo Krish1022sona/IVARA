@@ -58,16 +58,15 @@ class TestEvaluatorAudit:
         hyp = "I don't have sufficient recorded memory to answer."
         assert evaluate_response_locally("knowledge-update", "q", gold, hyp, is_abstention=True) is True
 
-    def test_abstention_matching_formal_phrasing_fails_in_existing_evaluator(self):
+    def test_abstention_matching_formal_phrasing_passes_in_corrected_evaluator(self):
         """
-        Demonstrates known flaw: 'do not have sufficient' is not in the hardcoded list
-        ['don't have sufficient', 'insufficient', ...], so formal phrasing fails.
+        Verifies that 'do not have sufficient' is recognized as a valid abstention statement
+        following the sprint fix to evaluate_response_locally.
         """
         gold = "unanswerable"
         hyp = "I do not have sufficient recorded memories to determine how often you see Dr. Johnson."
-        # Known flaw: returns False because 'do not have sufficient' is not 'don't have sufficient'
         res = evaluate_response_locally("knowledge-update", "q", gold, hyp, is_abstention=True)
-        assert res is False, "Expected existing heuristic to fail on 'do not have sufficient' (no contraction)"
+        assert res is True, "Expected corrected heuristic to recognize 'do not have sufficient'"
 
     def test_abstention_false_positive_risk(self):
         """

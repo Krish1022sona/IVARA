@@ -11,10 +11,19 @@
     "Organization": {
       "aliases": [
         "organization",
-        "org",
-        "institution"
+        "org"
       ],
       "parent": null
+    },
+    "Institution": {
+      "aliases": [
+        "institution",
+        "university",
+        "college",
+        "school",
+        "academy"
+      ],
+      "parent": "Organization"
     },
     "Company": {
       "aliases": [
@@ -76,6 +85,44 @@
         "position"
       ],
       "parent": null
+    },
+    "Animal": {
+      "aliases": [
+        "animal",
+        "pet",
+        "dog",
+        "cat"
+      ],
+      "parent": null
+    },
+    "Date": {
+      "aliases": [
+        "date",
+        "time",
+        "year",
+        "month",
+        "day"
+      ],
+      "parent": null
+    },
+    "Event": {
+      "aliases": [
+        "event",
+        "hackathon",
+        "conference",
+        "competition",
+        "milestone"
+      ],
+      "parent": null
+    },
+    "Degree": {
+      "aliases": [
+        "degree",
+        "education",
+        "qualification",
+        "diploma"
+      ],
+      "parent": null
     }
   },
 
@@ -85,13 +132,15 @@
         "worked with",
         "collaborated with",
         "colleague of",
-        "reunited with"
+        "reunited with",
+        "working with"
       ],
       "inverse": "worked_with"
     },
     "worked_on": {
       "aliases": [
         "worked on",
+        "working on",
         "built",
         "developed",
         "assigned to",
@@ -132,6 +181,7 @@
       "aliases": [
         "role",
         "holds role",
+        "holds position",
         "served as",
         "serves as"
       ],
@@ -193,6 +243,131 @@
         "child of"
       ],
       "inverse": "parent_of"
+    },
+    "born_in": {
+      "aliases": [
+        "born in",
+        "birthplace",
+        "native of"
+      ],
+      "inverse": null
+    },
+    "born_on": {
+      "aliases": [
+        "born on",
+        "birth date",
+        "date of birth"
+      ],
+      "inverse": null
+    },
+    "lives_in": {
+      "aliases": [
+        "lives in",
+        "resides in",
+        "living in",
+        "residence",
+        "moved to",
+        "relocated to",
+        "relocates to"
+      ],
+      "inverse": "has_resident"
+    },
+    "has_resident": {
+      "aliases": [
+        "has resident",
+        "resident"
+      ],
+      "inverse": "lives_in"
+    },
+    "roommate_of": {
+      "aliases": [
+        "roommate of",
+        "roommate",
+        "roomed with"
+      ],
+      "inverse": "roommate_of"
+    },
+    "has_pet": {
+      "aliases": [
+        "has pet",
+        "owns pet",
+        "pet"
+      ],
+      "inverse": "pet_of"
+    },
+    "pet_of": {
+      "aliases": [
+        "pet of"
+      ],
+      "inverse": "has_pet"
+    },
+    "prefers": {
+      "aliases": [
+        "prefers",
+        "preference for",
+        "prefers over"
+      ],
+      "inverse": null
+    },
+    "transitioned_to": {
+      "aliases": [
+        "transitioned to",
+        "switched to",
+        "adopted"
+      ],
+      "inverse": null
+    },
+    "transitioned_from": {
+      "aliases": [
+        "transitioned from",
+        "switched from"
+      ],
+      "inverse": null
+    },
+    "located_in": {
+      "aliases": [
+        "located in",
+        "located at",
+        "based in"
+      ],
+      "inverse": "contains_location"
+    },
+    "contains_location": {
+      "aliases": [
+        "contains location"
+      ],
+      "inverse": "located_in"
+    },
+    "graduated_from": {
+      "aliases": [
+        "graduated from",
+        "alumnus of",
+        "studied at"
+      ],
+      "inverse": null
+    },
+    "has_sibling": {
+      "aliases": [
+        "has sibling",
+        "sibling of",
+        "brother of",
+        "sister of"
+      ],
+      "inverse": "has_sibling"
+    },
+    "mentoring": {
+      "aliases": [
+        "mentoring",
+        "mentor of",
+        "mentors"
+      ],
+      "inverse": "mentored_by"
+    },
+    "mentored_by": {
+      "aliases": [
+        "mentored by"
+      ],
+      "inverse": "mentoring"
     }
   }
 }

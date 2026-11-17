@@ -143,7 +143,10 @@ class ChunkRetriever:
         query: str,
         k: int = 5,
         min_score: float | None = None,
-        max_chunks_per_session: int | None = None
+        max_chunks_per_session: int | None = None,
+        use_session_mmr: bool = True,
+        mmr_lambda: float = 0.25,
+        mmr_pool_size: int = 15
     ) -> list[dict[str, Any]]:
         """
         Retrieve top-k chunks combining cosine similarity, BM25, and optional ontology matching.
@@ -283,7 +286,53 @@ class ChunkRetriever:
                 if len(diverse_results) >= k:
                     break
             return diverse_results
+
+        # Session-Aware MMR selection when enabled
+        if use_session_mmr and len(fused_results) > k:
+            candidate_pool = fused_results[:max(k, mmr_pool_size)]
+            return select_session_mmr_chunks(candidate_pool, k=k, lambda_penalty=mmr_lambda)
+
         return fused_results[:k]
+
+
+def select_session_mmr_chunks(
+    candidates: list[dict[str, Any]],
+    k: int = 5,
+    lambda_penalty: float = 0.25
+) -> list[dict[str, Any]]:
+    """
+    Session-Aware Maximal Marginal Relevance selection.
+    Balances chunk relevance with diversity across conversational sessions.
+    Penalizes subsequent chunks from an already-selected session by lambda_penalty.
+    Preserves existing top-k retrieval as an exact fallback when lambda_penalty=0.0.
+    """
+    if not candidates or k <= 0:
+        return []
+    if len(candidates) <= k or lambda_penalty <= 0.0:
+        return candidates[:k]
+
+    selected: list[dict[str, Any]] = []
+    selected_sids: set[str] = set()
+    remaining = list(candidates)
+
+    for _ in range(min(k, len(remaining))):
+        best_idx = -1
+        best_score = -999.0
+        for i, c in enumerate(remaining):
+            sid = str(c.get("session_id") or c.get("memory_id") or "")
+            penalty = lambda_penalty if sid in selected_sids else 0.0
+            score = c.get("score", 0.0) - penalty
+            if score > best_score:
+                best_score = score
+                best_idx = i
+        if best_idx >= 0:
+            chosen = remaining.pop(best_idx)
+            selected.append(chosen)
+            chosen_sid = str(chosen.get("session_id") or chosen.get("memory_id") or "")
+            if chosen_sid:
+                selected_sids.add(chosen_sid)
+
+    return selected
 
 
 def assemble_bounded_context(
@@ -340,7 +389,12 @@ def assemble_bounded_context(
     ]
 
     direct_evidence = []
-    for mem_id, chunks_in_sess in session_snippets.items():
+    # Sort sessions chronologically by timestamp so multi-session context is presented in temporal order
+    sorted_sessions = sorted(
+        session_snippets.items(),
+        key=lambda item: (str(item[1][0].get("timestamp", "")), item[0])
+    )
+    for mem_id, chunks_in_sess in sorted_sessions:
         # Sort chunks within the session chronologically by start turn
         chunks_in_sess.sort(key=lambda c: c["turn_range"][0])
         for c in chunks_in_sess:

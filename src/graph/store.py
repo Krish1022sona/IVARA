@@ -393,3 +393,55 @@ class SQLiteGraphStore:
         with conn:
             conn.execute("DELETE FROM edges")
             conn.execute("DELETE FROM nodes")
+
+    def delete_node(self, node_id: str) -> bool:
+        """Delete a node and let foreign key constraints cascade to its connected edges."""
+        self._node_cache.pop(node_id, None)
+        conn = self._get_connection()
+        with conn:
+            cur = conn.execute("DELETE FROM nodes WHERE id = ?", (node_id,))
+            return cur.rowcount > 0
+
+    def delete_memory_nodes_and_edges(self, memory_id: str) -> dict[str, int]:
+        """Delete all nodes and edges associated with a specific memory ID.
+        
+        Removes:
+          1. Any edge referencing memory_id or chunk_id matching memory_id.
+          2. Any claim nodes where source_chunk_id matches memory_id.
+          3. The memory container node itself (id == memory_id).
+        """
+        conn = self._get_connection()
+        deleted_nodes_count = 0
+        deleted_edges_count = 0
+
+        with conn:
+            # Find claim nodes whose source_chunk_id matches memory_id
+            cur = conn.execute("SELECT id, properties FROM nodes WHERE node_type = 'claim'")
+            claim_node_ids = []
+            for row in cur.fetchall():
+                try:
+                    props = json.loads(row["properties"])
+                    if props.get("source_chunk_id") == memory_id:
+                        claim_node_ids.append(row["id"])
+                except Exception:
+                    pass
+
+            all_node_ids = list(claim_node_ids)
+            cur = conn.execute("SELECT id FROM nodes WHERE id = ?", (memory_id,))
+            if cur.fetchone():
+                all_node_ids.append(memory_id)
+
+            # Delete edges referencing memory_id or chunk_id
+            cur = conn.execute(
+                "DELETE FROM edges WHERE memory_id = ? OR chunk_id = ?",
+                (memory_id, memory_id)
+            )
+            deleted_edges_count += cur.rowcount
+
+            # Delete nodes
+            for nid in all_node_ids:
+                self._node_cache.pop(nid, None)
+                cur = conn.execute("DELETE FROM nodes WHERE id = ?", (nid,))
+                deleted_nodes_count += cur.rowcount
+
+        return {"deleted_nodes": deleted_nodes_count, "deleted_edges": deleted_edges_count}

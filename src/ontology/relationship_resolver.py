@@ -1,4 +1,4 @@
-from .vocabulary import get_canonical_predicate
+from .vocabulary import get_canonical_predicate, validate_predicate
 
 
 def find_resolved_entity(name, resolved_entities):
@@ -78,10 +78,10 @@ def resolve_relationship(
             "predicate": None
         }
 
-    # Canonicalize predicate via vocabulary
-    canonical_pred = get_canonical_predicate(raw_relation) if raw_relation else None
-    if not canonical_pred:
-        canonical_pred = raw_relation
+    # Canonicalize predicate via vocabulary or open-world normalization
+    pred_res = validate_predicate(raw_relation, allow_open_world=True) if raw_relation else None
+    canonical_pred = pred_res.canonical_predicate if (pred_res and pred_res.is_valid) else raw_relation
+    predicate_status = pred_res.status if pred_res else "unknown"
 
     source = find_resolved_entity(
         raw_source,
@@ -107,6 +107,8 @@ def resolve_relationship(
             "error": f"Could not resolve {', '.join(missing)} to an entity in the current context.",
             "source_raw": raw_source,
             "predicate": canonical_pred,
+            "raw_predicate": raw_relation,
+            "predicate_status": predicate_status,
             "target_raw": raw_target,
             "confidence": confidence,
             "origin": origin,
@@ -118,6 +120,8 @@ def resolve_relationship(
         "resolved": True,
         "source": build_entity_reference(source),
         "predicate": canonical_pred,
+        "raw_predicate": raw_relation,
+        "predicate_status": predicate_status,
         "target": build_entity_reference(target),
         "confidence": confidence,
         "origin": origin,
