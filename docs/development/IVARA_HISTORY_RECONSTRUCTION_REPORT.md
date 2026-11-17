@@ -38,7 +38,7 @@ To ensure total scientific integrity, every assertion in this reconstruction is 
 
 ### 2.1 Sources Investigated
 - **Git Commit Log:** 11 commits on `experiment/evidence-validated-routing-phase3-1`, with historical baseline commit `55a273bff20fa0eec1b2d361e8a03b217d147abe` representing Candidate E.
-- **Documentation Corpus:** 110 Markdown files totaling 1.15 MB of text, cataloged in [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_AUDIT.md).
+- **Documentation Corpus:** 110 Markdown files totaling 1.15 MB of text, cataloged in [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_AUDIT.md).
 - **Brain Artifacts:** 39 structured markdown documents in `<appDataDir>/brain/226de5a2-a635-43e4-bb7e-1182a69b037e/` recording phase designs, evaluation reports, and failure analyses.
 - **Test Suite Execution:** `pytest` execution against `tests/`, collecting and passing 525 tests in 32.58s.
 - **Benchmark Prediction Files:**
@@ -73,7 +73,7 @@ flowchart TD
 | **Phase 6** | Stage 1 Finalization Audit & Stage 2 Final Bakeoff Integrity Gate | Cryptographic hash audit of all 500 questions; McNemar test confirms Candidate B win | `55a273b` (verified) |
 | **Phase 7** | Production hardening: fixed unsafe fallback & eliminated 16 Arjun occurrences | 100% test pass rate (525/525 passed); 0 Arjun occurrences in `src/`; Freeze Authorized | Head of branch |
 
-*(For the complete narrative timeline with commit hashes, see [`IVARA_PROJECT_TIMELINE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_PROJECT_TIMELINE.md).)*
+*(For the complete narrative timeline with commit hashes, see [`IVARA_PROJECT_TIMELINE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_PROJECT_TIMELINE.md).)*
 
 ---
 
@@ -93,7 +93,7 @@ Across the seven phases, the engineering team identified, forensically investiga
 | **8** | **LLM Judge Prompt Jitter** | External API updates caused evaluation drift and score instability. | **Official Frozen Local Judge Contract:** Sealed Qwen 2.5 14B Q4_K_M prompt rubric. | Guarantee 100% deterministic, repeatable scoring across all bakeoffs. |
 | **9** | **Multi-Word Regex Boundary Failure** | Regex failed to match multi-word titles (`"Dr. Shalini Verma"`) on possessive queries. | **Bounded Token Regex Matching:** Extended regex to `[a-zA-Z0-9_\.\-]+(?:\s+[a-zA-Z0-9_\.\-]+){0,2}`. | Routing regression matrix improved to **28 / 28 passing (100%)**. |
 
-*(For detailed 7-point challenge registers, see [`IVARA_CHALLENGES_AND_SOLUTIONS.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_CHALLENGES_AND_SOLUTIONS.md).)*
+*(For detailed 7-point challenge registers, see [`IVARA_CHALLENGES_AND_SOLUTIONS.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_CHALLENGES_AND_SOLUTIONS.md).)*
 
 ---
 
@@ -118,7 +118,7 @@ flowchart TD
 | **Gen 4: Hierarchical/Router**| Session centroids + LLM router | Relative offset rules | Bounded ego-network | Structured + fallback | **56.80%** (284/500) | 8.84s |
 | **Gen 5: Candidate B (Frozen)**| **Flat MMR ($\lambda=0.70$) + BM25** | **TACC Calendar Engine** | **Pruned degree $\le 10$** | **Hardened Abstention**| **58.40%** (292/500) | **7.46s** |
 
-*(For detailed subsystem specifications and Mermaid component flows, see [`IVARA_ARCHITECTURE_EVOLUTION.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_ARCHITECTURE_EVOLUTION.md).)*
+*(For detailed subsystem specifications and Mermaid component flows, see [`IVARA_ARCHITECTURE_EVOLUTION.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/architecture/IVARA_ARCHITECTURE_EVOLUTION.md).)*
 
 ---
 
@@ -178,13 +178,13 @@ flowchart LR
     Gate --> DelDups[git rm: 6 Exact Root Duplicates]
 ```
 
-*(For the complete 110-file inventory table, see [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_AUDIT.md); for the post-freeze directory structure and migration commands, see [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_STRUCTURE.md).)*
+*(For the complete 110-file inventory table, see [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_AUDIT.md); for the post-freeze directory structure and migration commands, see [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_STRUCTURE.md).)*
 
 ---
 
 ## 8. Presentation Narrative & Slide Deck
 
-To support executive briefing, conference presentations, and technical defenses, a 12-slide narrative was authored in [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_PRESENTATION_STORY.md).
+To support executive briefing, conference presentations, and technical defenses, a 12-slide narrative was authored in [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/presentation/IVARA_PRESENTATION_STORY.md).
 
 ### 12-Slide Overview:
 1. **Slide 1: Title & The Long-Horizon Memory Problem:** Conversational amnesia in multi-session personal AI.
@@ -206,13 +206,13 @@ To support executive briefing, conference presentations, and technical defenses,
 
 The complete project history and audit reconstruction is embodied in seven master documents authored during this initiative:
 
-1. **Executive Synthesis & Archaeological Audit:** [`IVARA_HISTORY_RECONSTRUCTION_REPORT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_HISTORY_RECONSTRUCTION_REPORT.md) *(This document)*
-2. **Chronological Development Timeline:** [`IVARA_PROJECT_TIMELINE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_PROJECT_TIMELINE.md)
-3. **Engineering Challenges & Solution Registers:** [`IVARA_CHALLENGES_AND_SOLUTIONS.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_CHALLENGES_AND_SOLUTIONS.md)
-4. **Architectural Evolution & System Generations:** [`IVARA_ARCHITECTURE_EVOLUTION.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_ARCHITECTURE_EVOLUTION.md)
-5. **Complete Documentation Inventory & Audit:** [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_AUDIT.md)
-6. **Target Documentation Structure & Migration Plan:** [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_STRUCTURE.md)
-7. **Technical Presentation Storyline & Slide Deck:** [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_PRESENTATION_STORY.md)
+1. **Executive Synthesis & Archaeological Audit:** [`IVARA_HISTORY_RECONSTRUCTION_REPORT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_HISTORY_RECONSTRUCTION_REPORT.md) *(This document)*
+2. **Chronological Development Timeline:** [`IVARA_PROJECT_TIMELINE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_PROJECT_TIMELINE.md)
+3. **Engineering Challenges & Solution Registers:** [`IVARA_CHALLENGES_AND_SOLUTIONS.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_CHALLENGES_AND_SOLUTIONS.md)
+4. **Architectural Evolution & System Generations:** [`IVARA_ARCHITECTURE_EVOLUTION.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/architecture/IVARA_ARCHITECTURE_EVOLUTION.md)
+5. **Complete Documentation Inventory & Audit:** [`IVARA_DOCUMENTATION_AUDIT.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_AUDIT.md)
+6. **Target Documentation Structure & Migration Plan:** [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_STRUCTURE.md)
+7. **Technical Presentation Storyline & Slide Deck:** [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/presentation/IVARA_PRESENTATION_STORY.md)
 
 ---
 
@@ -221,11 +221,11 @@ The complete project history and audit reconstruction is embodied in seven maste
 With the project history completely reconstructed, the code verified and hardened, and all documentation audited, the project is ready for formal transition from experimentation to production release:
 
 1. **Step 1: Execute Production Code Freeze**
-   - Authorize code freeze based on [`FINAL_FREEZE_GO_NO_GO.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/FINAL_FREEZE_GO_NO_GO.md).
+   - Authorize code freeze based on [`FINAL_FREEZE_GO_NO_GO.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/release/FINAL_FREEZE_GO_NO_GO.md).
    - Tag the hardened release commit with `v1.0.0-freeze`.
 2. **Step 2: Execute Post-Freeze Documentation Reorganization**
    - Create a maintenance branch `refactor/docs-reorganization`.
-   - Execute the safe migration script from [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_DOCUMENTATION_STRUCTURE.md) to delete the 6 root duplicates and move historical files to `archive/` using `git mv`.
+   - Execute the safe migration script from [`IVARA_DOCUMENTATION_STRUCTURE.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/development/IVARA_DOCUMENTATION_STRUCTURE.md) to delete the 6 root duplicates and move historical files to `archive/` using `git mv`.
 3. **Step 3: Academic Publication & Presentation Preparation**
-   - Synthesize the technical narrative from [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_PRESENTATION_STORY.md) into conference slide decks.
+   - Synthesize the technical narrative from [`IVARA_PRESENTATION_STORY.md`](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/docs/presentation/IVARA_PRESENTATION_STORY.md) into conference slide decks.
    - Author the formal conference preprint based on the methodology and ablation tables established in this report.
