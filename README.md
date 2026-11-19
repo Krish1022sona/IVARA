@@ -1,10 +1,11 @@
 # IVARA — Intelligent Verifiable Agentic Retrieval Architecture
 ## Privacy-First Autobiographical Memory & Grounded Reasoning for Local Conversational AI
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0--freeze-blue.svg)](docs/release/FINAL_FREEZE_GO_NO_GO.md)
-[![Tests](https://img.shields.io/badge/Tests-525%20Passed%20(100%25)-brightgreen.svg)]()
-[![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-58.40%25%20(Task%20Avg%2061.34%25)-success.svg)](docs/evaluation/FINAL_BAKEOFF_REPORT.md)
-[![Compute](https://img.shields.io/badge/Compute-100%25%20Local%20%7C%20CPU%20or%20Ollama-orange.svg)]()
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-525%20Passed-brightgreen.svg)]()
+[![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-58.40%25-success.svg)](docs/evaluation/FINAL_BAKEOFF_REPORT.md)
+[![Compute](https://img.shields.io/badge/Compute-100%25%20Local-orange.svg)]()
 
 IVARA is a local, privacy-first personal AI memory architecture designed to retain, organize, and reason across extended autobiographical conversations spanning weeks, months, and years. By pairing deterministic episodic storage with Maximal Marginal Relevance (MMR) retrieval, explicit calendar arithmetic, and strict post-generation citation reconciliation, IVARA mitigates topic distraction and hallucinated memory recall without transmitting personal data to cloud APIs.
 
@@ -111,7 +112,7 @@ flowchart TD
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/IVARA.git
+   git clone https://github.com/Krish1022sona/IVARA.git
    cd IVARA
    ```
 
@@ -234,19 +235,20 @@ IVARA/
 ├── .github/                   # Issue templates and PR guidelines
 ├── archive/                   # Historical experiment reports & audit logs
 │   ├── experiments/           # Phase ablation reports (Phase 1 to Phase 3.1)
-│   ├── historical-reports/    # Milestone summaries and microbenchmarks
 │   └── research-notes/        # Failure forensics and investigative notes
 ├── data/                      # Baseline ontology entities and seed memories
 │   ├── entities.json          # Seed entity registry
+│   ├── memories.example.json  # Example memory schema
 │   └── memories.json          # Seed memory fixtures
-├── docs/                      # Living system documentation
+├── docs/                      # System documentation
 │   ├── architecture/          # Design specifications and architecture evolution
 │   ├── development/           # Project timeline and challenge registers
 │   ├── evaluation/            # Final bakeoff reports and integrity audits
-│   ├── presentation/          # Technical presentation outline
-│   ├── release/               # Pre-freeze hardening and freeze criteria
 │   └── research/              # Academic paper dossiers and research briefs
 ├── evaluation/                # Benchmark evaluation harnesses and protocols
+│   ├── adapters/              # LongMemEval dataset adapters
+│   ├── data/                  # Evaluation datasets and final bakeoff results
+│   └── runners/               # Official benchmark runners and judges
 ├── src/                       # Core application source code
 │   ├── answering.py           # Grounded answer generation & citation validator
 │   ├── embedding.py           # Local dense embedding wrappers
@@ -266,9 +268,10 @@ IVARA/
 ├── .gitignore                 # Exclusion rules for local DBs, caches, secrets
 ├── CONTRIBUTING.md             # Developer contribution guidelines
 ├── DEMO_GUIDE.md              # Evaluator demonstration walkthrough
-├── GITHUB_RELEASE_AUDIT.md    # Repository inventory and file classification
 ├── INSTALLATION_GUIDE.md      # Detailed installation instructions
 ├── KNOWN_LIMITATIONS.md       # Operational boundaries and failure taxonomy
+├── LICENSE                    # MIT License
+├── README.md                  # Project overview and entry point
 ├── requirements.txt           # Core runtime dependencies
 ├── requirements-dev.txt       # Development and testing dependencies
 ├── SECURITY.md                # Vulnerability disclosure and privacy policy
@@ -345,4 +348,4 @@ For security reports, please review [`SECURITY.md`](SECURITY.md).
 
 ## 18. License
 
-The intended license for this project is currently under review by the author (MIT or Apache 2.0). Please see the repository release notes for the formal license declaration prior to commercial distribution.
+This project is licensed under the MIT License — see the [`LICENSE`](LICENSE) file for details.

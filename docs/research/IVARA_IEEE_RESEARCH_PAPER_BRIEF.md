@@ -311,7 +311,7 @@ Candidate B vs. Candidate C       35                 27                0.7903   
 
 # 6. Final Product Verification & Empirical Edge Audits
 
-Prior to publication readiness, the hardened production implementation underwent a comprehensive 13-scenario end-to-end user journey audit ([IVARA_FINAL_PRODUCT_AUDIT.md](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/IVARA_FINAL_PRODUCT_AUDIT.md)).
+Prior to publication readiness, the hardened production implementation underwent a comprehensive 13-scenario end-to-end user journey audit.
 
 ### 6.1 Test Suite & Verification Matrix
 - **Automated Regression Suite:** 525 passed of 525 tests in 35.77s (100% pass rate).
