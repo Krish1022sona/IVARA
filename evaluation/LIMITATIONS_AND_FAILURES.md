@@ -43,6 +43,9 @@ In a controlled 4-arm ablation across 133 frozen temporal questions:
 ### 2.2 Unbounded Knowledge Graph Traversal Degrades Retrieval Precision
 In open information extraction experiments, allowing unbounded knowledge graph expansion created dense hub entities (e.g. common concepts connecting to 40+ nodes). During retrieval, traversing these hubs flooded the top-$k$ candidate pool with topically irrelevant turns, decreasing answerable accuracy on held-out evaluation from 43.33% to 40.00% (-3.33 pp) and increasing latency by 3x. Bounded hub suppression ($\le 10$ edges per hub) was required to stabilize graph retrieval.
 
+### 2.3 Evidence-Validated Hard Session Routing Regressions (Phase 3.1)
+In Phase 3.1, an automated `EvidenceSelector` was tested to apply hard binary masks across conversation sessions. While it successfully eliminated distractors for 10 single-session questions, it induced 15 severe regressions on complex multi-session questions where background context or entity definitions were located in peripheral sessions, dropping accuracy by -3.76 pp (64/133 vs 69/133). Soft continuous MMR diversity penalty ($\lambda = 0.70$) strictly outperformed hard binary session gating.
+
 ---
 
 ## 3. Explicit Non-Claims & Architectural Boundaries

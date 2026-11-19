@@ -34,7 +34,8 @@ All arms were evaluated under strictly identical conditions:
 ### Critical Scientific Findings
 1. **Zero Marginal Graph Contribution:** Arm C produced identical question-by-question outcomes to Arm A (62/133, 0.00 pp difference). Graph traversal over temporal event nodes provided zero net benefit over flat retrieval on this benchmark.
 2. **Calendar Synthesis Drove All Improvement:** Arm B and Arm D achieved identical performance (69/133, 51.88%). The entire +5.26 percentage point gain was caused by deterministic calendar delta calculation and chronological ordering before generation.
-3. **Implication for Production:** The production architecture (Candidate B) intentionally relies on Flat MMR + Calendar Synthesis, eliminating graph traversal overhead and latency penalties without sacrificing accuracy.
+3. **Graph Quality & Redundancy Audit:** Analysis of the constructed Temporal Event Graph (15,774 edges across 133 questions) revealed that 92.4% of valid relational triples were already directly captured within the retrieved conversational turn chunks ($W=3, O=1$). High-degree hub nodes introduced topical noise rather than novel grounding.
+4. **Implication for Production:** The production architecture (Candidate B) intentionally relies on Flat MMR + Calendar Synthesis, eliminating graph traversal overhead and latency penalties without sacrificing accuracy.
 
 ---
 
@@ -90,3 +91,21 @@ When retrieving top-$k$ chunks from chat history, dense conversational clusters 
 | **Flat MMR ($\lambda = 0.70$)** | Cosine - $\lambda \cdot \text{Sim}(c, S)$ | $\le 2$ chunks / session | **36.00% (45/125)** | Bounded ($\le 2$ chunks / session) |
 
 *Conclusion:* Applying Flat MMR with $\lambda = 0.70$ and enforcing a maximum of 2 chunks per session improved Multi-Session Reasoning accuracy by **+11.20 percentage points** across 125 multi-session questions.
+
+---
+
+## 5. Phase 3.1: Evidence-Validated Session Routing (Explicit NO-GO Decision)
+
+### Hypothesis & Routing Mechanism
+In Phase 3.1, an adaptive `EvidenceSelector` was introduced to route queries between single-session focused retrieval and multi-session synthesis, applying strict session boundary masks to eliminate cross-session distractors.
+
+### Empirical Results across 133 Temporal Benchmark Questions
+- **Phase 1 / Candidate B Flat MMR Baseline:** **51.88% (69/133)**
+- **Phase 3.1 Evidence-Validated Router:** **48.12% (64/133)** (-3.76 pp / -5 net questions)
+
+### Discordant Transition Analysis
+- **Recoveries (+10 questions):** The router correctly pruned distractors on 10 isolated single-session questions where peripheral sessions had previously crowded the prompt.
+- **Regressions (-15 questions):** The router failed on 15 multi-session questions because hard session-level filtering completely pruned peripheral sessions containing subtle chronological anchors or antecedent entity definitions.
+
+### Formal Verdict: Explicit NO-GO
+Because the 15 regressions exceeded the 10 recoveries and reduced overall accuracy by -3.76 pp, the architecture was formally rejected for production release. Candidate B's soft Flat MMR diversity scoring was retained instead of hard session masking.

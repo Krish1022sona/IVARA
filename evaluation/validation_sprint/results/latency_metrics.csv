@@ -1,8 +1,0 @@
-arm,mean_ms,median_ms,p95_ms
-baseline_vector,1899.4,1817.0,2867.3
-baseline_hybrid,2058.6,1973.5,2926.4
-baseline_hybrid_speaker_aware,1878.5,1697.2,3395.7
-ivara_hybrid_no_graph,2357.8,1910.3,9444.2
-ivara_full,3150.0,2484.5,7821.9
-ivara_no_ontology_no_graph,2611.4,1925.1,10704.9
-ivara_full_no_temporal,3230.8,2377.4,10832.4

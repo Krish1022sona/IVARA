@@ -44,7 +44,7 @@ $$\text{Arm D (True: 7 vs 1): } p = 2 \times \sum_{k=7}^{8} \binom{8}{k} (0.5)^{
 $$\text{Arm E (True: 8 vs 2): } p = 2 \times \sum_{k=8}^{10} \binom{10}{k} (0.5)^{10} = \frac{112}{1024} = \mathbf{0.10938} \quad (\text{Not significant at } \alpha = 0.10)$$
 
 **Key Audit Takeaway:**  
-The reported $p$-values in the M3.1 audit report (`0.0386`, `0.0703`, `0.1094`) were mathematically exact and generated from the true counts ($10\text{ vs }2, 7\text{ vs }1, 8\text{ vs }2$). The typographical transcription error in the display text has been formally corrected in [STATISTICAL_AUDIT_CORRECTION.md](file:///c:/Users/Krishna/Desktop/Brahmaand/Coding_Ki_Dunia/Projects/IVARA/evaluation/milestone_3_1_audit/STATISTICAL_AUDIT_CORRECTION.md).
+The reported $p$-values in the M3.1 audit report (`0.0386`, `0.0703`, `0.1094`) were mathematically exact and generated from the true counts ($10\text{ vs }2, 7\text{ vs }1, 8\text{ vs }2$). The typographical transcription error in the display text has been formally corrected in the statistical methodology documentation (see `evaluation/METHODOLOGY.md`).
 
 ### 1.3 Correction on the Unanswerable Question Category
 The M3 and M3.1 reports noted 100% accuracy on unanswerable questions.

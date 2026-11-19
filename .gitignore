@@ -112,3 +112,12 @@ assets/
 evaluation/data/longmemeval/longmemeval_oracle.json
 evaluation/data/longmemeval/runs/*
 !evaluation/data/longmemeval/runs/final_bakeoff/
+
+# 12. Local Research Archives (Historical Reports & Investigative Forensics)
+archive/
+evaluation/archive/
+
+# 13. Intermediate Synthetic Benchmark Outputs
+evaluation/hybrid_validation/hybrid_validation_results.json
+evaluation/story_benchmark/results/
+evaluation/validation_sprint/results/

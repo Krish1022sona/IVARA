@@ -233,9 +233,6 @@ pytest tests/test_answering.py -v
 ```text
 IVARA/
 ├── .github/                   # Issue templates and PR guidelines
-├── archive/                   # Historical experiment reports & audit logs
-│   ├── experiments/           # Phase ablation reports (Phase 1 to Phase 3.1)
-│   └── research-notes/        # Failure forensics and investigative notes
 ├── data/                      # Baseline ontology entities and seed memories
 │   ├── entities.json          # Seed entity registry
 │   ├── memories.example.json  # Example memory schema

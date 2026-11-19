@@ -8,16 +8,19 @@ Welcome to the IVARA benchmark evaluation suite. This directory contains the har
 
 The evaluation findings and methodology are organized into five canonical documents:
 
-1. [**`FINAL_RESULTS.md`**](FINAL_RESULTS.md)  
+1. [**`README.md`**](README.md)  
+   Benchmark overview, directory architecture, quick-start reproduction instructions, and cryptographic verification scripts.
+
+2. [**`FINAL_RESULTS.md`**](FINAL_RESULTS.md)  
    Complete 500-question LongMemEval-S benchmark results, task-by-task breakdown, Category H relative calendar time performance, paired McNemar statistical significance tests ($\chi^2 = 67.58, p = 2.02 \times 10^{-16}$), latency analysis, and SHA-256 cryptographic verification of sealed prediction files.
 
-2. [**`ABLATION_STUDIES.md`**](ABLATION_STUDIES.md)  
-   Controlled 4-arm temporal ablation isolating the +5.26 pp gain from deterministic calendar synthesis vs. 0.00 pp from event graph traversal, turn chunking vs. whole-session embedding dilution, ontology concept expansion, and session-aware MMR diversity filtering ($\lambda = 0.70$).
+3. [**`ABLATION_STUDIES.md`**](ABLATION_STUDIES.md)  
+   Controlled 4-arm temporal ablation isolating the +5.26 pp gain from deterministic calendar synthesis vs. 0.00 pp from event graph traversal, turn chunking vs. whole-session embedding dilution, ontology concept expansion, session-aware MMR diversity filtering ($\lambda = 0.70$), and Phase 3.1 session routing analysis.
 
-3. [**`METHODOLOGY.md`**](METHODOLOGY.md)  
+4. [**`METHODOLOGY.md`**](METHODOLOGY.md)  
    Dataset provenance and attribution, local isolated evaluation environments, metric definitions (Overall Accuracy, Macro Task Average, Recall@5, Evidence Coverage), official LLM-as-a-judge protocol (`qwen2.5:14b` at temperature 0.0), and cryptographic hash verification scripts.
 
-4. [**`LIMITATIONS_AND_FAILURES.md`**](LIMITATIONS_AND_FAILURES.md)  
+5. [**`LIMITATIONS_AND_FAILURES.md`**](LIMITATIONS_AND_FAILURES.md)  
    In-depth forensic failure mode taxonomy across non-passing instances (multi-session dispersion $\ge 3$ sessions, calendar arithmetic, implicit preference supersession), documented negative findings, and explicit architectural non-claims.
 
 ---
