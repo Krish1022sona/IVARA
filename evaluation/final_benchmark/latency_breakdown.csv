@@ -1,7 +1,0 @@
-arm_key,label,mean_ms,median_ms,p95_ms
-arm_a_baseline_fixed_fusion,Arm A: Baseline Fixed Fusion,2764.1,2492.2,5754.1
-arm_b_episodic_only,Arm B: Episodic Only,3875.7,2692.0,11142.2
-arm_c_semantic_only,Arm C: Semantic Only,2580.6,2488.6,5328.7
-arm_d_adaptive_episodic_semantic,Arm D: Adaptive Epi+Sem,3844.8,3103.7,8250.5
-arm_e_full_adaptive_safeguarded_graph,Arm E: Full Adaptive Multi-Source,3553.9,2903.2,7976.3
-arm_e_uncalibrated_generation,Arm E-Ablation: Uncalibrated Gen,4037.3,3042.6,10731.4

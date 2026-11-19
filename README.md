@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/Tests-525%20Passed-brightgreen.svg)]()
-[![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-58.40%25-success.svg)](docs/evaluation/FINAL_BAKEOFF_REPORT.md)
+[![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-58.40%25-success.svg)](evaluation/FINAL_RESULTS.md)
 [![Compute](https://img.shields.io/badge/Compute-100%25%20Local-orange.svg)]()
 
 IVARA is a local, privacy-first personal AI memory architecture designed to retain, organize, and reason across extended autobiographical conversations spanning weeks, months, and years. By pairing deterministic episodic storage with Maximal Marginal Relevance (MMR) retrieval, explicit calendar arithmetic, and strict post-generation citation reconciliation, IVARA mitigates topic distraction and hallucinated memory recall without transmitting personal data to cloud APIs.
@@ -202,7 +202,7 @@ Run the live demonstration (requires running Ollama):
 python demo.py --live
 ```
 
-See [`DEMO_GUIDE.md`](DEMO_GUIDE.md) for detailed scenario expectations.
+See [`DEMO_GUIDE.md`](docs/DEMO_GUIDE.md) for detailed scenario expectations.
 
 ---
 
@@ -243,12 +243,19 @@ IVARA/
 ├── docs/                      # System documentation
 │   ├── architecture/          # Design specifications and architecture evolution
 │   ├── development/           # Project timeline and challenge registers
-│   ├── evaluation/            # Final bakeoff reports and integrity audits
-│   └── research/              # Academic paper dossiers and research briefs
-├── evaluation/                # Benchmark evaluation harnesses and protocols
+│   ├── research/              # Academic paper dossiers and research briefs
+│   ├── DEMO_GUIDE.md          # Evaluator demonstration walkthrough
+│   ├── INSTALLATION_GUIDE.md  # Detailed installation instructions
+│   └── KNOWN_LIMITATIONS.md   # Operational boundaries and failure taxonomy
+├── evaluation/                # Benchmark evaluation harnesses, protocols & results
 │   ├── adapters/              # LongMemEval dataset adapters
 │   ├── data/                  # Evaluation datasets and final bakeoff results
-│   └── runners/               # Official benchmark runners and judges
+│   ├── runners/               # Official benchmark runners and judges
+│   ├── ABLATION_STUDIES.md    # 4-arm temporal and routing ablation studies
+│   ├── FINAL_RESULTS.md       # Authoritative 500-Q LongMemEval-S benchmark results
+│   ├── LIMITATIONS_AND_FAILURES.md # Failure mode taxonomy and negative results
+│   ├── METHODOLOGY.md         # Benchmark protocol, metrics, and judge setup
+│   └── README.md              # Evaluation overview and reproduction guide
 ├── src/                       # Core application source code
 │   ├── answering.py           # Grounded answer generation & citation validator
 │   ├── embedding.py           # Local dense embedding wrappers
@@ -267,9 +274,6 @@ IVARA/
 ├── tests/                     # 50 automated test modules (525 tests)
 ├── .gitignore                 # Exclusion rules for local DBs, caches, secrets
 ├── CONTRIBUTING.md             # Developer contribution guidelines
-├── DEMO_GUIDE.md              # Evaluator demonstration walkthrough
-├── INSTALLATION_GUIDE.md      # Detailed installation instructions
-├── KNOWN_LIMITATIONS.md       # Operational boundaries and failure taxonomy
 ├── LICENSE                    # MIT License
 ├── README.md                  # Project overview and entry point
 ├── requirements.txt           # Core runtime dependencies
@@ -325,7 +329,7 @@ IVARA was benchmarked against the 500-question **LongMemEval-S** dataset using t
 - **Implicit Preference Supersession:** Conversational changes of preference that lack explicit temporal markers remain challenging to disambiguate automatically.
 - **Hardware Requirements for Live Generation:** Running 14B models locally requires $\ge 12$ GB GPU VRAM or 16 GB unified system memory.
 
-For an in-depth forensic taxonomy, see [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
+For an in-depth forensic taxonomy, see [`docs/KNOWN_LIMITATIONS.md`](docs/KNOWN_LIMITATIONS.md) and [`evaluation/LIMITATIONS_AND_FAILURES.md`](evaluation/LIMITATIONS_AND_FAILURES.md).
 
 ---
 

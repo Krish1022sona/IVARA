@@ -1,6 +1,0 @@
-arm_key,label,mean_ms,median_ms,p95_ms
-arm_a_semantic_hybrid,A: Current Semantic/Hybrid IVARA,2063.8,1910.3,4547.5
-arm_b_episodic_only,B: Episodic Retrieval Only,2917.6,2278.1,9603.4
-arm_c_semantic_only,C: Semantic Retrieval Only,3136.2,2226.5,10058.9
-arm_d_episodic_semantic,D: Episodic + Semantic Retrieval,3530.3,2672.9,11021.2
-arm_e_unified_tri_source,E: Unified Tri-Source (Epi+Sem+Graph),3733.2,2718.0,11941.4
