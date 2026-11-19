@@ -1,0 +1,2521 @@
+{
+  "evaluation_mode": "local_model_diagnostic",
+  "official_benchmark_status": "diagnostic_only_not_official_longmemeval",
+  "judge_model": "VladimirGav/gemma4-26b-16GB-VRAM:latest",
+  "rubric": "You are a strict, objective evaluation judge assessing whether an AI assistant's response accurately answers a user question according to a reference gold answer.\n\nUser Question: {question}\nReference Gold Answer: {gold_answer}\nCandidate Prediction: {hypothesis}\nIs Abstention Required: {is_abstention}\n\nEvaluation Rules:\n1. For answerable questions (Is Abstention Required: False):\n   - Return is_correct: true if the prediction accurately captures the factual information stated in the gold answer, including semantic paraphrases, equivalent dates/durations, and spelled-out numbers vs digits.\n   - Return is_correct: false if the prediction is factually wrong, contradicts the evidence, fails to provide the requested information, or improperly abstains.\n2. For unanswerable questions (Is Abstention Required: True):\n   - Return is_correct: true if the candidate correctly identifies that the information is missing, unrecorded, or unanswerable from memory.\n   - Return is_correct: false if the candidate invents an answer or provides unsupported factual claims.\n\nRespond ONLY with a valid JSON object matching this schema:\n{{\n  \"is_correct\": true,\n  \"reasoning\": \"A concise one-sentence factual justification.\"\n}}\n",
+  "total_runtime_s": 1046.36,
+  "metrics_by_config": {
+    "Config-A": {
+      "description": "Dense + BM25 baseline",
+      "total_instances": 60,
+      "judge_failures": 0,
+      "overall_accuracy": 63.33,
+      "overall_accuracy_ci95": [
+        50.68,
+        74.38
+      ],
+      "answerable_accuracy": 61.54,
+      "answerable_accuracy_ci95": [
+        47.96,
+        73.53
+      ],
+      "abstention_accuracy": 75.0,
+      "abstentions_correct": 6,
+      "total_abstentions": 8
+    },
+    "Config-B": {
+      "description": "Baseline + ontology guidance",
+      "total_instances": 60,
+      "judge_failures": 0,
+      "overall_accuracy": 71.67,
+      "overall_accuracy_ci95": [
+        59.23,
+        81.49
+      ],
+      "answerable_accuracy": 67.31,
+      "answerable_accuracy_ci95": [
+        53.76,
+        78.48
+      ],
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 8,
+      "total_abstentions": 8
+    },
+    "Config-C": {
+      "description": "Ontology + bounded graph expansion",
+      "total_instances": 60,
+      "judge_failures": 0,
+      "overall_accuracy": 68.33,
+      "overall_accuracy_ci95": [
+        55.77,
+        78.69
+      ],
+      "answerable_accuracy": 65.38,
+      "answerable_accuracy_ci95": [
+        51.8,
+        76.85
+      ],
+      "abstention_accuracy": 87.5,
+      "abstentions_correct": 7,
+      "total_abstentions": 8
+    },
+    "Config-D": {
+      "description": "Full system with temporal reasoning",
+      "total_instances": 60,
+      "judge_failures": 0,
+      "overall_accuracy": 71.67,
+      "overall_accuracy_ci95": [
+        59.23,
+        81.49
+      ],
+      "answerable_accuracy": 67.31,
+      "answerable_accuracy_ci95": [
+        53.76,
+        78.48
+      ],
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 8,
+      "total_abstentions": 8
+    }
+  },
+  "paired_comparisons": {
+    "Config-B_vs_Config-A": {
+      "comparison": "Ontology vs Baseline",
+      "wins": 6,
+      "losses": 1,
+      "ties": 53,
+      "net_accuracy_delta_pp": 8.33
+    },
+    "Config-C_vs_Config-B": {
+      "comparison": "Bounded Graph vs Ontology",
+      "wins": 4,
+      "losses": 6,
+      "ties": 50,
+      "net_accuracy_delta_pp": -3.33
+    },
+    "Config-D_vs_Config-C": {
+      "comparison": "Full System + Temporal vs Bounded Graph",
+      "wins": 3,
+      "losses": 1,
+      "ties": 56,
+      "net_accuracy_delta_pp": 3.33
+    },
+    "Config-D_vs_Config-A": {
+      "comparison": "Full System vs Baseline",
+      "wins": 8,
+      "losses": 3,
+      "ties": 49,
+      "net_accuracy_delta_pp": 8.33
+    }
+  },
+  "predictions_by_config": {
+    "Config-A": {
+      "07741c44": {
+        "question_id": "07741c44",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"}",
+        "latency_ms": 1887.18
+      },
+      "184da446": {
+        "question_id": "184da446",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide the requested information.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide the requested information.\"\n}",
+        "latency_ms": 1961.17
+      },
+      "1cea1afa": {
+        "question_id": "1cea1afa",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of followers specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the number of followers specified in the gold answer.\"\n}",
+        "latency_ms": 1609.32
+      },
+      "2133c1b5": {
+        "question_id": "2133c1b5",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the duration of 3 months as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the duration of 3 months as specified in the gold answer.\"}",
+        "latency_ms": 1608.3
+      },
+      "2698e78f_abs": {
+        "question_id": "2698e78f_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2349.49
+      },
+      "26bdc477": {
+        "question_id": "26bdc477",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct number of trips as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct number of trips as specified in the gold answer.\"}",
+        "latency_ms": 1703.28
+      },
+      "5c40ec5b": {
+        "question_id": "5c40ec5b",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately reflects the factual information provided in the gold answer.\"}",
+        "latency_ms": 1401.55
+      },
+      "618f13b2": {
+        "question_id": "618f13b2",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides the number four, which contradicts the gold answer of six.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction provides the number four, which contradicts the gold answer of six.\"\n}",
+        "latency_ms": 1714.26
+      },
+      "6aeb4375": {
+        "question_id": "6aeb4375",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately includes the correct number 'four' from the gold answer while providing additional context regarding the user's conflicting statements.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately includes the correct number 'four' from the gold answer while providing additional context regarding the user's conflicting statements.\"}",
+        "latency_ms": 9325.89
+      },
+      "6aeb4375_abs": {
+        "question_id": "6aeb4375_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2671.73
+      },
+      "099778bb": {
+        "question_id": "099778bb",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the 20% figure specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the 20% figure specified in the gold answer.\"}",
+        "latency_ms": 1715.3
+      },
+      "09ba9854": {
+        "question_id": "09ba9854",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides different savings ranges for Narita and Haneda airports, neither of which matches the specific $50 value provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides different savings ranges for Narita and Haneda airports, neither of which matches the specific $50 value provided in the gold answer.\"}",
+        "latency_ms": 9193.61
+      },
+      "1a8a66a6": {
+        "question_id": "1a8a66a6",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the correct number of magazine subscriptions and improperly abstained from answering a question that was marked as answerable.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate failed to provide the correct number of magazine subscriptions and improperly abstained from answering a question that was marked as answerable.\"}",
+        "latency_ms": 2947.27
+      },
+      "3fdac837": {
+        "question_id": "3fdac837",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide the requested information.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide the requested information.\"\n}",
+        "latency_ms": 1990.55
+      },
+      "46a3abf7": {
+        "question_id": "46a3abf7",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the requested information despite it being available in the context, as indicated by the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate failed to provide the requested information despite it being available in the context, as indicated by the gold answer.\"\n}",
+        "latency_ms": 2690.74
+      },
+      "6456829e_abs": {
+        "question_id": "6456829e_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer's logic.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer's logic.\"}",
+        "latency_ms": 2680.45
+      },
+      "9d25d4e0": {
+        "question_id": "9d25d4e0",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The question is answerable according to the gold answer, but the candidate prediction improperly abstains instead of providing the correct number.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The question is answerable according to the gold answer, but the candidate prediction improperly abstains instead of providing the correct number.\"}",
+        "latency_ms": 2503.13
+      },
+      "a4996e51": {
+        "question_id": "a4996e51",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate answer provides the amount of increase in hours rather than the total number of hours requested in the question.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate answer provides the amount of increase in hours rather than the total number of hours requested in the question.\"}",
+        "latency_ms": 4706.3
+      },
+      "ba358f49": {
+        "question_id": "ba358f49",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific age requested in the gold answer and improperly abstains from answering an answerable question.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific age requested in the gold answer and improperly abstains from answering an answerable question.\"}",
+        "latency_ms": 2895.54
+      },
+      "eeda8a6d_abs": {
+        "question_id": "eeda8a6d_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion.\"}",
+        "latency_ms": 3619.68
+      },
+      "0e5e2d1a": {
+        "question_id": "0e5e2d1a",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of subjects specified in the gold answer.\"}",
+        "latency_ms": 1930.85
+      },
+      "3249768e": {
+        "question_id": "3249768e",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.\"\n}",
+        "latency_ms": 1752.69
+      },
+      "4388e9dd": {
+        "question_id": "4388e9dd",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the reference gold answer exactly.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the reference gold answer exactly.\"\n}",
+        "latency_ms": 1544.67
+      },
+      "4c36ccef": {
+        "question_id": "4c36ccef",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.\"\n}",
+        "latency_ms": 1770.9
+      },
+      "7161e7e2": {
+        "question_id": "7161e7e2",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate's response accurately provides the same shift information as the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate's response accurately provides the same shift information as the gold answer.\"}",
+        "latency_ms": 2123.67
+      },
+      "778164c6": {
+        "question_id": "778164c6",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate provides 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate provides 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' specified in the gold answer.\"}",
+        "latency_ms": 2392.84
+      },
+      "8aef76bc": {
+        "question_id": "8aef76bc",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies Mod Podge as the recommended sealant, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies Mod Podge as the recommended sealant, which matches the gold answer.\"}",
+        "latency_ms": 2209.22
+      },
+      "a40e080f": {
+        "question_id": "a40e080f",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the two companies mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the two companies mentioned in the gold answer.\"}",
+        "latency_ms": 1744.04
+      },
+      "ceb54acb": {
+        "question_id": "ceb54acb",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.\"}",
+        "latency_ms": 2295.12
+      },
+      "fea54f57": {
+        "question_id": "fea54f57",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.\"\n}",
+        "latency_ms": 1842.3
+      },
+      "07b6f563": {
+        "question_id": "07b6f563",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides specific brand suggestions for one of the accessory types mentioned in the gold answer, specifically targeting the iPhone 13 Pro as required.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides specific brand suggestions for one of the accessory types mentioned in the gold answer, specifically targeting the iPhone 13 Pro as required.\"}",
+        "latency_ms": 6504.15
+      },
+      "09d032c9": {
+        "question_id": "09d032c9",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction fails to provide the specific battery-saving tips mentioned in the gold answer and contains excessive, repetitive, and nonsensical text.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction fails to provide the specific battery-saving tips mentioned in the gold answer and contains excessive, repetitive, and nonsensical text.\"}",
+        "latency_ms": 7996.61
+      },
+      "0a34ad58": {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to incorporate the TripIt app, which the gold answer explicitly identifies as one of the user's existing resources that should be utilized for personalized tips.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate fails to incorporate the TripIt app, which the gold answer explicitly identifies as one of the user's existing resources that should be utilized for personalized tips.\"\n}",
+        "latency_ms": 18341.66
+      },
+      "195a1a1b": {
+        "question_id": "195a1a1b",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone.\"}",
+        "latency_ms": 9268.77
+      },
+      "1c0ddc50": {
+        "question_id": "1c0ddc50",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate's suggestions for podcasts and audiobooks (educational/storytelling) align with the user's preference for genres beyond true crime or self-improvement as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate's suggestions for podcasts and audiobooks (educational/storytelling) align with the user's preference for genres beyond true crime or self-improvement as specified in the gold answer.\"}",
+        "latency_ms": 23057.86
+      },
+      "1da05512": {
+        "question_id": "1da05512",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to incorporate the specific user context (reliance on external hard drives and recent tech upgrades) that the gold answer identifies as necessary for a preferred response.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to incorporate the specific user context (reliance on external hard drives and recent tech upgrades) that the gold answer identifies as necessary for a preferred response.\"}",
+        "latency_ms": 59288.92
+      },
+      "35a27287": {
+        "question_id": "35a27287",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide any cultural event recommendations as requested and does not address the user's specific preferences for language-learning events mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide any cultural event recommendations as requested and does not address the user's specific preferences for language-learning events mentioned in the gold answer.\"}",
+        "latency_ms": 12585.56
+      },
+      "38146c39": {
+        "question_id": "38146c39",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides specific cookie-making advice that builds upon the use of turbinado sugar, directly addressing the user's preference as described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides specific cookie-making advice that builds upon the use of turbinado sugar, directly addressing the user's preference as described in the gold answer.\"}",
+        "latency_ms": 5806.03
+      },
+      "b0479f84": {
+        "question_id": "b0479f84",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides documentary recommendations categorized by themes (Nature, Adventure, True Crime) that align with the user's implied preferences for 'Our Planet', 'Free Solo', and 'Tiger King' as described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate provides documentary recommendations categorized by themes (Nature, Adventure, True Crime) that align with the user's implied preferences for 'Our Planet', 'Free Solo', and 'Tiger King' as described in the gold answer.\"}",
+        "latency_ms": 6587.0
+      },
+      "d6233ab6": {
+        "question_id": "d6233ab6",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide any response to the user's question or capture the information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide any response to the user's question or capture the information provided in the gold answer.\"\n}",
+        "latency_ms": 9984.89
+      },
+      "118b2229": {
+        "question_id": "118b2229",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the duration and directionality provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately reflects the duration and directionality provided in the gold answer.\"\n}",
+        "latency_ms": 1903.94
+      },
+      "29f2956b_abs": {
+        "question_id": "29f2956b_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information regarding violin practice is not available in its memory, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information regarding violin practice is not available in its memory, which aligns with the gold answer.\"}",
+        "latency_ms": 2300.84
+      },
+      "37d43f65": {
+        "question_id": "37d43f65",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.\"\n}",
+        "latency_ms": 1846.48
+      },
+      "4100d0a0": {
+        "question_id": "4100d0a0",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"}",
+        "latency_ms": 1886.22
+      },
+      "58ef2f1c": {
+        "question_id": "58ef2f1c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the date specified in the gold answer, including the specific day and month.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the date specified in the gold answer, including the specific day and month.\"}",
+        "latency_ms": 2107.66
+      },
+      "8e9d538c": {
+        "question_id": "8e9d538c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number 17 as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number 17 as specified in the gold answer.\"}",
+        "latency_ms": 1797.33
+      },
+      "c5e8278d": {
+        "question_id": "c5e8278d",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.\"\n}",
+        "latency_ms": 1742.78
+      },
+      "caf9ead2": {
+        "question_id": "caf9ead2",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the duration of 5 hours provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the duration of 5 hours provided in the gold answer.\"}",
+        "latency_ms": 2331.19
+      },
+      "f4f1d8a4_abs": {
+        "question_id": "f4f1d8a4_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's indication that the information was not mentioned.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's indication that the information was not mentioned.\"\n}",
+        "latency_ms": 2560.13
+      },
+      "f8c5f88b": {
+        "question_id": "f8c5f88b",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 2061.29
+      },
+      "4dfccbf7": {
+        "question_id": "4dfccbf7",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the number of days as 24, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the number of days as 24, which matches the gold answer.\"}",
+        "latency_ms": 2459.5
+      },
+      "6e984302": {
+        "question_id": "6e984302",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the specific information requested, which was mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate failed to provide the specific information requested, which was mentioned in the gold answer.\"}",
+        "latency_ms": 2261.19
+      },
+      "dcfa8644": {
+        "question_id": "dcfa8644",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.\"}",
+        "latency_ms": 2306.79
+      },
+      "gpt4_1d80365e": {
+        "question_id": "gpt4_1d80365e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate provides a vague answer ('a few days') instead of the specific number of days requested in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate provides a vague answer ('a few days') instead of the specific number of days requested in the gold answer.\"}",
+        "latency_ms": 2088.14
+      },
+      "gpt4_4edbafa2": {
+        "question_id": "gpt4_4edbafa2",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the date specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the date specified in the gold answer.\"}",
+        "latency_ms": 1670.28
+      },
+      "gpt4_4fc4f797": {
+        "question_id": "gpt4_4fc4f797",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate's answer of 59 days is factually incorrect and contradicts the gold answer of 38 or 39 days.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate's answer of 59 days is factually incorrect and contradicts the gold answer of 38 or 39 days.\"}",
+        "latency_ms": 3260.34
+      },
+      "gpt4_c27434e8_abs": {
+        "question_id": "gpt4_c27434e8_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": false,
+        "reasoning": "The candidate invents an answer by claiming the Ferrari was started first, whereas the correct response is to state that the information is insufficient to make a comparison.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate invents an answer by claiming the Ferrari was started first, whereas the correct response is to state that the information is insufficient to make a comparison.\"}",
+        "latency_ms": 6086.13
+      },
+      "gpt4_e414231e": {
+        "question_id": "gpt4_e414231e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide the requested information.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide the requested information.\"\n}",
+        "latency_ms": 2046.65
+      },
+      "gpt4_fa19884c": {
+        "question_id": "gpt4_fa19884c",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction matches the primary answer provided in the gold answer.\"}",
+        "latency_ms": 1574.87
+      },
+      "gpt4_fe651585_abs": {
+        "question_id": "gpt4_fe651585_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": false,
+        "reasoning": "The candidate fails to identify that the information is insufficient to answer the comparison and instead provides a partial, unsupported answer regarding Alex.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to identify that the information is insufficient to answer the comparison and instead provides a partial, unsupported answer regarding Alex.\"}",
+        "latency_ms": 5848.13
+      }
+    },
+    "Config-B": {
+      "07741c44": {
+        "question_id": "07741c44",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"}",
+        "latency_ms": 1812.88
+      },
+      "184da446": {
+        "question_id": "184da446",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number 220 as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number 220 as specified in the gold answer.\"}",
+        "latency_ms": 1683.37
+      },
+      "1cea1afa": {
+        "question_id": "1cea1afa",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of followers specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the number of followers specified in the gold answer.\"\n}",
+        "latency_ms": 1611.74
+      },
+      "2133c1b5": {
+        "question_id": "2133c1b5",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual duration of 3 months provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the factual duration of 3 months provided in the gold answer.\"}",
+        "latency_ms": 1906.2
+      },
+      "2698e78f_abs": {
+        "question_id": "2698e78f_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2399.73
+      },
+      "26bdc477": {
+        "question_id": "26bdc477",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate's answer correctly identifies the number of trips as five, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate's answer correctly identifies the number of trips as five, matching the gold answer.\"}",
+        "latency_ms": 5490.92
+      },
+      "5c40ec5b": {
+        "question_id": "5c40ec5b",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately reflects the factual information provided in the gold answer.\"}",
+        "latency_ms": 1650.78
+      },
+      "618f13b2": {
+        "question_id": "618f13b2",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides the number four, which contradicts the gold answer of six.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction provides the number four, which contradicts the gold answer of six.\"\n}",
+        "latency_ms": 1697.48
+      },
+      "6aeb4375": {
+        "question_id": "6aeb4375",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction introduces uncertainty by suggesting the number could be three or four, whereas the gold answer specifies exactly four.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction introduces uncertainty by suggesting the number could be three or four, whereas the gold answer specifies exactly four.\"}",
+        "latency_ms": 2082.96
+      },
+      "6aeb4375_abs": {
+        "question_id": "6aeb4375_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing and requires abstention, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing and requires abstention, which aligns with the gold answer.\"}",
+        "latency_ms": 2722.01
+      },
+      "099778bb": {
+        "question_id": "099778bb",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the 20% figure specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the 20% figure specified in the gold answer.\"}",
+        "latency_ms": 1659.19
+      },
+      "09ba9854": {
+        "question_id": "09ba9854",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides a detailed range of savings that includes the gold answer's value of $50.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate provides a detailed range of savings that includes the gold answer's value of $50.\"\n}",
+        "latency_ms": 12940.47
+      },
+      "1a8a66a6": {
+        "question_id": "1a8a66a6",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction fails to provide the correct number of subscriptions (2) and instead provides an incomplete and highly repetitive response.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction fails to provide the correct number of subscriptions (2) and instead provides an incomplete and highly repetitive response.\"}",
+        "latency_ms": 3466.78
+      },
+      "3fdac837": {
+        "question_id": "3fdac837",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction improperly abstains from answering a question that is answerable according to the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction improperly abstains from answering a question that is answerable according to the reference gold answer.\"}",
+        "latency_ms": 2746.31
+      },
+      "46a3abf7": {
+        "question_id": "46a3abf7",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction improperly abstains by stating it lacks information, whereas the gold answer provides a specific count of 3.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction improperly abstains by stating it lacks information, whereas the gold answer provides a specific count of 3.\"}",
+        "latency_ms": 2282.9
+      },
+      "6456829e_abs": {
+        "question_id": "6456829e_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.\"}",
+        "latency_ms": 2752.89
+      },
+      "9d25d4e0": {
+        "question_id": "9d25d4e0",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction fails to provide the requested information and improperly abstains when the question is marked as answerable.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction fails to provide the requested information and improperly abstains when the question is marked as answerable.\"\n}",
+        "latency_ms": 2800.76
+      },
+      "a4996e51": {
+        "question_id": "a4996e51",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides the amount of increase in hours rather than the total number of hours requested in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction provides the amount of increase in hours rather than the total number of hours requested in the gold answer.\"\n}",
+        "latency_ms": 2553.14
+      },
+      "ba358f49": {
+        "question_id": "ba358f49",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific answer (33) provided in the gold answer, despite the question being marked as answerable.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific answer (33) provided in the gold answer, despite the question being marked as answerable.\"}",
+        "latency_ms": 3720.28
+      },
+      "eeda8a6d_abs": {
+        "question_id": "eeda8a6d_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer.\"}",
+        "latency_ms": 2877.17
+      },
+      "0e5e2d1a": {
+        "question_id": "0e5e2d1a",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of subjects specified in the gold answer.\"}",
+        "latency_ms": 2104.03
+      },
+      "3249768e": {
+        "question_id": "3249768e",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.\"\n}",
+        "latency_ms": 1745.0
+      },
+      "4388e9dd": {
+        "question_id": "4388e9dd",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the reference gold answer exactly.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the reference gold answer exactly.\"\n}",
+        "latency_ms": 1551.34
+      },
+      "4c36ccef": {
+        "question_id": "4c36ccef",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.\"\n}",
+        "latency_ms": 1815.02
+      },
+      "7161e7e2": {
+        "question_id": "7161e7e2",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the specific shift time for Admon on Sunday, matching the information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the specific shift time for Admon on Sunday, matching the information provided in the gold answer.\"\n}",
+        "latency_ms": 2295.62
+      },
+      "778164c6": {
+        "question_id": "778164c6",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate provides 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate provides 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' specified in the gold answer.\"}",
+        "latency_ms": 2401.74
+      },
+      "8aef76bc": {
+        "question_id": "8aef76bc",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies Mod Podge as the recommended sealant, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies Mod Podge as the recommended sealant, which matches the gold answer.\"}",
+        "latency_ms": 2264.24
+      },
+      "a40e080f": {
+        "question_id": "a40e080f",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the two companies mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the two companies mentioned in the gold answer.\"}",
+        "latency_ms": 1698.45
+      },
+      "ceb54acb": {
+        "question_id": "ceb54acb",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.\"}",
+        "latency_ms": 2485.54
+      },
+      "fea54f57": {
+        "question_id": "fea54f57",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.\"\n}",
+        "latency_ms": 1731.09
+      },
+      "07b6f563": {
+        "question_id": "07b6f563",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides suggestions for phone wallet cases, which is one of the categories of accessories explicitly mentioned in the gold answer as being preferred by the user.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate provides suggestions for phone wallet cases, which is one of the categories of accessories explicitly mentioned in the gold answer as being preferred by the user.\"}",
+        "latency_ms": 16514.45
+      },
+      "09d032c9": {
+        "question_id": "09d032c9",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction focuses on selecting a power bank rather than providing the requested tips on optimizing power bank use and utilizing phone battery-saving features as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction focuses on selecting a power bank rather than providing the requested tips on optimizing power bank use and utilizing phone battery-saving features as specified in the gold answer.\"}",
+        "latency_ms": 8651.89
+      },
+      "0a34ad58": {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides general travel tips and fails to incorporate the TripIt app or provide the personalized guidance requested in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides general travel tips and fails to incorporate the TripIt app or provide the personalized guidance requested in the gold answer.\"}",
+        "latency_ms": 8744.82
+      },
+      "195a1a1b": {
+        "question_id": "195a1a1b",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone as specified in the gold answer.\"\n}",
+        "latency_ms": 12325.46
+      },
+      "1c0ddc50": {
+        "question_id": "1c0ddc50",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate response provides audio-based activities that align with the user's preferences for podcasts and audiobooks, avoids visual-heavy activities, and suggests genres other than true crime or self-improvement, as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate response provides audio-based activities that align with the user's preferences for podcasts and audiobooks, avoids visual-heavy activities, and suggests genres other than true crime or self-improvement, as specified in the gold answer.\"}",
+        "latency_ms": 25186.78
+      },
+      "1da05512": {
+        "question_id": "1da05512",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction addresses the user's specific context regarding storage capacity issues and reliance on external drives, as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction addresses the user's specific context regarding storage capacity issues and reliance on external drives, as specified in the gold answer.\"}",
+        "latency_ms": 6615.91
+      },
+      "35a27287": {
+        "question_id": "35a27287",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to incorporate the user's specific preferences for Spanish and French language-focused cultural events as described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to incorporate the user's specific preferences for Spanish and French language-focused cultural events as described in the gold answer.\"}",
+        "latency_ms": 13194.67
+      },
+      "38146c39": {
+        "question_id": "38146c39",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction follows the user's preference for advice that builds upon their use of turbinado sugar by suggesting specific ingredients that complement its flavor.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction follows the user's preference for advice that builds upon their use of turbinado sugar by suggesting specific ingredients that complement its flavor.\"}",
+        "latency_ms": 6460.89
+      },
+      "b0479f84": {
+        "question_id": "b0479f84",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides documentary recommendations categorized by themes (Nature, Adventure, True Crime) that align with the user's preferences for 'Our Planet', 'Free Solo', and 'Tiger King' as described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides documentary recommendations categorized by themes (Nature, Adventure, True Crime) that align with the user's preferences for 'Our Planet', 'Free Solo', and 'Tiger King' as described in the gold answer.\"}",
+        "latency_ms": 9575.36
+      },
+      "d6233ab6": {
+        "question_id": "d6233ab6",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide any response to the user's question.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide any response to the user's question.\"\n}",
+        "latency_ms": 8952.67
+      },
+      "118b2229": {
+        "question_id": "118b2229",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the duration and directionality provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately reflects the duration and directionality provided in the gold answer.\"\n}",
+        "latency_ms": 1942.8
+      },
+      "29f2956b_abs": {
+        "question_id": "29f2956b_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.\"}",
+        "latency_ms": 2364.61
+      },
+      "37d43f65": {
+        "question_id": "37d43f65",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.\"}",
+        "latency_ms": 1668.71
+      },
+      "4100d0a0": {
+        "question_id": "4100d0a0",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately conveys the same factual information as the gold answer using a semantic paraphrase.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately conveys the same factual information as the gold answer using a semantic paraphrase.\"}",
+        "latency_ms": 1608.63
+      },
+      "58ef2f1c": {
+        "question_id": "58ef2f1c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.\"}",
+        "latency_ms": 2116.3
+      },
+      "8e9d538c": {
+        "question_id": "8e9d538c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number 17 as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number 17 as specified in the gold answer.\"}",
+        "latency_ms": 1664.72
+      },
+      "c5e8278d": {
+        "question_id": "c5e8278d",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.\"\n}",
+        "latency_ms": 1653.77
+      },
+      "caf9ead2": {
+        "question_id": "caf9ead2",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.\"}",
+        "latency_ms": 1890.03
+      },
+      "f4f1d8a4_abs": {
+        "question_id": "f4f1d8a4_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned.\"}",
+        "latency_ms": 3064.75
+      },
+      "f8c5f88b": {
+        "question_id": "f8c5f88b",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1901.36
+      },
+      "4dfccbf7": {
+        "question_id": "4dfccbf7",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the primary answer provided in the reference gold answer.\"\n}",
+        "latency_ms": 1547.46
+      },
+      "6e984302": {
+        "question_id": "6e984302",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific information requested in the gold answer, claiming it has no memory of the event instead.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific information requested in the gold answer, claiming it has no memory of the event instead.\"}",
+        "latency_ms": 2818.91
+      },
+      "dcfa8644": {
+        "question_id": "dcfa8644",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.\"}",
+        "latency_ms": 2370.05
+      },
+      "gpt4_1d80365e": {
+        "question_id": "gpt4_1d80365e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific number of days (2 or 3) mentioned in the gold answer, instead providing a vague response and incorrectly claiming the information is missing.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific number of days (2 or 3) mentioned in the gold answer, instead providing a vague response and incorrectly claiming the information is missing.\"}",
+        "latency_ms": 4768.82
+      },
+      "gpt4_4edbafa2": {
+        "question_id": "gpt4_4edbafa2",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the date as June 3rd, matching the information in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the date as June 3rd, matching the information in the gold answer.\"}",
+        "latency_ms": 2656.33
+      },
+      "gpt4_4fc4f797": {
+        "question_id": "gpt4_4fc4f797",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the number of days as 38, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the number of days as 38, which matches the gold answer.\"}",
+        "latency_ms": 2670.6
+      },
+      "gpt4_c27434e8_abs": {
+        "question_id": "gpt4_c27434e8_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the question is unanswerable due to missing information, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the question is unanswerable due to missing information, which aligns with the gold answer.\"}",
+        "latency_ms": 2901.36
+      },
+      "gpt4_e414231e": {
+        "question_id": "gpt4_e414231e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The question is answerable based on the provided gold answer, but the candidate incorrectly claimed it lacked sufficient information.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The question is answerable based on the provided gold answer, but the candidate incorrectly claimed it lacked sufficient information.\"}",
+        "latency_ms": 2785.42
+      },
+      "gpt4_fa19884c": {
+        "question_id": "gpt4_fa19884c",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number of days as six, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number of days as six, which matches the gold answer.\"}",
+        "latency_ms": 2444.07
+      },
+      "gpt4_fe651585_abs": {
+        "question_id": "gpt4_fe651585_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information regarding Tom is missing, making the comparison impossible, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information regarding Tom is missing, making the comparison impossible, which aligns with the gold answer.\"}",
+        "latency_ms": 7474.44
+      }
+    },
+    "Config-C": {
+      "07741c44": {
+        "question_id": "07741c44",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1995.15
+      },
+      "184da446": {
+        "question_id": "184da446",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number 220, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the number 220, which matches the gold answer.\"\n}",
+        "latency_ms": 1818.73
+      },
+      "1cea1afa": {
+        "question_id": "1cea1afa",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of followers specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of followers specified in the gold answer.\"}",
+        "latency_ms": 1622.73
+      },
+      "2133c1b5": {
+        "question_id": "2133c1b5",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the duration of 3 months as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the duration of 3 months as specified in the gold answer.\"}",
+        "latency_ms": 1718.79
+      },
+      "2698e78f_abs": {
+        "question_id": "2698e78f_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2257.1
+      },
+      "26bdc477": {
+        "question_id": "26bdc477",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct number of trips as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct number of trips as specified in the gold answer.\"}",
+        "latency_ms": 1689.78
+      },
+      "5c40ec5b": {
+        "question_id": "5c40ec5b",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately reflects the factual information provided in the gold answer.\"}",
+        "latency_ms": 1414.83
+      },
+      "618f13b2": {
+        "question_id": "618f13b2",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction states the number of times is four, whereas the gold answer is six.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction states the number of times is four, whereas the gold answer is six.\"}",
+        "latency_ms": 1434.57
+      },
+      "6aeb4375": {
+        "question_id": "6aeb4375",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number 'four' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the number 'four' as specified in the gold answer.\"\n}",
+        "latency_ms": 1736.7
+      },
+      "6aeb4375_abs": {
+        "question_id": "6aeb4375_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2429.05
+      },
+      "099778bb": {
+        "question_id": "099778bb",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the factual information (20%) specified in the gold answer and improperly abstained from answering an answerable question.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate failed to provide the factual information (20%) specified in the gold answer and improperly abstained from answering an answerable question.\"}",
+        "latency_ms": 3527.96
+      },
+      "09ba9854": {
+        "question_id": "09ba9854",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate provides a range of possible savings ($25-$160) instead of the specific amount ($50) provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate provides a range of possible savings ($25-$160) instead of the specific amount ($50) provided in the gold answer.\"\n}",
+        "latency_ms": 19260.99
+      },
+      "1a8a66a6": {
+        "question_id": "1a8a66a6",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction states there is one magazine subscription, which contradicts the gold answer of two.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction states there is one magazine subscription, which contradicts the gold answer of two.\"\n}",
+        "latency_ms": 1998.92
+      },
+      "3fdac837": {
+        "question_id": "3fdac837",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the total number of days requested and incorrectly claims that information about Japan is missing.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate fails to provide the total number of days requested and incorrectly claims that information about Japan is missing.\"\n}",
+        "latency_ms": 2299.81
+      },
+      "46a3abf7": {
+        "question_id": "46a3abf7",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the total number of tanks as three, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the total number of tanks as three, matching the gold answer.\"}",
+        "latency_ms": 2025.88
+      },
+      "6456829e_abs": {
+        "question_id": "6456829e_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.\"\n}",
+        "latency_ms": 2773.17
+      },
+      "9d25d4e0": {
+        "question_id": "9d25d4e0",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the requested information and improperly abstains despite the answer being available in the reference.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the requested information and improperly abstains despite the answer being available in the reference.\"}",
+        "latency_ms": 2302.67
+      },
+      "a4996e51": {
+        "question_id": "a4996e51",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides the amount of increase in hours rather than the total number of hours worked as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides the amount of increase in hours rather than the total number of hours worked as specified in the gold answer.\"}",
+        "latency_ms": 2856.92
+      },
+      "ba358f49": {
+        "question_id": "ba358f49",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction is empty and fails to provide the answer specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction is empty and fails to provide the answer specified in the gold answer.\"\n}",
+        "latency_ms": 1945.43
+      },
+      "eeda8a6d_abs": {
+        "question_id": "eeda8a6d_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that it lacks the necessary information to answer the question, which aligns with the gold answer's assessment that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that it lacks the necessary information to answer the question, which aligns with the gold answer's assessment that the information is insufficient.\"}",
+        "latency_ms": 2797.3
+      },
+      "0e5e2d1a": {
+        "question_id": "0e5e2d1a",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of subjects specified in the gold answer.\"}",
+        "latency_ms": 1907.65
+      },
+      "3249768e": {
+        "question_id": "3249768e",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.\"\n}",
+        "latency_ms": 1809.44
+      },
+      "4388e9dd": {
+        "question_id": "4388e9dd",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the reference gold answer exactly.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the reference gold answer exactly.\"\n}",
+        "latency_ms": 1608.19
+      },
+      "4c36ccef": {
+        "question_id": "4c36ccef",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.\"\n}",
+        "latency_ms": 1871.18
+      },
+      "7161e7e2": {
+        "question_id": "7161e7e2",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate's response accurately provides the same shift information as the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate's response accurately provides the same shift information as the gold answer.\"}",
+        "latency_ms": 2224.35
+      },
+      "778164c6": {
+        "question_id": "778164c6",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction identifies 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction identifies 'Escovitch Fish' instead of the correct dish 'Grilled Snapper with Mango Salsa' provided in the gold answer.\"\n}",
+        "latency_ms": 2832.09
+      },
+      "8aef76bc": {
+        "question_id": "8aef76bc",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies Mod Podge as the recommended sealant, which matches the information in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies Mod Podge as the recommended sealant, which matches the information in the gold answer.\"}",
+        "latency_ms": 2360.07
+      },
+      "a40e080f": {
+        "question_id": "a40e080f",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the two companies mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the two companies mentioned in the gold answer.\"}",
+        "latency_ms": 1830.64
+      },
+      "ceb54acb": {
+        "question_id": "ceb54acb",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately lists all four terms provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately lists all four terms provided in the reference gold answer.\"}",
+        "latency_ms": 2580.42
+      },
+      "fea54f57": {
+        "question_id": "fea54f57",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.\"\n}",
+        "latency_ms": 1761.65
+      },
+      "07b6f563": {
+        "question_id": "07b6f563",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides specific brand suggestions for wallet cases compatible with an iPhone 13 Pro, which aligns with the user's preferences described in the gold answer, and it correctly acknowledges the interest in power banks.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction provides specific brand suggestions for wallet cases compatible with an iPhone 13 Pro, which aligns with the user's preferences described in the gold answer, and it correctly acknowledges the interest in power banks.\"\n}",
+        "latency_ms": 18168.6
+      },
+      "09d032c9": {
+        "question_id": "09d032c9",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction focuses on recommending and choosing power banks, whereas the gold answer specifies that the user prefers tips on optimizing power bank use and utilizing phone battery-saving features.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction focuses on recommending and choosing power banks, whereas the gold answer specifies that the user prefers tips on optimizing power bank use and utilizing phone battery-saving features.\"}",
+        "latency_ms": 7556.98
+      },
+      "0a34ad58": {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides helpful tips and incorporates the user's Suica card as requested in the gold answer's description of user preferences.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate provides helpful tips and incorporates the user's Suica card as requested in the gold answer's description of user preferences.\"}",
+        "latency_ms": 22811.66
+      },
+      "195a1a1b": {
+        "question_id": "195a1a1b",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides relaxing activities, adheres to the 9:30 pm timeframe, and respects the constraint to avoid phone and TV use.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides relaxing activities, adheres to the 9:30 pm timeframe, and respects the constraint to avoid phone and TV use.\"}",
+        "latency_ms": 5783.31
+      },
+      "1c0ddc50": {
+        "question_id": "1c0ddc50",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate suggests language-learning apps which require visual attention, contradicting the gold answer's constraint that the user may not be interested in activities requiring visual attention.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate suggests language-learning apps which require visual attention, contradicting the gold answer's constraint that the user may not be interested in activities requiring visual attention.\"}",
+        "latency_ms": 14451.17
+      },
+      "1da05512": {
+        "question_id": "1da05512",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate response addresses the user's storage capacity issues as specified in the gold answer's description of preferred responses, even though it does not explicitly mention the external hard drives.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate response addresses the user's storage capacity issues as specified in the gold answer's description of preferred responses, even though it does not explicitly mention the external hard drives.\"}",
+        "latency_ms": 24026.85
+      },
+      "35a27287": {
+        "question_id": "35a27287",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide any recommendations or acknowledge the user's specific preferences for Spanish and French language-focused cultural events as described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide any recommendations or acknowledge the user's specific preferences for Spanish and French language-focused cultural events as described in the gold answer.\"}",
+        "latency_ms": 15642.92
+      },
+      "38146c39": {
+        "question_id": "38146c39",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the advice requested and incorrectly claims to have no memory of the user's preference for turbinado sugar, which is specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the advice requested and incorrectly claims to have no memory of the user's preference for turbinado sugar, which is specified in the gold answer.\"}",
+        "latency_ms": 5315.23
+      },
+      "b0479f84": {
+        "question_id": "b0479f84",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides documentary recommendations that align with the themes and styles of the user's previously enjoyed titles as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides documentary recommendations that align with the themes and styles of the user's previously enjoyed titles as specified in the gold answer.\"}",
+        "latency_ms": 3154.33
+      },
+      "d6233ab6": {
+        "question_id": "d6233ab6",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to utilize the specific personal experiences and preferences provided in the reference answer to address the user's question.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to utilize the specific personal experiences and preferences provided in the reference answer to address the user's question.\"}",
+        "latency_ms": 4564.26
+      },
+      "118b2229": {
+        "question_id": "118b2229",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the duration and directionality provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately reflects the duration and directionality provided in the gold answer.\"\n}",
+        "latency_ms": 1827.88
+      },
+      "29f2956b_abs": {
+        "question_id": "29f2956b_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.\"}",
+        "latency_ms": 2400.05
+      },
+      "37d43f65": {
+        "question_id": "37d43f65",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.\"}",
+        "latency_ms": 1682.39
+      },
+      "4100d0a0": {
+        "question_id": "4100d0a0",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1569.54
+      },
+      "58ef2f1c": {
+        "question_id": "58ef2f1c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.\"}",
+        "latency_ms": 2130.11
+      },
+      "8e9d538c": {
+        "question_id": "8e9d538c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number 17 as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number 17 as specified in the gold answer.\"}",
+        "latency_ms": 1658.69
+      },
+      "c5e8278d": {
+        "question_id": "c5e8278d",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.\"\n}",
+        "latency_ms": 1642.09
+      },
+      "caf9ead2": {
+        "question_id": "caf9ead2",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.\"}",
+        "latency_ms": 1867.99
+      },
+      "f4f1d8a4_abs": {
+        "question_id": "f4f1d8a4_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is not recorded in its memory, which aligns with the gold answer's indication that the information was not mentioned.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is not recorded in its memory, which aligns with the gold answer's indication that the information was not mentioned.\"}",
+        "latency_ms": 2392.83
+      },
+      "f8c5f88b": {
+        "question_id": "f8c5f88b",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1856.34
+      },
+      "4dfccbf7": {
+        "question_id": "4dfccbf7",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the primary answer provided in the reference gold answer.\"\n}",
+        "latency_ms": 1506.38
+      },
+      "6e984302": {
+        "question_id": "6e984302",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific information requested in the gold answer, claiming it has no memory of the event instead.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific information requested in the gold answer, claiming it has no memory of the event instead.\"}",
+        "latency_ms": 2158.22
+      },
+      "dcfa8644": {
+        "question_id": "dcfa8644",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies that fourteen days had passed, which matches the gold answer.\"}",
+        "latency_ms": 2405.34
+      },
+      "gpt4_1d80365e": {
+        "question_id": "gpt4_1d80365e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific number of days requested, using the vague term 'a few days' instead.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate fails to provide the specific number of days requested, using the vague term 'a few days' instead.\"\n}",
+        "latency_ms": 2518.47
+      },
+      "gpt4_4edbafa2": {
+        "question_id": "gpt4_4edbafa2",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the date specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the date specified in the gold answer.\"}",
+        "latency_ms": 1798.56
+      },
+      "gpt4_4fc4f797": {
+        "question_id": "gpt4_4fc4f797",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction states 22 days passed, which contradicts the gold answer of 38 or 39 days.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction states 22 days passed, which contradicts the gold answer of 38 or 39 days.\"}",
+        "latency_ms": 2942.78
+      },
+      "gpt4_c27434e8_abs": {
+        "question_id": "gpt4_c27434e8_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": false,
+        "reasoning": "The candidate's response is a broken, repetitive loop and provides a specific factual claim in the 'answer' field, making the response invalid and incoherent.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate's response is a broken, repetitive loop and provides a specific factual claim in the 'answer' field, making the response invalid and incoherent.\"\n}",
+        "latency_ms": 35018.7
+      },
+      "gpt4_e414231e": {
+        "question_id": "gpt4_e414231e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate improperly abstained from answering a question that was answerable based on the provided reference information.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate improperly abstained from answering a question that was answerable based on the provided reference information.\"}",
+        "latency_ms": 2657.72
+      },
+      "gpt4_fa19884c": {
+        "question_id": "gpt4_fa19884c",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number of days as six, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number of days as six, which matches the gold answer.\"}",
+        "latency_ms": 2388.36
+      },
+      "gpt4_fe651585_abs": {
+        "question_id": "gpt4_fe651585_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is insufficient to answer the question, which aligns with the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is insufficient to answer the question, which aligns with the gold answer.\"}",
+        "latency_ms": 2480.22
+      }
+    },
+    "Config-D": {
+      "07741c44": {
+        "question_id": "07741c44",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately restates the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately restates the factual information provided in the gold answer.\"}",
+        "latency_ms": 1590.65
+      },
+      "184da446": {
+        "question_id": "184da446",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number 220, which matches the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the number 220, which matches the gold answer.\"\n}",
+        "latency_ms": 1833.21
+      },
+      "1cea1afa": {
+        "question_id": "1cea1afa",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of followers specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of followers specified in the gold answer.\"}",
+        "latency_ms": 1688.2
+      },
+      "2133c1b5": {
+        "question_id": "2133c1b5",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual duration of 3 months provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the factual duration of 3 months provided in the gold answer.\"}",
+        "latency_ms": 1923.8
+      },
+      "2698e78f_abs": {
+        "question_id": "2698e78f_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2293.38
+      },
+      "26bdc477": {
+        "question_id": "26bdc477",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct number of trips as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct number of trips as specified in the gold answer.\"}",
+        "latency_ms": 1662.19
+      },
+      "5c40ec5b": {
+        "question_id": "5c40ec5b",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately reflects the factual information provided in the gold answer.\"}",
+        "latency_ms": 1384.16
+      },
+      "618f13b2": {
+        "question_id": "618f13b2",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction states the number of times is four, whereas the gold answer is six.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction states the number of times is four, whereas the gold answer is six.\"}",
+        "latency_ms": 1440.09
+      },
+      "6aeb4375": {
+        "question_id": "6aeb4375",
+        "question_type": "knowledge-update",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides a different count (four and three) which contradicts the gold answer of four.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides a different count (four and three) which contradicts the gold answer of four.\"}",
+        "latency_ms": 5698.37
+      },
+      "6aeb4375_abs": {
+        "question_id": "6aeb4375_abs",
+        "question_type": "knowledge-update",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing or unrecorded, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing or unrecorded, which aligns with the gold answer's conclusion that the information is insufficient.\"}",
+        "latency_ms": 2516.45
+      },
+      "099778bb": {
+        "question_id": "099778bb",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the specific percentage requested in the gold answer and instead improperly abstained from answering.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate failed to provide the specific percentage requested in the gold answer and instead improperly abstained from answering.\"}",
+        "latency_ms": 2620.83
+      },
+      "09ba9854": {
+        "question_id": "09ba9854",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides a range of savings ($25-$70 for Haneda) that includes the gold answer of $50.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate provides a range of savings ($25-$70 for Haneda) that includes the gold answer of $50.\"}",
+        "latency_ms": 14732.14
+      },
+      "1a8a66a6": {
+        "question_id": "1a8a66a6",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction states there is one magazine subscription, which contradicts the gold answer of two.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction states there is one magazine subscription, which contradicts the gold answer of two.\"}",
+        "latency_ms": 1933.7
+      },
+      "3fdac837": {
+        "question_id": "3fdac837",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction fails to provide the total number of days requested and incorrectly claims that information about the trip to Japan is missing, contradicting the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction fails to provide the total number of days requested and incorrectly claims that information about the trip to Japan is missing, contradicting the gold answer.\"}",
+        "latency_ms": 2150.35
+      },
+      "46a3abf7": {
+        "question_id": "46a3abf7",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the total number of tanks as three, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the total number of tanks as three, matching the gold answer.\"}",
+        "latency_ms": 1988.02
+      },
+      "6456829e_abs": {
+        "question_id": "6456829e_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the known information about tomato plants and accurately states that information regarding chili pepper plants is missing, matching the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies the known information about tomato plants and accurately states that information regarding chili pepper plants is missing, matching the gold answer.\"}",
+        "latency_ms": 2714.68
+      },
+      "9d25d4e0": {
+        "question_id": "9d25d4e0",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the requested information and improperly abstained despite the answer being available in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate failed to provide the requested information and improperly abstained despite the answer being available in the reference gold answer.\"}",
+        "latency_ms": 2432.64
+      },
+      "a4996e51": {
+        "question_id": "a4996e51",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides the amount of increase in hours rather than the total number of hours specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides the amount of increase in hours rather than the total number of hours specified in the gold answer.\"}",
+        "latency_ms": 2796.83
+      },
+      "ba358f49": {
+        "question_id": "ba358f49",
+        "question_type": "multi-session",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific answer (33) provided in the gold answer, despite the question being marked as answerable.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific answer (33) provided in the gold answer, despite the question being marked as answerable.\"}",
+        "latency_ms": 3584.76
+      },
+      "eeda8a6d_abs": {
+        "question_id": "eeda8a6d_abs",
+        "question_type": "multi-session",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information required to answer the question is missing.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information required to answer the question is missing.\"}",
+        "latency_ms": 3390.19
+      },
+      "0e5e2d1a": {
+        "question_id": "0e5e2d1a",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the number of subjects specified in the gold answer.\"}",
+        "latency_ms": 1928.79
+      },
+      "3249768e": {
+        "question_id": "3249768e",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.\"\n}",
+        "latency_ms": 1800.22
+      },
+      "4388e9dd": {
+        "question_id": "4388e9dd",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the reference gold answer exactly.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the reference gold answer exactly.\"\n}",
+        "latency_ms": 1619.59
+      },
+      "4c36ccef": {
+        "question_id": "4c36ccef",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies the restaurant name 'Roscioli' as specified in the gold answer.\"\n}",
+        "latency_ms": 1754.58
+      },
+      "7161e7e2": {
+        "question_id": "7161e7e2",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the same shift time and day as the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the same shift time and day as the reference gold answer.\"}",
+        "latency_ms": 2165.71
+      },
+      "778164c6": {
+        "question_id": "778164c6",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction identifies 'Escovitch Fish' instead of the correct dish, 'Grilled Snapper with Mango Salsa', as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction identifies 'Escovitch Fish' instead of the correct dish, 'Grilled Snapper with Mango Salsa', as specified in the gold answer.\"}",
+        "latency_ms": 2506.64
+      },
+      "8aef76bc": {
+        "question_id": "8aef76bc",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies Mod Podge as the recommended sealant, which matches the information in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies Mod Podge as the recommended sealant, which matches the information in the gold answer.\"}",
+        "latency_ms": 2371.79
+      },
+      "a40e080f": {
+        "question_id": "a40e080f",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately identifies the two companies mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately identifies the two companies mentioned in the gold answer.\"}",
+        "latency_ms": 1717.53
+      },
+      "ceb54acb": {
+        "question_id": "ceb54acb",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately lists all four alternative terms provided in the reference gold answer.\"}",
+        "latency_ms": 2357.74
+      },
+      "fea54f57": {
+        "question_id": "fea54f57",
+        "question_type": "single-session-assistant",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the song 'Evolution' as requested in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the song 'Evolution' as requested in the gold answer.\"}",
+        "latency_ms": 2078.43
+      },
+      "07b6f563": {
+        "question_id": "07b6f563",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides specific suggestions for phone wallet cases, which is one of the categories of accessories mentioned in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate provides specific suggestions for phone wallet cases, which is one of the categories of accessories mentioned in the gold answer.\"}",
+        "latency_ms": 9452.69
+      },
+      "09d032c9": {
+        "question_id": "09d032c9",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction provides product recommendations and tips on choosing a power bank, whereas the gold answer specifies that the user prefers tips on optimizing the use of their existing power bank and utilizing phone battery-saving features.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate prediction provides product recommendations and tips on choosing a power bank, whereas the gold answer specifies that the user prefers tips on optimizing the use of their existing power bank and utilizing phone battery-saving features.\"}",
+        "latency_ms": 6424.59
+      },
+      "0a34ad58": {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate provides personalized tips and utilizes the Suica card as specified in the gold answer's description of user preferences, although it does not explicitly mention the TripIt app.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate provides personalized tips and utilizes the Suica card as specified in the gold answer's description of user preferences, although it does not explicitly mention the TripIt app.\"\n}",
+        "latency_ms": 16765.43
+      },
+      "195a1a1b": {
+        "question_id": "195a1a1b",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides relaxing activities that avoid electronic devices and aim for a 9:30 pm bedtime, directly adhering to the preferences outlined in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides relaxing activities that avoid electronic devices and aim for a 9:30 pm bedtime, directly adhering to the preferences outlined in the gold answer.\"}",
+        "latency_ms": 5339.35
+      },
+      "1c0ddc50": {
+        "question_id": "1c0ddc50",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction assumes the commute is by bike, which was not specified, and suggests language-learning apps which likely require visual attention, contradicting the user's preference stated in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction assumes the commute is by bike, which was not specified, and suggests language-learning apps which likely require visual attention, contradicting the user's preference stated in the gold answer.\"\n}",
+        "latency_ms": 15921.28
+      },
+      "1da05512": {
+        "question_id": "1da05512",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction incorporates the user's specific context regarding storage capacity issues and reliance on external hard drives, as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction incorporates the user's specific context regarding storage capacity issues and reliance on external hard drives, as specified in the gold answer.\"}",
+        "latency_ms": 7059.08
+      },
+      "35a27287": {
+        "question_id": "35a27287",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate improperly abstains by stating it lacks information, whereas the gold answer provides context about the user's preferences for Spanish and French language-focused events.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate improperly abstains by stating it lacks information, whereas the gold answer provides context about the user's preferences for Spanish and French language-focused events.\"}",
+        "latency_ms": 22267.88
+      },
+      "38146c39": {
+        "question_id": "38146c39",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides specific advice that builds upon the use of turbinado sugar and suggests complementary flavors, directly fulfilling the user preferences described in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction provides specific advice that builds upon the use of turbinado sugar and suggests complementary flavors, directly fulfilling the user preferences described in the gold answer.\"\n}",
+        "latency_ms": 11880.93
+      },
+      "b0479f84": {
+        "question_id": "b0479f84",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction provides documentary recommendations categorized by themes that align with the user's implied preferences for 'Our Planet', 'Free Solo', and 'Tiger King'.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction provides documentary recommendations categorized by themes that align with the user's implied preferences for 'Our Planet', 'Free Solo', and 'Tiger King'.\"}",
+        "latency_ms": 5493.66
+      },
+      "d6233ab6": {
+        "question_id": "d6233ab6",
+        "question_type": "single-session-preference",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate incorrectly claims to have no recorded memories, whereas the gold answer provides specific personal details about the user's history that should have been used to answer the question.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate incorrectly claims to have no recorded memories, whereas the gold answer provides specific personal details about the user's history that should have been used to answer the question.\"}",
+        "latency_ms": 6066.02
+      },
+      "118b2229": {
+        "question_id": "118b2229",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately reflects the duration and directionality provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately reflects the duration and directionality provided in the gold answer.\"\n}",
+        "latency_ms": 1822.23
+      },
+      "29f2956b_abs": {
+        "question_id": "29f2956b_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.\"}",
+        "latency_ms": 2388.99
+      },
+      "37d43f65": {
+        "question_id": "37d43f65",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.\"}",
+        "latency_ms": 1686.96
+      },
+      "4100d0a0": {
+        "question_id": "4100d0a0",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1594.62
+      },
+      "58ef2f1c": {
+        "question_id": "58ef2f1c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the date specified in the gold answer, including the semantic addition of Valentine's Day.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the date specified in the gold answer, including the semantic addition of Valentine's Day.\"}",
+        "latency_ms": 1923.52
+      },
+      "8e9d538c": {
+        "question_id": "8e9d538c",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction correctly identifies the number 17 as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction correctly identifies the number 17 as specified in the gold answer.\"}",
+        "latency_ms": 1718.74
+      },
+      "c5e8278d": {
+        "question_id": "c5e8278d",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately provides the last name 'Johnson' as specified in the gold answer.\"\n}",
+        "latency_ms": 1664.15
+      },
+      "caf9ead2": {
+        "question_id": "caf9ead2",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately captures the duration of 5 hours specified in the gold answer.\"}",
+        "latency_ms": 1925.32
+      },
+      "f4f1d8a4_abs": {
+        "question_id": "f4f1d8a4_abs",
+        "question_type": "single-session-user",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned.\"}",
+        "latency_ms": 3155.36
+      },
+      "f8c5f88b": {
+        "question_id": "f8c5f88b",
+        "question_type": "single-session-user",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately captures the factual information provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction accurately captures the factual information provided in the gold answer.\"\n}",
+        "latency_ms": 1860.38
+      },
+      "4dfccbf7": {
+        "question_id": "4dfccbf7",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate prediction matches the primary answer provided in the reference gold answer.\"\n}",
+        "latency_ms": 1567.93
+      },
+      "6e984302": {
+        "question_id": "6e984302",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate fails to provide the specific information requested in the gold answer, claiming it has no record of the event.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The candidate fails to provide the specific information requested in the gold answer, claiming it has no record of the event.\"}",
+        "latency_ms": 2184.44
+      },
+      "dcfa8644": {
+        "question_id": "dcfa8644",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction matches the primary answer provided in the gold answer.\"}",
+        "latency_ms": 1710.12
+      },
+      "gpt4_1d80365e": {
+        "question_id": "gpt4_1d80365e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate failed to provide the specific number of days requested, which was available in the reference answer.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate failed to provide the specific number of days requested, which was available in the reference answer.\"\n}",
+        "latency_ms": 2839.81
+      },
+      "gpt4_4edbafa2": {
+        "question_id": "gpt4_4edbafa2",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction accurately provides the date specified in the gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction accurately provides the date specified in the gold answer.\"}",
+        "latency_ms": 1819.5
+      },
+      "gpt4_4fc4f797": {
+        "question_id": "gpt4_4fc4f797",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The candidate prediction of 37 days is incorrect, as the gold answer specifies 38 or 39 days.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": false,\n  \"reasoning\": \"The candidate prediction of 37 days is incorrect, as the gold answer specifies 38 or 39 days.\"\n}",
+        "latency_ms": 1851.78
+      },
+      "gpt4_c27434e8_abs": {
+        "question_id": "gpt4_c27434e8_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that it lacks the necessary information to answer the question, which matches the gold answer's conclusion.",
+        "judge_failed": false,
+        "raw_response": "{\n  \"is_correct\": true,\n  \"reasoning\": \"The candidate correctly identifies that it lacks the necessary information to answer the question, which matches the gold answer's conclusion.\"\n}",
+        "latency_ms": 2445.32
+      },
+      "gpt4_e414231e": {
+        "question_id": "gpt4_e414231e",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": false,
+        "reasoning": "The question is answerable, but the candidate prediction improperly abstains instead of providing the correct number of days.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": false, \"reasoning\": \"The question is answerable, but the candidate prediction improperly abstains instead of providing the correct number of days.\"}",
+        "latency_ms": 3090.1
+      },
+      "gpt4_fa19884c": {
+        "question_id": "gpt4_fa19884c",
+        "question_type": "temporal-reasoning",
+        "is_abstention": false,
+        "is_correct": true,
+        "reasoning": "The candidate prediction matches the primary answer provided in the reference gold answer.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate prediction matches the primary answer provided in the reference gold answer.\"}",
+        "latency_ms": 1725.76
+      },
+      "gpt4_fe651585_abs": {
+        "question_id": "gpt4_fe651585_abs",
+        "question_type": "temporal-reasoning",
+        "is_abstention": true,
+        "is_correct": true,
+        "reasoning": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion.",
+        "judge_failed": false,
+        "raw_response": "{\"is_correct\": true, \"reasoning\": \"The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion.\"}",
+        "latency_ms": 2636.88
+      }
+    }
+  }
+}

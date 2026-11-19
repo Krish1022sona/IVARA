@@ -120,7 +120,7 @@ tests/test_temporal_integration.py (10 passed)
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.7.0
-rootdir: C:\Users\Krishna\Desktop\Brahmaand\Coding_Ki_Dunia\Projects\IVARA
+rootdir: <project-root>
 plugins: anyio-4.14.2
 collected 187 items
 

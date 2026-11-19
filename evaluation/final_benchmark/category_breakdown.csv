@@ -1,0 +1,13 @@
+category,count,arm_a_baseline_fixed_fusion_cov,arm_a_baseline_fixed_fusion_bin,arm_a_baseline_fixed_fusion_r5,arm_b_episodic_only_cov,arm_b_episodic_only_bin,arm_b_episodic_only_r5,arm_c_semantic_only_cov,arm_c_semantic_only_bin,arm_c_semantic_only_r5,arm_d_adaptive_episodic_semantic_cov,arm_d_adaptive_episodic_semantic_bin,arm_d_adaptive_episodic_semantic_r5,arm_e_full_adaptive_safeguarded_graph_cov,arm_e_full_adaptive_safeguarded_graph_bin,arm_e_full_adaptive_safeguarded_graph_r5,arm_e_uncalibrated_generation_cov,arm_e_uncalibrated_generation_bin,arm_e_uncalibrated_generation_r5
+complex_multi_fact,5,0.05,0.0,1.0,0.35,0.2,1.0,0.15,0.0,1.0,0.45,0.4,0.0,0.5,0.4,0.0,0.55,0.4,0.0
+contradiction_handling,5,0.4667,0.2,0.6,0.4667,0.2,1.0,0.4667,0.2,0.6,0.4667,0.2,0.0,0.4667,0.2,0.0,0.4667,0.2,0.0
+cross_session_synthesis,5,0.1,0.0,0.6,0.2133,0.0,1.0,0.1,0.0,0.6,0.12,0.0,0.0,0.12,0.0,0.0,0.12,0.0,0.0
+entity_relationships,5,0.4,0.2,0.6,0.4,0.2,1.0,0.4,0.2,0.6,0.4,0.2,0.0,0.4,0.2,0.0,0.4,0.2,0.0
+historical_state_retrieval,5,0.8,0.8,1.0,0.8,0.8,1.0,1.0,1.0,1.0,0.6,0.6,0.0,0.6,0.6,0.0,0.6,0.6,0.0
+knowledge_updates,5,0.7,0.6,1.0,0.7,0.6,1.0,0.7,0.6,1.0,0.6,0.6,0.0,0.6,0.6,0.0,0.7,0.6,0.0
+multi_hop_reasoning,5,0.0,0.0,0.8,0.3,0.2,1.0,0.0,0.0,0.8,0.1,0.0,0.0,0.1,0.0,0.0,0.1,0.0,0.0
+negative_information,5,0.0,0.0,0.2,0.3,0.0,1.0,0.0,0.0,0.2,0.2,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.0
+preferences_and_constraints,5,0.4,0.4,0.6,0.6,0.6,0.8,0.4,0.4,0.6,0.4,0.4,0.0,0.4,0.4,0.0,0.6,0.6,0.0
+single_fact_retrieval,5,0.4,0.4,1.0,1.0,1.0,1.0,0.5,0.4,1.0,1.0,1.0,0.6,1.0,1.0,0.6,1.0,1.0,0.6
+temporal_reasoning,5,0.1667,0.0,0.8,0.3667,0.2,1.0,0.1667,0.0,0.8,0.5667,0.4,0.0,0.5667,0.4,0.0,0.5667,0.4,0.0
+unanswerable_questions,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0

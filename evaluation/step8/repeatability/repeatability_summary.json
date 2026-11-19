@@ -1,0 +1,160 @@
+{
+  "experiment": "IVARA Step 8 Deterministic Repeatability Evaluation",
+  "configuration": "CONFIG-D",
+  "sample_size": 6,
+  "all_predictions_identical": false,
+  "sample_question_ids": [
+    "e47becba",
+    "0a995998",
+    "8a2466db",
+    "dcfa8644",
+    "6a1eabeb",
+    "2698e78f_abs"
+  ],
+  "comparisons": {
+    "e47becba": {
+      "exact_text_match": true,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "f1ecd9dcecc275b916732f27e050810fcdb7cb0d0b575a6bd1e03a485324d704",
+      "hash_run_2": "f1ecd9dcecc275b916732f27e050810fcdb7cb0d0b575a6bd1e03a485324d704",
+      "latency_run_1_ms": 6206.73,
+      "latency_run_2_ms": 5837.22
+    },
+    "0a995998": {
+      "exact_text_match": false,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "500a3f693656d4312e3f8256cd3e6db8c94753ffdf3cb64007ed2eeb3e3018f6",
+      "hash_run_2": "4f81cae70240580afafce0ab6e7e922b97073df9d6331e895df3be2e335cc51e",
+      "latency_run_1_ms": 6863.52,
+      "latency_run_2_ms": 6383.87
+    },
+    "8a2466db": {
+      "exact_text_match": false,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "32271b2e35f6b386b5c6a3a3230263a1db6b5ee3066df37cc9bde1989a323cf8",
+      "hash_run_2": "7ad60a0ce8e2e9976a4952fe58cafd41da65bcee5a80720775e0b26bedfeac29",
+      "latency_run_1_ms": 7140.18,
+      "latency_run_2_ms": 7440.6
+    },
+    "dcfa8644": {
+      "exact_text_match": false,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "dc2e97ec59f7ca72ad675c70494f019dcfd777e0b55d3a3848ffa8aaa145f607",
+      "hash_run_2": "b914dae4f745b8325fa8524f594f5dec97fa11db67b037085ab0d16219dbc444",
+      "latency_run_1_ms": 5968.42,
+      "latency_run_2_ms": 5621.6
+    },
+    "6a1eabeb": {
+      "exact_text_match": false,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "370cb42fed5272d1af9af7cb08f5607ef059d4e5214f82a172982dfbb8620cad",
+      "hash_run_2": "2a8e358b42c7e7f9ad6193e2c4efd8770f3ba4bdb8e8ea628ebdce0cb2dd8759",
+      "latency_run_1_ms": 8260.14,
+      "latency_run_2_ms": 7307.04
+    },
+    "2698e78f_abs": {
+      "exact_text_match": true,
+      "status_match": true,
+      "score_match": true,
+      "hash_run_1": "cb3d5a19db681c4c09ea64030fd0cce26e0270a02c7a96fbf0a4baafca48f4f3",
+      "hash_run_2": "cb3d5a19db681c4c09ea64030fd0cce26e0270a02c7a96fbf0a4baafca48f4f3",
+      "latency_run_1_ms": 5599.46,
+      "latency_run_2_ms": 5556.69
+    }
+  },
+  "runs": {
+    "run_1": {
+      "e47becba": {
+        "hypothesis": "You graduated with a degree in Business Administration.",
+        "hypothesis_hash": "f1ecd9dcecc275b916732f27e050810fcdb7cb0d0b575a6bd1e03a485324d704",
+        "status": "answered",
+        "score": true,
+        "latency_ms": 6206.73
+      },
+      "0a995998": {
+        "hypothesis": "You need to pick up one item of clothing from a store \u2013 the new pair of boots you exchanged on 2/5.",
+        "hypothesis_hash": "500a3f693656d4312e3f8256cd3e6db8c94753ffdf3cb64007ed2eeb3e3018f6",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 6863.52
+      },
+      "8a2466db": {
+        "hypothesis": "Here are some resources you can use to learn more about video editing:\n\n1. **Adobe Premiere Pro\u2019s official documentation and tutorials** \u2013 the official site provides step\u2011by\u2011step guides and video tutorials.\n2. **YouTube channels** such as Premiere Bro, Video Copilot, and Adobe Creative Cloud, which offer practical editing tips and demonstrations.\n3. **Online courses** on platforms like Udemy, LinkedIn Learning, and Skillshare, which cover beginner to advanced editing techniques.\n4. **Community forums** such as Reddit\u2019s r/premierepro and Adobe\u2019s Premiere Pro forum, where you can ask questions and share workflows.\n\nThese resources were recommended in the assistant\u2019s response to a similar query about advanced settings for video editing with Adobe Premiere Pro.",
+        "hypothesis_hash": "32271b2e35f6b386b5c6a3a3230263a1db6b5ee3066df37cc9bde1989a323cf8",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 7140.18
+      },
+      "dcfa8644": {
+        "hypothesis": "Fourteen days had passed between the purchase of your Adidas running shoes on January\u202f10,\u202f2023, and the moment you realized a shoelace on your old Converse sneakers had broken on January\u202f24,\u202f2023.",
+        "hypothesis_hash": "dc2e97ec59f7ca72ad675c70494f019dcfd777e0b55d3a3848ffa8aaa145f607",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 5968.42
+      },
+      "6a1eabeb": {
+        "hypothesis": "Your personal best time in the charity 5K run is 25:50.",
+        "hypothesis_hash": "370cb42fed5272d1af9af7cb08f5607ef059d4e5214f82a172982dfbb8620cad",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 8260.14
+      },
+      "2698e78f_abs": {
+        "hypothesis": "I do not have sufficient recorded memories to determine how often you see Dr. Johnson.",
+        "hypothesis_hash": "cb3d5a19db681c4c09ea64030fd0cce26e0270a02c7a96fbf0a4baafca48f4f3",
+        "status": "insufficient_evidence",
+        "score": false,
+        "latency_ms": 5599.46
+      }
+    },
+    "run_2": {
+      "e47becba": {
+        "hypothesis": "You graduated with a degree in Business Administration.",
+        "hypothesis_hash": "f1ecd9dcecc275b916732f27e050810fcdb7cb0d0b575a6bd1e03a485324d704",
+        "status": "answered",
+        "score": true,
+        "latency_ms": 5837.22
+      },
+      "0a995998": {
+        "hypothesis": "You need to pick up one item of clothing\u2014a pair of boots\u2014from the store.",
+        "hypothesis_hash": "4f81cae70240580afafce0ab6e7e922b97073df9d6331e895df3be2e335cc51e",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 6383.87
+      },
+      "8a2466db": {
+        "hypothesis": "Here are some resources you can use to learn more about video editing:\n\n1. **Adobe Premiere Pro\u2019s official documentation and tutorials** \u2013 the publisher\u2019s own guides cover everything from basic to advanced features.\n2. **YouTube channels** such as Premiere Bro, Video Copilot, and Adobe Creative Cloud, which publish step\u2011by\u2011step tutorials and tips.\n3. **Online courses** on platforms like Udemy, LinkedIn Learning, and Skillshare that offer structured learning paths for Premiere Pro and other editing software.\n4. **Community forums** such as Reddit\u2019s r/premierepro and Adobe\u2019s Premiere Pro forum, where you can ask questions and share workflows.\n\nThese resources were recommended in the assistant\u2019s response to a similar query about advanced settings for video editing with Adobe Premiere Pro.",
+        "hypothesis_hash": "7ad60a0ce8e2e9976a4952fe58cafd41da65bcee5a80720775e0b26bedfeac29",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 7440.6
+      },
+      "dcfa8644": {
+        "hypothesis": "Fourteen days had passed between the purchase of your Adidas running shoes on January\u202f10 and the moment you realized one of the shoelaces on your old Converse sneakers had broken on January\u202f24.",
+        "hypothesis_hash": "b914dae4f745b8325fa8524f594f5dec97fa11db67b037085ab0d16219dbc444",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 5621.6
+      },
+      "6a1eabeb": {
+        "hypothesis": "Your personal best time in the charity 5K run was 27:12.",
+        "hypothesis_hash": "2a8e358b42c7e7f9ad6193e2c4efd8770f3ba4bdb8e8ea628ebdce0cb2dd8759",
+        "status": "partial",
+        "score": false,
+        "latency_ms": 7307.04
+      },
+      "2698e78f_abs": {
+        "hypothesis": "I do not have sufficient recorded memories to determine how often you see Dr. Johnson.",
+        "hypothesis_hash": "cb3d5a19db681c4c09ea64030fd0cce26e0270a02c7a96fbf0a4baafca48f4f3",
+        "status": "insufficient_evidence",
+        "score": false,
+        "latency_ms": 5556.69
+      }
+    }
+  }
+}

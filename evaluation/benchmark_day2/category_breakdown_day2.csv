@@ -1,0 +1,13 @@
+category,count,gpt_bin_acc,gpt_fact_cov,gpt_exact_m,qwen_bin_acc,qwen_fact_cov,qwen_exact_m,delta_bin_acc,delta_fact_cov
+complex_multi_fact,5,0.6,0.7,0.6,0.4,0.5,0.4,-0.2,-0.2
+contradiction_handling,5,0.2,0.4667,0.2,0.4,0.6333,0.4,0.2,0.1666
+cross_session_synthesis,5,0.2,0.27,0.0,0.2,0.2633,0.0,0.0,-0.0067
+entity_relationships,5,0.2,0.4,0.2,0.2,0.4,0.2,0.0,0.0
+historical_state_retrieval,5,0.8,0.8,0.8,0.8,0.8,0.8,0.0,0.0
+knowledge_updates,5,0.6,0.7,0.6,0.2,0.3,0.2,-0.4,-0.4
+multi_hop_reasoning,5,0.0,0.1,0.0,0.0,0.1,0.0,0.0,0.0
+negative_information,5,0.0,0.2667,0.0,0.0,0.1667,0.0,0.0,-0.1
+preferences_and_constraints,5,0.6,0.6,0.6,0.4,0.4,0.4,-0.2,-0.2
+single_fact_retrieval,5,1.0,1.0,1.0,0.8,0.8,0.8,-0.2,-0.2
+temporal_reasoning,5,0.2,0.5333,0.2,0.2,0.3667,0.2,0.0,-0.1666
+unanswerable_questions,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0

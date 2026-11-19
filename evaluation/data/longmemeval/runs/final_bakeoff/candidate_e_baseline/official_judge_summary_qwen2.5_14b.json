@@ -1,0 +1,51 @@
+{
+  "evaluation_timestamp": "2026-11-16T18:58:01Z",
+  "judge_model": "qwen2.5:14b",
+  "predictions_file": "evaluation\\data\\longmemeval\\runs\\integrated_production_run\\results_config_D.jsonl",
+  "total_evaluated": 500,
+  "overall_accuracy": 0.408,
+  "task_averaged_accuracy": 0.451,
+  "abstention_accuracy": 0.8667,
+  "answerable_accuracy": 0.3787,
+  "answerable_task_averaged_accuracy": 0.4302,
+  "counts": {
+    "total": 500,
+    "correct": 204,
+    "abstention_total": 30,
+    "abstention_correct": 26,
+    "answerable_total": 470,
+    "answerable_correct": 178
+  },
+  "by_task": {
+    "single-session-user": {
+      "accuracy": 0.8286,
+      "correct": 58,
+      "total": 70
+    },
+    "single-session-preference": {
+      "accuracy": 0.3333,
+      "correct": 10,
+      "total": 30
+    },
+    "single-session-assistant": {
+      "accuracy": 0.5893,
+      "correct": 33,
+      "total": 56
+    },
+    "multi-session": {
+      "accuracy": 0.3158,
+      "correct": 42,
+      "total": 133
+    },
+    "temporal-reasoning": {
+      "accuracy": 0.203,
+      "correct": 27,
+      "total": 133
+    },
+    "knowledge-update": {
+      "accuracy": 0.4359,
+      "correct": 34,
+      "total": 78
+    }
+  }
+}

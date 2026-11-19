@@ -1,0 +1,59 @@
+[
+  {
+    "id": "m001",
+    "text": "Maya Lin is a Distributed Systems Architect at CloudMatrix Inc.",
+    "timestamp": "2026-01-15",
+    "source": "synthetic_fixture",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Maya Lin",
+        "entity_id": "e_maya",
+        "canonical_name": "Maya Lin",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "explicit",
+        "status": "matched"
+      },
+      {
+        "mention": "CloudMatrix Inc",
+        "entity_id": "e_cloudmatrix",
+        "canonical_name": "CloudMatrix Inc",
+        "types": [
+          "Organization",
+          "Company"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "explicit",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "work",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "entity",
+          "id": "e_maya"
+        },
+        "predicate": "works_for",
+        "target": {
+          "type": "entity",
+          "id": "e_cloudmatrix"
+        },
+        "confidence": 1.0,
+        "origin": "explicit"
+      }
+    ]
+  }
+]

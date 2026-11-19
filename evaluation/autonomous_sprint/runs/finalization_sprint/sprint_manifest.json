@@ -1,0 +1,31 @@
+{
+  "sprint_name": "IVARA Finalization Sprint: From Research Prototype to Research-Ready System",
+  "start_timestamp": "2026-10-29 13:43:00 IST",
+  "git_branch": "research/evaluation-baseline",
+  "git_commit": "885298c73cd0257653c49cb81d958f49ad8a0da4",
+  "starting_test_suite_result": "216 passed in 21.08s",
+  "clean_stores_verified": {
+    "data_memories_json": "untouched",
+    "data_entities_json": "untouched",
+    "step9_human_review_sample_csv": "untouched_blank_verdicts",
+    "historical_runs": "untouched"
+  },
+  "dataset_hashes": {
+    "longmemeval_s_cleaned_json": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+    "diagnostic_sample_100_json": "cef499da6e68cae8f8e8df61351261a2c652074986063acade0c1330331de338"
+  },
+  "models": {
+    "generator_model": "gpt-oss:latest",
+    "diagnostic_judge_model": "VladimirGav/gemma4-26b-16GB-VRAM:latest"
+  },
+  "sprint_phases": [
+    "Phase 1: Starting point verification and manifest",
+    "Phase 2: Proper implementation of candidate IVARA-Hybrid architecture with fallback routing and invariants",
+    "Phase 3: Decision-grade evaluation runner and preflight gates",
+    "Phase 4: Independent versioned human-review artifact (30-40 cases) and verdict import utility",
+    "Phase 5: Focused controlled experiment on fresh held-out questions (4 arms)",
+    "Phase 6: In-depth quality/error investigation and regression test",
+    "Phase 7: Research deliverables and editable architecture diagram",
+    "Phase 8: Final verification and handoff"
+  ]
+}

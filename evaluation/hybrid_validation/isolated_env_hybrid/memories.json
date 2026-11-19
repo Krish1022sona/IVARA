@@ -1,0 +1,686 @@
+[
+  {
+    "id": "m001",
+    "text": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos.",
+    "timestamp": "2024-03-15",
+    "source": "conv_conv_97567aaa5155_turn_8fe7accf1e5a",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Dr. Elena Rostova",
+        "entity_id": null,
+        "canonical_name": "Dr. Elena Rostova",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Aetheria Labs",
+        "entity_id": null,
+        "canonical_name": "Aetheria Labs",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Project Chronos",
+        "entity_id": null,
+        "canonical_name": "Project Chronos",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Joining an organization",
+        "confidence": 1.0
+      },
+      {
+        "name": "Project direction",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'worksFor' is not registered in vocabulary.",
+        "Relationship predicate 'leads' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Dr. Elena Rostova",
+            "relation": "worksFor",
+            "target": "Aetheria Labs",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos."
+          },
+          [
+            "Relationship predicate 'worksFor' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Dr. Elena Rostova",
+            "relation": "leads",
+            "target": "Project Chronos",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos."
+          },
+          [
+            "Relationship predicate 'leads' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m002",
+    "text": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers.",
+    "timestamp": "2024-04-10",
+    "source": "conv_conv_5e687b38d144_turn_84f19be7d4b1",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Dr. Rostova",
+        "entity_id": null,
+        "canonical_name": "Dr. Rostova",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Aetheria",
+        "entity_id": null,
+        "canonical_name": "Aetheria",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Vanguard Robotics",
+        "entity_id": null,
+        "canonical_name": "Vanguard Robotics",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Collaboration",
+        "confidence": 1.0
+      },
+      {
+        "name": "Hardware Drivers",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'collaborating_with' is not registered in vocabulary.",
+        "Relationship predicate 'collaborating_with' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Aetheria",
+            "relation": "collaborating_with",
+            "target": "Vanguard Robotics",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers."
+          },
+          [
+            "Relationship predicate 'collaborating_with' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Vanguard Robotics",
+            "relation": "collaborating_with",
+            "target": "Aetheria",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers."
+          },
+          [
+            "Relationship predicate 'collaborating_with' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Hardware Drivers' to an entity in the current context.",
+          "source_raw": "Aetheria",
+          "predicate": "worked_on",
+          "raw_predicate": "working_on",
+          "predicate_status": "canonical",
+          "target_raw": "Hardware Drivers",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers."
+        },
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Hardware Drivers' to an entity in the current context.",
+          "source_raw": "Vanguard Robotics",
+          "predicate": "worked_on",
+          "raw_predicate": "working_on",
+          "predicate_status": "canonical",
+          "target_raw": "Hardware Drivers",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers."
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m003",
+    "text": "In 2023, Arjun used VS Code as his primary code editor for all backend projects.",
+    "timestamp": "2023-05-10",
+    "source": "conv_conv_173f2ae0a610_turn_123682152b33",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Arjun",
+        "entity_id": null,
+        "canonical_name": "Arjun",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Code Editor",
+        "confidence": 1.0
+      },
+      {
+        "name": "Backend Projects",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'VS Code' has unrecognized type 'Software' in vocabulary.",
+        "Relationship predicate 'used for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "VS Code",
+            "relation": "used for",
+            "target": "backend projects",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Arjun used VS Code as his primary code editor for all backend projects."
+          },
+          [
+            "Relationship predicate 'used for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'VS Code' to an entity in the current context.",
+          "source_raw": "Arjun",
+          "predicate": "uses",
+          "raw_predicate": "uses",
+          "predicate_status": "canonical",
+          "target_raw": "VS Code",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "Arjun used VS Code as his primary code editor for all backend projects."
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m004",
+    "text": "In November 2025, Arjun switched completely to Neovim for all software development and abandoned VS Code.",
+    "timestamp": "2025-11-20",
+    "source": "conv_conv_ffb0466896c9_turn_3b62248a3790",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Arjun",
+        "entity_id": null,
+        "canonical_name": "Arjun",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Software Development",
+        "confidence": 1.0
+      },
+      {
+        "name": "Software Switch",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Neovim' has unrecognized type 'Software' in vocabulary.",
+        "Entity 'VS Code' has unrecognized type 'Software' in vocabulary.",
+        "Relationship predicate 'abandoned' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Arjun",
+            "relation": "abandoned",
+            "target": "VS Code",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Arjun switched completely to Neovim for all software development and abandoned VS Code."
+          },
+          [
+            "Relationship predicate 'abandoned' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Neovim' to an entity in the current context.",
+          "source_raw": "Arjun",
+          "predicate": "uses",
+          "raw_predicate": "uses",
+          "predicate_status": "canonical",
+          "target_raw": "Neovim",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "Arjun switched completely to Neovim for all software development and abandoned VS Code."
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m005",
+    "text": "Marcus Vance stated that Project Hyperion was officially approved for production deployment in July 2025.",
+    "timestamp": "2025-06-01",
+    "source": "conv_conv_e58ea7045e18_turn_3f8c656fd0e1",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Marcus Vance",
+        "entity_id": null,
+        "canonical_name": "Marcus Vance",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Project Hyperion",
+        "entity_id": null,
+        "canonical_name": "Project Hyperion",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Project Approval",
+        "confidence": 1.0
+      },
+      {
+        "name": "Production Deployment",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'stated' is not registered in vocabulary.",
+        "Relationship predicate 'hasStatus' is not registered in vocabulary.",
+        "Relationship predicate 'hasApprovalDate' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Marcus Vance",
+            "relation": "stated",
+            "target": "Project Hyperion was officially approved for production deployment in July 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Marcus Vance stated that Project Hyperion was officially approved for production deployment in July 2025."
+          },
+          [
+            "Relationship predicate 'stated' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Project Hyperion",
+            "relation": "hasStatus",
+            "target": "officially approved for production deployment",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Project Hyperion was officially approved for production deployment in July 2025."
+          },
+          [
+            "Relationship predicate 'hasStatus' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Project Hyperion",
+            "relation": "hasApprovalDate",
+            "target": "July 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Project Hyperion was officially approved for production deployment in July 2025."
+          },
+          [
+            "Relationship predicate 'hasApprovalDate' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m006",
+    "text": "Executive leadership officially cancelled Project Hyperion on June 12, 2025 due to regulatory concerns and no code was deployed.",
+    "timestamp": "2025-06-13",
+    "source": "conv_conv_0e1ac2f958b5_turn_769bbb94c44b",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Project Hyperion",
+        "entity_id": null,
+        "canonical_name": "Project Hyperion",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Executive leadership",
+        "entity_id": null,
+        "canonical_name": "Executive leadership",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Project cancellation",
+        "confidence": 1.0
+      },
+      {
+        "name": "Regulatory concerns",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'cancelled' is not registered in vocabulary.",
+        "Relationship predicate 'has_reason_for_cancellation' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Executive leadership",
+            "relation": "cancelled",
+            "target": "Project Hyperion",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Executive leadership officially cancelled Project Hyperion on June 12, 2025 due to regulatory concerns and no code was deployed."
+          },
+          [
+            "Relationship predicate 'cancelled' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Project Hyperion",
+            "relation": "has_reason_for_cancellation",
+            "target": "Regulatory concerns",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Executive leadership officially cancelled Project Hyperion on June 12, 2025 due to regulatory concerns and no code was deployed."
+          },
+          [
+            "Relationship predicate 'has_reason_for_cancellation' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m007",
+    "text": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc.",
+    "timestamp": "2024-05-15",
+    "source": "conv_conv_474462db09ca_turn_9d531546df60",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "VectorFlow",
+        "entity_id": null,
+        "canonical_name": "VectorFlow",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Engineering Management",
+        "confidence": 1.0
+      },
+      {
+        "name": "Software Development",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'David Thorne' has unrecognized type 'Person, Employee, Manager' in vocabulary.",
+        "Entity 'CloudMatrix Inc.' has unrecognized type 'Company, Employer' in vocabulary.",
+        "Relationship predicate 'worksFor' is not registered in vocabulary.",
+        "Relationship predicate 'manages' is not registered in vocabulary.",
+        "Relationship predicate 'isProjectOf' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [
+        "Inferred relationship 'isProjectOf' is derived from premise: 'David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc.'."
+      ],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "David Thorne",
+            "relation": "worksFor",
+            "target": "CloudMatrix Inc.",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc."
+          },
+          [
+            "Relationship predicate 'worksFor' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "David Thorne",
+            "relation": "manages",
+            "target": "VectorFlow",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc."
+          },
+          [
+            "Relationship predicate 'manages' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "VectorFlow",
+            "relation": "isProjectOf",
+            "target": "CloudMatrix Inc.",
+            "confidence": 1.0,
+            "origin": "inferred",
+            "evidence": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc."
+          },
+          [
+            "Relationship predicate 'isProjectOf' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m008",
+    "text": "The VectorFlow project utilizes Neo4j as its core graph persistence database.",
+    "timestamp": "2024-05-20",
+    "source": "conv_conv_2ed5299d902a_turn_ab8d03074484",
+    "type": "semantic",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "VectorFlow",
+        "entity_id": null,
+        "canonical_name": "VectorFlow",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Graph Persistence",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Neo4j' has unrecognized type 'Database' in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Neo4j' to an entity in the current context.",
+          "source_raw": "VectorFlow",
+          "predicate": "uses",
+          "raw_predicate": "utilizes",
+          "predicate_status": "canonical",
+          "target_raw": "Neo4j",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "The VectorFlow project utilizes Neo4j as its core graph persistence database."
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  }
+]

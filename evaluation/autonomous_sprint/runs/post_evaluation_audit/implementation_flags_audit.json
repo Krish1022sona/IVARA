@@ -1,0 +1,41 @@
+{
+  "git_commit": "885298c73cd0257653c49cb81d958f49ad8a0da4",
+  "git_branch": "research/evaluation-baseline",
+  "answering_model": "gpt-oss:latest",
+  "judge_model": "VladimirGav/gemma4-26b-16GB-VRAM:latest",
+  "retrieval_k": 5,
+  "max_context_tokens": 1500,
+  "arm_configuration_audit": {
+    "ARM_A": {
+      "name": "Baseline (Dense + BM25)",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    },
+    "ARM_B": {
+      "name": "Ontology Guidance Only",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    },
+    "ARM_C": {
+      "name": "Ontology + Raw Graph Expansion",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    },
+    "ARM_D": {
+      "name": "Ontology + Relevance-Filtered Graph (Prototype B)",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    },
+    "ARM_E": {
+      "name": "Ontology + Direct Seed Temporal (Prototype C)",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    },
+    "ARM_F": {
+      "name": "Full Architecture (Graph + Temporal)",
+      "configuration_compliant": true,
+      "discrepancies": {}
+    }
+  },
+  "all_arms_strictly_compliant": true
+}

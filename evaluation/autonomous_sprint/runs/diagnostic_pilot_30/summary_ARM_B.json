@@ -1,0 +1,12 @@
+{
+  "arm": "ARM_B",
+  "arm_name": "Ontology Guidance Only",
+  "total_instances": 30,
+  "overall_accuracy": 63.33,
+  "answerable_accuracy": 58.33,
+  "abstention_accuracy": 83.33,
+  "abstentions_correct": 5,
+  "total_abstentions": 6,
+  "answerable_correct": 14,
+  "total_answerable": 24
+}

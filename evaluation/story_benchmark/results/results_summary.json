@@ -1,0 +1,275 @@
+{
+  "overall": {
+    "baseline_vector": {
+      "questions_count": 50,
+      "mean_accuracy": 0.1617,
+      "exact_match_rate": 0.12,
+      "recall_at_1": 0.9,
+      "recall_at_5": 0.98,
+      "mean_mrr": 0.94,
+      "citation_validity": 1.0,
+      "mean_latency_ms": 1997.4,
+      "median_latency_ms": 1694.7,
+      "p95_latency_ms": 3829.5
+    },
+    "baseline_hybrid": {
+      "questions_count": 50,
+      "mean_accuracy": 0.165,
+      "exact_match_rate": 0.14,
+      "recall_at_1": 0.96,
+      "recall_at_5": 1.0,
+      "mean_mrr": 0.9767,
+      "citation_validity": 1.0,
+      "mean_latency_ms": 2096.8,
+      "median_latency_ms": 1871.9,
+      "p95_latency_ms": 3901.9
+    },
+    "ivara_hybrid_no_graph": {
+      "questions_count": 50,
+      "mean_accuracy": 0.337,
+      "exact_match_rate": 0.2,
+      "recall_at_1": 0.8,
+      "recall_at_5": 0.88,
+      "mean_mrr": 0.84,
+      "citation_validity": 1.0,
+      "mean_latency_ms": 3627.9,
+      "median_latency_ms": 2113.9,
+      "p95_latency_ms": 11613.7
+    },
+    "ivara_full": {
+      "questions_count": 50,
+      "mean_accuracy": 0.3902,
+      "exact_match_rate": 0.24,
+      "recall_at_1": 0.88,
+      "recall_at_5": 0.92,
+      "mean_mrr": 0.895,
+      "citation_validity": 0.98,
+      "mean_latency_ms": 3402.2,
+      "median_latency_ms": 2697.4,
+      "p95_latency_ms": 7677.9
+    }
+  },
+  "category_wise": {
+    "single_fact_recall": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.2667,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.3667,
+        "recall_at_5": 1.0
+      }
+    },
+    "multi_hop": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 0.8
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.1333,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.1333,
+        "recall_at_5": 0.8
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 1.0
+      }
+    },
+    "entity_relationship": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.04,
+        "recall_at_5": 0.6
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.2733,
+        "recall_at_5": 0.6
+      }
+    },
+    "temporal_reasoning": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.0667,
+        "recall_at_5": 1.0
+      }
+    },
+    "historical_state": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.2,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.6,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.7,
+        "recall_at_5": 1.0
+      }
+    },
+    "contradiction_handling": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.1333,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.5067,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.5733,
+        "recall_at_5": 1.0
+      }
+    },
+    "preference_constraint": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.35,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.2,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.4,
+        "recall_at_5": 0.4
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.4,
+        "recall_at_5": 0.6
+      }
+    },
+    "negative_fact": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.1333,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.2,
+        "recall_at_5": 1.0
+      }
+    },
+    "cross_session_synthesis": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 0.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 0.05,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 0.2229,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 0.2557,
+        "recall_at_5": 1.0
+      }
+    },
+    "unanswerable": {
+      "baseline_vector": {
+        "count": 5,
+        "accuracy": 1.0,
+        "recall_at_5": 1.0
+      },
+      "baseline_hybrid": {
+        "count": 5,
+        "accuracy": 1.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_hybrid_no_graph": {
+        "count": 5,
+        "accuracy": 1.0,
+        "recall_at_5": 1.0
+      },
+      "ivara_full": {
+        "count": 5,
+        "accuracy": 1.0,
+        "recall_at_5": 1.0
+      }
+    }
+  },
+  "latency_stats": {}
+}

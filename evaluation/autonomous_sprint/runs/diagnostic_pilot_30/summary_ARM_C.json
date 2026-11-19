@@ -1,0 +1,12 @@
+{
+  "arm": "ARM_C",
+  "arm_name": "Ontology + Raw Graph Expansion",
+  "total_instances": 30,
+  "overall_accuracy": 60.0,
+  "answerable_accuracy": 58.33,
+  "abstention_accuracy": 66.67,
+  "abstentions_correct": 4,
+  "total_abstentions": 6,
+  "answerable_correct": 14,
+  "total_answerable": 24
+}

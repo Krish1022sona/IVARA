@@ -1,0 +1,374 @@
+[
+  {
+    "question_id": "00ca467f",
+    "task_type": "multi-session",
+    "question": "How many doctor's appointments did I go to in March?",
+    "gold_answer": "2",
+    "target_session_ids": [
+      "answer_39900a0a_1",
+      "answer_39900a0a_2",
+      "answer_39900a0a_3"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_39900a0a_1_c003",
+      "sess_answer_39900a0a_1_c004",
+      "sess_ultrachat_145200_c005"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction is empty and fails to provide the requested information."
+  },
+  {
+    "question_id": "07741c45",
+    "task_type": "knowledge-update",
+    "question": "Where do I currently keep my old sneakers?",
+    "gold_answer": "in a shoe rack in my closet",
+    "target_session_ids": [
+      "answer_7e9ad7b4_1",
+      "answer_7e9ad7b4_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_7e9ad7b4_2_c002",
+      "sess_answer_7e9ad7b4_2_c005",
+      "sess_answer_7e9ad7b4_1_c001"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "You currently keep your old sneakers under your bed.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction contradicts the gold answer by stating the sneakers are under the bed instead of in a shoe rack in the closet."
+  },
+  {
+    "question_id": "10e09553",
+    "task_type": "knowledge-update",
+    "question": "How many largemouth bass did I catch with Alex on the earlier fishing trip to Lake Michigan before the 7/22 trip?",
+    "gold_answer": "7",
+    "target_session_ids": [
+      "answer_67be2c38_2",
+      "answer_67be2c38_1"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_67be2c38_2_c000",
+      "sess_answer_67be2c38_2_c001",
+      "sess_answer_67be2c38_2_c004"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "I do not have sufficient recorded memories to determine how many largemouth bass you caught with Alex on the earlier fishing trip to Lake Michigan before the 7/22 trip.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The question is answerable, but the candidate prediction failed to provide the correct number and improperly abstained."
+  },
+  {
+    "question_id": "1d4e3b97",
+    "task_type": "single-session-preference",
+    "question": "I noticed my bike seems to be performing even better during my Sunday group rides. Could there be a reason for this?",
+    "gold_answer": "The user would prefer responses that reference specific details from their previous interactions, such as the replacement of the bike's chain and cassette, and the use of a new Garmin bike computer. They might prefer explanations that connect these details to the observed improvement in bike performance. The user may not prefer responses that fail to acknowledge these specific details or provide vague, general explanations for the improvement.",
+    "target_session_ids": [
+      "answer_e6b6353d"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_ecb24dd8_2_c001",
+      "sess_ecb24dd8_2_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_present": false,
+    "generated_answer": "I don't have any recorded memories that explain why your bike might be performing better during your Sunday group rides.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate incorrectly claims to have no recorded memories, whereas the gold answer indicates that specific details about a new chain, cassette, and Garmin computer exist in the user's history."
+  },
+  {
+    "question_id": "50635ada",
+    "task_type": "knowledge-update",
+    "question": "What was my previous frequent flyer status on United Airlines before I got the current status?",
+    "gold_answer": "Premier Silver",
+    "target_session_ids": [
+      "answer_dcd74827_2",
+      "answer_dcd74827_1"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_dcd74827_1_c001",
+      "sess_answer_dcd74827_1_c002",
+      "sess_answer_dcd74827_2_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "I do not have sufficient recorded memories to determine your previous frequent flyer status on United Airlines.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate failed to provide the specific information requested in the gold answer, claiming it could not be determined."
+  },
+  {
+    "question_id": "95228167",
+    "task_type": "single-session-preference",
+    "question": "I'm getting excited about my visit to the music store this weekend. Any tips on what to look for in a new guitar?",
+    "gold_answer": "The user would prefer responses that highlight the differences between Fender Stratocaster and Gibson Les Paul electric guitars, such as the feel of the neck, weight, and sound profile. They might not prefer general tips on buying an electric guitar or suggestions that do not take into account their current guitar and desired upgrade.",
+    "target_session_ids": [
+      "answer_5e613445"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_b916da64_2_c000",
+      "sess_b916da64_2_c004",
+      "sess_answer_5e613445_c001"
+    ],
+    "gold_retrieval_rank": 3,
+    "gold_evidence_present": true,
+    "generated_answer": "I\u2019m sorry, but I don\u2019t have any recorded memories that provide specific tips for choosing a new guitar.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate improperly abstains by claiming it has no information, whereas the gold answer provides specific guidance on what the user is looking for."
+  },
+  {
+    "question_id": "b46e15ed",
+    "task_type": "temporal-reasoning",
+    "question": "How many months have passed since I participated in two charity events in a row, on consecutive days?",
+    "gold_answer": "2",
+    "target_session_ids": [
+      "answer_4bfcc250_4",
+      "answer_4bfcc250_1",
+      "answer_4bfcc250_3",
+      "answer_4bfcc250_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_4bfcc250_1_c004",
+      "sess_answer_4bfcc250_1_c005"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "I do not have sufficient recorded memories to determine how many months have passed since you participated in two charity events on consecutive days.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The question is marked as answerable, but the candidate failed to provide the correct answer and instead improperly abstained."
+  },
+  {
+    "question_id": "bbf86515",
+    "task_type": "temporal-reasoning",
+    "question": "How many days before the 'Rack Fest' did I participate in the 'Turbocharged Tuesdays' event?",
+    "gold_answer": "4 days.",
+    "target_session_ids": [
+      "answer_b3763b6b_1",
+      "answer_b3763b6b_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_b3763b6b_1_c001",
+      "sess_answer_b3763b6b_1_c004"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "I do not have sufficient recorded memories to determine how many days before the 'Rack Fest' you participated in the 'Turbocharged Tuesdays' event.",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate fails to provide the specific number of days requested in the gold answer, improperly abstaining from an answerable question."
+  },
+  {
+    "question_id": "c7dc5443",
+    "task_type": "knowledge-update",
+    "question": "What is my current record in the recreational volleyball league?",
+    "gold_answer": "5-2",
+    "target_session_ids": [
+      "answer_0cdbca92_1",
+      "answer_0cdbca92_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_0cdbca92_1_c000",
+      "sess_answer_0cdbca92_1_c003"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "Your current record in the recreational volleyball league is 3 wins and 2 losses (3-2).",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction provides a record of 3-2, which contradicts the gold answer of 5-2."
+  },
+  {
+    "question_id": "d23cf73b",
+    "task_type": "multi-session",
+    "question": "How many different cuisines have I learned to cook or tried out in the past few months?",
+    "gold_answer": "4",
+    "target_session_ids": [
+      "answer_5a0d28f8_1",
+      "answer_5a0d28f8_2",
+      "answer_5a0d28f8_3",
+      "answer_5a0d28f8_4"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_5a0d28f8_4_c000",
+      "sess_b124e4a1_1_c002"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "{\n  \"answer\": \"You have tried one cuisine in the past few months: Ethiopian.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The evidence only confirms that you have tried Ethiopian food. It does not provide evidence that you have learned to cook or tried other cuisines such as Korean, Japanese, or Indian in that timeframe. Therefore, the total number of cuisines you have tried is known only for Ethiopian, and the count for other cuisines remains unknown based on the provided evidence. If you have tried additional cuisines, that information is not captured in the evidence given here. If you would like to confirm whether you have tried other cuisines, please provide additional evidence or details. If you have any other questions or need further clarification, let me know! I\u2019m happy to help. I can also provide more detailed cooking suggestions for Ethiopian dishes if you\u2019d like. I\u2019m here to help you explore new culinary adventures. Let me know how I can assist you further! I\u2019m ready to help you plan your next cooking session or recommend recipes. I\u2019m excited to help you expand your culinary repertoire. Let me know what you\u2019d like to do next! I\u2019m here to help. I can also share more about Ethiopian cuisine if you\u2019re interested. I\u2019m happy to help you with that. I\u2019m ready to help you with any cooking questions you have. I\u2019m here to help you explore more cuisines. I\u2019m excited to help you learn new recipes. I\u2019m ready to help you with any cooking advice you need. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with any cooking questions. I\u2019m here to help you with your cooking plans. I\u2019m excited to help you with your cooking adventures. I\u2019m ready to help you with any cooking queries. I\u2019m happy to help you with your cooking goals. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction states the user has tried one cuisine, whereas the gold answer specifies the correct number is 4."
+  },
+  {
+    "question_id": "d24813b1",
+    "task_type": "single-session-preference",
+    "question": "I'm thinking of inviting my colleagues over for a small gathering. Any tips on what to bake?",
+    "gold_answer": "The user would prefer baking suggestions that take into account their previous success with the lemon poppyseed cake, such as variations of that recipe or other desserts that share similar qualities. They might prefer suggestions that balance impressiveness with manageability, considering their previous experience. The user may not prefer overly complex or unfamiliar recipes, or suggestions that do not build upon their existing baking experience.",
+    "target_session_ids": [
+      "answer_7c0ade93"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_61a46ff7_3_c000",
+      "sess_446173bb_1_c000",
+      "sess_ultrachat_494027_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_present": false,
+    "generated_answer": "For a small gathering with colleagues, consider baking a simple roasted chicken and vegetable dish or roasted chickpeas. \n\n\u2022 **Roasted Chicken and Vegetables**: Toss chicken breast or thighs with olive oil, salt, and pepper, then roast in the oven with your favorite vegetables (e.g., carrots, broccoli, Brussels sprouts, sweet potatoes) until cooked through. This is a straightforward, oven\u2011baked meal that\u2019s easy to prepare and serves a crowd.\n\n\u2022 **Roasted Chickpeas**: Rinse and dry a can of chickpeas, toss with olive oil and spices such as cumin, chili powder, or garlic powder, and roast in the oven at 400\u202f\u00b0F (200\u202f\u00b0C) for 30\u201140 minutes until crispy. These are a tasty, protein\u2011rich snack that can be served alongside other baked items.\n\nBoth options are oven\u2011baked, require minimal prep, and can be made in advance, making them ideal for a casual gathering.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate suggests savory dishes like roasted chicken and chickpeas, failing to provide the dessert-based baking suggestions (like variations of lemon poppyseed cake) that the user's profile requires."
+  },
+  {
+    "question_id": "gpt4_372c3eed",
+    "task_type": "multi-session",
+    "question": "How many years in total did I spend in formal education from high school to the completion of my Bachelor's degree?",
+    "gold_answer": "10 years",
+    "target_session_ids": [
+      "answer_35c5419d_2",
+      "answer_35c5419d_3",
+      "answer_35c5419d_1"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_35c5419d_1_c000",
+      "sess_answer_35c5419d_3_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "You spent a total of 8 years in formal education from high school through the completion of your Bachelor's degree.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate predicted 8 years, which contradicts the gold answer of 10 years."
+  },
+  {
+    "question_id": "gpt4_483dd43c",
+    "task_type": "temporal-reasoning",
+    "question": "Which show did I start watching first, 'The Crown' or 'Game of Thrones'?",
+    "gold_answer": "'Game of Thrones'",
+    "target_session_ids": [
+      "answer_fb793c87_1",
+      "answer_fb793c87_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_fb793c87_2_c000",
+      "sess_answer_fb793c87_1_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "The evidence shows that you began watching *Game of Thrones* about a month ago (as of the 29\u202fMay\u202f2023 session).  In a later session you said you started *The Crown* on a Sunday afternoon, but the exact date of that Sunday is not recorded.  Because the start date for *The Crown* is unspecified, the records do not allow us to determine definitively which series you began first.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction fails to provide the correct answer and incorrectly claims the information is unanswerable, despite its own reasoning suggesting 'Game of Thrones' was watched first."
+  },
+  {
+    "question_id": "gpt4_4929293b",
+    "task_type": "temporal-reasoning",
+    "question": "What was the the life event of one of my relatives that I participated in a week ago?",
+    "gold_answer": "my cousin's wedding",
+    "target_session_ids": [
+      "answer_add9b013_2",
+      "answer_add9b013_1"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_4090cbea_c001",
+      "sess_sharegpt_rqvR1Ep_0_c002",
+      "sess_sharegpt_KFhIUCO_0_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_present": false,
+    "generated_answer": "The life event you participated in a week ago was your niece\u2019s kindergarten graduation ceremony.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction provides a different life event (niece's graduation) than the one specified in the gold answer (cousin's wedding)."
+  },
+  {
+    "question_id": "gpt4_59c863d7",
+    "task_type": "multi-session",
+    "question": "How many model kits have I worked on or bought?",
+    "gold_answer": "I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.",
+    "target_session_ids": [
+      "answer_593bdffd_4",
+      "answer_593bdffd_2",
+      "answer_593bdffd_1",
+      "answer_593bdffd_3"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_593bdffd_1_c001",
+      "sess_answer_593bdffd_4_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "You have bought two model kits: a 1/72\u2011scale B\u201129 bomber and a 1/24\u2011scale \u201969 Camaro.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction incorrectly states the number of model kits as two, whereas the gold answer specifies five."
+  },
+  {
+    "question_id": "gpt4_93159ced",
+    "task_type": "temporal-reasoning",
+    "question": "How long have I been working before I started my current job at NovaTech?",
+    "gold_answer": "4 years and 9 months",
+    "target_session_ids": [
+      "answer_e5131a1b_1",
+      "answer_e5131a1b_2"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_e5131a1b_2_c002",
+      "sess_answer_e5131a1b_2_c005",
+      "sess_ultrachat_475376_c001"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "",
+    "status": "insufficient_evidence",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate prediction is empty and fails to provide the requested information."
+  },
+  {
+    "question_id": "gpt4_d84a3211",
+    "task_type": "multi-session",
+    "question": "How much total money have I spent on bike-related expenses since the start of the year?",
+    "gold_answer": "$185",
+    "target_session_ids": [
+      "answer_2880eb6c_3",
+      "answer_2880eb6c_2",
+      "answer_2880eb6c_1",
+      "answer_2880eb6c_4"
+    ],
+    "retrieved_chunk_ids": [
+      "sess_answer_2880eb6c_3_c001",
+      "sess_answer_2880eb6c_4_c002"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_present": true,
+    "generated_answer": "Based on the recorded memories, you have spent $40 on bike lights since the start of the year.",
+    "status": "partial",
+    "is_abstention": false,
+    "gemma_verdict": "INCORRECT",
+    "gemma_rationale": "The candidate provides the amount spent on bike lights ($40) instead of the total bike-related expenses ($185) requested."
+  }
+]

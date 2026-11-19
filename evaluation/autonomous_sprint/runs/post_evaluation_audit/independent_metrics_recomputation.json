@@ -1,0 +1,1645 @@
+{
+  "cohorts": {
+    "Full_100": {
+      "ARM_A": {
+        "sample_size": 100,
+        "overall_accuracy": 64.0,
+        "overall_95ci": [
+          54.24,
+          72.73
+        ],
+        "answerable_accuracy": 60.47,
+        "answerable_95ci": [
+          49.9,
+          70.14
+        ],
+        "abstention_accuracy": 85.71,
+        "abstention_95ci": [
+          60.06,
+          95.99
+        ],
+        "counts": {
+          "total_correct": 64,
+          "total_instances": 100,
+          "ans_correct": 52,
+          "ans_total": 86,
+          "abs_correct": 12,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 12,
+          "failed_abstention": 2,
+          "correct_answered": 52,
+          "incorrect_answered": 26,
+          "improper_abstention": 8
+        },
+        "latency_summary_ms": {
+          "mean_total": 6460.2,
+          "median_total": 5633.5,
+          "p90_total": 8688.4,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 8,
+            "acc": 44.44,
+            "ans_acc": 35.71,
+            "abs_acc": 75.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 9,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 10,
+            "acc": 50.0,
+            "ans_acc": 37.5,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 8,
+            "acc": 40.0,
+            "ans_acc": 31.25,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 14,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_B": {
+        "sample_size": 100,
+        "overall_accuracy": 65.0,
+        "overall_95ci": [
+          55.25,
+          73.64
+        ],
+        "answerable_accuracy": 60.47,
+        "answerable_95ci": [
+          49.9,
+          70.14
+        ],
+        "abstention_accuracy": 92.86,
+        "abstention_95ci": [
+          68.53,
+          98.73
+        ],
+        "counts": {
+          "total_correct": 65,
+          "total_instances": 100,
+          "ans_correct": 52,
+          "ans_total": 86,
+          "abs_correct": 13,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 13,
+          "failed_abstention": 1,
+          "correct_answered": 52,
+          "incorrect_answered": 25,
+          "improper_abstention": 9
+        },
+        "latency_summary_ms": {
+          "mean_total": 6281.6,
+          "median_total": 5641.3,
+          "p90_total": 8484.5,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 12,
+            "acc": 66.67,
+            "ans_acc": 57.14,
+            "abs_acc": 100.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 8,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 9,
+            "acc": 45.0,
+            "ans_acc": 31.25,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 7,
+            "acc": 35.0,
+            "ans_acc": 25.0,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 14,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_C": {
+        "sample_size": 100,
+        "overall_accuracy": 61.0,
+        "overall_95ci": [
+          51.2,
+          69.98
+        ],
+        "answerable_accuracy": 56.98,
+        "answerable_95ci": [
+          46.44,
+          66.92
+        ],
+        "abstention_accuracy": 85.71,
+        "abstention_95ci": [
+          60.06,
+          95.99
+        ],
+        "counts": {
+          "total_correct": 61,
+          "total_instances": 100,
+          "ans_correct": 49,
+          "ans_total": 86,
+          "abs_correct": 12,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 12,
+          "failed_abstention": 2,
+          "correct_answered": 49,
+          "incorrect_answered": 31,
+          "improper_abstention": 6
+        },
+        "latency_summary_ms": {
+          "mean_total": 6785.5,
+          "median_total": 6066.6,
+          "p90_total": 8828.7,
+          "mean_graph_build": 425.7
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 10,
+            "acc": 55.56,
+            "ans_acc": 50.0,
+            "abs_acc": 75.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 7,
+            "acc": 58.33,
+            "ans_acc": 58.33,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 9,
+            "acc": 45.0,
+            "ans_acc": 31.25,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 6,
+            "acc": 30.0,
+            "ans_acc": 18.75,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 14,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_D": {
+        "sample_size": 100,
+        "overall_accuracy": 64.0,
+        "overall_95ci": [
+          54.24,
+          72.73
+        ],
+        "answerable_accuracy": 60.47,
+        "answerable_95ci": [
+          49.9,
+          70.14
+        ],
+        "abstention_accuracy": 85.71,
+        "abstention_95ci": [
+          60.06,
+          95.99
+        ],
+        "counts": {
+          "total_correct": 64,
+          "total_instances": 100,
+          "ans_correct": 52,
+          "ans_total": 86,
+          "abs_correct": 12,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 12,
+          "failed_abstention": 2,
+          "correct_answered": 52,
+          "incorrect_answered": 29,
+          "improper_abstention": 5
+        },
+        "latency_summary_ms": {
+          "mean_total": 6442.6,
+          "median_total": 5877.4,
+          "p90_total": 8272.2,
+          "mean_graph_build": 425.3
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 12,
+            "acc": 66.67,
+            "ans_acc": 64.29,
+            "abs_acc": 75.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 8,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 10,
+            "acc": 50.0,
+            "ans_acc": 37.5,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 6,
+            "acc": 30.0,
+            "ans_acc": 18.75,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 13,
+            "acc": 92.86,
+            "ans_acc": 92.86,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_E": {
+        "sample_size": 100,
+        "overall_accuracy": 64.0,
+        "overall_95ci": [
+          54.24,
+          72.73
+        ],
+        "answerable_accuracy": 60.47,
+        "answerable_95ci": [
+          49.9,
+          70.14
+        ],
+        "abstention_accuracy": 85.71,
+        "abstention_95ci": [
+          60.06,
+          95.99
+        ],
+        "counts": {
+          "total_correct": 64,
+          "total_instances": 100,
+          "ans_correct": 52,
+          "ans_total": 86,
+          "abs_correct": 12,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 12,
+          "failed_abstention": 2,
+          "correct_answered": 52,
+          "incorrect_answered": 25,
+          "improper_abstention": 9
+        },
+        "latency_summary_ms": {
+          "mean_total": 6267.2,
+          "median_total": 5741.3,
+          "p90_total": 8298.6,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 10,
+            "acc": 55.56,
+            "ans_acc": 50.0,
+            "abs_acc": 75.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 8,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 10,
+            "acc": 50.0,
+            "ans_acc": 37.5,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 7,
+            "acc": 35.0,
+            "ans_acc": 25.0,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 14,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_F": {
+        "sample_size": 100,
+        "overall_accuracy": 61.0,
+        "overall_95ci": [
+          51.2,
+          69.98
+        ],
+        "answerable_accuracy": 56.98,
+        "answerable_95ci": [
+          46.44,
+          66.92
+        ],
+        "abstention_accuracy": 85.71,
+        "abstention_95ci": [
+          60.06,
+          95.99
+        ],
+        "counts": {
+          "total_correct": 61,
+          "total_instances": 100,
+          "ans_correct": 49,
+          "ans_total": 86,
+          "abs_correct": 12,
+          "abs_total": 14
+        },
+        "confusion_counts": {
+          "correct_abstention": 12,
+          "failed_abstention": 2,
+          "correct_answered": 49,
+          "incorrect_answered": 31,
+          "improper_abstention": 6
+        },
+        "latency_summary_ms": {
+          "mean_total": 6358.6,
+          "median_total": 6046.1,
+          "p90_total": 7934.5,
+          "mean_graph_build": 428.1
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 16,
+            "correct": 15,
+            "acc": 93.75,
+            "ans_acc": 92.86,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 18,
+            "correct": 9,
+            "acc": 50.0,
+            "ans_acc": 42.86,
+            "abs_acc": 75.0
+          },
+          "single-session-preference": {
+            "total": 12,
+            "correct": 9,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 20,
+            "correct": 8,
+            "acc": 40.0,
+            "ans_acc": 25.0,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 20,
+            "correct": 6,
+            "acc": 30.0,
+            "ans_acc": 18.75,
+            "abs_acc": 75.0
+          },
+          "single-session-assistant": {
+            "total": 14,
+            "correct": 14,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      }
+    },
+    "Pilot_30": {
+      "ARM_A": {
+        "sample_size": 30,
+        "overall_accuracy": 66.67,
+        "overall_95ci": [
+          48.78,
+          80.77
+        ],
+        "answerable_accuracy": 66.67,
+        "answerable_95ci": [
+          46.71,
+          82.03
+        ],
+        "abstention_accuracy": 66.67,
+        "abstention_95ci": [
+          30.0,
+          90.32
+        ],
+        "counts": {
+          "total_correct": 20,
+          "total_instances": 30,
+          "ans_correct": 16,
+          "ans_total": 24,
+          "abs_correct": 4,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 4,
+          "failed_abstention": 2,
+          "correct_answered": 16,
+          "incorrect_answered": 6,
+          "improper_abstention": 2
+        },
+        "latency_summary_ms": {
+          "mean_total": 6750.1,
+          "median_total": 5924.3,
+          "p90_total": 10601.3,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 3,
+            "acc": 50.0,
+            "ans_acc": 33.33,
+            "abs_acc": 66.67
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 4,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 2,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_B": {
+        "sample_size": 30,
+        "overall_accuracy": 63.33,
+        "overall_95ci": [
+          45.51,
+          78.13
+        ],
+        "answerable_accuracy": 58.33,
+        "answerable_95ci": [
+          38.83,
+          75.53
+        ],
+        "abstention_accuracy": 83.33,
+        "abstention_95ci": [
+          43.65,
+          96.99
+        ],
+        "counts": {
+          "total_correct": 19,
+          "total_instances": 30,
+          "ans_correct": 14,
+          "ans_total": 24,
+          "abs_correct": 5,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 5,
+          "failed_abstention": 1,
+          "correct_answered": 14,
+          "incorrect_answered": 9,
+          "improper_abstention": 1
+        },
+        "latency_summary_ms": {
+          "mean_total": 6208.9,
+          "median_total": 5758.4,
+          "p90_total": 7781.0,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 5,
+            "acc": 83.33,
+            "ans_acc": 66.67,
+            "abs_acc": 100.0
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 2,
+            "acc": 50.0,
+            "ans_acc": 50.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 1,
+            "acc": 33.33,
+            "ans_acc": 33.33,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_C": {
+        "sample_size": 30,
+        "overall_accuracy": 60.0,
+        "overall_95ci": [
+          42.32,
+          75.41
+        ],
+        "answerable_accuracy": 58.33,
+        "answerable_95ci": [
+          38.83,
+          75.53
+        ],
+        "abstention_accuracy": 66.67,
+        "abstention_95ci": [
+          30.0,
+          90.32
+        ],
+        "counts": {
+          "total_correct": 18,
+          "total_instances": 30,
+          "ans_correct": 14,
+          "ans_total": 24,
+          "abs_correct": 4,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 4,
+          "failed_abstention": 2,
+          "correct_answered": 14,
+          "incorrect_answered": 8,
+          "improper_abstention": 2
+        },
+        "latency_summary_ms": {
+          "mean_total": 6562.9,
+          "median_total": 6171.2,
+          "p90_total": 7995.6,
+          "mean_graph_build": 469.7
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 4,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 66.67
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 2,
+            "acc": 50.0,
+            "ans_acc": 50.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 1,
+            "acc": 33.33,
+            "ans_acc": 33.33,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_D": {
+        "sample_size": 30,
+        "overall_accuracy": 63.33,
+        "overall_95ci": [
+          45.51,
+          78.13
+        ],
+        "answerable_accuracy": 62.5,
+        "answerable_95ci": [
+          42.71,
+          78.84
+        ],
+        "abstention_accuracy": 66.67,
+        "abstention_95ci": [
+          30.0,
+          90.32
+        ],
+        "counts": {
+          "total_correct": 19,
+          "total_instances": 30,
+          "ans_correct": 15,
+          "ans_total": 24,
+          "abs_correct": 4,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 4,
+          "failed_abstention": 2,
+          "correct_answered": 15,
+          "incorrect_answered": 9,
+          "improper_abstention": 0
+        },
+        "latency_summary_ms": {
+          "mean_total": 6510.1,
+          "median_total": 5937.1,
+          "p90_total": 9131.6,
+          "mean_graph_build": 472.7
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 4,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 66.67
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 2,
+            "acc": 50.0,
+            "ans_acc": 50.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 2,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_E": {
+        "sample_size": 30,
+        "overall_accuracy": 63.33,
+        "overall_95ci": [
+          45.51,
+          78.13
+        ],
+        "answerable_accuracy": 62.5,
+        "answerable_95ci": [
+          42.71,
+          78.84
+        ],
+        "abstention_accuracy": 66.67,
+        "abstention_95ci": [
+          30.0,
+          90.32
+        ],
+        "counts": {
+          "total_correct": 19,
+          "total_instances": 30,
+          "ans_correct": 15,
+          "ans_total": 24,
+          "abs_correct": 4,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 4,
+          "failed_abstention": 2,
+          "correct_answered": 15,
+          "incorrect_answered": 7,
+          "improper_abstention": 2
+        },
+        "latency_summary_ms": {
+          "mean_total": 5826.1,
+          "median_total": 5562.3,
+          "p90_total": 7814.2,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 4,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 66.67
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 2,
+            "acc": 50.0,
+            "ans_acc": 50.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 2,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      },
+      "ARM_F": {
+        "sample_size": 30,
+        "overall_accuracy": 63.33,
+        "overall_95ci": [
+          45.51,
+          78.13
+        ],
+        "answerable_accuracy": 62.5,
+        "answerable_95ci": [
+          42.71,
+          78.84
+        ],
+        "abstention_accuracy": 66.67,
+        "abstention_95ci": [
+          30.0,
+          90.32
+        ],
+        "counts": {
+          "total_correct": 19,
+          "total_instances": 30,
+          "ans_correct": 15,
+          "ans_total": 24,
+          "abs_correct": 4,
+          "abs_total": 6
+        },
+        "confusion_counts": {
+          "correct_abstention": 4,
+          "failed_abstention": 2,
+          "correct_answered": 15,
+          "incorrect_answered": 7,
+          "improper_abstention": 2
+        },
+        "latency_summary_ms": {
+          "mean_total": 6458.5,
+          "median_total": 6156.2,
+          "p90_total": 8044.8,
+          "mean_graph_build": 467.8
+        },
+        "task_type_breakdown": {
+          "single-session-user": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 100.0
+          },
+          "knowledge-update": {
+            "total": 6,
+            "correct": 4,
+            "acc": 66.67,
+            "ans_acc": 66.67,
+            "abs_acc": 66.67
+          },
+          "single-session-preference": {
+            "total": 4,
+            "correct": 3,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "temporal-reasoning": {
+            "total": 3,
+            "correct": 1,
+            "acc": 33.33,
+            "ans_acc": 33.33,
+            "abs_acc": 0.0
+          },
+          "multi-session": {
+            "total": 7,
+            "correct": 1,
+            "acc": 14.29,
+            "ans_acc": 16.67,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 5,
+            "correct": 5,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          }
+        }
+      }
+    },
+    "Remaining_70": {
+      "ARM_A": {
+        "sample_size": 70,
+        "overall_accuracy": 62.86,
+        "overall_95ci": [
+          51.15,
+          73.23
+        ],
+        "answerable_accuracy": 58.06,
+        "answerable_95ci": [
+          45.67,
+          69.52
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 44,
+          "total_instances": 70,
+          "ans_correct": 36,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 36,
+          "incorrect_answered": 20,
+          "improper_abstention": 6
+        },
+        "latency_summary_ms": {
+          "mean_total": 6335.9,
+          "median_total": 5632.9,
+          "p90_total": 8295.6,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 5,
+            "acc": 62.5,
+            "ans_acc": 62.5,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 9,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 5,
+            "acc": 41.67,
+            "ans_acc": 36.36,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 7,
+            "acc": 53.85,
+            "ans_acc": 40.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 8,
+            "acc": 47.06,
+            "ans_acc": 30.77,
+            "abs_acc": 100.0
+          }
+        }
+      },
+      "ARM_B": {
+        "sample_size": 70,
+        "overall_accuracy": 65.71,
+        "overall_95ci": [
+          54.04,
+          75.75
+        ],
+        "answerable_accuracy": 61.29,
+        "answerable_95ci": [
+          48.85,
+          72.42
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 46,
+          "total_instances": 70,
+          "ans_correct": 38,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 38,
+          "incorrect_answered": 16,
+          "improper_abstention": 8
+        },
+        "latency_summary_ms": {
+          "mean_total": 6312.8,
+          "median_total": 5639.2,
+          "p90_total": 8520.6,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 6,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 9,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 7,
+            "acc": 58.33,
+            "ans_acc": 54.55,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 6,
+            "acc": 46.15,
+            "ans_acc": 30.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 8,
+            "acc": 47.06,
+            "ans_acc": 30.77,
+            "abs_acc": 100.0
+          }
+        }
+      },
+      "ARM_C": {
+        "sample_size": 70,
+        "overall_accuracy": 61.43,
+        "overall_95ci": [
+          49.72,
+          71.95
+        ],
+        "answerable_accuracy": 56.45,
+        "answerable_95ci": [
+          44.09,
+          68.06
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 43,
+          "total_instances": 70,
+          "ans_correct": 35,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 35,
+          "incorrect_answered": 23,
+          "improper_abstention": 4
+        },
+        "latency_summary_ms": {
+          "mean_total": 6880.8,
+          "median_total": 6045.4,
+          "p90_total": 9837.8,
+          "mean_graph_build": 406.8
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 5,
+            "acc": 62.5,
+            "ans_acc": 62.5,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 9,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 6,
+            "acc": 50.0,
+            "ans_acc": 45.45,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 5,
+            "acc": 38.46,
+            "ans_acc": 20.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 8,
+            "acc": 47.06,
+            "ans_acc": 30.77,
+            "abs_acc": 100.0
+          }
+        }
+      },
+      "ARM_D": {
+        "sample_size": 70,
+        "overall_accuracy": 64.29,
+        "overall_95ci": [
+          52.59,
+          74.5
+        ],
+        "answerable_accuracy": 59.68,
+        "answerable_95ci": [
+          47.25,
+          70.98
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 45,
+          "total_instances": 70,
+          "ans_correct": 37,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 37,
+          "incorrect_answered": 20,
+          "improper_abstention": 5
+        },
+        "latency_summary_ms": {
+          "mean_total": 6413.7,
+          "median_total": 5866.8,
+          "p90_total": 8179.9,
+          "mean_graph_build": 404.9
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 6,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 8,
+            "acc": 88.89,
+            "ans_acc": 88.89,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 8,
+            "acc": 66.67,
+            "ans_acc": 63.64,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 5,
+            "acc": 38.46,
+            "ans_acc": 20.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 8,
+            "acc": 47.06,
+            "ans_acc": 30.77,
+            "abs_acc": 100.0
+          }
+        }
+      },
+      "ARM_E": {
+        "sample_size": 70,
+        "overall_accuracy": 64.29,
+        "overall_95ci": [
+          52.59,
+          74.5
+        ],
+        "answerable_accuracy": 59.68,
+        "answerable_95ci": [
+          47.25,
+          70.98
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 45,
+          "total_instances": 70,
+          "ans_correct": 37,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 37,
+          "incorrect_answered": 18,
+          "improper_abstention": 7
+        },
+        "latency_summary_ms": {
+          "mean_total": 6456.3,
+          "median_total": 5890.4,
+          "p90_total": 8575.7,
+          "mean_graph_build": 0.0
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 6,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 9,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 6,
+            "acc": 50.0,
+            "ans_acc": 45.45,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 6,
+            "acc": 46.15,
+            "ans_acc": 30.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 8,
+            "acc": 47.06,
+            "ans_acc": 30.77,
+            "abs_acc": 100.0
+          }
+        }
+      },
+      "ARM_F": {
+        "sample_size": 70,
+        "overall_accuracy": 60.0,
+        "overall_95ci": [
+          48.29,
+          70.67
+        ],
+        "answerable_accuracy": 54.84,
+        "answerable_95ci": [
+          42.53,
+          66.58
+        ],
+        "abstention_accuracy": 100.0,
+        "abstention_95ci": [
+          67.56,
+          100.0
+        ],
+        "counts": {
+          "total_correct": 42,
+          "total_instances": 70,
+          "ans_correct": 34,
+          "ans_total": 62,
+          "abs_correct": 8,
+          "abs_total": 8
+        },
+        "confusion_counts": {
+          "correct_abstention": 8,
+          "failed_abstention": 0,
+          "correct_answered": 34,
+          "incorrect_answered": 24,
+          "improper_abstention": 4
+        },
+        "latency_summary_ms": {
+          "mean_total": 6315.8,
+          "median_total": 6019.4,
+          "p90_total": 7934.5,
+          "mean_graph_build": 411.1
+        },
+        "task_type_breakdown": {
+          "single-session-preference": {
+            "total": 8,
+            "correct": 6,
+            "acc": 75.0,
+            "ans_acc": 75.0,
+            "abs_acc": 0.0
+          },
+          "single-session-user": {
+            "total": 11,
+            "correct": 10,
+            "acc": 90.91,
+            "ans_acc": 90.91,
+            "abs_acc": 0.0
+          },
+          "single-session-assistant": {
+            "total": 9,
+            "correct": 9,
+            "acc": 100.0,
+            "ans_acc": 100.0,
+            "abs_acc": 0.0
+          },
+          "knowledge-update": {
+            "total": 12,
+            "correct": 5,
+            "acc": 41.67,
+            "ans_acc": 36.36,
+            "abs_acc": 100.0
+          },
+          "multi-session": {
+            "total": 13,
+            "correct": 5,
+            "acc": 38.46,
+            "ans_acc": 20.0,
+            "abs_acc": 100.0
+          },
+          "temporal-reasoning": {
+            "total": 17,
+            "correct": 7,
+            "acc": 41.18,
+            "ans_acc": 23.08,
+            "abs_acc": 100.0
+          }
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "ARM_A_vs_ARM_B": {
+      "label": "Baseline A vs Ontology Guidance B",
+      "arm1": "ARM_A",
+      "arm2": "ARM_B",
+      "arm1_wins": 4,
+      "arm2_wins": 5,
+      "ties": 91,
+      "net_diff": -1,
+      "mcnemar_exact_p_value": 1.0,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 1.0000 >= 0.05). High tie rate (91%) dominates; observed difference (4 vs 5) is directional only.",
+      "win_ids_arm1": [
+        "2a1811e2",
+        "32260d93",
+        "505af2f5",
+        "e25c3b8d"
+      ],
+      "win_ids_arm2": [
+        "01493427",
+        "031748ae_abs",
+        "7401057b",
+        "caf03d32",
+        "dad224aa"
+      ]
+    },
+    "ARM_C_vs_ARM_D": {
+      "label": "Raw Graph C vs Relevance-Filtered Graph D",
+      "arm1": "ARM_C",
+      "arm2": "ARM_D",
+      "arm1_wins": 1,
+      "arm2_wins": 4,
+      "ties": 95,
+      "net_diff": -3,
+      "mcnemar_exact_p_value": 0.375,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 0.3750 >= 0.05). High tie rate (95%) dominates; observed difference (1 vs 4) is directional only.",
+      "win_ids_arm1": [
+        "cc539528"
+      ],
+      "win_ids_arm2": [
+        "2a1811e2",
+        "6b7dfb22",
+        "7401057b",
+        "dad224aa"
+      ]
+    },
+    "ARM_E_vs_ARM_F": {
+      "label": "Direct Seed Temporal E vs Full Graph+Temporal F",
+      "arm1": "ARM_E",
+      "arm2": "ARM_F",
+      "arm1_wins": 5,
+      "arm2_wins": 2,
+      "ties": 93,
+      "net_diff": 3,
+      "mcnemar_exact_p_value": 0.4531,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 0.4531 >= 0.05). High tie rate (93%) dominates; observed difference (5 vs 2) is directional only.",
+      "win_ids_arm1": [
+        "2a1811e2",
+        "7401057b",
+        "dad224aa",
+        "f35224e0",
+        "gpt4_65aabe59"
+      ],
+      "win_ids_arm2": [
+        "06f04340",
+        "59524333"
+      ]
+    },
+    "ARM_A_vs_ARM_D": {
+      "label": "Baseline A vs Relevance-Filtered Graph D",
+      "arm1": "ARM_A",
+      "arm2": "ARM_D",
+      "arm1_wins": 5,
+      "arm2_wins": 5,
+      "ties": 90,
+      "net_diff": 0,
+      "mcnemar_exact_p_value": 1.0,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 1.0000 >= 0.05). High tie rate (90%) dominates; observed difference (5 vs 5) is directional only.",
+      "win_ids_arm1": [
+        "06f04340",
+        "505af2f5",
+        "cc539528",
+        "e25c3b8d",
+        "f35224e0"
+      ],
+      "win_ids_arm2": [
+        "01493427",
+        "7401057b",
+        "caf03d32",
+        "dad224aa",
+        "f9e8c073"
+      ]
+    },
+    "ARM_A_vs_ARM_E": {
+      "label": "Baseline A vs Direct Seed Temporal E",
+      "arm1": "ARM_A",
+      "arm2": "ARM_E",
+      "arm1_wins": 4,
+      "arm2_wins": 4,
+      "ties": 92,
+      "net_diff": 0,
+      "mcnemar_exact_p_value": 1.0,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 1.0000 >= 0.05). High tie rate (92%) dominates; observed difference (4 vs 4) is directional only.",
+      "win_ids_arm1": [
+        "06f04340",
+        "505af2f5",
+        "59524333",
+        "e25c3b8d"
+      ],
+      "win_ids_arm2": [
+        "01493427",
+        "7401057b",
+        "caf03d32",
+        "dad224aa"
+      ]
+    },
+    "ARM_C_vs_ARM_F": {
+      "label": "Raw Graph C vs Full Architecture F",
+      "arm1": "ARM_C",
+      "arm2": "ARM_F",
+      "arm1_wins": 2,
+      "arm2_wins": 2,
+      "ties": 96,
+      "net_diff": 0,
+      "mcnemar_exact_p_value": 1.0,
+      "statistically_significant_at_0_05": false,
+      "interpretation": "No statistically significant difference (p = 1.0000 >= 0.05). High tie rate (96%) dominates; observed difference (2 vs 2) is directional only.",
+      "win_ids_arm1": [
+        "f9e8c073",
+        "gpt4_65aabe59"
+      ],
+      "win_ids_arm2": [
+        "06f04340",
+        "6b7dfb22"
+      ]
+    }
+  }
+}

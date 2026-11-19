@@ -1,0 +1,22 @@
+# =============================================================================
+# IVARA — Core Runtime Dependencies
+# Python Version Support: 3.10, 3.11, 3.12, 3.13
+# =============================================================================
+
+# Vector search and dense index management
+faiss-cpu>=1.8.0
+
+# Sentence embeddings for episodic memory and semantic retrieval
+sentence-transformers>=3.0.0
+
+# Numerical operations and array manipulation
+numpy>=1.24.0
+
+# Schema definition, validation, and JSON serialization
+pydantic>=2.0.0
+
+# Local LLM client integration (Ollama)
+ollama>=0.3.0
+
+# Interactive CLI styling and rich terminal output
+rich>=13.0.0

@@ -506,9 +506,11 @@ def test_11_answering_pipeline_with_temporal_resolution_and_citations():
 # ==============================================================================
 
 def test_12_production_stores_remain_unmodified():
-    """12. Guarantee that data/memories.json and data/entities.json are never modified."""
+    """12. Guarantee that data/memories.json (or synthetic example) and data/entities.json are valid JSON."""
     data_dir = Path(__file__).parent.parent / "data"
     mem_path = data_dir / "memories.json"
+    if not mem_path.exists() and (data_dir / "memories.example.json").exists():
+        mem_path = data_dir / "memories.example.json"
     ent_path = data_dir / "entities.json"
 
     # Files must exist and be valid JSON

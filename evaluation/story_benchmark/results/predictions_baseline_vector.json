@@ -1,0 +1,1537 @@
+{
+  "q01": {
+    "question_id": "q01",
+    "category": "single_fact_recall",
+    "question": "Where was Arjun born and what is his date of birth?",
+    "expected_answer": "Arjun was born in Chandigarh on August 14, 1999.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2232.88,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q02": {
+    "question_id": "q02",
+    "category": "single_fact_recall",
+    "question": "What is the name and breed of Arjun's dog?",
+    "expected_answer": "Arjun's dog is a rescue indie dog named Kaalu.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1614.79,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q03": {
+    "question_id": "q03",
+    "category": "single_fact_recall",
+    "question": "What watch model did Arjun purchase to track his swimming and fitness?",
+    "expected_answer": "Arjun bought a Garmin Forerunner 265 watch.",
+    "predicted_answer": "I’m sorry, I don’t have enough information to answer that question.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1475.63,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q04": {
+    "question_id": "q04",
+    "category": "single_fact_recall",
+    "question": "What prize did team MatrixCrafters win at the Smart India Hackathon for AgriVision?",
+    "expected_answer": "Team MatrixCrafters won the 2nd runner-up prize of $1,500 for AgriVision.",
+    "predicted_answer": "Team MatrixCrafters won the 2nd runner‑up prize of $1,500 at the Smart India Hackathon for AgriVision.",
+    "predicted_status": "answered",
+    "citations": [
+      "c_session_03_017"
+    ],
+    "latency_ms": 1470.8,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "AgriVision"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q05": {
+    "question_id": "q05",
+    "category": "single_fact_recall",
+    "question": "Who was Arjun's engineering manager at HyperScale Systems?",
+    "expected_answer": "Arjun's engineering manager at HyperScale Systems was Vikram Rao.",
+    "predicted_answer": "The provided context does not contain any information about Arjun’s engineering manager at HyperScale Systems.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1385.57,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q06": {
+    "question_id": "q06",
+    "category": "multi_hop",
+    "question": "Who managed the backend of the hackathon project where Arjun trained the computer vision model?",
+    "expected_answer": "Rohan Sharma managed the backend (FastAPI) of the hackathon project AgriVision.",
+    "predicted_answer": "Rohan managed the backend of the hackathon project where Arjun trained the computer vision model.",
+    "predicted_status": "answered",
+    "citations": [
+      "c_session_03_016"
+    ],
+    "latency_ms": 2945.23,
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q07": {
+    "question_id": "q07",
+    "category": "multi_hop",
+    "question": "Which company's former research leader became Arjun's CTO when he transitioned to generative AI?",
+    "expected_answer": "Dr. Shalini Verma, who previously led research at FAIR, became Arjun's CTO at Aetheria AI.",
+    "predicted_answer": "Dr. Shalini Verma, who previously led research at FAIR, became Arjun’s CTO when he transitioned to generative AI.",
+    "predicted_status": "answered",
+    "citations": [
+      "c_session_05_030"
+    ],
+    "latency_ms": 2041.3,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "FAIR"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q08": {
+    "question_id": "q08",
+    "category": "multi_hop",
+    "question": "Who presented Arjun's accepted oral paper when he was unable to travel to the United States?",
+    "expected_answer": "Dr. Shalini Verma delivered the MLSys 2026 oral presentation on NeuroCompact on Arjun's behalf.",
+    "predicted_answer": "I don't have sufficient recorded memory to answer 'Who presented Arjun's accepted oral paper when he was unable to travel to the United States?'.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 10.79,
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q09": {
+    "question_id": "q09",
+    "category": "multi_hop",
+    "question": "What sport did Arjun take up after a running injury sustained while running with his former college roommate?",
+    "expected_answer": "Arjun switched to swimming at the Padukone-Dravid Centre after injuring his heel running with Rohan Sharma.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2691.1,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q10": {
+    "question_id": "q10",
+    "category": "multi_hop",
+    "question": "What full-time position was offered to the intern who was mentored on memory-augmented transformers by Arjun?",
+    "expected_answer": "Ananya Bose was offered a full-time Research Scientist position at Aetheria AI.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3739.74,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q11": {
+    "question_id": "q11",
+    "category": "entity_relationship",
+    "question": "How did Arjun and Rohan Sharma originally meet, and what activities did they do together in Bengaluru?",
+    "expected_answer": "Arjun and Rohan met as college roommates in Hostel 3 at ABV IIITM Gwalior. In Bengaluru, they lived near each other in HSR Layout, played badminton every Tuesday at PlayArena, participated in SIH (MatrixCrafters), and ran the Bengaluru 10k.",
+    "predicted_answer": "The provided evidence does not contain any information about Arjun or how he and Rohan Sharma originally met, nor does it mention any activities they did together in Bengaluru.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1418.94,
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 0.75
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q12": {
+    "question_id": "q12",
+    "category": "entity_relationship",
+    "question": "In what two different projects did Arjun collaborate with Meera Sen, and what was her role in each?",
+    "expected_answer": "Arjun collaborated with Meera Sen on AgriVision (where she built the Flutter mobile frontend) and later on the pivoted NeuroCompact (where she assisted in testing on-device latency on real Android handsets).",
+    "predicted_answer": "The evidence does not provide enough information to determine the two distinct projects Arjun collaborated with Meera Sen on, nor does it specify her role in each.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2734.6,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q13": {
+    "question_id": "q13",
+    "category": "entity_relationship",
+    "question": "What was the working relationship between Arjun and Kabir Das at Aetheria AI, and why did it end?",
+    "expected_answer": "Kabir Das was a compiler engineer collaborating with Arjun on NeuroCompact CUDA/Mojo kernels. The collaboration ended when Kabir left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1802.38,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q14": {
+    "question_id": "q14",
+    "category": "entity_relationship",
+    "question": "What is the relationship between Dr. Shalini Verma and Arjun across his time at Aetheria AI?",
+    "expected_answer": "Dr. Shalini Verma was Arjun's CTO at Aetheria AI. She co-authored NeuroCompact, supported its pivot, promoted him to Lead Research Scientist in January 2026, presented his MLSys oral paper, and offered him the opportunity to head the Zurich research lab.",
+    "predicted_answer": "No information about the relationship between Dr. Shalini Verma and Arjun is provided in the evidence.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1441.77,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q15": {
+    "question_id": "q15",
+    "category": "entity_relationship",
+    "question": "Who is Sneha Roy and how is she connected to Arjun's social circle?",
+    "expected_answer": "Sneha Roy is Rohan Sharma's fiancée; they got engaged in March 2026.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3891.14,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q16": {
+    "question_id": "q16",
+    "category": "temporal_reasoning",
+    "question": "Did Arjun move to HSR Layout before or after he resigned from HyperScale Systems?",
+    "expected_answer": "Arjun moved to HSR Layout in December 2024, BEFORE resigning from HyperScale Systems in January 2025.",
+    "predicted_answer": "The provided context does not contain any information about Arjun’s movements or resignation from HyperScale Systems.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1169.36,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q17": {
+    "question_id": "q17",
+    "category": "temporal_reasoning",
+    "question": "In what month and year was Arjun promoted to Lead Research Scientist, and how long was that after the Bengaluru 10k marathon?",
+    "expected_answer": "Arjun was promoted to Lead Research Scientist in January 2026, roughly two months after running the Bengaluru 10k marathon on November 9, 2025.",
+    "predicted_answer": "I don't have any information about a promotion of someone named Arjun to Lead Research Scientist in the provided context.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1634.97,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q18": {
+    "question_id": "q18",
+    "category": "temporal_reasoning",
+    "question": "What was the chronological sequence of Arjun's residences from university graduation to late 2026?",
+    "expected_answer": "Arjun graduated from Gwalior (June 2022), lived in Indiranagar, Bengaluru (2022-2024), moved to HSR Layout, Bengaluru (December 2024), and finally relocated to Zurich Kreis 4, Switzerland (September 2026).",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3745.83,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q19": {
+    "question_id": "q19",
+    "category": "temporal_reasoning",
+    "question": "When did Kabir Das leave Aetheria AI relative to the rejection of the EMNLP paper?",
+    "expected_answer": "Kabir Das left Aetheria AI in July 2025, just before the EMNLP paper was rejected in August 2025.",
+    "predicted_answer": "The provided context does not contain any information about the rejection of an EMNLP paper, so it is impossible to determine the timing of Kabir Das’s departure relative to that event.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1480.05,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q20": {
+    "question_id": "q20",
+    "category": "temporal_reasoning",
+    "question": "When did Arjun decide to relocate to Zurich versus when did he actually move into his apartment there?",
+    "expected_answer": "Arjun decided to relocate to Zurich in April 2026, and actually moved into his apartment in Zurich Kreis 4 on September 15, 2026.",
+    "predicted_answer": "The provided context does not contain any information about a person named Arjun making a relocation decision or moving into an apartment. The only relocation details refer to the user (presumably yourself) deciding to move to Zurich and then actually moving in. Therefore, I cannot answer the question about Arjun based on the evidence given.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2629.43,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q21": {
+    "question_id": "q21",
+    "category": "historical_state",
+    "question": "Where did Arjun live when he first joined HyperScale Systems in 2022?",
+    "expected_answer": "When Arjun joined HyperScale Systems in 2022, he lived in Indiranagar, Bengaluru.",
+    "predicted_answer": "The provided context does not contain explicit information about Arjun’s place of residence when he first joined HyperScale Systems in 2022.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1887.02,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q22": {
+    "question_id": "q22",
+    "category": "historical_state",
+    "question": "What database technology did Arjun initially use for CacheMesh before updating his database stack?",
+    "expected_answer": "Arjun initially used Redis (cluster) for CacheMesh at HyperScale.",
+    "predicted_answer": "The evidence does not provide a clear answer to the question.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1561.26,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q23": {
+    "question_id": "q23",
+    "category": "historical_state",
+    "question": "What was Arjun's job title when he initially joined Aetheria AI in February 2025?",
+    "expected_answer": "Arjun's job title was Research Engineer when he joined Aetheria AI in February 2025.",
+    "predicted_answer": "The provided evidence does not contain any information about a person named Arjun or his job title at Aetheria AI. The only job title mentioned is for the user who joined on February 1, 2025, who was a Research Engineer. However, there is no explicit link between that user and the name Arjun in the evidence. Therefore, the answer cannot be determined from the given context.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2078.15,
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q24": {
+    "question_id": "q24",
+    "category": "historical_state",
+    "question": "What language did Arjun try to use for CUDA execution kernels on NeuroCompact before reverting to C++?",
+    "expected_answer": "Arjun tried using Mojo for CUDA execution kernels before switching back to C++ and PyTorch C++ API.",
+    "predicted_answer": "The evidence indicates that the team decided to rewrite the CUDA execution kernels in **Mojo** (instead of Python). No information about a subsequent revert to C++ is provided in the supplied context.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [
+      "c_session_06_034"
+    ],
+    "latency_ms": 2303.4,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q25": {
+    "question_id": "q25",
+    "category": "historical_state",
+    "question": "What was the initial research goal and target venue of the NeuroCompact project in mid-2025?",
+    "expected_answer": "The initial goal was 4-bit quantization for server speculative decoding targeted at EMNLP 2025.",
+    "predicted_answer": "The evidence does not provide a clear statement of the initial research goal and target venue for the NeuroCompact project in mid‑2025.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1803.31,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q26": {
+    "question_id": "q26",
+    "category": "contradiction_handling",
+    "question": "Does Arjun currently live in Bengaluru or Zurich?",
+    "expected_answer": "Arjun currently lives in Zurich (Kreis 4), Switzerland, having moved there on September 15, 2026 from Bengaluru.",
+    "predicted_answer": "I don't have any information about Arjun's current location in the provided context.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 854.52,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q27": {
+    "question_id": "q27",
+    "category": "contradiction_handling",
+    "question": "Does Arjun currently use Redis or Dragonfly for his systems?",
+    "expected_answer": "Arjun completely phased out Redis and now strictly uses Dragonfly and DuckDB.",
+    "predicted_answer": "I don't have enough information to determine whether Arjun currently uses Redis or Dragonfly for his systems.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1930.48,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q28": {
+    "question_id": "q28",
+    "category": "contradiction_handling",
+    "question": "Did Arjun abandon learning German or is he currently learning it?",
+    "expected_answer": "Arjun initially dropped German on Duolingo in late 2024, but revived his studies at the Goethe-Institut in April 2026 and is currently studying for the German B1 proficiency exam in Zurich.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1090.13,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q29": {
+    "question_id": "q29",
+    "category": "contradiction_handling",
+    "question": "Is NeuroCompact designed for server speculative decoding or on-device memory compression?",
+    "expected_answer": "While originally designed for server speculative decoding, NeuroCompact was pivoted in August 2025 to on-device memory compression.",
+    "predicted_answer": "NeuroCompact was originally developed as a 4‑bit quantizer for speculative decoding (see the 2025‑05‑10 session).  In August 2025, the project was pivoted to focus on on‑device memory compression with Dr. Shalini Verma (see the 2025‑08‑22 session).  Therefore, the current design of NeuroCompact is for on‑device memory compression.",
+    "predicted_status": "answered",
+    "citations": [
+      "c_session_06_032",
+      "c_session_07_040"
+    ],
+    "latency_ms": 1926.41,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "pivoted",
+        "memory compression"
+      ],
+      "key_facts_coverage": 0.6667,
+      "accuracy": 0.6667,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q30": {
+    "question_id": "q30",
+    "category": "contradiction_handling",
+    "question": "Is Arjun currently programming CUDA kernels in Mojo or C++?",
+    "expected_answer": "Arjun no longer uses Mojo; he switched back to C++ and PyTorch C++ API due to unstable tooling.",
+    "predicted_answer": "The latest available evidence indicates that Arjun has switched back to C++ and the PyTorch C++ API for kernel development, abandoning Mojo due to tooling instability. No more recent information is provided to confirm a change back to Mojo. Therefore, based on the evidence, Arjun is currently programming CUDA kernels in C++.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [
+      "c_session_07_042"
+    ],
+    "latency_ms": 3829.46,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q31": {
+    "question_id": "q31",
+    "category": "preference_constraint",
+    "question": "What is Arjun's stance on drinking coffee, and what does he drink instead?",
+    "expected_answer": "Arjun never drinks coffee because it triggers migraines; he strictly drinks masala chai.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1625.48,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q32": {
+    "question_id": "q32",
+    "category": "preference_constraint",
+    "question": "What dietary restrictions does Arjun follow, and does he eat dairy or cheese?",
+    "expected_answer": "Arjun has followed a strict vegetarian diet since November 2024; he eats Swiss artisanal dairy and cheeses freely.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1841.44,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q33": {
+    "question_id": "q33",
+    "category": "preference_constraint",
+    "question": "What code editor and configuration does Arjun prefer?",
+    "expected_answer": "Arjun prefers Neovim configured with Lua.",
+    "predicted_answer": "Arjun prefers Neovim configured with Lua as his primary code editor.",
+    "predicted_status": "partial",
+    "citations": [
+      "c_session_02_012"
+    ],
+    "latency_ms": 1331.45,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Neovim",
+        "Lua"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q34": {
+    "question_id": "q34",
+    "category": "preference_constraint",
+    "question": "What contractual restriction did Arjun have after resigning from HyperScale Systems?",
+    "expected_answer": "Arjun signed a 12-month non-compete clause barring him from consulting for competing database and caching companies.",
+    "predicted_answer": "After resigning from HyperScale Systems, Arjun was bound by a non‑compete clause that prohibited him from consulting for competing database and caching companies for a period of 12 months.",
+    "predicted_status": "answered",
+    "citations": [
+      "c_session_05_031"
+    ],
+    "latency_ms": 1483.9,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "database",
+        "caching",
+        "12 months"
+      ],
+      "key_facts_coverage": 0.75,
+      "accuracy": 0.75,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q35": {
+    "question_id": "q35",
+    "category": "preference_constraint",
+    "question": "What ethical constraint does Arjun maintain regarding his research and engineering contracts?",
+    "expected_answer": "Arjun strictly refuses to work on closed-source military or defense surveillance contracts.",
+    "predicted_answer": "I am sorry, but I cannot find any evidence in the provided context that specifies an ethical constraint Arjun maintains regarding his research and engineering contracts.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1668.03,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q36": {
+    "question_id": "q36",
+    "category": "negative_fact",
+    "question": "Did Rohan Sharma complete the Bengaluru 10k Marathon?",
+    "expected_answer": "No, Rohan Sharma twisted his ankle at kilometer 4 and did not finish the marathon.",
+    "predicted_answer": "No, Rohan Sharma did not complete the Bengaluru 10k Marathon.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1574.46,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q37": {
+    "question_id": "q37",
+    "category": "negative_fact",
+    "question": "Did Arjun accept HyperScale's salary raise counter-offer when leaving for Aetheria AI?",
+    "expected_answer": "No, Arjun declined HyperScale's 30 percent salary raise counter-offer.",
+    "predicted_answer": "The evidence indicates that the user declined HyperScale's 30 % salary raise counter‑offer. Therefore, the user did not accept the counter‑offer when leaving for Aetheria AI.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [
+      "c_session_05_028"
+    ],
+    "latency_ms": 1973.66,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q38": {
+    "question_id": "q38",
+    "category": "negative_fact",
+    "question": "Did Arjun attend the MLSys 2026 conference in person in California?",
+    "expected_answer": "No, Arjun could not attend in person because his US visa was delayed under 221g.",
+    "predicted_answer": "No, Arjun did not attend the MLSys 2026 conference in person in California. The user reported that they were unable to attend in person because their US B1/B2 visa was administratively delayed under 221g.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [
+      "c_session_11_060"
+    ],
+    "latency_ms": 1694.65,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q39": {
+    "question_id": "q39",
+    "category": "negative_fact",
+    "question": "Did Rohan Sharma move to Zurich with Arjun?",
+    "expected_answer": "No, Rohan Sharma stayed in Bengaluru and got engaged to Sneha Roy.",
+    "predicted_answer": "No information is provided about Rohan Sharma moving to Zurich or about Arjun's movements.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1457.62,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q40": {
+    "question_id": "q40",
+    "category": "negative_fact",
+    "question": "Was Arjun allowed to continue high-impact marathon running after November 2025?",
+    "expected_answer": "No, Arjun developed plantar fasciitis and the doctor forbade high-impact running for 3 months.",
+    "predicted_answer": "No information is available regarding Arjun's eligibility to continue high‑impact marathon running after November 2025.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1623.16,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q41": {
+    "question_id": "q41",
+    "category": "cross_session_synthesis",
+    "question": "Trace the complete evolution of Arjun's athletic and fitness activities from 2024 through late 2026.",
+    "expected_answer": "In 2024, Arjun played badminton every Tuesday at PlayArena with Rohan and set a goal to run a 10k. In November 2025, he ran the Bengaluru 10k in 54 minutes, but injured his heel (plantar fasciitis). His doctor forbade running, so he switched to swimming at the Padukone-Dravid Centre with a Garmin 265. After moving to Zurich in 2026, he hikes Uetliberg and does cold water swimming in Lake Zurich.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3789.62,
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q42": {
+    "question_id": "q42",
+    "category": "cross_session_synthesis",
+    "question": "Summarize all the software and research projects Arjun worked on, including their technical domains and primary collaborators.",
+    "expected_answer": "1. CacheMesh: Distributed caching in Redis and Go at HyperScale with Deepa Nair. 2. AgriVision: Edge-AI crop disease diagnosis mobile app with PyTorch Mobile, collaborating with Meera Sen (Flutter) and Rohan Sharma (FastAPI). 3. NeuroCompact: 4-bit quantizer for speculative decoding, later pivoted to on-device memory compression in C++, collaborating with Kabir Das, Dr. Shalini Verma, and Meera Sen.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3761.54,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q43": {
+    "question_id": "q43",
+    "category": "cross_session_synthesis",
+    "question": "Describe Arjun's language learning journey with German from his initial attempt to his current status.",
+    "expected_answer": "In late 2024, Arjun tried learning German on Duolingo for 40 days but dropped it due to work overload. In April 2026, after deciding to relocate to Zurich, he revived his goal by taking intensive classes at Goethe-Institut Bengaluru. By October 2026 in Zurich, he is actively studying for the German B1 proficiency exam.",
+    "predicted_answer": "The provided evidence does not contain any information about a person named Arjun or his language learning journey.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2148.96,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q44": {
+    "question_id": "q44",
+    "category": "cross_session_synthesis",
+    "question": "How did the life and career paths of college roommates Arjun and Rohan diverge by late 2026?",
+    "expected_answer": "Arjun transitioned from HyperScale to Aetheria AI, became Lead Research Scientist, pivoted research, ran a marathon, and relocated to Zurich, Switzerland with his dog Kaalu. Rohan stayed in Bengaluru, worked on backend systems, got engaged to Sneha Roy in March 2026, and remained in India.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3738.71,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q45": {
+    "question_id": "q45",
+    "category": "cross_session_synthesis",
+    "question": "Synthesize the complete life cycle of the NeuroCompact project from inception to MLSys presentation.",
+    "expected_answer": "NeuroCompact began at Aetheria AI in mid-2025 as a 4-bit quantizer for speculative decoding in Mojo with Kabir Das and Dr. Shalini Verma. After EMNLP rejection and Kabir's departure in summer 2025, Arjun and Shalini pivoted it to on-device memory compression in C++ with Meera Sen testing Android latency. NeuroCompact v2 won oral presentation at MLSys 2026 and a $25k grant, and Dr. Shalini delivered the oral presentation in California.",
+    "predicted_answer": "LLM error: Expecting value: line 1 column 1 (char 0)",
+    "predicted_status": "error",
+    "citations": [],
+    "latency_ms": 3880.13,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q46": {
+    "question_id": "q46",
+    "category": "unanswerable",
+    "question": "What was the exact GPA or percentage Arjun graduated with from ABV IIITM Gwalior?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's college GPA is not mentioned.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1645.71,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q47": {
+    "question_id": "q47",
+    "category": "unanswerable",
+    "question": "What brand and model of car does Arjun drive in Zurich?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's car is not mentioned.",
+    "predicted_answer": "I don't have sufficient recorded memory to answer 'What brand and model of car does Arjun drive in Zurich?'.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 12.91,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q48": {
+    "question_id": "q48",
+    "category": "unanswerable",
+    "question": "What is Sneha Roy's profession and company?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Sneha Roy's profession is not recorded.",
+    "predicted_answer": "",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1566.7,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q49": {
+    "question_id": "q49",
+    "category": "unanswerable",
+    "question": "How much equity percentage did Arjun receive upon joining Aetheria AI?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's equity percentage was never disclosed.",
+    "predicted_answer": "The provided context does not contain any information about an individual named Arjun or the equity percentage he received upon joining Aetheria AI.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1165.39,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q50": {
+    "question_id": "q50",
+    "category": "unanswerable",
+    "question": "What was the name of Arjun's high school in Chandigarh?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's high school name is not recorded.",
+    "predicted_answer": "I don't have enough information to answer that question.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1064.1,
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  }
+}

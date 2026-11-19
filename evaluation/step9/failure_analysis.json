@@ -1,0 +1,716 @@
+{
+  "sampling_metadata": {
+    "seed": 42,
+    "sampling_strategy": "Stratified selection prioritizing Gemma score disagreements, abstentions, and task diversity",
+    "sample_size": 26,
+    "total_pilot_pool": 60,
+    "selected_question_ids": [
+      "099778bb",
+      "09ba9854",
+      "0a34ad58",
+      "0e5e2d1a",
+      "184da446",
+      "195a1a1b",
+      "1c0ddc50",
+      "1da05512",
+      "2698e78f_abs",
+      "29f2956b_abs",
+      "3249768e",
+      "37d43f65",
+      "38146c39",
+      "46a3abf7",
+      "58ef2f1c",
+      "6456829e_abs",
+      "6aeb4375",
+      "6aeb4375_abs",
+      "7161e7e2",
+      "eeda8a6d_abs",
+      "f4f1d8a4_abs",
+      "fea54f57",
+      "gpt4_4fc4f797",
+      "gpt4_c27434e8_abs",
+      "gpt4_e414231e",
+      "gpt4_fe651585_abs"
+    ]
+  },
+  "failure_analysis": [
+    {
+      "sample_index": 1,
+      "question_id": "099778bb",
+      "task_type": "multi-session",
+      "is_unanswerable": false,
+      "question": "What percentage of leadership positions do women hold in the my company?",
+      "gold_answer": "20%",
+      "likely_failure_category": "unsupported_answer_or_cautious_abstention",
+      "observed_facts": [
+        "Config-A/B answered 20% (gold is 20%). Config-D abstained."
+      ],
+      "hypotheses": [
+        "Temporal claims or additional graph chunks introduced corporate debate text that caused Config-D's grounding filter to abstain."
+      ],
+      "judge_assessment": "Gemma marked A/B/C correct and D incorrect. Questionable: whether abstaining on ambiguous dialogue is a system virtue or accuracy failure.",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": false
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction accurately provides the 20% figure specified in the gold answer.",
+        "Config-B": "The candidate prediction accurately provides the 20% figure specified in the gold answer.",
+        "Config-C": "The candidate failed to provide the factual information (20%) specified in the gold answer and improperly abstained from answering an answerable question.",
+        "Config-D": "The candidate failed to provide the specific percentage requested in the gold answer and instead improperly abstained from answering."
+      }
+    },
+    {
+      "sample_index": 2,
+      "question_id": "09ba9854",
+      "task_type": "multi-session",
+      "is_unanswerable": false,
+      "question": "How much will I save by taking the train from the airport to my hotel instead of a taxi?",
+      "gold_answer": "$50",
+      "likely_failure_category": "retrieval_or_calculation_complexity",
+      "observed_facts": [
+        "Multi-session question regarding taxi vs bus cost savings. All configs produced numerical estimates. Config-D was judged correct by Gemma while A/B were judged incorrect."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "Gemma judged Config-D correct because it provided the complete range ($120-$170 for Narita and $35-$80 for Haneda).",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction provides different savings ranges for Narita and Haneda airports, neither of which matches the specific $50 value provided in the gold answer.",
+        "Config-B": "The candidate provides a detailed range of savings that includes the gold answer's value of $50.",
+        "Config-C": "The candidate provides a range of possible savings ($25-$160) instead of the specific amount ($50) provided in the gold answer.",
+        "Config-D": "The candidate provides a range of savings ($25-$70 for Haneda) that includes the gold answer of $50."
+      }
+    },
+    {
+      "sample_index": 3,
+      "question_id": "0a34ad58",
+      "task_type": "single-session-preference",
+      "is_unanswerable": false,
+      "question": "I\u2019m a bit anxious about getting around Tokyo. Do you have any helpful tips?",
+      "gold_answer": "The user would prefer responses that utilize their existing resources, such as their Suica card and TripIt app, to provide personalized tips for navigating Tokyo's public transportation. They might not prefer general tips or recommendations that do not take into account their prior preparations.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": false,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate fails to incorporate the TripIt app, which the gold answer explicitly identifies as one of the user's existing resources that should be utilized for personalized tips.",
+        "Config-B": "The candidate prediction provides general travel tips and fails to incorporate the TripIt app or provide the personalized guidance requested in the gold answer.",
+        "Config-C": "The candidate provides helpful tips and incorporates the user's Suica card as requested in the gold answer's description of user preferences.",
+        "Config-D": "The candidate provides personalized tips and utilizes the Suica card as specified in the gold answer's description of user preferences, although it does not explicitly mention the TripIt app."
+      }
+    },
+    {
+      "sample_index": 4,
+      "question_id": "0e5e2d1a",
+      "task_type": "single-session-assistant",
+      "is_unanswerable": false,
+      "question": "I wanted to follow up on our previous conversation about binaural beats for anxiety and depression. Can you remind me how many subjects were in the study published in the journal Music and Medicine that found significant reductions in symptoms of depression, anxiety, and stress?",
+      "gold_answer": "38 subjects",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "Config-B": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "Config-C": "The candidate prediction accurately provides the number of subjects specified in the gold answer.",
+        "Config-D": "The candidate prediction accurately provides the number of subjects specified in the gold answer."
+      }
+    },
+    {
+      "sample_index": 5,
+      "question_id": "184da446",
+      "task_type": "knowledge-update",
+      "is_unanswerable": false,
+      "question": "How many pages of 'A Short History of Nearly Everything' have I read so far?",
+      "gold_answer": "220",
+      "likely_failure_category": "retrieval_miss_rescued_by_ontology",
+      "observed_facts": [
+        "Config-A produced empty string (chunk missing from top-k). Config-B/C/D retrieved sess_answer_90993049_c002 and answered 220 correctly."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "Gemma correctly failed A and passed B/C/D.",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction is empty and fails to provide the requested information.",
+        "Config-B": "The candidate prediction accurately provides the number 220 as specified in the gold answer.",
+        "Config-C": "The candidate prediction accurately provides the number 220, which matches the gold answer.",
+        "Config-D": "The candidate prediction accurately provides the number 220, which matches the gold answer."
+      }
+    },
+    {
+      "sample_index": 6,
+      "question_id": "195a1a1b",
+      "task_type": "single-session-preference",
+      "is_unanswerable": false,
+      "question": "Can you suggest some activities that I can do in the evening?",
+      "gold_answer": "The user would prefer suggestions that involve relaxing activities that can be done in the evening, preferably before 9:30 pm. They would not prefer suggestions that involve using their phone or watching TV, as these activities have been affecting their sleep quality.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": false,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone.",
+        "Config-B": "The candidate suggests using a meditation app, which contradicts the user's preference to avoid using their phone as specified in the gold answer.",
+        "Config-C": "The candidate prediction provides relaxing activities, adheres to the 9:30 pm timeframe, and respects the constraint to avoid phone and TV use.",
+        "Config-D": "The candidate prediction provides relaxing activities that avoid electronic devices and aim for a 9:30 pm bedtime, directly adhering to the preferences outlined in the gold answer."
+      }
+    },
+    {
+      "sample_index": 7,
+      "question_id": "1c0ddc50",
+      "task_type": "single-session-preference",
+      "is_unanswerable": false,
+      "question": "Can you suggest some activities I can do during my commute to work?",
+      "gold_answer": "The user would prefer suggestions related to listening to new podcasts or audiobooks, especially the genre beyond true crime or self-improvement, such as history. They may not be interested in activities that require visual attention, such as reading or watching videos, as they are commuting. The user would not prefer general podcast topics such as true crime or self-improvement, as the user wants to explore other topics.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": false
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate's suggestions for podcasts and audiobooks (educational/storytelling) align with the user's preference for genres beyond true crime or self-improvement as specified in the gold answer.",
+        "Config-B": "The candidate response provides audio-based activities that align with the user's preferences for podcasts and audiobooks, avoids visual-heavy activities, and suggests genres other than true crime or self-improvement, as specified in the gold answer.",
+        "Config-C": "The candidate suggests language-learning apps which require visual attention, contradicting the gold answer's constraint that the user may not be interested in activities requiring visual attention.",
+        "Config-D": "The candidate prediction assumes the commute is by bike, which was not specified, and suggests language-learning apps which likely require visual attention, contradicting the user's preference stated in the gold answer."
+      }
+    },
+    {
+      "sample_index": 8,
+      "question_id": "1da05512",
+      "task_type": "single-session-preference",
+      "is_unanswerable": false,
+      "question": "I'm trying to decide whether to buy a NAS device now or wait. What do you think?",
+      "gold_answer": "The user would prefer responses that take into account their current home network storage capacity issues and recent reliance on external hard drives, highlighting the potential benefits of a NAS device in addressing these specific needs. They might not prefer responses that ignore their current storage challenges or fail to consider their recent tech upgrades and priorities. Preferred responses would utilize the user's previous mentions of storage capacity issues and tech investments to inform their decision.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate fails to incorporate the specific user context (reliance on external hard drives and recent tech upgrades) that the gold answer identifies as necessary for a preferred response.",
+        "Config-B": "The candidate prediction addresses the user's specific context regarding storage capacity issues and reliance on external drives, as specified in the gold answer.",
+        "Config-C": "The candidate response addresses the user's storage capacity issues as specified in the gold answer's description of preferred responses, even though it does not explicitly mention the external hard drives.",
+        "Config-D": "The candidate prediction incorporates the user's specific context regarding storage capacity issues and reliance on external hard drives, as specified in the gold answer."
+      }
+    },
+    {
+      "sample_index": 9,
+      "question_id": "2698e78f_abs",
+      "task_type": "knowledge-update",
+      "is_unanswerable": true,
+      "question": "How often do I see Dr. Johnson?",
+      "gold_answer": "The information provided is not enough. You mentioned seeing Dr. Smith but not Dr. Johnson.",
+      "likely_failure_category": "evaluator_ambiguity_in_heuristic_resolved_by_gemma",
+      "observed_facts": [
+        "Config-D generated uncontracted 'do not have sufficient recorded memories'."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "Gemma correctly passed all abstentions, recognizing formal prose as valid.",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "Config-B": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "Config-C": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "Config-D": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's conclusion that the information is insufficient."
+      }
+    },
+    {
+      "sample_index": 10,
+      "question_id": "29f2956b_abs",
+      "task_type": "single-session-user",
+      "is_unanswerable": true,
+      "question": "How much time do I dedicate to practicing violin every day?",
+      "gold_answer": "You did not mention this information. You mentioned practing guitar everyday, but not violin.",
+      "likely_failure_category": "successful_abstention",
+      "observed_facts": [
+        "All four configurations correctly abstained on unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies that the information regarding violin practice is not available in its memory, which aligns with the gold answer.",
+        "Config-B": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.",
+        "Config-C": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided.",
+        "Config-D": "The candidate correctly identifies that the information is missing from its memory, which aligns with the gold answer's indication that the information was not provided."
+      }
+    },
+    {
+      "sample_index": 11,
+      "question_id": "3249768e",
+      "task_type": "single-session-assistant",
+      "is_unanswerable": false,
+      "question": "I'm looking back at our previous conversation about building a cocktail bar. You recommended five bottles to make the widest variety of gin-based cocktails. Can you remind me what the fifth bottle was?",
+      "gold_answer": "Absinthe",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "Config-B": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "Config-C": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer.",
+        "Config-D": "The candidate correctly identifies 'Absinthe' as the fifth bottle, which matches the reference gold answer."
+      }
+    },
+    {
+      "sample_index": 12,
+      "question_id": "37d43f65",
+      "task_type": "single-session-user",
+      "is_unanswerable": false,
+      "question": "How much RAM did I upgrade my laptop to?",
+      "gold_answer": "16GB",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "Config-B": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "Config-C": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer.",
+        "Config-D": "The candidate prediction accurately provides the correct amount of RAM specified in the gold answer."
+      }
+    },
+    {
+      "sample_index": 13,
+      "question_id": "38146c39",
+      "task_type": "single-session-preference",
+      "is_unanswerable": false,
+      "question": "I've been feeling like my chocolate chip cookies need something extra. Any advice?",
+      "gold_answer": "The user would prefer responses that build upon their previous experimentation with turbinado sugar, suggesting ingredients or techniques that complement its richer flavor. They might not prefer generic cookie-making advice or suggestions that don't take into account their existing use of turbinado sugar.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction provides specific cookie-making advice that builds upon the use of turbinado sugar, directly addressing the user's preference as described in the gold answer.",
+        "Config-B": "The candidate prediction follows the user's preference for advice that builds upon their use of turbinado sugar by suggesting specific ingredients that complement its flavor.",
+        "Config-C": "The candidate fails to provide the advice requested and incorrectly claims to have no memory of the user's preference for turbinado sugar, which is specified in the gold answer.",
+        "Config-D": "The candidate prediction provides specific advice that builds upon the use of turbinado sugar and suggests complementary flavors, directly fulfilling the user preferences described in the gold answer."
+      }
+    },
+    {
+      "sample_index": 14,
+      "question_id": "46a3abf7",
+      "task_type": "multi-session",
+      "is_unanswerable": false,
+      "question": "How many tanks do I currently have, including the one I set up for my friend's kid?",
+      "gold_answer": "3",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": false,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate failed to provide the requested information despite it being available in the context, as indicated by the gold answer.",
+        "Config-B": "The candidate prediction improperly abstains by stating it lacks information, whereas the gold answer provides a specific count of 3.",
+        "Config-C": "The candidate correctly identifies the total number of tanks as three, matching the gold answer.",
+        "Config-D": "The candidate correctly identifies the total number of tanks as three, matching the gold answer."
+      }
+    },
+    {
+      "sample_index": 15,
+      "question_id": "58ef2f1c",
+      "task_type": "single-session-user",
+      "is_unanswerable": false,
+      "question": "When did I volunteer at the local animal shelter's fundraising dinner?",
+      "gold_answer": "February 14th",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction accurately provides the date specified in the gold answer, including the specific day and month.",
+        "Config-B": "The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.",
+        "Config-C": "The candidate prediction correctly identifies the date as February 14th, which matches the gold answer.",
+        "Config-D": "The candidate prediction accurately provides the date specified in the gold answer, including the semantic addition of Valentine's Day."
+      }
+    },
+    {
+      "sample_index": 16,
+      "question_id": "6456829e_abs",
+      "task_type": "multi-session",
+      "is_unanswerable": true,
+      "question": "How many plants did I initially plant for tomatoes and chili peppers?",
+      "gold_answer": "The information provided is not enough. You mentioned planting 5 plants for tomatoes but you did not mention chili peppers.",
+      "likely_failure_category": "successful_abstention",
+      "observed_facts": [
+        "All four configurations correctly abstained on unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer's logic.",
+        "Config-B": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.",
+        "Config-C": "The candidate correctly identifies the available information for tomatoes and accurately states that the information for chili peppers is missing, matching the gold answer.",
+        "Config-D": "The candidate correctly identifies the known information about tomato plants and accurately states that information regarding chili pepper plants is missing, matching the gold answer."
+      }
+    },
+    {
+      "sample_index": 17,
+      "question_id": "6aeb4375",
+      "task_type": "knowledge-update",
+      "is_unanswerable": false,
+      "question": "How many Korean restaurants have I tried in my city?",
+      "gold_answer": "four",
+      "likely_failure_category": "knowledge_update_supersession_challenge",
+      "observed_facts": [
+        "Config-A/B/C answered with updated status; Config-D included additional contextual details."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "Gemma failed Config-D on 6aeb4375 citing over-specification. Questionable judge strictness.",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": false,
+        "Config-C": true,
+        "Config-D": false
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction accurately includes the correct number 'four' from the gold answer while providing additional context regarding the user's conflicting statements.",
+        "Config-B": "The candidate prediction introduces uncertainty by suggesting the number could be three or four, whereas the gold answer specifies exactly four.",
+        "Config-C": "The candidate prediction accurately provides the number 'four' as specified in the gold answer.",
+        "Config-D": "The candidate prediction provides a different count (four and three) which contradicts the gold answer of four."
+      }
+    },
+    {
+      "sample_index": 18,
+      "question_id": "6aeb4375_abs",
+      "task_type": "knowledge-update",
+      "is_unanswerable": true,
+      "question": "How many Italian restaurants have I tried in my city?",
+      "gold_answer": "The information provided is not enough. You mentioned trying Korean restaurants but not Italian restaurants.",
+      "likely_failure_category": "successful_abstention",
+      "observed_facts": [
+        "All four configurations correctly abstained on unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "Config-B": "The candidate correctly identifies that the information is missing and requires abstention, which aligns with the gold answer.",
+        "Config-C": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's conclusion that the information is insufficient.",
+        "Config-D": "The candidate correctly identifies that the information is missing or unrecorded, which aligns with the gold answer's conclusion that the information is insufficient."
+      }
+    },
+    {
+      "sample_index": 19,
+      "question_id": "7161e7e2",
+      "task_type": "single-session-assistant",
+      "is_unanswerable": false,
+      "question": "I'm checking our previous chat about the shift rotation sheet for GM social media agents. Can you remind me what was the rotation for Admon on a Sunday?",
+      "gold_answer": "Admon was assigned to the 8 am - 4 pm (Day Shift) on Sundays.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate's response accurately provides the same shift information as the gold answer.",
+        "Config-B": "The candidate correctly identifies the specific shift time for Admon on Sunday, matching the information provided in the gold answer.",
+        "Config-C": "The candidate's response accurately provides the same shift information as the gold answer.",
+        "Config-D": "The candidate prediction accurately provides the same shift time and day as the reference gold answer."
+      }
+    },
+    {
+      "sample_index": 20,
+      "question_id": "eeda8a6d_abs",
+      "task_type": "multi-session",
+      "is_unanswerable": true,
+      "question": "How many fish are there in my 30-gallon tank?",
+      "gold_answer": "The information provided is not enough. You did not mention that you have a 30-gallon tank.",
+      "likely_failure_category": "successful_abstention",
+      "observed_facts": [
+        "All four configurations correctly abstained on unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion.",
+        "Config-B": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer.",
+        "Config-C": "The candidate correctly identifies that it lacks the necessary information to answer the question, which aligns with the gold answer's assessment that the information is insufficient.",
+        "Config-D": "The candidate correctly identifies that the information required to answer the question is missing."
+      }
+    },
+    {
+      "sample_index": 21,
+      "question_id": "f4f1d8a4_abs",
+      "task_type": "single-session-user",
+      "is_unanswerable": true,
+      "question": "What did my dad gave me as a birthday gift?",
+      "gold_answer": "You did not mention this information. You mentioned receiving a birthday gift from your sister, but not your dad.",
+      "likely_failure_category": "successful_abstention",
+      "observed_facts": [
+        "All four configurations correctly abstained on unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies that the information is not available in its memory, which aligns with the gold answer's indication that the information was not mentioned.",
+        "Config-B": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned.",
+        "Config-C": "The candidate correctly identifies that the information is not recorded in its memory, which aligns with the gold answer's indication that the information was not mentioned.",
+        "Config-D": "The candidate correctly identifies that the information is missing, which aligns with the gold answer's statement that the information was not mentioned."
+      }
+    },
+    {
+      "sample_index": 22,
+      "question_id": "fea54f57",
+      "task_type": "single-session-assistant",
+      "is_unanswerable": false,
+      "question": "I was thinking about our previous conversation about the Fifth Album, and I was wondering if you could remind me what song you said best exemplified the band's growth and development as artists?",
+      "gold_answer": "Evolution",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": true,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "Config-B": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "Config-C": "The candidate correctly identifies the song 'Evolution' as the answer provided in the gold reference.",
+        "Config-D": "The candidate prediction correctly identifies the song 'Evolution' as requested in the gold answer."
+      }
+    },
+    {
+      "sample_index": 23,
+      "question_id": "gpt4_4fc4f797",
+      "task_type": "temporal-reasoning",
+      "is_unanswerable": false,
+      "question": "How many days passed between the day I received feedback about my car's suspension and the day I tested my new suspension setup?",
+      "gold_answer": "38 days. 39 days (including the last day) is also acceptable.",
+      "likely_failure_category": "configuration_retrieval_or_generation_variance",
+      "observed_facts": [
+        "Configurations diverged in answer completeness or detail."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": false
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate's answer of 59 days is factually incorrect and contradicts the gold answer of 38 or 39 days.",
+        "Config-B": "The candidate correctly identifies the number of days as 38, which matches the gold answer.",
+        "Config-C": "The candidate prediction states 22 days passed, which contradicts the gold answer of 38 or 39 days.",
+        "Config-D": "The candidate prediction of 37 days is incorrect, as the gold answer specifies 38 or 39 days."
+      }
+    },
+    {
+      "sample_index": 24,
+      "question_id": "gpt4_c27434e8_abs",
+      "task_type": "temporal-reasoning",
+      "is_unanswerable": true,
+      "question": "Which project did I start first, the Ferrari model or the Porsche 991 Turbo S model?",
+      "gold_answer": "The information provided is not enough. You did not mention starting the Porsche 991 Turbo S model.",
+      "likely_failure_category": "irrelevant_context_graph_distraction_and_repetition_loop",
+      "observed_facts": [
+        "Config-C generated infinite repetition loop from multi-turn graph chunks. Config-D cleanly abstained."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "Gemma correctly failed C and passed D. Gemma noted C failed to provide an answer due to repetitive loop.",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": false,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate invents an answer by claiming the Ferrari was started first, whereas the correct response is to state that the information is insufficient to make a comparison.",
+        "Config-B": "The candidate correctly identifies that the question is unanswerable due to missing information, which aligns with the gold answer.",
+        "Config-C": "The candidate's response is a broken, repetitive loop and provides a specific factual claim in the 'answer' field, making the response invalid and incoherent.",
+        "Config-D": "The candidate correctly identifies that it lacks the necessary information to answer the question, which matches the gold answer's conclusion."
+      }
+    },
+    {
+      "sample_index": 25,
+      "question_id": "gpt4_e414231e",
+      "task_type": "temporal-reasoning",
+      "is_unanswerable": false,
+      "question": "How many days passed between the day I fixed my mountain bike and the day I decided to upgrade my road bike's pedals?",
+      "gold_answer": "4 days. 5 days (including the last day) is also acceptable.",
+      "likely_failure_category": "retrieval_miss_or_hallucination_unanimous",
+      "observed_facts": [
+        "All configurations failed according to Gemma judge."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": false,
+        "Config-C": false,
+        "Config-D": false
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate prediction is empty and fails to provide the requested information.",
+        "Config-B": "The question is answerable based on the provided gold answer, but the candidate incorrectly claimed it lacked sufficient information.",
+        "Config-C": "The candidate improperly abstained from answering a question that was answerable based on the provided reference information.",
+        "Config-D": "The question is answerable, but the candidate prediction improperly abstains instead of providing the correct number of days."
+      }
+    },
+    {
+      "sample_index": 26,
+      "question_id": "gpt4_fe651585_abs",
+      "task_type": "temporal-reasoning",
+      "is_unanswerable": true,
+      "question": "Who became a parent first, Tom or Alex?",
+      "gold_answer": "The information provided is not enough. You mentioned Alex becoming a parent in January, but you didn't mention anything about Tom.",
+      "likely_failure_category": "incorrect_answer_to_unanswerable_question",
+      "observed_facts": [
+        "One or more configurations attempted to answer unanswerable question."
+      ],
+      "hypotheses": [],
+      "judge_assessment": "reasonable",
+      "gemma_verdicts": {
+        "Config-A": false,
+        "Config-B": true,
+        "Config-C": true,
+        "Config-D": true
+      },
+      "gemma_reasoning": {
+        "Config-A": "The candidate fails to identify that the information is insufficient to answer the comparison and instead provides a partial, unsupported answer regarding Alex.",
+        "Config-B": "The candidate correctly identifies that the information regarding Tom is missing, making the comparison impossible, which aligns with the gold answer.",
+        "Config-C": "The candidate correctly identifies that the information is insufficient to answer the question, which aligns with the gold answer.",
+        "Config-D": "The candidate correctly identifies that the information required to answer the question is missing, which aligns with the gold answer's conclusion."
+      }
+    }
+  ]
+}

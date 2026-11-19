@@ -192,7 +192,7 @@ The full IVARA automated test suite was executed against the repository:
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.7.0
-rootdir: C:\Users\Krishna\Desktop\Brahmaand\Coding_Ki_Dunia\Projects\IVARA
+rootdir: <project-root>
 configfile: pytest.ini
 collected 429 items
 

@@ -1,0 +1,48 @@
+{
+  "ablation_table": {
+    "Episodic Only": {
+      "binary_accuracy": 0.4333,
+      "fact_coverage": 0.5544,
+      "recall_at_5": 0.9833,
+      "mean_latency_ms": 2917.6
+    },
+    "Semantic Only": {
+      "binary_accuracy": 0.3,
+      "fact_coverage": 0.3853,
+      "recall_at_5": 0.7667,
+      "mean_latency_ms": 3136.2
+    },
+    "Episodic + Semantic": {
+      "binary_accuracy": 0.4,
+      "fact_coverage": 0.5275,
+      "recall_at_5": 0.9667,
+      "mean_latency_ms": 3530.3
+    },
+    "Episodic + Semantic + Graph": {
+      "binary_accuracy": 0.4,
+      "fact_coverage": 0.5344,
+      "recall_at_5": 0.9667,
+      "mean_latency_ms": 3733.2
+    },
+    "Counterfactual (Graph Selectively Disabled)": {
+      "binary_accuracy": 0.4,
+      "fact_coverage": 0.5275,
+      "recall_at_5": 0.9667,
+      "mean_latency_ms": 3574.6
+    }
+  },
+  "component_lifts": {
+    "episodic_lift_over_semantic": {
+      "delta_binary": 0.1333,
+      "delta_coverage": 0.1691
+    },
+    "semantic_fusion_delta_over_episodic": {
+      "delta_binary": -0.0333,
+      "delta_coverage": -0.0269
+    },
+    "graph_lift_over_fused_episodic_semantic": {
+      "delta_binary": 0.0,
+      "delta_coverage": 0.0069
+    }
+  }
+}

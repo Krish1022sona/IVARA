@@ -1,0 +1,4523 @@
+[
+  {
+    "id": "m001",
+    "text": "I was born in Chandigarh on August 14, 1999.",
+    "timestamp": "2026-11-14",
+    "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Chandigarh",
+        "entity_id": null,
+        "canonical_name": "Chandigarh",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Birth",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'August 14, 1999' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'born_in' is not registered in vocabulary.",
+        "Relationship predicate 'birth_date' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "born_in",
+            "target": "Chandigarh",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "born in Chandigarh"
+          },
+          [
+            "Relationship predicate 'born_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "birth_date",
+            "target": "August 14, 1999",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "August 14, 1999"
+          },
+          [
+            "Relationship predicate 'birth_date' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m002",
+    "text": "My college roommate was Rohan Sharma.",
+    "timestamp": "2026-11-14",
+    "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Rohan Sharma",
+        "entity_id": null,
+        "canonical_name": "Rohan Sharma",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.2036805897951126,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "college roommate",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'college roommate' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "college roommate",
+            "target": "Rohan Sharma",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "My college roommate was Rohan Sharma."
+          },
+          [
+            "Relationship predicate 'college roommate' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m003",
+    "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+    "timestamp": "2026-11-14",
+    "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Indiranagar",
+        "entity_id": null,
+        "canonical_name": "Indiranagar",
+        "types": [
+          "Location"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Bengaluru",
+        "entity_id": null,
+        "canonical_name": "Bengaluru",
+        "types": [
+          "Location"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Living Location",
+        "confidence": 0.95
+      },
+      {
+        "name": "Pet Ownership",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Kaalu' has unrecognized type 'Pet' in vocabulary.",
+        "Entity 'rescue indie dog' has unrecognized type 'PetType' in vocabulary.",
+        "Relationship predicate 'lives_in' is not registered in vocabulary.",
+        "Relationship predicate 'located_in' is not registered in vocabulary.",
+        "Inferred relationship 'located_in' must cite premise text span as 'evidence'.",
+        "Relationship predicate 'has_pet' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "lives_in",
+            "target": "Indiranagar",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "I currently live in Indiranagar"
+          },
+          [
+            "Relationship predicate 'lives_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Indiranagar",
+            "relation": "located_in",
+            "target": "Bengaluru",
+            "confidence": 0.95,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'located_in' is not registered in vocabulary.",
+            "Inferred relationship 'located_in' must cite premise text span as 'evidence'."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "has_pet",
+            "target": "Kaalu",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "my rescue indie dog named Kaalu"
+          },
+          [
+            "Relationship predicate 'has_pet' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Kaalu",
+            "relation": "type",
+            "target": "rescue indie dog",
+            "confidence": 0.85,
+            "origin": "explicit",
+            "evidence": "my rescue indie dog named Kaalu"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m004",
+    "text": "I prefer reading physical books over e-readers for technical subjects.",
+    "timestamp": "2026-11-14",
+    "source": "conv_ef30f29ef2e3_msg_ae55afccc7dc",
+    "type": "preference",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "reading preference",
+        "confidence": 1.0
+      },
+      {
+        "name": "media type comparison",
+        "confidence": 1.0
+      },
+      {
+        "name": "subject specificity",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'physical books' has unrecognized type 'reading media' in vocabulary.",
+        "Entity 'e-readers' has unrecognized type 'reading media' in vocabulary.",
+        "Entity 'technical subjects' has unrecognized type 'subject category' in vocabulary.",
+        "Relationship predicate 'prefers' is not registered in vocabulary.",
+        "Relationship predicate 'prefers over' is not registered in vocabulary.",
+        "Relationship predicate 'used for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "prefers",
+            "target": "physical books",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I prefer reading physical books over e-readers for technical subjects."
+          },
+          [
+            "Relationship predicate 'prefers' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "prefers over",
+            "target": "e-readers",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I prefer reading physical books over e-readers for technical subjects."
+          },
+          [
+            "Relationship predicate 'prefers over' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "physical books",
+            "relation": "used for",
+            "target": "technical subjects",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I prefer reading physical books over e-readers for technical subjects."
+          },
+          [
+            "Relationship predicate 'used for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m005",
+    "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_c3564028014c",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "HyperScale Systems",
+        "entity_id": null,
+        "canonical_name": "HyperScale Systems",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Bengaluru",
+        "entity_id": null,
+        "canonical_name": "Bengaluru",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Employment",
+        "confidence": 1.0
+      },
+      {
+        "name": "Location",
+        "confidence": 1.0
+      },
+      {
+        "name": "Job Role",
+        "confidence": 1.0
+      },
+      {
+        "name": "Start Date",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Associate Software Engineer' has unrecognized type 'JobTitle' in vocabulary.",
+        "Entity 'July 2022' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'works_in' is not registered in vocabulary.",
+        "Relationship predicate 'joined_on' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "works_in",
+            "target": "Bengaluru",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "in Bengaluru"
+          },
+          [
+            "Relationship predicate 'works_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "joined_on",
+            "target": "July 2022",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "back in July 2022"
+          },
+          [
+            "Relationship predicate 'joined_on' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "employed_by",
+          "target_raw": "HyperScale Systems",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "I joined HyperScale Systems"
+        },
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF', target 'Associate Software Engineer' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "has_role",
+          "target_raw": "Associate Software Engineer",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "as an Associate Software Engineer"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m006",
+    "text": "My engineering manager at HyperScale is Vikram Rao.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_3d69f989d806",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Vikram Rao",
+        "entity_id": null,
+        "canonical_name": "Vikram Rao",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.17617441713809967,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "HyperScale",
+        "entity_id": null,
+        "canonical_name": "HyperScale",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "engineering management",
+        "confidence": 1.0
+      },
+      {
+        "name": "company",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "Vikram Rao",
+          "types": [
+            "Person"
+          ]
+        },
+        "predicate": "employed_by",
+        "target": {
+          "type": "candidate",
+          "mention": "HyperScale",
+          "types": [
+            "Organization"
+          ]
+        },
+        "confidence": 1.0,
+        "origin": "explicit",
+        "evidence": "My engineering manager at HyperScale is Vikram Rao."
+      }
+    ],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'has engineering manager' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "has engineering manager",
+            "target": "Vikram Rao",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "My engineering manager at HyperScale is Vikram Rao."
+          },
+          [
+            "Relationship predicate 'has engineering manager' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m007",
+    "text": "I am working with senior staff engineer Deepa Nair on our distributed caching layer called CacheMesh.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_9e4664be85b1",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Deepa Nair",
+        "entity_id": null,
+        "canonical_name": "Deepa Nair",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.22164440155029297,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "distributed caching layer",
+        "entity_id": null,
+        "canonical_name": "distributed caching layer",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "distributed caching",
+        "confidence": 1.0
+      },
+      {
+        "name": "collaboration",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'CacheMesh' has unrecognized type 'SoftwareComponent' in vocabulary.",
+        "Relationship predicate 'works_with' is not registered in vocabulary.",
+        "Relationship predicate 'works_on' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "works_with",
+            "target": "Deepa Nair",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "working with senior staff engineer Deepa Nair"
+          },
+          [
+            "Relationship predicate 'works_with' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "works_on",
+            "target": "CacheMesh",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "working with senior staff engineer Deepa Nair on our distributed caching layer called CacheMesh"
+          },
+          [
+            "Relationship predicate 'works_on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "CacheMesh",
+            "relation": "type",
+            "target": "distributed caching layer",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "distributed caching layer called CacheMesh"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'senior staff engineer' to an entity in the current context.",
+          "source_raw": "Deepa Nair",
+          "predicate": "has_role",
+          "target_raw": "senior staff engineer",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "senior staff engineer Deepa Nair"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m008",
+    "text": "We built CacheMesh using Redis cluster and Go.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_2bb619c3e40d",
+    "type": "experience",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Go",
+        "entity_id": null,
+        "canonical_name": "Go",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 0.9,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "software development",
+        "confidence": 0.85
+      },
+      {
+        "name": "distributed caching",
+        "confidence": 0.8
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'CacheMesh' has unrecognized type 'software' in vocabulary.",
+        "Entity 'Redis cluster' has unrecognized type 'database' in vocabulary.",
+        "Relationship predicate 'built using' is not registered in vocabulary.",
+        "Relationship predicate 'built using' is not registered in vocabulary.",
+        "Relationship evidence 'built CacheMesh using Go' (explicit) is not grounded in memory text."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "CacheMesh",
+            "relation": "built using",
+            "target": "Redis cluster",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "built CacheMesh using Redis cluster"
+          },
+          [
+            "Relationship predicate 'built using' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "CacheMesh",
+            "relation": "built using",
+            "target": "Go",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "built CacheMesh using Go"
+          },
+          [
+            "Relationship predicate 'built using' is not registered in vocabulary.",
+            "Relationship evidence 'built CacheMesh using Go' (explicit) is not grounded in memory text."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m009",
+    "text": "I dislike Kubernetes complexity and prefer lightweight Docker Compose for local service development.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_511171402d6a",
+    "type": "preference",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Kubernetes",
+        "entity_id": null,
+        "canonical_name": "Kubernetes",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Docker Compose",
+        "entity_id": null,
+        "canonical_name": "Docker Compose",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Preference for lightweight tools",
+        "confidence": 0.9
+      },
+      {
+        "name": "Complexity aversion",
+        "confidence": 0.85
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'local service development' has unrecognized type 'Process' in vocabulary.",
+        "Relationship predicate 'dislikes' is not registered in vocabulary.",
+        "Relationship predicate 'prefers' is not registered in vocabulary.",
+        "Relationship predicate 'used for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "dislikes",
+            "target": "Kubernetes",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "I dislike Kubernetes complexity"
+          },
+          [
+            "Relationship predicate 'dislikes' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "prefers",
+            "target": "Docker Compose",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "prefer lightweight Docker Compose"
+          },
+          [
+            "Relationship predicate 'prefers' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Docker Compose",
+            "relation": "used for",
+            "target": "local service development",
+            "confidence": 0.85,
+            "origin": "explicit",
+            "evidence": "for local service development"
+          },
+          [
+            "Relationship predicate 'used for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m010",
+    "text": "I decided to adopt Neovim configured with Lua as my primary code editor.",
+    "timestamp": "2026-11-14",
+    "source": "conv_df71ddcc754e_msg_1d0a375090f2",
+    "type": "decision",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Lua",
+        "entity_id": null,
+        "canonical_name": "Lua",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Code Editor Preference",
+        "confidence": 1.0
+      },
+      {
+        "name": "Editor Configuration",
+        "confidence": 0.95
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Neovim' has unrecognized type 'Software' in vocabulary.",
+        "Entity 'code editor' has unrecognized type 'Software Category' in vocabulary.",
+        "Relationship predicate 'decided to adopt' is not registered in vocabulary.",
+        "Relationship predicate 'configured with' is not registered in vocabulary.",
+        "Relationship predicate 'uses as primary code editor' is not registered in vocabulary.",
+        "Inferred relationship 'uses as primary code editor' must cite premise text span as 'evidence'."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "decided to adopt",
+            "target": "Neovim",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I decided to adopt Neovim"
+          },
+          [
+            "Relationship predicate 'decided to adopt' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Neovim",
+            "relation": "configured with",
+            "target": "Lua",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "configured with Lua"
+          },
+          [
+            "Relationship predicate 'configured with' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "uses as primary code editor",
+            "target": "Neovim",
+            "confidence": 0.95,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'uses as primary code editor' is not registered in vocabulary.",
+            "Inferred relationship 'uses as primary code editor' must cite premise text span as 'evidence'."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m011",
+    "text": "Had an exciting weekend with my old college crew!",
+    "timestamp": "2026-11-14",
+    "source": "conv_e71c5b956c6b_msg_30a33ba4c702",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [],
+    "topics": [
+      {
+        "name": "weekend",
+        "confidence": 0.95
+      },
+      {
+        "name": "college crew",
+        "confidence": 0.95
+      },
+      {
+        "name": "excitement",
+        "confidence": 0.95
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'weekend' has unrecognized type 'time_period' in vocabulary.",
+        "Entity 'old college crew' has unrecognized type 'group' in vocabulary.",
+        "Relationship predicate 'had' is not registered in vocabulary.",
+        "Relationship predicate 'had_with' is not registered in vocabulary.",
+        "Relationship predicate 'is_excitement' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "had",
+            "target": "weekend",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "Had an exciting weekend"
+          },
+          [
+            "Relationship predicate 'had' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "had_with",
+            "target": "old college crew",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "with my old college crew"
+          },
+          [
+            "Relationship predicate 'had_with' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "weekend",
+            "relation": "is_excitement",
+            "target": "exciting",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "exciting"
+          },
+          [
+            "Relationship predicate 'is_excitement' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m012",
+    "text": "Our team name was MatrixCrafters and we built AgriVision, an edge-AI crop disease diagnosis mobile app.",
+    "timestamp": "2026-11-14",
+    "source": "conv_e71c5b956c6b_msg_cc7b93204ade",
+    "type": "experience",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "edge-AI",
+        "entity_id": null,
+        "canonical_name": "edge-AI",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Artificial Intelligence",
+        "confidence": 0.98
+      },
+      {
+        "name": "Agriculture",
+        "confidence": 0.98
+      },
+      {
+        "name": "Mobile Application Development",
+        "confidence": 0.97
+      },
+      {
+        "name": "Team Collaboration",
+        "confidence": 0.96
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'MatrixCrafters' has unrecognized type 'Team' in vocabulary.",
+        "Entity 'AgriVision' has unrecognized type 'App' in vocabulary.",
+        "Entity 'crop disease diagnosis' has unrecognized type 'Function' in vocabulary.",
+        "Entity 'mobile app' has unrecognized type 'Platform' in vocabulary.",
+        "Relationship predicate 'is a' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "AgriVision",
+            "relation": "is a",
+            "target": "edge-AI crop disease diagnosis mobile app",
+            "confidence": 0.99,
+            "origin": "explicit",
+            "evidence": "AgriVision, an edge-AI crop disease diagnosis mobile app"
+          },
+          [
+            "Relationship predicate 'is a' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'MatrixCrafters', target 'AgriVision' to an entity in the current context.",
+          "source_raw": "MatrixCrafters",
+          "predicate": "worked_on",
+          "target_raw": "AgriVision",
+          "confidence": 0.99,
+          "origin": "explicit",
+          "evidence": "Our team name was MatrixCrafters and we built AgriVision"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m013",
+    "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+    "timestamp": "2026-11-14",
+    "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+    "type": "experience",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "AgriVision",
+        "entity_id": null,
+        "canonical_name": "AgriVision",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Project Award",
+        "confidence": 1.0
+      },
+      {
+        "name": "Competition Participation",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'SIH' has unrecognized type 'Competition' in vocabulary.",
+        "Entity '2nd runner-up prize' has unrecognized type 'Award' in vocabulary.",
+        "Entity '1,500 dollars' has unrecognized type 'MonetaryValue' in vocabulary.",
+        "Relationship predicate 'won' is not registered in vocabulary.",
+        "Relationship predicate 'awarded_at' is not registered in vocabulary.",
+        "Relationship predicate 'amount' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "AgriVision",
+            "relation": "won",
+            "target": "2nd runner-up prize",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Our project AgriVision won the 2nd runner-up prize"
+          },
+          [
+            "Relationship predicate 'won' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "2nd runner-up prize",
+            "relation": "awarded_at",
+            "target": "SIH",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "at SIH"
+          },
+          [
+            "Relationship predicate 'awarded_at' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "2nd runner-up prize",
+            "relation": "amount",
+            "target": "1,500 dollars",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "of 1,500 dollars"
+          },
+          [
+            "Relationship predicate 'amount' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m014",
+    "text": "I bought a 16-inch MacBook Pro M3 Max to run local model evaluations.",
+    "timestamp": "2026-11-14",
+    "source": "conv_e71c5b956c6b_msg_78e074c39004",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [],
+    "topics": [
+      {
+        "name": "Hardware Purchase",
+        "confidence": 0.97
+      },
+      {
+        "name": "AI Model Evaluation",
+        "confidence": 0.96
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity '16-inch MacBook Pro M3 Max' has unrecognized type 'ComputerHardware' in vocabulary.",
+        "Entity 'local model evaluations' has unrecognized type 'AIActivity' in vocabulary.",
+        "Relationship predicate 'bought' is not registered in vocabulary.",
+        "Relationship predicate 'used_for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "bought",
+            "target": "16-inch MacBook Pro M3 Max",
+            "confidence": 0.99,
+            "origin": "explicit",
+            "evidence": "I bought a 16-inch MacBook Pro M3 Max"
+          },
+          [
+            "Relationship predicate 'bought' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "16-inch MacBook Pro M3 Max",
+            "relation": "used_for",
+            "target": "local model evaluations",
+            "confidence": 0.98,
+            "origin": "explicit",
+            "evidence": "to run local model evaluations"
+          },
+          [
+            "Relationship predicate 'used_for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m015",
+    "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+    "timestamp": "2026-11-14",
+    "source": "conv_774e7356733e_msg_a49f3684aac9",
+    "type": "update",
+    "importance": 0.9,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Bengaluru",
+        "entity_id": null,
+        "canonical_name": "Bengaluru",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Relocation",
+        "confidence": 1.0
+      },
+      {
+        "name": "Geographic Movement",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Indiranagar' has unrecognized type 'Neighborhood' in vocabulary.",
+        "Entity 'HSR Layout Sector 2' has unrecognized type 'Neighborhood' in vocabulary.",
+        "Entity 'this month' has unrecognized type 'TimePeriod' in vocabulary.",
+        "Relationship predicate 'moved_from' is not registered in vocabulary.",
+        "Relationship predicate 'moved_to' is not registered in vocabulary.",
+        "Relationship predicate 'located_in' is not registered in vocabulary.",
+        "Relationship predicate 'moved_at' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "moved_from",
+            "target": "Indiranagar",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month."
+          },
+          [
+            "Relationship predicate 'moved_from' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "moved_to",
+            "target": "HSR Layout Sector 2",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month."
+          },
+          [
+            "Relationship predicate 'moved_to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "HSR Layout Sector 2",
+            "relation": "located_in",
+            "target": "Bengaluru",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month."
+          },
+          [
+            "Relationship predicate 'located_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "moved_at",
+            "target": "this month",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month."
+          },
+          [
+            "Relationship predicate 'moved_at' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m016",
+    "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+    "timestamp": "2026-11-14",
+    "source": "conv_774e7356733e_msg_82149b2939d7",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "HSR Layout",
+        "entity_id": null,
+        "canonical_name": "HSR Layout",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Rohan",
+        "entity_id": null,
+        "canonical_name": "Rohan",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.21102789044380188,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "badminton club",
+        "entity_id": null,
+        "canonical_name": "badminton club",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "moving",
+        "confidence": 1.0
+      },
+      {
+        "name": "location",
+        "confidence": 1.0
+      },
+      {
+        "name": "relationships",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'moved to' is not registered in vocabulary.",
+        "Relationship predicate 'closer to' is not registered in vocabulary.",
+        "Relationship predicate 'closer to' is not registered in vocabulary.",
+        "Relationship evidence 'to be closer to ... our badminton club' (explicit) is not grounded in memory text."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "moved to",
+            "target": "HSR Layout",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I moved to HSR Layout"
+          },
+          [
+            "Relationship predicate 'moved to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "closer to",
+            "target": "Rohan",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to be closer to Rohan"
+          },
+          [
+            "Relationship predicate 'closer to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "closer to",
+            "target": "badminton club",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to be closer to ... our badminton club"
+          },
+          [
+            "Relationship predicate 'closer to' is not registered in vocabulary.",
+            "Relationship evidence 'to be closer to ... our badminton club' (explicit) is not grounded in memory text."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m017",
+    "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+    "timestamp": "2026-11-14",
+    "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "personal fitness goal",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity '10k marathon' has unrecognized type 'Event' in vocabulary.",
+        "Entity 'late 2025' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'has goal to complete' is not registered in vocabulary.",
+        "Relationship predicate 'to be completed by' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "has goal to complete",
+            "target": "10k marathon",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I have set a personal fitness goal to complete a 10k marathon by late 2025."
+          },
+          [
+            "Relationship predicate 'has goal to complete' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "10k marathon",
+            "relation": "to be completed by",
+            "target": "late 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I have set a personal fitness goal to complete a 10k marathon by late 2025."
+          },
+          [
+            "Relationship predicate 'to be completed by' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m018",
+    "text": "I tried learning German on Duolingo for 40 days, but I gave up and dropped it due to work overload.",
+    "timestamp": "2026-11-14",
+    "source": "conv_774e7356733e_msg_ab50ece2326d",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "German",
+        "entity_id": null,
+        "canonical_name": "German",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "language learning",
+        "confidence": 0.95
+      },
+      {
+        "name": "time commitment",
+        "confidence": 0.9
+      },
+      {
+        "name": "abandonment due to workload",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Duolingo' has unrecognized type 'app' in vocabulary.",
+        "Entity '40 days' has unrecognized type 'duration' in vocabulary.",
+        "Entity 'work overload' has unrecognized type 'cause' in vocabulary.",
+        "Relationship predicate 'learned' is not registered in vocabulary.",
+        "Relationship predicate 'spent' is not registered in vocabulary.",
+        "Relationship predicate 'dropped' is not registered in vocabulary.",
+        "Relationship predicate 'caused' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "learned",
+            "target": "German",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "I tried learning German on Duolingo for 40 days"
+          },
+          [
+            "Relationship predicate 'learned' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "spent",
+            "target": "40 days",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "I tried learning German on Duolingo for 40 days"
+          },
+          [
+            "Relationship predicate 'spent' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "dropped",
+            "target": "German learning",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "but I gave up and dropped it due to work overload"
+          },
+          [
+            "Relationship predicate 'dropped' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "work overload",
+            "relation": "caused",
+            "target": "drop of German learning",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "but I gave up and dropped it due to work overload"
+          },
+          [
+            "Relationship predicate 'caused' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Duolingo' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "Duolingo",
+          "confidence": 0.95,
+          "origin": "explicit",
+          "evidence": "I tried learning German on Duolingo for 40 days"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m019",
+    "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+    "timestamp": "2026-11-14",
+    "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Aetheria AI",
+        "entity_id": null,
+        "canonical_name": "Aetheria AI",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Koramangala",
+        "entity_id": null,
+        "canonical_name": "Koramangala",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Employment",
+        "confidence": 1.0
+      },
+      {
+        "name": "AI Research",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'generative AI research startup' has unrecognized type 'OrganizationType' in vocabulary.",
+        "Entity 'Research Engineer' has unrecognized type 'JobTitle' in vocabulary.",
+        "Entity 'February 1, 2025' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'holds' is not registered in vocabulary.",
+        "Relationship predicate 'joined_on' is not registered in vocabulary.",
+        "Relationship predicate 'located_in' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "holds",
+            "target": "Research Engineer",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "as a Research Engineer"
+          },
+          [
+            "Relationship predicate 'holds' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "joined_on",
+            "target": "February 1, 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "on February 1, 2025"
+          },
+          [
+            "Relationship predicate 'joined_on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Aetheria AI",
+            "relation": "located_in",
+            "target": "Koramangala",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "in Koramangala"
+          },
+          [
+            "Relationship predicate 'located_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Aetheria AI",
+            "relation": "type",
+            "target": "generative AI research startup",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "a generative AI research startup"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "employed_by",
+          "target_raw": "Aetheria AI",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "I joined Aetheria AI"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m020",
+    "text": "My new CTO at Aetheria AI is Dr.",
+    "timestamp": "2026-11-14",
+    "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Aetheria AI",
+        "entity_id": null,
+        "canonical_name": "Aetheria AI",
+        "types": [
+          "Company"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "CTO",
+        "entity_id": null,
+        "canonical_name": "CTO",
+        "types": [
+          "Role"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Dr.",
+        "entity_id": null,
+        "canonical_name": "Dr.",
+        "types": [
+          "Person"
+        ],
+        "confidence": 0.9,
+        "resolution_score": 0.3229876160621643,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Company",
+        "confidence": 0.95
+      },
+      {
+        "name": "Role",
+        "confidence": 0.95
+      },
+      {
+        "name": "Person",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "Dr.",
+          "types": [
+            "Person"
+          ]
+        },
+        "predicate": "has_role",
+        "target": {
+          "type": "candidate",
+          "mention": "CTO",
+          "types": [
+            "Role"
+          ]
+        },
+        "confidence": 0.9,
+        "origin": "explicit",
+        "evidence": "My new CTO at Aetheria AI is Dr."
+      },
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "Dr.",
+          "types": [
+            "Person"
+          ]
+        },
+        "predicate": "employed_by",
+        "target": {
+          "type": "candidate",
+          "mention": "Aetheria AI",
+          "types": [
+            "Company"
+          ]
+        },
+        "confidence": 0.9,
+        "origin": "explicit",
+        "evidence": "My new CTO at Aetheria AI is Dr."
+      }
+    ],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'has_new_CTO_at' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "has_new_CTO_at",
+            "target": "Aetheria AI",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "My new CTO at Aetheria AI is Dr."
+          },
+          [
+            "Relationship predicate 'has_new_CTO_at' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m021",
+    "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+    "timestamp": "2026-11-14",
+    "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Aetheria AI",
+        "entity_id": null,
+        "canonical_name": "Aetheria AI",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "NeuroCompact",
+        "entity_id": null,
+        "canonical_name": "NeuroCompact",
+        "types": [
+          "Project"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "NeuroCompact",
+        "entity_id": null,
+        "canonical_name": "NeuroCompact",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "4-bit quantizer",
+        "entity_id": null,
+        "canonical_name": "4-bit quantizer",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Artificial Intelligence",
+        "confidence": 0.95
+      },
+      {
+        "name": "Quantization",
+        "confidence": 0.95
+      },
+      {
+        "name": "Speculative Decoding",
+        "confidence": 0.95
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "entity",
+          "id": "self"
+        },
+        "predicate": "employed_by",
+        "target": {
+          "type": "candidate",
+          "mention": "Aetheria AI",
+          "types": [
+            "Organization"
+          ]
+        },
+        "confidence": 0.95,
+        "origin": "explicit",
+        "evidence": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding."
+      }
+    ],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'speculative decoding' has unrecognized type 'Technique' in vocabulary.",
+        "Relationship predicate 'working_on' is not registered in vocabulary.",
+        "Relationship predicate 'is_a' is not registered in vocabulary.",
+        "Relationship predicate 'used_for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "working_on",
+            "target": "NeuroCompact",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding."
+          },
+          [
+            "Relationship predicate 'working_on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "is_a",
+            "target": "4-bit quantizer",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding."
+          },
+          [
+            "Relationship predicate 'is_a' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "used_for",
+            "target": "speculative decoding",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding."
+          },
+          [
+            "Relationship predicate 'used_for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m022",
+    "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+    "timestamp": "2026-11-14",
+    "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "NeuroCompact",
+        "entity_id": null,
+        "canonical_name": "NeuroCompact",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Kabir Das",
+        "entity_id": null,
+        "canonical_name": "Kabir Das",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.17909899353981018,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Dr.",
+        "entity_id": null,
+        "canonical_name": "Dr.",
+        "types": [
+          "Role"
+        ],
+        "confidence": 0.8,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "collaboration",
+        "confidence": 1.0
+      },
+      {
+        "name": "compiler engineering",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'collaborates_with' is not registered in vocabulary.",
+        "Relationship predicate 'collaborates_with' is not registered in vocabulary.",
+        "Relationship evidence 'I am collaborating on NeuroCompact directly with ... and Dr.' (explicit) is not grounded in memory text."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "collaborates_with",
+            "target": "Kabir Das",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das"
+          },
+          [
+            "Relationship predicate 'collaborates_with' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "collaborates_with",
+            "target": "Dr.",
+            "confidence": 0.8,
+            "origin": "explicit",
+            "evidence": "I am collaborating on NeuroCompact directly with ... and Dr."
+          },
+          [
+            "Relationship predicate 'collaborates_with' is not registered in vocabulary.",
+            "Relationship evidence 'I am collaborating on NeuroCompact directly with ... and Dr.' (explicit) is not grounded in memory text."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m023",
+    "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+    "timestamp": "2026-11-14",
+    "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+    "type": "decision",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Mojo",
+        "entity_id": null,
+        "canonical_name": "Mojo",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Python",
+        "entity_id": null,
+        "canonical_name": "Python",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "rewriting",
+        "confidence": 0.95
+      },
+      {
+        "name": "programming languages",
+        "confidence": 0.95
+      },
+      {
+        "name": "CUDA",
+        "confidence": 0.95
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'CUDA execution kernels' has unrecognized type 'SoftwareComponent' in vocabulary.",
+        "Relationship predicate 'decided to rewrite' is not registered in vocabulary.",
+        "Relationship predicate 'rewritten in' is not registered in vocabulary.",
+        "Relationship predicate 'instead of' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "decided to rewrite",
+            "target": "CUDA execution kernels",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python."
+          },
+          [
+            "Relationship predicate 'decided to rewrite' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "rewritten in",
+            "target": "Mojo",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python."
+          },
+          [
+            "Relationship predicate 'rewritten in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Mojo",
+            "relation": "instead of",
+            "target": "Python",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python."
+          },
+          [
+            "Relationship predicate 'instead of' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m024",
+    "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+    "timestamp": "2026-11-14",
+    "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+    "type": "goal",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "research",
+        "confidence": 1.0
+      },
+      {
+        "name": "submission",
+        "confidence": 1.0
+      },
+      {
+        "name": "conference",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'NeuroCompact' has unrecognized type 'ResearchTopic' in vocabulary.",
+        "Entity 'EMNLP 2025' has unrecognized type 'Conference' in vocabulary.",
+        "Entity 'empirical findings' has unrecognized type 'ResearchOutput' in vocabulary.",
+        "Entity 'research goal' has unrecognized type 'Objective' in vocabulary.",
+        "Relationship predicate 'hasObjective' is not registered in vocabulary.",
+        "Relationship predicate 'involves' is not registered in vocabulary.",
+        "Relationship predicate 'onTopic' is not registered in vocabulary.",
+        "Relationship predicate 'toSubmit' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "hasObjective",
+            "target": "research goal",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Our research goal"
+          },
+          [
+            "Relationship predicate 'hasObjective' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "research goal",
+            "relation": "involves",
+            "target": "empirical findings",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "submit our empirical findings"
+          },
+          [
+            "Relationship predicate 'involves' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "empirical findings",
+            "relation": "onTopic",
+            "target": "NeuroCompact",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "empirical findings on NeuroCompact"
+          },
+          [
+            "Relationship predicate 'onTopic' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "empirical findings",
+            "relation": "toSubmit",
+            "target": "EMNLP 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to EMNLP 2025"
+          },
+          [
+            "Relationship predicate 'toSubmit' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m025",
+    "text": "Our EMNLP 2025 paper submission on NeuroCompact was rejected in August 2025 due to baseline benchmark leakage.",
+    "timestamp": "2026-11-14",
+    "source": "conv_4cf36601951b_msg_7edd3da4624f",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "AcademicPaperSubmission",
+        "confidence": 1.0
+      },
+      {
+        "name": "PaperRejection",
+        "confidence": 1.0
+      },
+      {
+        "name": "DataLeakage",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'EMNLP 2025' has unrecognized type 'AcademicConference' in vocabulary.",
+        "Entity 'NeuroCompact' has unrecognized type 'PaperTitle' in vocabulary.",
+        "Entity 'baseline benchmark leakage' has unrecognized type 'ReasonForRejection' in vocabulary.",
+        "Entity 'August 2025' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'submitted_to' is not registered in vocabulary.",
+        "Relationship predicate 'rejected_in' is not registered in vocabulary.",
+        "Relationship predicate 'rejected_due_to' is not registered in vocabulary.",
+        "Relationship predicate 'author_of' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "submitted_to",
+            "target": "EMNLP 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Our EMNLP 2025 paper submission on NeuroCompact"
+          },
+          [
+            "Relationship predicate 'submitted_to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "rejected_in",
+            "target": "August 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "rejected in August 2025"
+          },
+          [
+            "Relationship predicate 'rejected_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "rejected_due_to",
+            "target": "baseline benchmark leakage",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "due to baseline benchmark leakage"
+          },
+          [
+            "Relationship predicate 'rejected_due_to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "author_of",
+            "target": "NeuroCompact",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Our EMNLP 2025 paper submission on NeuroCompact"
+          },
+          [
+            "Relationship predicate 'author_of' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m026",
+    "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+    "timestamp": "2026-11-14",
+    "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Kabir Das",
+        "entity_id": null,
+        "canonical_name": "Kabir Das",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.17909899353981018,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Aetheria AI",
+        "entity_id": null,
+        "canonical_name": "Aetheria AI",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Vancouver",
+        "entity_id": null,
+        "canonical_name": "Vancouver",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Relocation",
+        "confidence": 1.0
+      },
+      {
+        "name": "Employment",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Canada' has unrecognized type 'Country' in vocabulary.",
+        "Entity 'July 2025' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'left' is not registered in vocabulary.",
+        "Relationship predicate 'relocated to' is not registered in vocabulary.",
+        "Relationship predicate 'is in' is not registered in vocabulary.",
+        "Inferred relationship 'is in' must cite premise text span as 'evidence'.",
+        "Relationship predicate 'left in' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Kabir Das",
+            "relation": "left",
+            "target": "Aetheria AI",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "left Aetheria AI"
+          },
+          [
+            "Relationship predicate 'left' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Kabir Das",
+            "relation": "relocated to",
+            "target": "Vancouver, Canada",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "relocate to Vancouver, Canada"
+          },
+          [
+            "Relationship predicate 'relocated to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Vancouver",
+            "relation": "is in",
+            "target": "Canada",
+            "confidence": 1.0,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'is in' is not registered in vocabulary.",
+            "Inferred relationship 'is in' must cite premise text span as 'evidence'."
+          ]
+        ],
+        [
+          {
+            "source": "Kabir Das",
+            "relation": "left in",
+            "target": "July 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "July 2025"
+          },
+          [
+            "Relationship predicate 'left in' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m027",
+    "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+    "timestamp": "2026-11-14",
+    "source": "conv_4cf36601951b_msg_a834abac4388",
+    "type": "decision",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Shalini Verma",
+        "entity_id": null,
+        "canonical_name": "Shalini Verma",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.1737774908542633,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "NeuroCompact",
+        "entity_id": null,
+        "canonical_name": "NeuroCompact",
+        "types": [
+          "Project"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "server speculative decoding",
+        "entity_id": null,
+        "canonical_name": "server speculative decoding",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "on-device memory compression",
+        "entity_id": null,
+        "canonical_name": "on-device memory compression",
+        "types": [
+          "Technology"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "pivot",
+        "confidence": 1.0
+      },
+      {
+        "name": "memory compression",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Relationship predicate 'decided to pivot' is not registered in vocabulary.",
+        "Relationship predicate 'pivoted from' is not registered in vocabulary.",
+        "Relationship predicate 'pivoted to' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Shalini Verma",
+            "relation": "decided to pivot",
+            "target": "NeuroCompact",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Shalini Verma and I decided to pivot NeuroCompact"
+          },
+          [
+            "Relationship predicate 'decided to pivot' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "pivoted from",
+            "target": "server speculative decoding",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "pivot NeuroCompact from server speculative decoding"
+          },
+          [
+            "Relationship predicate 'pivoted from' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "NeuroCompact",
+            "relation": "pivoted to",
+            "target": "on-device memory compression",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to on-device memory compression"
+          },
+          [
+            "Relationship predicate 'pivoted to' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m028",
+    "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+    "timestamp": "2026-11-14",
+    "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+    "type": "update",
+    "importance": 0.9,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "C++",
+        "entity_id": null,
+        "canonical_name": "C++",
+        "types": [
+          "ProgrammingLanguage"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Programming Language Preference",
+        "confidence": 0.9
+      },
+      {
+        "name": "Tooling Stability",
+        "confidence": 0.85
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Mojo' has unrecognized type 'Programming Language / Tooling' in vocabulary.",
+        "Entity 'kernel development' has unrecognized type 'Software Development Domain' in vocabulary.",
+        "Entity 'PyTorch C++ API' has unrecognized type 'Library / Framework' in vocabulary.",
+        "Entity 'Mojo tooling' has unrecognized type 'Tooling' in vocabulary.",
+        "Entity 'unstable' has unrecognized type 'Quality Attribute' in vocabulary.",
+        "Relationship predicate 'used for' is not registered in vocabulary.",
+        "Relationship predicate 'has quality' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Mojo",
+            "relation": "used for",
+            "target": "kernel development",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "I no longer use Mojo for kernel development"
+          },
+          [
+            "Relationship predicate 'used for' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Mojo tooling",
+            "relation": "has quality",
+            "target": "unstable",
+            "confidence": 0.85,
+            "origin": "explicit",
+            "evidence": "the Mojo tooling was unstable"
+          },
+          [
+            "Relationship predicate 'has quality' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF', target 'Mojo' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "Mojo",
+          "confidence": 0.95,
+          "origin": "explicit",
+          "evidence": "I no longer use Mojo for kernel development"
+        },
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "C++",
+          "confidence": 0.95,
+          "origin": "explicit",
+          "evidence": "I switched back to C++ and PyTorch C++ API"
+        },
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve source 'SELF', target 'PyTorch C++ API' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "PyTorch C++ API",
+          "confidence": 0.9,
+          "origin": "explicit",
+          "evidence": "I switched back to C++ and PyTorch C++ API"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m029",
+    "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+    "timestamp": "2026-11-14",
+    "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+    "type": "experience",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Running",
+        "confidence": 1.0
+      },
+      {
+        "name": "Marathon",
+        "confidence": 1.0
+      },
+      {
+        "name": "Time Performance",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Bengaluru 10k Marathon' has unrecognized type 'Event' in vocabulary.",
+        "Entity 'November 9, 2025' has unrecognized type 'Date' in vocabulary.",
+        "Entity '54 minutes' has unrecognized type 'Duration' in vocabulary.",
+        "Relationship predicate 'participated_in' is not registered in vocabulary.",
+        "Relationship predicate 'participated_on' is not registered in vocabulary.",
+        "Relationship predicate 'finished_with_time' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "participated_in",
+            "target": "Bengaluru 10k Marathon",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I ran the Bengaluru 10k Marathon"
+          },
+          [
+            "Relationship predicate 'participated_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "participated_on",
+            "target": "November 9, 2025",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "on November 9, 2025"
+          },
+          [
+            "Relationship predicate 'participated_on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "finished_with_time",
+            "target": "54 minutes",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "finished in 54 minutes"
+          },
+          [
+            "Relationship predicate 'finished_with_time' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m030",
+    "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+    "timestamp": "2026-11-14",
+    "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+    "type": "update",
+    "importance": 0.9,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Padukone-Dravid Centre for Sports Excellence",
+        "entity_id": null,
+        "canonical_name": "Padukone-Dravid Centre for Sports Excellence",
+        "types": [
+          "Location"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "sports training",
+        "confidence": 0.9
+      },
+      {
+        "name": "athletic transition",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'running' has unrecognized type 'sport' in vocabulary.",
+        "Entity 'swimming' has unrecognized type 'sport' in vocabulary.",
+        "Relationship predicate 'switched_from' is not registered in vocabulary.",
+        "Relationship predicate 'switched_to' is not registered in vocabulary.",
+        "Relationship predicate 'trained_at' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "switched_from",
+            "target": "running",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence."
+          },
+          [
+            "Relationship predicate 'switched_from' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "switched_to",
+            "target": "swimming",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence."
+          },
+          [
+            "Relationship predicate 'switched_to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "trained_at",
+            "target": "Padukone-Dravid Centre for Sports Excellence",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence."
+          },
+          [
+            "Relationship predicate 'trained_at' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m031",
+    "text": "I bought a Garmin Forerunner 265 watch to track my swim laps and heart rate.",
+    "timestamp": "2026-11-14",
+    "source": "conv_90aa3a5204a7_msg_6971973afafc",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [],
+    "topics": [
+      {
+        "name": "fitness tracking",
+        "confidence": 1.0
+      },
+      {
+        "name": "swimming",
+        "confidence": 1.0
+      },
+      {
+        "name": "heart rate monitoring",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Garmin Forerunner 265 watch' has unrecognized type 'watch' in vocabulary.",
+        "Entity 'swim laps' has unrecognized type 'activity' in vocabulary.",
+        "Entity 'heart rate' has unrecognized type 'metric' in vocabulary.",
+        "Relationship predicate 'bought' is not registered in vocabulary.",
+        "Relationship predicate 'tracks' is not registered in vocabulary.",
+        "Relationship predicate 'tracks' is not registered in vocabulary.",
+        "Relationship evidence 'to track my ... heart rate' (explicit) is not grounded in memory text."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "bought",
+            "target": "Garmin Forerunner 265 watch",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I bought a Garmin Forerunner 265 watch"
+          },
+          [
+            "Relationship predicate 'bought' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Garmin Forerunner 265 watch",
+            "relation": "tracks",
+            "target": "swim laps",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to track my swim laps"
+          },
+          [
+            "Relationship predicate 'tracks' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Garmin Forerunner 265 watch",
+            "relation": "tracks",
+            "target": "heart rate",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to track my ... heart rate"
+          },
+          [
+            "Relationship predicate 'tracks' is not registered in vocabulary.",
+            "Relationship evidence 'to track my ... heart rate' (explicit) is not grounded in memory text."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m032",
+    "text": "Huge milestone for our research work!",
+    "timestamp": "2026-11-14",
+    "source": "conv_acfada7f2873_msg_591b31a89ca5",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "research work",
+        "entity_id": null,
+        "canonical_name": "research work",
+        "types": [
+          "Project"
+        ],
+        "confidence": 0.95,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Milestone Achievement",
+        "confidence": 0.92
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Huge milestone' has unrecognized type 'Achievement' in vocabulary.",
+        "Relationship predicate 'is for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Huge milestone",
+            "relation": "is for",
+            "target": "research work",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "Huge milestone for our research work!"
+          },
+          [
+            "Relationship predicate 'is for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m033",
+    "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+    "timestamp": "2026-11-14",
+    "source": "conv_acfada7f2873_msg_a57833bbf280",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 0.9,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Paper Acceptance",
+        "confidence": 0.95
+      },
+      {
+        "name": "Conference Presentation",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'NeuroCompact v2' has unrecognized type 'System' in vocabulary.",
+        "Entity 'MLSys 2026' has unrecognized type 'Conference' in vocabulary.",
+        "Entity 'Oral Presentation' has unrecognized type 'PresentationType' in vocabulary.",
+        "Entity 'Revised Paper' has unrecognized type 'Document' in vocabulary.",
+        "Relationship predicate 'about' is not registered in vocabulary.",
+        "Relationship predicate 'accepted_as' is not registered in vocabulary.",
+        "Relationship predicate 'at' is not registered in vocabulary.",
+        "Relationship predicate 'authored' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Revised Paper",
+            "relation": "about",
+            "target": "NeuroCompact v2",
+            "confidence": 0.95,
+            "origin": "explicit",
+            "evidence": "revised paper on NeuroCompact v2"
+          },
+          [
+            "Relationship predicate 'about' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Revised Paper",
+            "relation": "accepted_as",
+            "target": "Oral Presentation",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "was accepted as an Oral Presentation"
+          },
+          [
+            "Relationship predicate 'accepted_as' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Oral Presentation",
+            "relation": "at",
+            "target": "MLSys 2026",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "at MLSys 2026"
+          },
+          [
+            "Relationship predicate 'at' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "authored",
+            "target": "Revised Paper",
+            "confidence": 0.9,
+            "origin": "explicit",
+            "evidence": "Our"
+          },
+          [
+            "Relationship predicate 'authored' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m034",
+    "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+    "timestamp": "2026-11-14",
+    "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "OpenCompute Foundation",
+        "entity_id": null,
+        "canonical_name": "OpenCompute Foundation",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Research Compute Grant",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity '25,000 dollar research compute grant' has unrecognized type 'Grant' in vocabulary.",
+        "Entity '25,000 dollars' has unrecognized type 'MonetaryAmount' in vocabulary.",
+        "Entity 'research compute grant' has unrecognized type 'GrantType' in vocabulary.",
+        "Relationship predicate 'received' is not registered in vocabulary.",
+        "Relationship predicate 'provided_by' is not registered in vocabulary.",
+        "Relationship predicate 'amount' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "received",
+            "target": "25,000 dollar research compute grant",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "We were awarded a 25,000 dollar research compute grant"
+          },
+          [
+            "Relationship predicate 'received' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "25,000 dollar research compute grant",
+            "relation": "provided_by",
+            "target": "OpenCompute Foundation",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "from the OpenCompute Foundation"
+          },
+          [
+            "Relationship predicate 'provided_by' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "25,000 dollar research compute grant",
+            "relation": "amount",
+            "target": "25,000 dollars",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "25,000 dollar"
+          },
+          [
+            "Relationship predicate 'amount' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "25,000 dollar research compute grant",
+            "relation": "type",
+            "target": "research compute grant",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "research compute grant"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m035",
+    "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+    "timestamp": "2026-11-14",
+    "source": "conv_acfada7f2873_msg_5c62aea617e2",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Ananya Bose",
+        "entity_id": null,
+        "canonical_name": "Ananya Bose",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.28348687291145325,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "research intern",
+        "entity_id": null,
+        "canonical_name": "research intern",
+        "types": [
+          "Role"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "mentoring",
+        "confidence": 1.0
+      },
+      {
+        "name": "hiring",
+        "confidence": 1.0
+      },
+      {
+        "name": "research internship",
+        "confidence": 1.0
+      },
+      {
+        "name": "memory-augmented transformers",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "entity",
+          "id": "self"
+        },
+        "predicate": "employs",
+        "target": {
+          "type": "candidate",
+          "mention": "Ananya Bose",
+          "types": [
+            "Person"
+          ]
+        },
+        "confidence": 1.0,
+        "origin": "explicit",
+        "evidence": "I hired"
+      },
+      {
+        "source": {
+          "type": "candidate",
+          "mention": "Ananya Bose",
+          "types": [
+            "Person"
+          ]
+        },
+        "predicate": "has_role",
+        "target": {
+          "type": "candidate",
+          "mention": "research intern",
+          "types": [
+            "Role"
+          ]
+        },
+        "confidence": 1.0,
+        "origin": "explicit",
+        "evidence": "research intern named Ananya Bose"
+      }
+    ],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'memory-augmented transformers' has unrecognized type 'topic' in vocabulary.",
+        "Relationship predicate 'mentoring' is not registered in vocabulary.",
+        "Relationship predicate 'working on' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "mentoring",
+            "target": "Ananya Bose",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "started mentoring"
+          },
+          [
+            "Relationship predicate 'mentoring' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Ananya Bose",
+            "relation": "working on",
+            "target": "memory-augmented transformers",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "who is working on memory-augmented transformers"
+          },
+          [
+            "Relationship predicate 'working on' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m036",
+    "text": "I decided to relocate to Zurich in September 2026.",
+    "timestamp": "2026-11-14",
+    "source": "conv_576673ddd42e_msg_257aa43c086e",
+    "type": "decision",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Zurich",
+        "entity_id": null,
+        "canonical_name": "Zurich",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Relocation",
+        "confidence": 1.0
+      },
+      {
+        "name": "Date",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'September 2026' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'decided to relocate to' is not registered in vocabulary.",
+        "Relationship predicate 'decided to relocate in' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "decided to relocate to",
+            "target": "Zurich",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I decided to relocate to Zurich in September 2026."
+          },
+          [
+            "Relationship predicate 'decided to relocate to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "decided to relocate in",
+            "target": "September 2026",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I decided to relocate to Zurich in September 2026."
+          },
+          [
+            "Relationship predicate 'decided to relocate in' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m037",
+    "text": "I have completely phased out Redis in all my systems; I now strictly use Dragonfly and DuckDB.",
+    "timestamp": "2026-11-14",
+    "source": "conv_38894e4e69a2_msg_c8f44cd4e2f4",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "DatabaseTechnology",
+        "confidence": 1.0
+      },
+      {
+        "name": "SystemArchitecture",
+        "confidence": 0.8
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Redis' has unrecognized type 'DatabaseTechnology' in vocabulary.",
+        "Entity 'Dragonfly' has unrecognized type 'DatabaseTechnology' in vocabulary.",
+        "Entity 'DuckDB' has unrecognized type 'DatabaseTechnology' in vocabulary.",
+        "Entity 'systems' has unrecognized type 'System' in vocabulary.",
+        "Relationship predicate 'phased_out' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary.",
+        "Relationship predicate 'type' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "phased_out",
+            "target": "Redis",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I have completely phased out Redis in all my systems"
+          },
+          [
+            "Relationship predicate 'phased_out' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Redis",
+            "relation": "type",
+            "target": "DatabaseTechnology",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Redis"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Dragonfly",
+            "relation": "type",
+            "target": "DatabaseTechnology",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "Dragonfly"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "DuckDB",
+            "relation": "type",
+            "target": "DatabaseTechnology",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "DuckDB"
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'Dragonfly' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "Dragonfly",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "I now strictly use Dragonfly and DuckDB"
+        },
+        {
+          "status": "unresolved",
+          "resolved": false,
+          "error": "Could not resolve target 'DuckDB' to an entity in the current context.",
+          "source_raw": "SELF",
+          "predicate": "uses",
+          "target_raw": "DuckDB",
+          "confidence": 1.0,
+          "origin": "explicit",
+          "evidence": "I now strictly use Dragonfly and DuckDB"
+        }
+      ],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m038",
+    "text": "I was unable to attend MLSys 2026 in person in Santa Clara because my US B1/B2 visa was administratively delayed under 221g.",
+    "timestamp": "2026-11-14",
+    "source": "conv_38894e4e69a2_msg_c537501eb36b",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "Santa Clara",
+        "entity_id": null,
+        "canonical_name": "Santa Clara",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Conference Attendance",
+        "confidence": 1.0
+      },
+      {
+        "name": "Visa Processing",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'MLSys 2026' has unrecognized type 'Conference' in vocabulary.",
+        "Entity 'US B1/B2 visa' has unrecognized type 'Visa' in vocabulary.",
+        "Entity '221g' has unrecognized type 'Administrative Delay Code' in vocabulary.",
+        "Relationship predicate 'unable to attend' is not registered in vocabulary.",
+        "Relationship predicate 'held in' is not registered in vocabulary.",
+        "Relationship predicate 'administratively delayed under' is not registered in vocabulary.",
+        "Relationship predicate 'caused' is not registered in vocabulary.",
+        "Inferred relationship 'caused' must cite premise text span as 'evidence'."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "unable to attend",
+            "target": "MLSys 2026",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I was unable to attend MLSys 2026 in person"
+          },
+          [
+            "Relationship predicate 'unable to attend' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "MLSys 2026",
+            "relation": "held in",
+            "target": "Santa Clara",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "in Santa Clara"
+          },
+          [
+            "Relationship predicate 'held in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "US B1/B2 visa",
+            "relation": "administratively delayed under",
+            "target": "221g",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "under 221g"
+          },
+          [
+            "Relationship predicate 'administratively delayed under' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "US B1/B2 visa",
+            "relation": "caused",
+            "target": "unable to attend MLSys 2026",
+            "confidence": 1.0,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'caused' is not registered in vocabulary.",
+            "Inferred relationship 'caused' must cite premise text span as 'evidence'."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m039",
+    "text": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts.",
+    "timestamp": "2026-11-14",
+    "source": "conv_38894e4e69a2_msg_2048b7a7c3ba",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "policy",
+        "confidence": 1.0
+      },
+      {
+        "name": "contracts",
+        "confidence": 1.0
+      },
+      {
+        "name": "closed-source",
+        "confidence": 0.9
+      },
+      {
+        "name": "military",
+        "confidence": 0.9
+      },
+      {
+        "name": "defense surveillance",
+        "confidence": 0.9
+      },
+      {
+        "name": "professional",
+        "confidence": 0.9
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'professional policy' has unrecognized type 'policy' in vocabulary.",
+        "Entity 'closed-source' has unrecognized type 'property' in vocabulary.",
+        "Entity 'military' has unrecognized type 'contract type' in vocabulary.",
+        "Entity 'defense surveillance' has unrecognized type 'contract type' in vocabulary.",
+        "Entity 'contracts' has unrecognized type 'contract' in vocabulary.",
+        "Relationship predicate 'has' is not registered in vocabulary.",
+        "Relationship predicate 'refuses to work on' is not registered in vocabulary.",
+        "Relationship predicate 'applies to' is not registered in vocabulary.",
+        "Relationship predicate 'applies to' is not registered in vocabulary.",
+        "Relationship predicate 'applies to' is not registered in vocabulary.",
+        "Relationship predicate 'is type of' is not registered in vocabulary.",
+        "Relationship predicate 'has property' is not registered in vocabulary.",
+        "Inferred relationship 'has property' must cite premise text span as 'evidence'.",
+        "Relationship predicate 'type' is not registered in vocabulary.",
+        "Inferred relationship 'type' must cite premise text span as 'evidence'.",
+        "Relationship predicate 'type' is not registered in vocabulary.",
+        "Inferred relationship 'type' must cite premise text span as 'evidence'."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "has",
+            "target": "professional policy",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I have a strict professional policy"
+          },
+          [
+            "Relationship predicate 'has' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "professional policy",
+            "relation": "refuses to work on",
+            "target": "contracts",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I refuse to work on closed-source military or defense surveillance contracts"
+          },
+          [
+            "Relationship predicate 'refuses to work on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "professional policy",
+            "relation": "applies to",
+            "target": "closed-source",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I refuse to work on closed-source military or defense surveillance contracts"
+          },
+          [
+            "Relationship predicate 'applies to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "professional policy",
+            "relation": "applies to",
+            "target": "military",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I refuse to work on closed-source military or defense surveillance contracts"
+          },
+          [
+            "Relationship predicate 'applies to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "professional policy",
+            "relation": "applies to",
+            "target": "defense surveillance",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I refuse to work on closed-source military or defense surveillance contracts"
+          },
+          [
+            "Relationship predicate 'applies to' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "professional policy",
+            "relation": "is type of",
+            "target": "professional",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "strict professional policy"
+          },
+          [
+            "Relationship predicate 'is type of' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "contracts",
+            "relation": "has property",
+            "target": "closed-source",
+            "confidence": 0.8,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'has property' is not registered in vocabulary.",
+            "Inferred relationship 'has property' must cite premise text span as 'evidence'."
+          ]
+        ],
+        [
+          {
+            "source": "contracts",
+            "relation": "type",
+            "target": "military",
+            "confidence": 0.8,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary.",
+            "Inferred relationship 'type' must cite premise text span as 'evidence'."
+          ]
+        ],
+        [
+          {
+            "source": "contracts",
+            "relation": "type",
+            "target": "defense surveillance",
+            "confidence": 0.8,
+            "origin": "inferred",
+            "evidence": null
+          },
+          [
+            "Relationship predicate 'type' is not registered in vocabulary.",
+            "Inferred relationship 'type' must cite premise text span as 'evidence'."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m040",
+    "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+    "timestamp": "2026-11-14",
+    "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "apartment",
+        "entity_id": null,
+        "canonical_name": "apartment",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Zurich Kreis 4",
+        "entity_id": null,
+        "canonical_name": "Zurich Kreis 4",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "moving in",
+        "confidence": 1.0
+      },
+      {
+        "name": "landing",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'September 15, 2026' has unrecognized type 'Date' in vocabulary.",
+        "Relationship predicate 'moved_into' is not registered in vocabulary.",
+        "Relationship predicate 'located_in' is not registered in vocabulary.",
+        "Relationship predicate 'moved_in_on' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "moved_into",
+            "target": "apartment",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I successfully landed and moved into my apartment"
+          },
+          [
+            "Relationship predicate 'moved_into' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "apartment",
+            "relation": "located_in",
+            "target": "Zurich Kreis 4",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "in Zurich Kreis 4"
+          },
+          [
+            "Relationship predicate 'located_in' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "SELF",
+            "relation": "moved_in_on",
+            "target": "September 15, 2026",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "on September 15, 2026"
+          },
+          [
+            "Relationship predicate 'moved_in_on' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m041",
+    "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+    "timestamp": "2026-11-14",
+    "source": "conv_321234af5eb5_msg_3b4d428a075e",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      },
+      {
+        "mention": "Aetheria Europe research office",
+        "entity_id": null,
+        "canonical_name": "Aetheria Europe research office",
+        "types": [
+          "Organization"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      },
+      {
+        "mention": "Zurich",
+        "entity_id": null,
+        "canonical_name": "Zurich",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Work Location",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [
+      {
+        "source": {
+          "type": "entity",
+          "id": "self"
+        },
+        "predicate": "employed_by",
+        "target": {
+          "type": "candidate",
+          "mention": "Aetheria Europe research office",
+          "types": [
+            "Organization"
+          ]
+        },
+        "confidence": 1.0,
+        "origin": "explicit",
+        "evidence": "I work at the Aetheria Europe research office"
+      }
+    ],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'Technoparkstrasse' has unrecognized type 'Street' in vocabulary.",
+        "Relationship predicate 'located_on' is not registered in vocabulary.",
+        "Relationship predicate 'located_in' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "Aetheria Europe research office",
+            "relation": "located_on",
+            "target": "Technoparkstrasse",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "located on Technoparkstrasse"
+          },
+          [
+            "Relationship predicate 'located_on' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "Technoparkstrasse",
+            "relation": "located_in",
+            "target": "Zurich",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "in Zurich"
+          },
+          [
+            "Relationship predicate 'located_in' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m042",
+    "text": "I bought a traditional brass tea kettle to brew authentic chai at home.",
+    "timestamp": "2026-11-14",
+    "source": "conv_321234af5eb5_msg_175cd434844d",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "home",
+        "entity_id": null,
+        "canonical_name": "home",
+        "types": [
+          "Location"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 0.0,
+        "method": "new",
+        "status": "candidate"
+      }
+    ],
+    "topics": [
+      {
+        "name": "brewing tea",
+        "confidence": 1.0
+      },
+      {
+        "name": "authentic chai",
+        "confidence": 1.0
+      },
+      {
+        "name": "traditional kettle",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'traditional brass tea kettle' has unrecognized type 'Object' in vocabulary.",
+        "Entity 'brass' has unrecognized type 'Material' in vocabulary.",
+        "Entity 'traditional' has unrecognized type 'Attribute' in vocabulary.",
+        "Entity 'chai' has unrecognized type 'Beverage' in vocabulary.",
+        "Entity 'authentic' has unrecognized type 'Attribute' in vocabulary.",
+        "Relationship predicate 'bought' is not registered in vocabulary.",
+        "Relationship predicate 'made of' is not registered in vocabulary.",
+        "Relationship predicate 'has attribute' is not registered in vocabulary.",
+        "Relationship predicate 'used to brew' is not registered in vocabulary.",
+        "Relationship predicate 'has attribute' is not registered in vocabulary.",
+        "Relationship predicate 'used at' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "bought",
+            "target": "traditional brass tea kettle",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I bought a traditional brass tea kettle"
+          },
+          [
+            "Relationship predicate 'bought' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "traditional brass tea kettle",
+            "relation": "made of",
+            "target": "brass",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "traditional brass tea kettle"
+          },
+          [
+            "Relationship predicate 'made of' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "traditional brass tea kettle",
+            "relation": "has attribute",
+            "target": "traditional",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "traditional brass tea kettle"
+          },
+          [
+            "Relationship predicate 'has attribute' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "traditional brass tea kettle",
+            "relation": "used to brew",
+            "target": "chai",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "to brew authentic chai"
+          },
+          [
+            "Relationship predicate 'used to brew' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "chai",
+            "relation": "has attribute",
+            "target": "authentic",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "authentic chai"
+          },
+          [
+            "Relationship predicate 'has attribute' is not registered in vocabulary."
+          ]
+        ],
+        [
+          {
+            "source": "traditional brass tea kettle",
+            "relation": "used at",
+            "target": "home",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "at home"
+          },
+          [
+            "Relationship predicate 'used at' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  },
+  {
+    "id": "m043",
+    "text": "I am currently studying for the German B1 proficiency exam.",
+    "timestamp": "2026-11-14",
+    "source": "conv_321234af5eb5_msg_468668c95389",
+    "type": "fact",
+    "importance": 0.8,
+    "confidence": 1.0,
+    "entities": [
+      {
+        "mention": "SELF",
+        "entity_id": "self",
+        "canonical_name": "SELF",
+        "types": [
+          "Person"
+        ],
+        "confidence": 1.0,
+        "resolution_score": 1.0,
+        "method": "special",
+        "status": "matched"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Language Learning",
+        "confidence": 1.0
+      },
+      {
+        "name": "Exam Preparation",
+        "confidence": 1.0
+      }
+    ],
+    "relationships": [],
+    "diagnostics": {
+      "extraction_errors": [
+        "Entity 'German B1 proficiency exam' has unrecognized type 'Exam' in vocabulary.",
+        "Relationship predicate 'studying for' is not registered in vocabulary."
+      ],
+      "extraction_warnings": [],
+      "invalid_extracted_relationships": [
+        [
+          {
+            "source": "SELF",
+            "relation": "studying for",
+            "target": "German B1 proficiency exam",
+            "confidence": 1.0,
+            "origin": "explicit",
+            "evidence": "I am currently studying for the German B1 proficiency exam."
+          },
+          [
+            "Relationship predicate 'studying for' is not registered in vocabulary."
+          ]
+        ]
+      ],
+      "unresolved_relationships": [],
+      "invalid_resolved_relationships": []
+    }
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "metrics_by_arm": {
+    "ARM_A": {
+      "overall_acc": 66.66666666666666,
+      "ans_acc": 66.66666666666666,
+      "abs_acc": 66.66666666666666,
+      "rec1": 91.66666666666666,
+      "rec3": 95.83333333333334,
+      "rec5": 95.83333333333334,
+      "mean_lat": 6750.133333333333,
+      "mean_graph_lat": 0.0
+    },
+    "ARM_B": {
+      "overall_acc": 63.33333333333333,
+      "ans_acc": 58.333333333333336,
+      "abs_acc": 83.33333333333334,
+      "rec1": 91.66666666666666,
+      "rec3": 91.66666666666666,
+      "rec5": 91.66666666666666,
+      "mean_lat": 6208.916,
+      "mean_graph_lat": 0.0
+    },
+    "ARM_C": {
+      "overall_acc": 60.0,
+      "ans_acc": 58.333333333333336,
+      "abs_acc": 66.66666666666666,
+      "rec1": 91.66666666666666,
+      "rec3": 91.66666666666666,
+      "rec5": 91.66666666666666,
+      "mean_lat": 6562.897666666667,
+      "mean_graph_lat": 469.668
+    },
+    "ARM_D": {
+      "overall_acc": 63.33333333333333,
+      "ans_acc": 62.5,
+      "abs_acc": 66.66666666666666,
+      "rec1": 91.66666666666666,
+      "rec3": 91.66666666666666,
+      "rec5": 91.66666666666666,
+      "mean_lat": 6510.067,
+      "mean_graph_lat": 472.67366666666663
+    },
+    "ARM_E": {
+      "overall_acc": 63.33333333333333,
+      "ans_acc": 62.5,
+      "abs_acc": 66.66666666666666,
+      "rec1": 91.66666666666666,
+      "rec3": 91.66666666666666,
+      "rec5": 91.66666666666666,
+      "mean_lat": 5826.1089999999995,
+      "mean_graph_lat": 0.0
+    },
+    "ARM_F": {
+      "overall_acc": 63.33333333333333,
+      "ans_acc": 62.5,
+      "abs_acc": 66.66666666666666,
+      "rec1": 91.66666666666666,
+      "rec3": 91.66666666666666,
+      "rec5": 91.66666666666666,
+      "mean_lat": 6458.451666666666,
+      "mean_graph_lat": 467.7753333333333
+    }
+  },
+  "paired_comparisons": {
+    "ARM_B_vs_ARM_A": {
+      "wins1": 2,
+      "wins2": 3,
+      "ties": 25,
+      "net": -1,
+      "diff_cases": [
+        {
+          "qid": "01493427",
+          "winner": "ARM_B",
+          "loser": "ARM_A",
+          "q": "How many new postcards have I added to my collection since I started collecting again?"
+        },
+        {
+          "qid": "031748ae_abs",
+          "winner": "ARM_B",
+          "loser": "ARM_A",
+          "q": "How many engineers do I lead when I just started my new role as Software Engineer Manager?"
+        },
+        {
+          "qid": "2a1811e2",
+          "winner": "ARM_A",
+          "loser": "ARM_B",
+          "q": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?"
+        },
+        {
+          "qid": "32260d93",
+          "winner": "ARM_A",
+          "loser": "ARM_B",
+          "q": "Can you recommend a show or movie for me to watch tonight?"
+        },
+        {
+          "qid": "505af2f5",
+          "winner": "ARM_A",
+          "loser": "ARM_B",
+          "q": "I was thinking of trying a new coffee creamer recipe. Any recommendations?"
+        }
+      ]
+    },
+    "ARM_C_vs_ARM_B": {
+      "wins1": 1,
+      "wins2": 2,
+      "ties": 27,
+      "net": -1,
+      "diff_cases": [
+        {
+          "qid": "031748ae_abs",
+          "winner": "ARM_B",
+          "loser": "ARM_C",
+          "q": "How many engineers do I lead when I just started my new role as Software Engineer Manager?"
+        },
+        {
+          "qid": "06f04340",
+          "winner": "ARM_B",
+          "loser": "ARM_C",
+          "q": "What should I serve for dinner this weekend with my homegrown ingredients?"
+        },
+        {
+          "qid": "32260d93",
+          "winner": "ARM_C",
+          "loser": "ARM_B",
+          "q": "Can you recommend a show or movie for me to watch tonight?"
+        }
+      ]
+    },
+    "ARM_D_vs_ARM_C": {
+      "wins1": 1,
+      "wins2": 0,
+      "ties": 29,
+      "net": 1,
+      "diff_cases": [
+        {
+          "qid": "2a1811e2",
+          "winner": "ARM_D",
+          "loser": "ARM_C",
+          "q": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?"
+        }
+      ]
+    },
+    "ARM_E_vs_ARM_B": {
+      "wins1": 2,
+      "wins2": 2,
+      "ties": 26,
+      "net": 0,
+      "diff_cases": [
+        {
+          "qid": "031748ae_abs",
+          "winner": "ARM_B",
+          "loser": "ARM_E",
+          "q": "How many engineers do I lead when I just started my new role as Software Engineer Manager?"
+        },
+        {
+          "qid": "06f04340",
+          "winner": "ARM_B",
+          "loser": "ARM_E",
+          "q": "What should I serve for dinner this weekend with my homegrown ingredients?"
+        },
+        {
+          "qid": "2a1811e2",
+          "winner": "ARM_E",
+          "loser": "ARM_B",
+          "q": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?"
+        },
+        {
+          "qid": "32260d93",
+          "winner": "ARM_E",
+          "loser": "ARM_B",
+          "q": "Can you recommend a show or movie for me to watch tonight?"
+        }
+      ]
+    },
+    "ARM_E_vs_ARM_F": {
+      "wins1": 1,
+      "wins2": 1,
+      "ties": 28,
+      "net": 0,
+      "diff_cases": [
+        {
+          "qid": "06f04340",
+          "winner": "ARM_F",
+          "loser": "ARM_E",
+          "q": "What should I serve for dinner this weekend with my homegrown ingredients?"
+        },
+        {
+          "qid": "2a1811e2",
+          "winner": "ARM_E",
+          "loser": "ARM_F",
+          "q": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?"
+        }
+      ]
+    },
+    "ARM_F_vs_ARM_C": {
+      "wins1": 1,
+      "wins2": 0,
+      "ties": 29,
+      "net": 1,
+      "diff_cases": [
+        {
+          "qid": "06f04340",
+          "winner": "ARM_F",
+          "loser": "ARM_C",
+          "q": "What should I serve for dinner this weekend with my homegrown ingredients?"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "experiment_title": "6-Arm Controlled Diagnostic Evaluation (Pilot 30)",
+  "sample_size": 30,
+  "total_evaluations": 180,
+  "total_runtime_s": 1630.74,
+  "generation_runtime_s": 1151.4,
+  "judge_runtime_s": 479.35,
+  "arm_summaries": {
+    "ARM_A": {
+      "arm": "ARM_A",
+      "arm_name": "Baseline (Dense + BM25)",
+      "total_instances": 30,
+      "overall_accuracy": 66.67,
+      "answerable_accuracy": 66.67,
+      "abstention_accuracy": 66.67,
+      "abstentions_correct": 4,
+      "total_abstentions": 6,
+      "answerable_correct": 16,
+      "total_answerable": 24
+    },
+    "ARM_B": {
+      "arm": "ARM_B",
+      "arm_name": "Ontology Guidance Only",
+      "total_instances": 30,
+      "overall_accuracy": 63.33,
+      "answerable_accuracy": 58.33,
+      "abstention_accuracy": 83.33,
+      "abstentions_correct": 5,
+      "total_abstentions": 6,
+      "answerable_correct": 14,
+      "total_answerable": 24
+    },
+    "ARM_C": {
+      "arm": "ARM_C",
+      "arm_name": "Ontology + Raw Graph Expansion",
+      "total_instances": 30,
+      "overall_accuracy": 60.0,
+      "answerable_accuracy": 58.33,
+      "abstention_accuracy": 66.67,
+      "abstentions_correct": 4,
+      "total_abstentions": 6,
+      "answerable_correct": 14,
+      "total_answerable": 24
+    },
+    "ARM_D": {
+      "arm": "ARM_D",
+      "arm_name": "Ontology + Relevance-Filtered Graph (Prototype B)",
+      "total_instances": 30,
+      "overall_accuracy": 63.33,
+      "answerable_accuracy": 62.5,
+      "abstention_accuracy": 66.67,
+      "abstentions_correct": 4,
+      "total_abstentions": 6,
+      "answerable_correct": 15,
+      "total_answerable": 24
+    },
+    "ARM_E": {
+      "arm": "ARM_E",
+      "arm_name": "Ontology + Direct Seed Temporal (Prototype C)",
+      "total_instances": 30,
+      "overall_accuracy": 63.33,
+      "answerable_accuracy": 62.5,
+      "abstention_accuracy": 66.67,
+      "abstentions_correct": 4,
+      "total_abstentions": 6,
+      "answerable_correct": 15,
+      "total_answerable": 24
+    },
+    "ARM_F": {
+      "arm": "ARM_F",
+      "arm_name": "Full Architecture (Graph + Temporal)",
+      "total_instances": 30,
+      "overall_accuracy": 63.33,
+      "answerable_accuracy": 62.5,
+      "abstention_accuracy": 66.67,
+      "abstentions_correct": 4,
+      "total_abstentions": 6,
+      "answerable_correct": 15,
+      "total_answerable": 24
+    }
+  }
+}

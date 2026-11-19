@@ -1,35 +1,114 @@
-# Virtual environment
+# =============================================================================
+# IVARA — Git Ignore Configuration for Production & Open-Source Release
+# =============================================================================
+
+# 1. Virtual Environments
 .venv/
 venv/
 env/
+ENV/
+env.bak/
+venv.bak/
 
-# PyCharm
-.idea/
-
-# Python cache
+# 2. Python Bytecode & Caching
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# Future Python modules / local modules
-modules/
-*.module/
+# 3. Testing & Coverage Caches
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 
-# Databases
+# 4. IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# 5. Local Databases & Personal State
 *.db
 *.sqlite
 *.sqlite3
+data/*.db
+data/backups/
+data/chat_sessions/
+data/conversations.db
 
-# Environment / secrets
+# Whitelist synthetic evaluation test fixtures
+!evaluation/long_context/multi_episode/graph.db
+!evaluation/long_context/single_episode/graph.db
+
+# 6. Secrets, Environment Variables & Credentials
 .env
 .env.*
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+credentials.json
 
-# Jupyter
-.ipynb_checkpoints/
+# 7. Logs & Temporary Files
+*.log
+logs/
+scratch/
+IVARA_FILE_TREE.txt
+*.tmp
 
-# OS junk
+# 8. Operating System Specific
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+[Dd]esktop.ini
 
-# assets and ppts
+# 9. Model Caches & Large Binary Artifacts (>20MB)
+models/
+weights/
+*.pkl
+*.bin
+evaluation/data/longmemeval/longmemeval_s_cleaned.json
+evaluation/autonomous_sprint/diagnostic_sample_100.json
+evaluation/baseline_reranker_experiment/cached_candidates.pkl
+evaluation/autonomous_sprint/runs/finalization_sprint/fresh_heldout_40.json
+
+# 10. Presentation Assets & Working Materials
 PPT/
 assets/
+
+# 11. Benchmark Datasets & Transient Experiment Runs
+evaluation/data/longmemeval/longmemeval_oracle.json
+evaluation/data/longmemeval/runs/*
+!evaluation/data/longmemeval/runs/final_bakeoff/

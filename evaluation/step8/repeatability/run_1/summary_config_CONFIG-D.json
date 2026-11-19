@@ -1,0 +1,406 @@
+{
+  "run_metadata": {
+    "timestamp": "2026-10-28T10:57:31.536669+00:00",
+    "git_commit": "885298c",
+    "git_branch": "research/evaluation-baseline",
+    "dataset_file": "longmemeval_s_cleaned.json",
+    "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+    "dataset_variant": "longmemeval_s_retrieval_eval",
+    "config": "CONFIG-D",
+    "model": "gpt-oss",
+    "k": 5,
+    "total_dataset_instances": 6,
+    "evaluated_instances": 6,
+    "validation_failures": 0
+  },
+  "metrics": {
+    "evaluation_mode": "smoke_test_deterministic_heuristics",
+    "judge_model": null,
+    "official_status": "smoke_test_pending_official_judge",
+    "official_metrics": {
+      "overall_accuracy": 0.1667,
+      "task_averaged_accuracy": 0.2,
+      "abstention_accuracy": 0.0,
+      "denominators": {
+        "overall_accuracy": 6,
+        "task_averaged_accuracy": 5,
+        "abstention_accuracy": 1
+      },
+      "tasks": {
+        "single-session-user": {
+          "accuracy": 1.0,
+          "correct": 1,
+          "total": 1
+        },
+        "single-session-preference": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "single-session-assistant": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "multi-session": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "temporal-reasoning": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "knowledge-update": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 2
+        }
+      }
+    },
+    "answerable_only_metrics": {
+      "overall_accuracy": 0.2,
+      "task_averaged_accuracy": 0.2,
+      "denominators": {
+        "overall_accuracy": 5,
+        "task_averaged_accuracy": 5
+      },
+      "tasks": {
+        "single-session-user": {
+          "accuracy": 1.0,
+          "correct": 1,
+          "total": 1
+        },
+        "single-session-preference": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "single-session-assistant": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "multi-session": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "temporal-reasoning": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        },
+        "knowledge-update": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 1
+        }
+      }
+    },
+    "supplementary_all_500_metrics": {
+      "all_500_accuracy": 0.002,
+      "denominator": 500,
+      "note": "Supplementary metric with fixed denominator 500. Differs from official overall_accuracy when fewer than 500 questions are evaluated."
+    },
+    "summary_counts": {
+      "total_evaluated": 6,
+      "total_missing": 0,
+      "total_answerable_evaluated": 5,
+      "total_abstention_evaluated": 1
+    },
+    "detailed_logs": [
+      {
+        "question_id": "e47becba",
+        "question_type": "single-session-user",
+        "question": "What degree did I graduate with?",
+        "question_date": "2023/05/30 (Tue) 23:40",
+        "hypothesis": "You graduated with a degree in Business Administration.",
+        "status": "answered",
+        "citations": [
+          "sess_answer_280352e9"
+        ],
+        "retrieved_evidence": [
+          "sess_answer_280352e9",
+          "sess_answer_280352e9",
+          "sess_ultrachat_458322"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_280352e9_c002",
+          "sess_answer_280352e9_c003",
+          "sess_ultrachat_458322_c002"
+        ],
+        "latency_ms": 6206.73,
+        "stage_latencies_ms": {
+          "chunking": 13.39,
+          "graph_build": 500.93,
+          "answering": 5128.84,
+          "total": 6206.73
+        },
+        "config": "CONFIG-D",
+        "is_abstention": false,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 1598,
+        "local_heuristic_score": true,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "historical",
+        "selected_claims_count": 2,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 3669,
+        "graph_edges_count": 8927,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": true,
+          "is_abstention": false,
+          "task": "single-session-user"
+        }
+      },
+      {
+        "question_id": "0a995998",
+        "question_type": "multi-session",
+        "question": "How many items of clothing do I need to pick up or return from a store?",
+        "question_date": "2023/02/15 (Wed) 23:50",
+        "hypothesis": "You need to pick up one item of clothing from a store \u2013 the new pair of boots you exchanged on 2/5.",
+        "status": "partial",
+        "citations": [],
+        "retrieved_evidence": [
+          "sess_answer_afa9873b_1",
+          "sess_answer_afa9873b_2"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_afa9873b_1_c002",
+          "sess_answer_afa9873b_2_c000"
+        ],
+        "latency_ms": 6863.52,
+        "stage_latencies_ms": {
+          "chunking": 6.99,
+          "graph_build": 483.06,
+          "answering": 5828.02,
+          "total": 6863.52
+        },
+        "config": "CONFIG-D",
+        "is_abstention": false,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 1400,
+        "local_heuristic_score": false,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "ambiguous",
+        "selected_claims_count": 4,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 3736,
+        "graph_edges_count": 9118,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": false,
+          "is_abstention": false,
+          "task": "multi-session"
+        }
+      },
+      {
+        "question_id": "8a2466db",
+        "question_type": "single-session-preference",
+        "question": "Can you recommend some resources where I can learn more about video editing?",
+        "question_date": "2023/05/30 (Tue) 22:03",
+        "hypothesis": "Here are some resources you can use to learn more about video editing:\n\n1. **Adobe Premiere Pro\u2019s official documentation and tutorials** \u2013 the official site provides step\u2011by\u2011step guides and video tutorials.\n2. **YouTube channels** such as Premiere Bro, Video Copilot, and Adobe Creative Cloud, which offer practical editing tips and demonstrations.\n3. **Online courses** on platforms like Udemy, LinkedIn Learning, and Skillshare, which cover beginner to advanced editing techniques.\n4. **Community forums** such as Reddit\u2019s r/premierepro and Adobe\u2019s Premiere Pro forum, where you can ask questions and share workflows.\n\nThese resources were recommended in the assistant\u2019s response to a similar query about advanced settings for video editing with Adobe Premiere Pro.",
+        "status": "partial",
+        "citations": [],
+        "retrieved_evidence": [
+          "sess_answer_edb03329",
+          "sess_6dcf5fa0_1"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_edb03329_c000",
+          "sess_6dcf5fa0_1_c000"
+        ],
+        "latency_ms": 7140.18,
+        "stage_latencies_ms": {
+          "chunking": 7.43,
+          "graph_build": 579.67,
+          "answering": 6005.5,
+          "total": 7140.18
+        },
+        "config": "CONFIG-D",
+        "is_abstention": false,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 1476,
+        "local_heuristic_score": false,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "ambiguous",
+        "selected_claims_count": 1,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 4006,
+        "graph_edges_count": 9864,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": false,
+          "is_abstention": false,
+          "task": "single-session-preference"
+        }
+      },
+      {
+        "question_id": "dcfa8644",
+        "question_type": "temporal-reasoning",
+        "question": "How many days had passed since I bought my Adidas running shoes when I realized one of the shoelaces on my old Converse sneakers had broken?",
+        "question_date": "2023/02/03 (Fri) 17:43",
+        "hypothesis": "Fourteen days had passed between the purchase of your Adidas running shoes on January\u202f10,\u202f2023, and the moment you realized a shoelace on your old Converse sneakers had broken on January\u202f24,\u202f2023.",
+        "status": "partial",
+        "citations": [],
+        "retrieved_evidence": [
+          "sess_answer_5e3eeb12_1",
+          "sess_answer_5e3eeb12_2"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_5e3eeb12_1_c004",
+          "sess_answer_5e3eeb12_2_c000"
+        ],
+        "latency_ms": 5968.42,
+        "stage_latencies_ms": {
+          "chunking": 4.91,
+          "graph_build": 448.08,
+          "answering": 5028.23,
+          "total": 5968.42
+        },
+        "config": "CONFIG-D",
+        "is_abstention": false,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 1076,
+        "local_heuristic_score": false,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "ambiguous",
+        "selected_claims_count": 1,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 3724,
+        "graph_edges_count": 9090,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": false,
+          "is_abstention": false,
+          "task": "temporal-reasoning"
+        }
+      },
+      {
+        "question_id": "6a1eabeb",
+        "question_type": "knowledge-update",
+        "question": "What was my personal best time in the charity 5K run?",
+        "question_date": "2023/06/25 (Sun) 13:22",
+        "hypothesis": "Your personal best time in the charity 5K run is 25:50.",
+        "status": "partial",
+        "citations": [],
+        "retrieved_evidence": [
+          "sess_answer_a25d4a91_2",
+          "sess_answer_a25d4a91_1"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_a25d4a91_2_c000",
+          "sess_answer_a25d4a91_1_c001"
+        ],
+        "latency_ms": 8260.14,
+        "stage_latencies_ms": {
+          "chunking": 5.56,
+          "graph_build": 463.93,
+          "answering": 7314.88,
+          "total": 8260.14
+        },
+        "config": "CONFIG-D",
+        "is_abstention": false,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 1518,
+        "local_heuristic_score": false,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "historical",
+        "selected_claims_count": 1,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 3790,
+        "graph_edges_count": 9188,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": false,
+          "is_abstention": false,
+          "task": "knowledge-update"
+        }
+      },
+      {
+        "question_id": "2698e78f_abs",
+        "question_type": "knowledge-update",
+        "question": "How often do I see Dr. Johnson?",
+        "question_date": "2023/06/16 (Fri) 16:18",
+        "hypothesis": "I do not have sufficient recorded memories to determine how often you see Dr. Johnson.",
+        "status": "insufficient_evidence",
+        "citations": [],
+        "retrieved_evidence": [
+          "sess_answer_9282283d_abs_2"
+        ],
+        "retrieved_chunk_ids": [
+          "sess_answer_9282283d_abs_2_c000"
+        ],
+        "latency_ms": 5599.46,
+        "stage_latencies_ms": {
+          "chunking": 6.67,
+          "graph_build": 490.55,
+          "answering": 4560.02,
+          "total": 5599.46
+        },
+        "config": "CONFIG-D",
+        "is_abstention": true,
+        "failure_reason": null,
+        "indexing_success": true,
+        "gold_retrieval_rank": 1,
+        "final_context_evidence_coverage": true,
+        "context_token_count": 504,
+        "local_heuristic_score": false,
+        "evaluation_label": "smoke_test_deterministic_heuristics",
+        "official_status": "smoke_test_pending_official_judge",
+        "temporal_activated": true,
+        "temporal_intent": "ambiguous",
+        "selected_claims_count": 1,
+        "historical_claims_count": 0,
+        "unresolved_conflicts_count": 0,
+        "graph_nodes_count": 4350,
+        "graph_edges_count": 9930,
+        "autoeval_label": {
+          "judge": "smoke_test_deterministic_heuristics",
+          "label": false,
+          "is_abstention": true,
+          "task": "knowledge-update"
+        }
+      }
+    ]
+  },
+  "latency": {
+    "mean_ms": 6673.07,
+    "min_ms": 5599.46,
+    "max_ms": 8260.14,
+    "total_eval_time_s": 42.76
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "evaluation_timestamp": "2026-11-17T15:32:09Z",
+  "judge_model": "qwen2.5:14b",
+  "predictions_file": "evaluation\\data\\longmemeval\\runs\\final_bakeoff\\candidate_b_arm_b\\results_config_D.jsonl",
+  "total_evaluated": 500,
+  "overall_accuracy": 0.584,
+  "task_averaged_accuracy": 0.6134,
+  "abstention_accuracy": 0.8667,
+  "answerable_accuracy": 0.566,
+  "answerable_task_averaged_accuracy": 0.5982,
+  "counts": {
+    "total": 500,
+    "correct": 292,
+    "abstention_total": 30,
+    "abstention_correct": 26,
+    "answerable_total": 470,
+    "answerable_correct": 266
+  },
+  "by_task": {
+    "single-session-user": {
+      "accuracy": 0.9286,
+      "correct": 65,
+      "total": 70
+    },
+    "single-session-preference": {
+      "accuracy": 0.3333,
+      "correct": 10,
+      "total": 30
+    },
+    "single-session-assistant": {
+      "accuracy": 0.9107,
+      "correct": 51,
+      "total": 56
+    },
+    "multi-session": {
+      "accuracy": 0.3609,
+      "correct": 48,
+      "total": 133
+    },
+    "temporal-reasoning": {
+      "accuracy": 0.5188,
+      "correct": 69,
+      "total": 133
+    },
+    "knowledge-update": {
+      "accuracy": 0.6282,
+      "correct": 49,
+      "total": 78
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "evaluation_tier": "fresh_heldout_40",
+  "benchmark_status": "diagnostic_only_not_official_longmemeval",
+  "sample_size": 40,
+  "preflight_validation": {
+    "output_directory_safe": true,
+    "judge_labeling_compliant": true,
+    "sample_dataset_sha256": "5a42338eb5758b7a73c8357b6a3e223b68d38ef27368ada03617865a04cacf53",
+    "sample_question_count": 40,
+    "models_verified": {
+      "generator": "gpt-oss:latest",
+      "judge": "VladimirGav/gemma4-26b-16GB-VRAM:latest"
+    },
+    "status": "PASSED"
+  },
+  "runtime_seconds": {
+    "generation": 1005.92,
+    "judging": 406.15,
+    "total": 1412.07
+  },
+  "arms": {
+    "ARM_1_BASELINE": {
+      "arm": "ARM_1_BASELINE",
+      "arm_name": "Baseline (Dense + BM25)",
+      "total_instances": 40,
+      "overall_accuracy": 52.5,
+      "answerable_accuracy": 50.0,
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 2,
+      "total_abstentions": 2,
+      "answerable_correct": 19,
+      "total_answerable": 38
+    },
+    "ARM_2_ONTOLOGY": {
+      "arm": "ARM_2_ONTOLOGY",
+      "arm_name": "Ontology-Guided Hybrid",
+      "total_instances": 40,
+      "overall_accuracy": 55.0,
+      "answerable_accuracy": 52.63,
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 2,
+      "total_abstentions": 2,
+      "answerable_correct": 20,
+      "total_answerable": 38
+    },
+    "ARM_3_DIRECT_TEMPORAL": {
+      "arm": "ARM_3_DIRECT_TEMPORAL",
+      "arm_name": "Ontology + Direct-Seed Temporal",
+      "total_instances": 40,
+      "overall_accuracy": 55.0,
+      "answerable_accuracy": 52.63,
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 2,
+      "total_abstentions": 2,
+      "answerable_correct": 20,
+      "total_answerable": 38
+    },
+    "ARM_4_UNIFIED_HYBRID": {
+      "arm": "ARM_4_UNIFIED_HYBRID",
+      "arm_name": "Unified Research Candidate (IVARA-Hybrid)",
+      "total_instances": 40,
+      "overall_accuracy": 57.5,
+      "answerable_accuracy": 55.26,
+      "abstention_accuracy": 100.0,
+      "abstentions_correct": 2,
+      "total_abstentions": 2,
+      "answerable_correct": 21,
+      "total_answerable": 38
+    }
+  }
+}

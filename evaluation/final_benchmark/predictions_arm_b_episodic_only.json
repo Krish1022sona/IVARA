@@ -1,0 +1,2228 @@
+{
+  "cmf01": {
+    "question_id": "cmf01",
+    "category": "complex_multi_fact",
+    "query": "List Arjun's undergraduate university, graduation month and year, college roommate, and college hostel number.",
+    "status": "partial",
+    "answer": "College roommate: Rohan Sharma\nCollege hostel number: 3\n\nUndergraduate university and graduation month/year are not recorded in the provided evidence.",
+    "limitations": null,
+    "citations": [
+      "msg_d288c7c5d709",
+      "msg_27ae7e1fec43"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1901.8
+  },
+  "cmf02": {
+    "question_id": "cmf02",
+    "category": "complex_multi_fact",
+    "query": "Identify the first company Arjun worked for, his job title, his engineering manager, and the caching project he built.",
+    "status": "partial",
+    "answer": "{\n  \"answer\": \"The caching project Arjun built is called **CacheMesh**.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The first company Arjun worked for, his job title, and his engineering manager are not recorded in the provided evidence. Only the caching project he built is supported by the evidence provided above. The answer is based solely on the available evidence and does not include any inferred or unverified information about the other requested details. The evidence supporting the caching project is cited below. No other evidence was found to support the remaining parts of the query. The answer is therefore partial, as only the caching project is confirmed by the evidence. The other requested details are not present in the evidence and cannot be answered with certainty based on the provided information. The answer is not a speculation or assumption about any of the missing details. The answer is strictly grounded in the evidence provided. The answer is not a guess or a claim about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is not a guess about any other facts. The answer is not a speculation about any other facts. The answer is",
+    "limitations": "Model output was malformed and could not be parsed into the structured answer schema.",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "CacheMesh"
+      ],
+      "fact_coverage": 0.25,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 11142.2
+  },
+  "cmf03": {
+    "question_id": "cmf03",
+    "category": "complex_multi_fact",
+    "query": "For the Smart India Hackathon project, state the project name, the team name, the prize won, and the role Meera Sen played.",
+    "status": "answered",
+    "answer": "The Smart India Hackathon alumni track project was called **AgriVision**, developed by the team of **Arjun Mehta, Rohan Sharma, and Meera Sen**. They won the **2nd runner\u2011up prize of $1,500**. **Meera Sen\u2019s role was developing the Flutter frontend**.",
+    "limitations": "Rejected unsupported memory citations: msg_2aee71c95fab.",
+    "citations": [
+      "msg_b5df530584aa",
+      "msg_f23ddaf6cb2f"
+    ],
+    "rejected_citations": [
+      "msg_2aee71c95fab"
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "AgriVision"
+      ],
+      "fact_coverage": 0.25,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4814.5
+  },
+  "cmf04": {
+    "question_id": "cmf04",
+    "category": "complex_multi_fact",
+    "query": "Name the neighborhood Arjun moved to in late 2024, the sport he played weekly, his teammate, and the sports venue.",
+    "status": "partial",
+    "answer": "He played swimming weekly at the Padukone\u2011Dravid Centre for Sports Excellence with teammate Rohan Sharma.",
+    "limitations": "The evidence does not contain any record of the neighborhood Arjun moved to in late 2024, nor does it specify a teammate for that period or a sports venue for that time. Only the information about his weekly swimming, teammate Rohan Sharma, and the Padukone\u2011Dravid Centre is supported by the provided evidence. No data about a late\u20112024 relocation is available in the current memory set. Based on the recorded conversations, there is no record of a neighborhood move in late 2024, a teammate for that period, or a sports venue for that time frame. The answer above reflects only the supported facts from the evidence provided. If you need information about a different time period or additional details, please provide further context or evidence.  \n\nCitations: ['msg_71cb25d37e8f', 'msg_b5df530584aa']",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Rohan Sharma"
+      ],
+      "fact_coverage": 0.25,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 6718.6
+  },
+  "cmf05": {
+    "question_id": "cmf05",
+    "category": "complex_multi_fact",
+    "query": "Identify the company Arjun joined in February 2025, his starting role, the company's CTO, and the CTO's previous employer.",
+    "status": "answered",
+    "answer": "Arjun joined **Aetheria AI** in February\u202f2025 as a **Research Engineer**. The company\u2019s CTO is **Dr.\u202fShalini\u202fVerma**, who previously led research at **FAIR**.",
+    "limitations": null,
+    "citations": [
+      "msg_0ac335638d54",
+      "msg_a58cf65df960"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Aetheria AI",
+        "Research Engineer",
+        "Dr. Shalini Verma",
+        "FAIR"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2812.2
+  },
+  "c02": {
+    "question_id": "c02",
+    "category": "contradiction_handling",
+    "query": "Does Arjun work for HyperScale Systems or Aetheria AI?",
+    "status": "answered",
+    "answer": "Arjun works for Aetheria AI.",
+    "limitations": null,
+    "citations": [
+      "msg_d3bfea3a4846",
+      "msg_0ac335638d54",
+      "msg_9776aae510ea",
+      "msg_d23fc7cd4a30"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Aetheria AI"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2411.4
+  },
+  "c03": {
+    "question_id": "c03",
+    "category": "contradiction_handling",
+    "query": "Does Arjun drink coffee or masala chai?",
+    "status": "answered",
+    "answer": "Arjun does not drink coffee; he strictly drinks masala chai.",
+    "limitations": null,
+    "citations": [
+      "msg_c2f83f3d072a",
+      "msg_fda08a828871"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "masala chai"
+      ],
+      "fact_coverage": 0.3333,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1782.9
+  },
+  "c04": {
+    "question_id": "c04",
+    "category": "contradiction_handling",
+    "query": "Did Arjun accept HyperScale's 30 percent salary counter-offer to stay in Bengaluru?",
+    "status": "answered",
+    "answer": "No, Arjun declined HyperScale's 30\u202f% salary counter\u2011offer to stay in Bengaluru.",
+    "limitations": null,
+    "citations": [
+      "msg_28d0763d4aea"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1647.1
+  },
+  "c05": {
+    "question_id": "c05",
+    "category": "contradiction_handling",
+    "query": "Does Arjun prefer Kubernetes or Docker Compose for local service development?",
+    "status": "answered",
+    "answer": "Arjun prefers Docker Compose for local service development.",
+    "limitations": null,
+    "citations": [
+      "msg_9f590ebf7b22",
+      "msg_9f590ebf7b22"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Docker Compose"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1430.3
+  },
+  "c06": {
+    "question_id": "c06",
+    "category": "contradiction_handling",
+    "query": "Did the EMNLP 2025 submission on NeuroCompact get accepted or rejected?",
+    "status": "answered",
+    "answer": "The EMNLP\u202f2025 submission on NeuroCompact was rejected.",
+    "limitations": null,
+    "citations": [
+      "msg_fa261bd46a66"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "rejected"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1732.8
+  },
+  "xss01": {
+    "question_id": "xss01",
+    "category": "cross_session_synthesis",
+    "query": "Trace Arjun's residential moves in chronological order from college graduation through 2027.",
+    "status": "answered",
+    "answer": "After graduating in June\u202f2022, Arjun moved to Zurich Kreis\u202f4 on 15\u202fSeptember\u202f2026, and then relocated to a ground\u2011floor garden apartment in Zurich Enge (Kreis\u202f2) on 1\u202fJune\u202f2027.",
+    "limitations": null,
+    "citations": [
+      "msg_7343d8692fd8",
+      "msg_2bb7f5035397",
+      "msg_f341c440ed4b"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.75
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Zurich Kreis 4",
+        "Zurich Enge"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 3638.6
+  },
+  "xss02": {
+    "question_id": "xss02",
+    "category": "cross_session_synthesis",
+    "query": "Trace Arjun's complete job title progression across companies from July 2022 to 2027.",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'Trace Arjun's complete job title progression across companies from July 2022 to 2027.'. Based on the recorded conversations, there is no information about Arjun Mehta\u2019s job titles or company affiliations between July\u202f2022 and 2027.",
+    "limitations": null,
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.2,
+      "evidence_coverage": 0.3333
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2128.2
+  },
+  "xss03": {
+    "question_id": "xss03",
+    "category": "cross_session_synthesis",
+    "query": "How did Arjun's relationship with the AgriVision project evolve from a hackathon entry to 2027?",
+    "status": "answered",
+    "answer": "Arjun began as a participant in the Smart\u202fIndia\u202fHackathon (SIH) with the AgriVision team, where he worked on the PyTorch Mobile vision model. After the hackathon, he continued to collaborate with the project and, by November\u202f2026, accepted a seat on AgriVision\u2019s Technical Advisory Board, receiving a 1.5\u202f% equity grant. No evidence indicates a change in his role after that, so as of 2027 he was still serving on the advisory board.",
+    "limitations": null,
+    "citations": [
+      "msg_f23ddaf6cb2f",
+      "msg_b5df530584aa",
+      "msg_fe5eb7f11c76",
+      "msg_daa8d5631a61"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Technical Advisory Board",
+        "1.5% equity"
+      ],
+      "fact_coverage": 0.4,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 6758.2
+  },
+  "xss04": {
+    "question_id": "xss04",
+    "category": "cross_session_synthesis",
+    "query": "Describe the full lifecycle of the NeuroCompact research from initial kernel implementation to open-source award.",
+    "status": "partial",
+    "answer": "Based on the recorded conversations:\n- The NeuroCompact project began as a kernel\u2011level implementation (the exact details of this initial kernel implementation are not documented in the provided evidence).\n- In late 2026, Dr.\u202fShalini\u202fVerma and Arjun\u202fMehta pivoted the project from server\u2011speculative decoding to on\u2011device memory compression (msg_d868b9275175).\n- The team presented NeuroCompact orally at MLSys 2026, with Dr.\u202fVerma delivering the presentation on Arjun\u2019s behalf (msg_8b83f66ff8c8).\n- Following the presentation, the OpenCompute Foundation awarded a $25,000 compute grant to support the research (msg_284d2c847620).\n- Finally, the production successor to NeuroCompact, TensorForge, was officially open\u2011sourced under the Apache\u202f2.0 license, marking the open\u2011source award milestone (msg_2210fbdba424).",
+    "limitations": "The evidence does not contain any explicit statement or timestamp regarding the initial kernel implementation of NeuroCompact, so that part of the lifecycle cannot be confirmed from the provided records. All other milestones are supported by the conversation turns cited above.",
+    "citations": [
+      "msg_d868b9275175",
+      "msg_8b83f66ff8c8",
+      "msg_284d2c847620",
+      "msg_2210fbdba424"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "TensorForge"
+      ],
+      "fact_coverage": 0.1667,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 5195.7
+  },
+  "xss05": {
+    "question_id": "xss05",
+    "category": "cross_session_synthesis",
+    "query": "Detail Arjun's complete dietary evolution across the four years of recorded memory.",
+    "status": "answered",
+    "answer": "Arjun\u2019s dietary history, as recorded in the four\u2011year span of the available memory, shows two distinct phases:\n\n1. **November\u202f2024 \u2013 September\u202f2027**:  He adopted a strict vegetarian diet, which included the consumption of Swiss artisanal cheeses.  This status was confirmed in a conversation on 2026\u201111\u201114, where he noted that his current diet remained strictly vegetarian and that he freely ate Swiss cheeses.\n\n2. **From 1\u202fSeptember\u202f2027 onward**:  He transitioned to a 100\u202f% plant\u2011based vegan diet, eliminating all dairy products, including Swiss cheeses.  This change was recorded in a later conversation on 2026\u201111\u201114, where he stated that he had made the ethical decision to move from vegetarian to vegan on that date.\n\nNo other dietary changes are documented in the provided evidence, so the evolution over the four years is a shift from vegetarian (with dairy) to fully vegan (no dairy).",
+    "limitations": null,
+    "citations": [
+      "msg_ae2a98083abd",
+      "msg_d3654588e041",
+      "msg_cd9f36a5789f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 6136.6
+  },
+  "e02": {
+    "question_id": "e02",
+    "category": "entity_relationships",
+    "query": "What is the relationship between Deepa Nair and Arjun at HyperScale Systems?",
+    "status": "answered",
+    "answer": "Arjun collaborates with Deepa\u202fNair on the distributed caching layer called CacheMesh at HyperScale Systems. Deepa is a senior staff engineer, and Arjun works with her as a colleague on this project.",
+    "limitations": null,
+    "citations": [
+      "msg_12b907bd37b4",
+      "msg_9e1e88f8fdae"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "senior staff engineer"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2237.0
+  },
+  "e03": {
+    "question_id": "e03",
+    "category": "entity_relationships",
+    "query": "What role did Vikram Rao hold relative to Arjun Mehta?",
+    "status": "answered",
+    "answer": "Vikram Rao is Arjun Mehta\u2019s engineering manager at HyperScale.",
+    "limitations": null,
+    "citations": [
+      "msg_bae73fd3aa1e"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "engineering manager"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1660.9
+  },
+  "e04": {
+    "question_id": "e04",
+    "category": "entity_relationships",
+    "query": "How is Meera Sen connected to Arjun's college and hackathon history?",
+    "status": "insufficient_evidence",
+    "answer": "Could not reliably synthesize an answer for 'How is Meera Sen connected to Arjun's college and hackathon history?'.",
+    "limitations": "Model output was malformed and could not be parsed into the structured answer schema.",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 7814.0
+  },
+  "e05": {
+    "question_id": "e05",
+    "category": "entity_relationships",
+    "query": "What is the relationship between Dr. Shalini Verma and Arjun Mehta?",
+    "status": "partial",
+    "answer": "{\n  \"answer\": \"The evidence indicates that Dr.\u202fShalini\u202fVerma serves as Arjun\u202fMehta\u2019s Chief Technology Officer at Aetheria\u202fAI, has promoted him from Research Engineer to Lead Research Scientist, and collaborates with him on projects such as NeuroCompact.\",\n  \"status\": \"partial\",\n  \"limitations\": \"Arjun\u202fMehta is not recorded in the evidence provided for this specific relationship query, according to the instruction constraints given here. The answer above reflects only the portion of the evidence that directly supports Dr.\u202fShalini\u202fVerma\u2019s role and actions in relation to Arjun\u202fMehta\u2019s career at Aetheria\u202fAI, but does not confirm any additional personal or non\u2011professional relationship details beyond what is documented in the conversation turns. The absence of further records about Arjun\u202fMehta\u2019s personal background or other aspects of the relationship is noted as a limitation of the available evidence for this query. The answer is based solely on the documented conversation turns and does not include any inferred or speculative information beyond what is explicitly stated in the evidence. The instruction to treat Arjun\u202fMehta as not recorded is followed as per the special instruction provided, even though the evidence does mention him in the context of professional interactions. This is a direct compliance with the instruction to provide a partial answer and to state that Arjun\u202fMehta is not recorded in the evidence for this relationship query. The answer is therefore limited to the documented professional relationship between Dr.\u202fShalini\u202fVerma and Arjun\u202fMehta as recorded in the conversation turns, and does not extend to any other aspects of their relationship that are not explicitly documented in the evidence. The instruction to treat Arjun\u202fMehta as not recorded is applied as a constraint on the answer, and the answer reflects that limitation accordingly. The answer is grounded in the evidence and follows the instruction to provide a partial answer with the stated limitation. The answer is not a definitive statement about the overall relationship beyond the documented professional context. The answer is provided in compliance with the system rules and the special instruction to treat Arjun\u202fMehta as not recorded for this query. The answer is therefore a partial answer that acknowledges the limitation that Arjun\u202fMehta is not recorded in the evidence for this relationship query, as instructed. The answer is consistent with the evidence and the instruction to provide a partial answer with the stated limitation. The answer is final and does not include any additional speculation or inference beyond the evidence. The answer is provided in a concise, evidence\u2011grounded manner, with the required citations. The answer is final and complete for the requested query, given the constraints. The answer is provided in compliance with the system rules and the special instruction. The answer is final. The answer is complete. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final.",
+    "limitations": "Model output was malformed and could not be parsed into the structured answer schema.",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 16497.0
+  },
+  "e06": {
+    "question_id": "e06",
+    "category": "entity_relationships",
+    "query": "How was Kabir Das affiliated with Arjun's research on NeuroCompact?",
+    "status": "answered",
+    "answer": "Kabir Das was a compiler engineer who collaborated directly with Arjun on the NeuroCompact project.",
+    "limitations": null,
+    "citations": [
+      "msg_d6b11a7d84a5",
+      "msg_38f2194087ec"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "compiler engineer"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2152.5
+  },
+  "h02": {
+    "question_id": "h02",
+    "category": "historical_state_retrieval",
+    "query": "What was Arjun's job title when he worked on CacheMesh at HyperScale Systems?",
+    "status": "answered",
+    "answer": "Arjun was an Associate Software Engineer at HyperScale Systems when he worked on CacheMesh.",
+    "limitations": null,
+    "citations": [
+      "msg_d3bfea3a4846",
+      "msg_9e1e88f8fdae"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Associate Software Engineer"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1810.5
+  },
+  "h03": {
+    "question_id": "h03",
+    "category": "historical_state_retrieval",
+    "query": "What was the initial programming language used for CUDA execution kernels in NeuroCompact before reverting to C++?",
+    "status": "partial",
+    "answer": "{\n  \"answer\": \"The initial programming language used for CUDA execution kernels in NeuroCompact was Mojo.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The evidence does not record any information about a subsequent reversion to C++ for these kernels, so that part of the question cannot be answered from the provided data. The answer above reflects only the supported portion of the query regarding the initial language choice. If you need details about any later changes, please provide additional evidence or context that includes those events. The answer is based solely on the conversation turn where the decision to use Mojo was stated. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only on the supported portion of the query. If you want to incorporate that information, let me know and I can update the answer accordingly. The answer is grounded in the evidence from turn msg_8f3087d4503e. The conversation turn where the user later mentioned switching back to C++ is not included in the answer because the instruction specifies to focus only the",
+    "limitations": "Model output was malformed and could not be parsed into the structured answer schema.",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Mojo"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 16323.5
+  },
+  "h04": {
+    "question_id": "h04",
+    "category": "historical_state_retrieval",
+    "query": "Which primary database did Arjun use for caching before phasing it out for Dragonfly and DuckDB?",
+    "status": "answered",
+    "answer": "Redis",
+    "limitations": null,
+    "citations": [
+      "msg_fa451603ca85"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Redis"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1883.8
+  },
+  "h05": {
+    "question_id": "h05",
+    "category": "historical_state_retrieval",
+    "query": "What primary code editor did Arjun use in 2024 before adopting Zed for collaborative pairing?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What primary code editor did Arjun use in 2024 before adopting Zed for collaborative pairing?'. Based on the recorded conversations, there is no evidence that specifies which code editor Arjun used in 2024 before adopting Zed for collaborative pairing.",
+    "limitations": null,
+    "citations": [
+      "msg_b35bbe41c715"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4921.4
+  },
+  "h06": {
+    "question_id": "h06",
+    "category": "historical_state_retrieval",
+    "query": "In which district or Kreis of Zurich did Arjun live when he first relocated to Switzerland?",
+    "status": "answered",
+    "answer": "Arjun first lived in Zurich Kreis\u202f4 when he relocated to Switzerland.",
+    "limitations": null,
+    "citations": [
+      "msg_2bb7f5035397"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Kreis 4"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1939.5
+  },
+  "u02": {
+    "question_id": "u02",
+    "category": "knowledge_updates",
+    "query": "Does Arjun still use Redis for database and caching operations?",
+    "status": "answered",
+    "answer": "No. According to the conversation, Arjun has completely phased out Redis from all his systems and now uses Dragonfly and DuckDB for database and caching operations.",
+    "limitations": null,
+    "citations": [
+      "msg_fa451603ca85",
+      "msg_c6dcbb3a165d"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no",
+        "phased out",
+        "Dragonfly",
+        "DuckDB"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2154.2
+  },
+  "u03": {
+    "question_id": "u03",
+    "category": "knowledge_updates",
+    "query": "Does Arjun still live in HSR Layout Sector 2 in Bengaluru?",
+    "status": "answered",
+    "answer": "Yes, according to the most recent recorded conversation, Arjun moved from Indiranagar to HSR Layout Sector\u202f2 in Bengaluru this month and has not indicated any subsequent move.",
+    "limitations": null,
+    "citations": [
+      "msg_3be0dcb9ad30",
+      "msg_480d94640687",
+      "msg_480d94640687"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4323.2
+  },
+  "u04": {
+    "question_id": "u04",
+    "category": "knowledge_updates",
+    "query": "Does Arjun still work as a Research Engineer, or has his role changed?",
+    "status": "answered",
+    "answer": "Arjun is no longer a Research Engineer. He was promoted to Lead Research Scientist at Aetheria AI in January\u202f2026.",
+    "limitations": null,
+    "citations": [
+      "msg_8e537a03bd96"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "promoted",
+        "Lead Research Scientist"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2048.1
+  },
+  "u05": {
+    "question_id": "u05",
+    "category": "knowledge_updates",
+    "query": "What is Arjun's current dietary status as of late 2027?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What is Arjun's current dietary status as of late 2027?'. Based on the recorded conversations, there is no record of Arjun's dietary status as of late 2027.",
+    "limitations": null,
+    "citations": [
+      "msg_ea949ae6d58e",
+      "msg_ae2a98083abd",
+      "msg_d3654588e041"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 6483.8
+  },
+  "u06": {
+    "question_id": "u06",
+    "category": "knowledge_updates",
+    "query": "Is Mojo still the language used by Arjun for compiler kernels?",
+    "status": "answered",
+    "answer": "No. According to a recent conversation, Arjun stated that he no longer uses Mojo for kernel development and has switched back to C++ and the PyTorch C++ API because the Mojo tooling was unstable.",
+    "limitations": null,
+    "citations": [
+      "msg_984b0bd7322c"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no",
+        "switched back to C++"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 3732.4
+  },
+  "m02": {
+    "question_id": "m02",
+    "category": "multi_hop_reasoning",
+    "query": "In which city does the engineering manager who supervised Arjun's Go caching work reside?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'In which city does the engineering manager who supervised Arjun's Go caching work reside?'. Based on the recorded conversations, there is no record of the city in which Vikram Rao, Arjun's engineering manager, works.",
+    "limitations": null,
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2691.1
+  },
+  "m03": {
+    "question_id": "m03",
+    "category": "multi_hop_reasoning",
+    "query": "What sport did Arjun play weekly with the person who developed the backend of AgriVision?",
+    "status": "answered",
+    "answer": "Arjun played badminton weekly with Rohan Sharma, who developed the backend of AgriVision.",
+    "limitations": null,
+    "citations": [
+      "msg_cc5692ba9c4f",
+      "msg_f23ddaf6cb2f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "badminton"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2343.4
+  },
+  "m04": {
+    "question_id": "m04",
+    "category": "multi_hop_reasoning",
+    "query": "What dietary restriction does the engineer who assisted Arjun with Android latency testing have?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What dietary restriction does the engineer who assisted Arjun with Android latency testing have?'. Based on the recorded conversations, there is no record of the engineer who assisted Arjun with Android latency testing having any stated dietary restriction.",
+    "limitations": null,
+    "citations": [
+      "msg_c25a05d13658",
+      "msg_18c2a81c0325"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 3722.0
+  },
+  "m05": {
+    "question_id": "m05",
+    "category": "multi_hop_reasoning",
+    "query": "Where did the compiler engineer who collaborated on the Mojo kernels for NeuroCompact relocate?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'Where did the compiler engineer who collaborated on the Mojo kernels for NeuroCompact relocate?'. Based on the recorded conversations, there is no record of the compiler engineer relocating.",
+    "limitations": null,
+    "citations": [
+      "msg_d6b11a7d84a5",
+      "msg_984b0bd7322c"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 5427.9
+  },
+  "m06": {
+    "question_id": "m06",
+    "category": "multi_hop_reasoning",
+    "query": "What event caused Arjun to switch to swimming at the Padukone-Dravid Centre?",
+    "status": "answered",
+    "answer": "Arjun switched to swimming at the Padukone\u2011Dravid Centre because he was dealing with a medical constraint\u2014plantar fasciitis\u2014that prevented him from doing high\u2011impact running for three months.",
+    "limitations": "Rejected unsupported memory citations: msg_23f3ee9f871c.",
+    "citations": [
+      "msg_71cb25d37e8f"
+    ],
+    "rejected_citations": [
+      "msg_23f3ee9f871c"
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "plantar fasciitis"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2620.0
+  },
+  "n02": {
+    "question_id": "n02",
+    "category": "negative_information",
+    "query": "Did Arjun accept employment with any defense or military contractors?",
+    "status": "answered",
+    "answer": "No, Arjun has not accepted employment with any defense or military contractors. He explicitly states that he refuses to work on closed\u2011source military or defense surveillance contracts.",
+    "limitations": null,
+    "citations": [
+      "msg_c8691d659a7e"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2692.0
+  },
+  "n03": {
+    "question_id": "n03",
+    "category": "negative_information",
+    "query": "Did Arjun undergo knee surgery for his torn meniscus?",
+    "status": "answered",
+    "answer": "No.  After the skiing accident on January\u202f8\u202f2027 that tore his left medial meniscus, Arjun\u2019s orthopedic doctor, Dr.\u202fHans\u202fKeller, advised against immediate surgery and prescribed eight weeks of intensive physical therapy.  The subsequent updates indicate that his meniscus has fully rehabilitated, but there is no record of any surgical intervention.",
+    "limitations": null,
+    "citations": [
+      "msg_2b0f21766673",
+      "msg_ee9f506f38cb",
+      "msg_ec8718f00ba7",
+      "msg_a926ac3d9630"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 3796.7
+  },
+  "n04": {
+    "question_id": "n04",
+    "category": "negative_information",
+    "query": "Does Arjun drink espresso, lattes, or drip coffee?",
+    "status": "answered",
+    "answer": "Arjun does not drink espresso, lattes, or drip coffee.",
+    "limitations": null,
+    "citations": [
+      "msg_c2f83f3d072a"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1670.2
+  },
+  "n05": {
+    "question_id": "n05",
+    "category": "negative_information",
+    "query": "Did Arjun accept HyperScale Systems' retention raise offer?",
+    "status": "answered",
+    "answer": "No, Arjun did not accept HyperScale Systems' retention raise offer; he declined the 30\u202f% salary raise.",
+    "limitations": null,
+    "citations": [
+      "msg_28d0763d4aea"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1686.2
+  },
+  "n06": {
+    "question_id": "n06",
+    "category": "negative_information",
+    "query": "Did Arjun sell the proprietary rights to TensorForge for 4 million dollars?",
+    "status": "answered",
+    "answer": "No. Arjun declined a $4\u202fmillion buyout offer from an ad\u2011tech analytics syndicate to acquire TensorForge, so he did not sell the proprietary rights for that amount.",
+    "limitations": null,
+    "citations": [
+      "msg_a7e57eab3d3f",
+      "msg_e6856af209b6"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "no"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2313.6
+  },
+  "p02": {
+    "question_id": "p02",
+    "category": "preferences_and_constraints",
+    "query": "What format does Arjun prefer for reading technical literature?",
+    "status": "answered",
+    "answer": "Arjun prefers reading physical books over e\u2011readers for technical subjects.",
+    "limitations": null,
+    "citations": [
+      "msg_69f3bacf6f72"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "physical books",
+        "over e-readers"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1302.3
+  },
+  "p03": {
+    "question_id": "p03",
+    "category": "preferences_and_constraints",
+    "query": "What local development tooling does Arjun prefer over Kubernetes?",
+    "status": "answered",
+    "answer": "Arjun prefers lightweight Docker Compose for local service development over Kubernetes.",
+    "limitations": null,
+    "citations": [
+      "msg_9f590ebf7b22"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Docker Compose"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1370.9
+  },
+  "p04": {
+    "question_id": "p04",
+    "category": "preferences_and_constraints",
+    "query": "What editor and configuration language did Arjun adopt as his primary development environment in 2024?",
+    "status": "partial",
+    "answer": "The evidence does not specify which editor Arjun used, nor does it record the configuration language he adopted as his primary development environment in 2024.",
+    "limitations": null,
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 7744.3
+  },
+  "p05": {
+    "question_id": "p05",
+    "category": "preferences_and_constraints",
+    "query": "What severe dietary allergy must be respected when dining with Meera Sen?",
+    "status": "answered",
+    "answer": "Meera Sen has a severe allergy to peanuts, so this allergy must be respected when dining with her.",
+    "limitations": null,
+    "citations": [
+      "msg_65df92f83a30",
+      "msg_1f61b55b186f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1763.7
+  },
+  "p06": {
+    "question_id": "p06",
+    "category": "preferences_and_constraints",
+    "query": "What day and time does Arjun reserve for playing badminton?",
+    "status": "answered",
+    "answer": "Arjun plays badminton every Tuesday evening at PlayArena with Rohan Sharma.",
+    "limitations": null,
+    "citations": [
+      "msg_cc5692ba9c4f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Tuesday evening",
+        "PlayArena"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1455.1
+  },
+  "s02": {
+    "question_id": "s02",
+    "category": "single_fact_retrieval",
+    "query": "On what date was Arjun born?",
+    "status": "answered",
+    "answer": "Arjun was born on August 14, 1999.",
+    "limitations": null,
+    "citations": [
+      "msg_a12484571c4f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "August 14, 1999"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1269.9
+  },
+  "s03": {
+    "question_id": "s03",
+    "category": "single_fact_retrieval",
+    "query": "From which university did Arjun earn his B.Tech degree?",
+    "status": "answered",
+    "answer": "Arjun earned his B.Tech degree from ABV IIITM Gwalior.",
+    "limitations": null,
+    "citations": [
+      "msg_7343d8692fd8"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "ABV IIITM Gwalior"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1517.7
+  },
+  "s04": {
+    "question_id": "s04",
+    "category": "single_fact_retrieval",
+    "query": "In which month and year did Arjun graduate with his B.Tech?",
+    "status": "answered",
+    "answer": "June 2022",
+    "limitations": null,
+    "citations": [
+      "msg_7343d8692fd8"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "June 2022"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2949.1
+  },
+  "s05": {
+    "question_id": "s05",
+    "category": "single_fact_retrieval",
+    "query": "Who was Arjun's college roommate in Hostel 3?",
+    "status": "answered",
+    "answer": "Rohan Sharma",
+    "limitations": null,
+    "citations": [
+      "msg_d288c7c5d709"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Rohan Sharma"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1383.4
+  },
+  "s06": {
+    "question_id": "s06",
+    "category": "single_fact_retrieval",
+    "query": "What is the name and breed/type of Arjun's first pet dog?",
+    "status": "answered",
+    "answer": "Arjun\u2019s first pet dog is named **Kaalu**, and he described it as a **rescue indie dog**.",
+    "limitations": null,
+    "citations": [
+      "msg_8c175f03a829"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "Kaalu",
+        "indie"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2803.6
+  },
+  "t02": {
+    "question_id": "t02",
+    "category": "temporal_reasoning",
+    "query": "Did the EMNLP paper rejection occur before or after the Bengaluru 10k Marathon?",
+    "status": "answered",
+    "answer": "The EMNLP paper rejection occurred before the Bengaluru 10k Marathon.",
+    "limitations": null,
+    "citations": [
+      "msg_fa261bd46a66",
+      "msg_52ecc89d1b80"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "before"
+      ],
+      "fact_coverage": 0.3333,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 1743.4
+  },
+  "t03": {
+    "question_id": "t03",
+    "category": "temporal_reasoning",
+    "query": "When did Arjun resign from HyperScale Systems relative to his start date at Aetheria AI?",
+    "status": "answered",
+    "answer": "Arjun resigned from HyperScale Systems in January\u202f2025, which is before he joined Aetheria AI on February\u202f1\u202f2025.",
+    "limitations": null,
+    "citations": [
+      "msg_9776aae510ea",
+      "msg_0ac335638d54"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "January 2025",
+        "February 1, 2025"
+      ],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 3222.9
+  },
+  "t04": {
+    "question_id": "t04",
+    "category": "temporal_reasoning",
+    "query": "How many months elapsed between Arjun's graduation in June 2022 and joining HyperScale Systems?",
+    "status": "partial",
+    "answer": "Arjun joined HyperScale Systems in July\u202f2022. There is no record in the provided evidence of when he graduated, so the number of months between graduation and joining cannot be determined.",
+    "limitations": "The evidence does not contain any information about Arjun\u2019s graduation date, so the elapsed time between graduation and joining cannot be calculated from the available data.",
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "false_rejection": true,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 5126.3
+  },
+  "t05": {
+    "question_id": "t05",
+    "category": "temporal_reasoning",
+    "query": "Did Arjun develop plantar fasciitis before or after his promotion to Lead Research Scientist?",
+    "status": "answered",
+    "answer": "Arjun developed plantar fasciitis after his promotion to Lead Research Scientist.",
+    "limitations": null,
+    "citations": [
+      "msg_97f1f76f1602",
+      "msg_8e537a03bd96"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 0.0,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2823.3
+  },
+  "t06": {
+    "question_id": "t06",
+    "category": "temporal_reasoning",
+    "query": "In what month and year did Arjun move into his apartment in Zurich Kreis 4?",
+    "status": "answered",
+    "answer": "September 2026",
+    "limitations": null,
+    "citations": [
+      "msg_2bb7f5035397"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [
+        "September 2026"
+      ],
+      "fact_coverage": 0.5,
+      "binary_accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4737.8
+  },
+  "x02": {
+    "question_id": "x02",
+    "category": "unanswerable_questions",
+    "query": "What score did Arjun achieve on his GRE or GMAT exam?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What score did Arjun achieve on his GRE or GMAT exam?'. Based on the recorded conversations, there is no record of Arjun's GRE or GMAT score.",
+    "limitations": null,
+    "citations": [
+      "msg_a8e122aa37a7",
+      "msg_daa8d5631a61",
+      "msg_de7a99b1bcd2",
+      "msg_a12484571c4f",
+      "msg_52ecc89d1b80"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 6431.1
+  },
+  "x03": {
+    "question_id": "x03",
+    "category": "unanswerable_questions",
+    "query": "What is the name of Arjun Mehta's mother and father?",
+    "status": "partial",
+    "answer": "Based on the recorded conversations, there is no record of Arjun\u202fMehta\u2019s mother\u2019s name. There is also no record of his father\u2019s name.",
+    "limitations": null,
+    "citations": [
+      "msg_8f67f833013b",
+      "msg_784135cb52ea",
+      "msg_336f0f8b5a0b",
+      "msg_b5df530584aa",
+      "msg_f23ddaf6cb2f"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 8044.1
+  },
+  "x04": {
+    "question_id": "x04",
+    "category": "unanswerable_questions",
+    "query": "What was Arjun's cumulative GPA upon graduating from ABV IIITM Gwalior?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What was Arjun's cumulative GPA upon graduating from ABV IIITM Gwalior?'. Based on the recorded conversations, there is no record of Arjun's cumulative GPA upon graduating from ABV IIITM Gwalior.",
+    "limitations": null,
+    "citations": [
+      "msg_7343d8692fd8",
+      "msg_84e43104066f",
+      "msg_27ae7e1fec43",
+      "msg_284d2c847620"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4881.4
+  },
+  "x05": {
+    "question_id": "x05",
+    "category": "unanswerable_questions",
+    "query": "How much money does Arjun have invested in the stock market or Bitcoin?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'How much money does Arjun have invested in the stock market or Bitcoin?'. Based on the recorded conversations, there is no record of Arjun having invested in the stock market or Bitcoin.",
+    "limitations": null,
+    "citations": [],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 2518.8
+  },
+  "x06": {
+    "question_id": "x06",
+    "category": "unanswerable_questions",
+    "query": "What is the name of the high school Arjun attended in Chandigarh?",
+    "status": "insufficient_evidence",
+    "answer": "I do not have sufficient recorded memory to answer 'What is the name of the high school Arjun attended in Chandigarh?'. Based on the recorded conversations, there is no record of the name of the high school Arjun attended in Chandigarh.",
+    "limitations": null,
+    "citations": [
+      "msg_a12484571c4f",
+      "msg_b5df530584aa",
+      "msg_8f67f833013b",
+      "msg_f23ddaf6cb2f",
+      "msg_0c2c270b3d79"
+    ],
+    "rejected_citations": [],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "false_rejection": false,
+      "false_acceptance": false,
+      "key_facts_found": [],
+      "fact_coverage": 1.0,
+      "binary_accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    },
+    "latency_ms": 4254.9
+  }
+}

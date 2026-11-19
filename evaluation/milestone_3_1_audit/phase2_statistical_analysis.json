@@ -1,0 +1,612 @@
+{
+  "overall_paired_against_arm_a": {
+    "arm_b_episodic_only": {
+      "binary_accuracy": {
+        "mean_arm": 0.43333333333333335,
+        "mean_base": 0.3,
+        "diff": 0.13333333333333333,
+        "ci_95": [
+          0.03333333333333333,
+          0.25
+        ],
+        "mcnemar": {
+          "b": 10,
+          "c": 2,
+          "p_value": 0.03857421875,
+          "odds_ratio": 5.0
+        },
+        "statistically_significant": true
+      },
+      "fact_coverage": {
+        "mean_arm": 0.5544433333333333,
+        "mean_base": 0.368055,
+        "paired_stats": {
+          "mean_diff": 0.18638833333333332,
+          "std_diff": 0.43810362217161253,
+          "cohens_d": 0.4254434884820968,
+          "ci_95": [
+            0.075,
+            0.2988952499999999
+          ],
+          "t_stat": 3.2954710912870957,
+          "t_pvalue": 0.0016657970190182205,
+          "wilcoxon_stat": 40.0,
+          "wilcoxon_pvalue": 0.0024445430047811308
+        },
+        "statistically_significant": true
+      },
+      "recall_at_5": {
+        "mean_arm": 0.9833333333333333,
+        "mean_base": 0.7666666666666667,
+        "paired_stats": {
+          "mean_diff": 0.21666666666666667,
+          "std_diff": 0.41545020165658497,
+          "cohens_d": 0.5215225935689047,
+          "ci_95": [
+            0.11666666666666667,
+            0.3333333333333333
+          ],
+          "t_stat": 4.039696639126535,
+          "t_pvalue": 0.00015681782690473925,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 0.0003114909767673833
+        },
+        "statistically_significant": true
+      }
+    },
+    "arm_c_semantic_only": {
+      "binary_accuracy": {
+        "mean_arm": 0.3,
+        "mean_base": 0.3,
+        "diff": 0.0,
+        "ci_95": [
+          -0.05,
+          0.05
+        ],
+        "mcnemar": {
+          "b": 1,
+          "c": 1,
+          "p_value": 1.0,
+          "odds_ratio": 1.0
+        },
+        "statistically_significant": false
+      },
+      "fact_coverage": {
+        "mean_arm": 0.38527666666666666,
+        "mean_base": 0.368055,
+        "paired_stats": {
+          "mean_diff": 0.017221666666666666,
+          "std_diff": 0.23500067586752194,
+          "cohens_d": 0.07328347717763638,
+          "ci_95": [
+            -0.041666666666666664,
+            0.07583333333333334
+          ],
+          "t_stat": 0.567651373322314,
+          "t_pvalue": 0.5724255583867752,
+          "wilcoxon_stat": 21.0,
+          "wilcoxon_pvalue": 0.5042835180720096
+        },
+        "statistically_significant": false
+      },
+      "recall_at_5": {
+        "mean_arm": 0.7666666666666667,
+        "mean_base": 0.7666666666666667,
+        "paired_stats": {
+          "mean_diff": 0.0,
+          "std_diff": 0.0,
+          "cohens_d": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ],
+          "t_stat": 0.0,
+          "t_pvalue": 1.0,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 1.0
+        },
+        "statistically_significant": false
+      }
+    },
+    "arm_d_episodic_semantic": {
+      "binary_accuracy": {
+        "mean_arm": 0.4,
+        "mean_base": 0.3,
+        "diff": 0.1,
+        "ci_95": [
+          0.016666666666666666,
+          0.2
+        ],
+        "mcnemar": {
+          "b": 7,
+          "c": 1,
+          "p_value": 0.0703125,
+          "odds_ratio": 7.0
+        },
+        "statistically_significant": false
+      },
+      "fact_coverage": {
+        "mean_arm": 0.5274983333333333,
+        "mean_base": 0.368055,
+        "paired_stats": {
+          "mean_diff": 0.15944333333333333,
+          "std_diff": 0.3409072438917265,
+          "cohens_d": 0.46770297842064384,
+          "ci_95": [
+            0.077221625,
+            0.24860999999999997
+          ],
+          "t_stat": 3.6228116927895204,
+          "t_pvalue": 0.0006076418082883966,
+          "wilcoxon_stat": 17.0,
+          "wilcoxon_pvalue": 0.0005366980772420169
+        },
+        "statistically_significant": true
+      },
+      "recall_at_5": {
+        "mean_arm": 0.9666666666666667,
+        "mean_base": 0.7666666666666667,
+        "paired_stats": {
+          "mean_diff": 0.2,
+          "std_diff": 0.40337558727168854,
+          "cohens_d": 0.49581582602145063,
+          "ci_95": [
+            0.1,
+            0.3
+          ],
+          "t_stat": 3.840572873934305,
+          "t_pvalue": 0.0003022421429083884,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 0.0005320055051392492
+        },
+        "statistically_significant": true
+      }
+    },
+    "arm_e_unified_tri_source": {
+      "binary_accuracy": {
+        "mean_arm": 0.4,
+        "mean_base": 0.3,
+        "diff": 0.1,
+        "ci_95": [
+          0.0,
+          0.2
+        ],
+        "mcnemar": {
+          "b": 8,
+          "c": 2,
+          "p_value": 0.109375,
+          "odds_ratio": 4.0
+        },
+        "statistically_significant": false
+      },
+      "fact_coverage": {
+        "mean_arm": 0.5344433333333334,
+        "mean_base": 0.368055,
+        "paired_stats": {
+          "mean_diff": 0.16638833333333333,
+          "std_diff": 0.3724941592497005,
+          "cohens_d": 0.44668709347948554,
+          "ci_95": [
+            0.07333333333333333,
+            0.2622233333333333
+          ],
+          "t_stat": 3.4600233480236864,
+          "t_pvalue": 0.0010098729236064702,
+          "wilcoxon_stat": 38.5,
+          "wilcoxon_pvalue": 0.0012451693488136854
+        },
+        "statistically_significant": true
+      },
+      "recall_at_5": {
+        "mean_arm": 0.9666666666666667,
+        "mean_base": 0.7666666666666667,
+        "paired_stats": {
+          "mean_diff": 0.2,
+          "std_diff": 0.40337558727168854,
+          "cohens_d": 0.49581582602145063,
+          "ci_95": [
+            0.1,
+            0.3
+          ],
+          "t_stat": 3.840572873934305,
+          "t_pvalue": 0.0003022421429083884,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 0.0005320055051392492
+        },
+        "statistically_significant": true
+      }
+    }
+  },
+  "arm_d_vs_arm_e_graph_effect": {
+    "binary_accuracy": {
+      "mean_arm_d": 0.4,
+      "mean_arm_e": 0.4,
+      "diff": 0.0,
+      "mcnemar": {
+        "b": 1,
+        "c": 1,
+        "p_value": 1.0,
+        "odds_ratio": 1.0
+      }
+    },
+    "fact_coverage": {
+      "mean_arm_d": 0.5274983333333333,
+      "mean_arm_e": 0.5344433333333334,
+      "paired_stats": {
+        "mean_diff": 0.006944999999999999,
+        "std_diff": 0.1764717727704512,
+        "cohens_d": 0.03935473583661355,
+        "ci_95": [
+          -0.03888833333333333,
+          0.05
+        ],
+        "t_stat": 0.304840472979193,
+        "t_pvalue": 0.761560421674651,
+        "wilcoxon_stat": 4.0,
+        "wilcoxon_pvalue": 0.7150006546880893
+      }
+    }
+  },
+  "category_wise_paired_stats": {
+    "complex_multi_fact": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.05,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.4,
+        "diff_fact_coverage": 0.25,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 0.5
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.6,
+        "diff_fact_coverage": 0.4,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 0.25
+      }
+    },
+    "contradiction_handling": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.06666,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.06666,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.06666,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.06666,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      }
+    },
+    "cross_session_synthesis": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.22000000000000003,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.13999999999999999,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.18,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.21334,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      }
+    },
+    "entity_relationships": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": -0.1,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.4,
+        "mcnemar_p": 1.0
+      }
+    },
+    "historical_state_retrieval": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": -0.2,
+        "diff_fact_coverage": -0.2,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": -0.2,
+        "diff_fact_coverage": -0.2,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": -0.2,
+        "diff_fact_coverage": -0.2,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      }
+    },
+    "knowledge_updates": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": -0.05,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": -0.05,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      }
+    },
+    "multi_hop_reasoning": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.3,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.1,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.1,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      }
+    },
+    "negative_information": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.4,
+        "diff_recall_at_5": 0.8,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.36666,
+        "diff_recall_at_5": 0.8,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.46665999999999996,
+        "diff_recall_at_5": 0.8,
+        "mcnemar_p": 1.0
+      }
+    },
+    "preferences_and_constraints": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.2,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.1,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.1,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      }
+    },
+    "single_fact_retrieval": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.8,
+        "diff_fact_coverage": 0.8,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 0.125
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.2,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.6,
+        "diff_fact_coverage": 0.6,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 0.25
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.6,
+        "diff_fact_coverage": 0.6,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 0.25
+      }
+    },
+    "temporal_reasoning": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.4,
+        "diff_fact_coverage": 0.4,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 0.5
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.1,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.3,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.2,
+        "diff_fact_coverage": 0.3,
+        "diff_recall_at_5": 0.2,
+        "mcnemar_p": 1.0
+      }
+    },
+    "unanswerable_questions": {
+      "arm_b_episodic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_c_semantic_only": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_d_episodic_semantic": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      },
+      "arm_e_unified_tri_source": {
+        "sample_count": 5,
+        "diff_binary_accuracy": 0.0,
+        "diff_fact_coverage": 0.0,
+        "diff_recall_at_5": 0.0,
+        "mcnemar_p": 1.0
+      }
+    }
+  }
+}

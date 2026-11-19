@@ -170,7 +170,7 @@ The complete IVARA test suite was executed:
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.13.9, pytest-9.1.1, pluggy-1.5.0
-rootdir: C:\Users\Krishna\Desktop\Brahmaand\Coding_Ki_Dunia\Projects\IVARA
+rootdir: <project-root>
 configfile: pytest.ini
 collected 525 items
 

@@ -1,0 +1,343 @@
+"""Builder script for the Expanded Narrative Reasoning Benchmark (280 Questions across 18 Sessions).
+
+Generates:
+- evaluation/validation_sprint/story_data_expanded.json
+- evaluation/validation_sprint/ground_truth_expanded.json
+- evaluation/validation_sprint/dataset_expanded.py
+"""
+
+import json
+from pathlib import Path
+
+DEST_DIR = Path(__file__).parent
+
+# 1. Sessions: 18 longitudinal conversational sessions spanning 2024 to 2027
+# Sessions 01-12 retain the exact historical narrative. Sessions 13-18 extend the story.
+
+SESSIONS_01_TO_12 = [
+    {
+        "session_id": "session_01",
+        "date": "2024-03-10",
+        "title": "Background and University Life",
+        "turns": [
+            {"role": "user", "content": "Hi IVARA! Good to meet you."},
+            {"role": "assistant", "content": "Hello! It is a pleasure to meet you. How can I assist you today?"},
+            {"role": "user", "content": "I was born in Chandigarh on August 14, 1999."},
+            {"role": "assistant", "content": "Nice to know! You were born in Chandigarh on August 14, 1999."},
+            {"role": "user", "content": "I completed my B.Tech in Computer Science from ABV IIITM Gwalior in June 2022."},
+            {"role": "assistant", "content": "Understood, B.Tech in CS from ABV IIITM Gwalior graduated in June 2022."},
+            {"role": "user", "content": "My college roommate was Rohan Sharma. We lived in Hostel 3."},
+            {"role": "assistant", "content": "Recorded: Rohan Sharma was your college roommate in Hostel 3 at IIITM Gwalior."},
+            {"role": "user", "content": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu."},
+            {"role": "assistant", "content": "Noted, you live in Indiranagar, Bengaluru with your rescue dog Kaalu."},
+            {"role": "user", "content": "I prefer reading physical books over e-readers for technical subjects."}
+        ]
+    },
+    {
+        "session_id": "session_02",
+        "date": "2024-06-15",
+        "title": "HyperScale Systems Job and Early Architecture",
+        "turns": [
+            {"role": "user", "content": "Hey IVARA, just getting back from work."},
+            {"role": "assistant", "content": "Welcome back! How was your work day?"},
+            {"role": "user", "content": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022."},
+            {"role": "assistant", "content": "Got it: Joined HyperScale Systems in July 2022 as Associate Software Engineer."},
+            {"role": "user", "content": "My engineering manager at HyperScale is Vikram Rao."},
+            {"role": "assistant", "content": "Recorded: Vikram Rao is your engineering manager at HyperScale."},
+            {"role": "user", "content": "I am working with senior staff engineer Deepa Nair on our distributed caching layer called CacheMesh."},
+            {"role": "assistant", "content": "Noted: Collaborating with Deepa Nair on CacheMesh at HyperScale."},
+            {"role": "user", "content": "We built CacheMesh using Redis cluster and Go."},
+            {"role": "assistant", "content": "Recorded: CacheMesh is built using Redis cluster and Go."},
+            {"role": "user", "content": "I dislike Kubernetes complexity and prefer lightweight Docker Compose for local service development."},
+            {"role": "assistant", "content": "Noted your preference for Docker Compose over Kubernetes for local dev."},
+            {"role": "user", "content": "I decided to adopt Neovim configured with Lua as my primary code editor."}
+        ]
+    },
+    {
+        "session_id": "session_03",
+        "date": "2024-09-20",
+        "title": "Smart India Hackathon and AgriVision Project",
+        "turns": [
+            {"role": "user", "content": "Had an exciting weekend with my old college crew!"},
+            {"role": "assistant", "content": "That sounds great! What did you do with your college friends?"},
+            {"role": "user", "content": "I participated in the Smart India Hackathon alumni track with Rohan Sharma and Meera Sen."},
+            {"role": "assistant", "content": "Recorded: Participated in SIH alumni track with Rohan Sharma and Meera Sen."},
+            {"role": "user", "content": "Our team name was MatrixCrafters and we built AgriVision, an edge-AI crop disease diagnosis mobile app."},
+            {"role": "assistant", "content": "Got it: Team MatrixCrafters developed AgriVision for edge-AI crop disease diagnosis."},
+            {"role": "user", "content": "Meera Sen built the Flutter mobile frontend, Rohan managed the FastAPI cloud backend, and I trained the PyTorch Mobile vision model."},
+            {"role": "assistant", "content": "Understood the division of roles: Meera on Flutter frontend, Rohan on FastAPI backend, and you on PyTorch Mobile vision model."},
+            {"role": "user", "content": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH."},
+            {"role": "assistant", "content": "Congratulations! Won 2nd runner-up prize ($1,500) for AgriVision."},
+            {"role": "user", "content": "Meera is strictly allergic to peanuts, so we celebrated with peanut-free Italian food."},
+            {"role": "assistant", "content": "Noted Meera Sen's severe peanut allergy constraint."},
+            {"role": "user", "content": "I bought a 16-inch MacBook Pro M3 Max to run local model evaluations."}
+        ]
+    },
+    {
+        "session_id": "session_04",
+        "date": "2024-12-05",
+        "title": "Relocation to HSR Layout, Diet and Sports",
+        "turns": [
+            {"role": "user", "content": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month."},
+            {"role": "assistant", "content": "Updated your residence: Moved from Indiranagar to HSR Layout Sector 2, Bengaluru."},
+            {"role": "user", "content": "I moved to HSR Layout to be closer to Rohan and our badminton club."},
+            {"role": "assistant", "content": "Noted: Relocation motivated by proximity to Rohan and badminton club."},
+            {"role": "user", "content": "I play badminton every Tuesday evening at PlayArena with Rohan Sharma."},
+            {"role": "assistant", "content": "Recorded: Badminton every Tuesday evening at PlayArena with Rohan."},
+            {"role": "user", "content": "I adopted a strict vegetarian diet starting in November 2024."},
+            {"role": "assistant", "content": "Recorded your dietary change: Strict vegetarian since November 2024."},
+            {"role": "user", "content": "I have set a personal fitness goal to complete a 10k marathon by late 2025."},
+            {"role": "assistant", "content": "Fitness goal recorded: Complete a 10k marathon by late 2025."},
+            {"role": "user", "content": "I tried learning German on Duolingo for 40 days, but I gave up and dropped it due to work overload."}
+        ]
+    },
+    {
+        "session_id": "session_05",
+        "date": "2025-02-18",
+        "title": "Career Pivot to Aetheria AI",
+        "turns": [
+            {"role": "user", "content": "Big career update to share with you!"},
+            {"role": "assistant", "content": "Exciting! What is the career update?"},
+            {"role": "user", "content": "I resigned from HyperScale Systems in January 2025."},
+            {"role": "assistant", "content": "Recorded: Resigned from HyperScale Systems in January 2025."},
+            {"role": "user", "content": "HyperScale offered me a 30 percent salary raise to stay, but I declined their counter-offer."},
+            {"role": "assistant", "content": "Noted: Declined HyperScale's 30% raise counter-offer."},
+            {"role": "user", "content": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025."},
+            {"role": "assistant", "content": "Congratulations! Joined Aetheria AI in Koramangala as Research Engineer on February 1, 2025."},
+            {"role": "user", "content": "My new CTO at Aetheria AI is Dr. Shalini Verma, who previously led research at FAIR."},
+            {"role": "assistant", "content": "Recorded: Dr. Shalini Verma is your CTO at Aetheria AI."},
+            {"role": "user", "content": "I signed a non-compete clause with HyperScale barring me from consulting for competing database and caching companies for 12 months."}
+        ]
+    },
+    {
+        "session_id": "session_06",
+        "date": "2025-05-10",
+        "title": "NeuroCompact Project and Research Collaborators",
+        "turns": [
+            {"role": "user", "content": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding."},
+            {"role": "assistant", "content": "Recorded: Developing NeuroCompact, a 4-bit quantizer for speculative decoding at Aetheria AI."},
+            {"role": "user", "content": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr. Shalini Verma."},
+            {"role": "assistant", "content": "Collaborators recorded: Working on NeuroCompact with Kabir Das and Dr. Shalini Verma."},
+            {"role": "user", "content": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python."},
+            {"role": "assistant", "content": "Architecture decision: Rewriting CUDA execution kernels in Mojo."},
+            {"role": "user", "content": "I never drink coffee because it gives me migraines; I strictly drink masala chai."},
+            {"role": "assistant", "content": "Noted beverage preference: No coffee due to migraines, strictly masala chai."},
+            {"role": "user", "content": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025."}
+        ]
+    },
+    {
+        "session_id": "session_07",
+        "date": "2025-08-22",
+        "title": "EMNLP Paper Rejection, Departure of Kabir, and Project Pivot",
+        "turns": [
+            {"role": "user", "content": "Tough couple of weeks at the research lab."},
+            {"role": "assistant", "content": "Sorry to hear that. What happened at the lab?"},
+            {"role": "user", "content": "Our EMNLP 2025 paper submission on NeuroCompact was rejected in August 2025 due to baseline benchmark leakage."},
+            {"role": "assistant", "content": "Noted: EMNLP 2025 submission rejected in August 2025 due to baseline leakage."},
+            {"role": "user", "content": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada."},
+            {"role": "assistant", "content": "Recorded: Kabir Das departed Aetheria AI in July 2025 to relocate to Vancouver, Canada."},
+            {"role": "user", "content": "Dr. Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression."},
+            {"role": "assistant", "content": "Major project pivot: NeuroCompact shifted to on-device memory compression with Dr. Shalini Verma."},
+            {"role": "user", "content": "I reconnected with Meera Sen to help test on-device latency on real Android smartphones."},
+            {"role": "assistant", "content": "Collaboration: Meera Sen assisting with Android on-device latency testing."},
+            {"role": "user", "content": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable."}
+        ]
+    },
+    {
+        "session_id": "session_08",
+        "date": "2025-11-14",
+        "title": "Bengaluru 10k Marathon and Health Setback",
+        "turns": [
+            {"role": "user", "content": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!"},
+            {"role": "assistant", "content": "Congratulations on finishing the Bengaluru 10k Marathon in 54 minutes on November 9, 2025!"},
+            {"role": "user", "content": "Rohan Sharma started the race with me, but he twisted his ankle at kilometer 4 and could not complete the marathon."},
+            {"role": "assistant", "content": "Noted: Rohan Sharma twisted ankle at km 4 and DNF (did not finish)."},
+            {"role": "user", "content": "I developed plantar fasciitis in my right heel after the run, and the sports doctor forbade high-impact running for 3 months."},
+            {"role": "assistant", "content": "Medical constraint: Plantar fasciitis, no high-impact running for 3 months."},
+            {"role": "user", "content": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence."},
+            {"role": "assistant", "content": "Activity update: Switched to swimming at Padukone-Dravid Centre."},
+            {"role": "user", "content": "I bought a Garmin Forerunner 265 watch to track my swim laps and heart rate."}
+        ]
+    },
+    {
+        "session_id": "session_09",
+        "date": "2026-01-25",
+        "title": "MLSys Oral Acceptance and Promotion",
+        "turns": [
+            {"role": "user", "content": "Huge milestone for our research work!"},
+            {"role": "assistant", "content": "Tell me all about it!"},
+            {"role": "user", "content": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!"},
+            {"role": "assistant", "content": "Outstanding achievement! NeuroCompact v2 accepted as an Oral Presentation at MLSys 2026."},
+            {"role": "user", "content": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation."},
+            {"role": "assistant", "content": "Recorded: $25,000 compute grant from OpenCompute Foundation."},
+            {"role": "user", "content": "Dr. Shalini Verma promoted me from Research Engineer to Lead Research Scientist at Aetheria AI in January 2026."},
+            {"role": "assistant", "content": "Congratulations on your promotion to Lead Research Scientist at Aetheria AI!"},
+            {"role": "user", "content": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers."}
+        ]
+    },
+    {
+        "session_id": "session_10",
+        "date": "2026-04-12",
+        "title": "Relocation Decision to Zurich",
+        "turns": [
+            {"role": "user", "content": "Aetheria AI is opening a European research hub in Zurich, Switzerland."},
+            {"role": "assistant", "content": "Noted: Aetheria AI opening a European research office in Zurich."},
+            {"role": "user", "content": "Dr. Shalini Verma gave me the option to stay in Bengaluru as regional lead or relocate to Zurich to head the efficiency lab."},
+            {"role": "assistant", "content": "Understood: Offered choice between staying in Bengaluru or heading Zurich lab."},
+            {"role": "user", "content": "I decided to relocate to Zurich in September 2026."},
+            {"role": "assistant", "content": "Major decision recorded: Relocating to Zurich in September 2026."},
+            {"role": "user", "content": "I enrolled in intensive German classes at the Goethe-Institut Bengaluru, reviving my language goal."},
+            {"role": "assistant", "content": "Goal revived: Intensive German classes at Goethe-Institut Bengaluru."},
+            {"role": "user", "content": "Kaalu will move with me to Switzerland; I completed his pet microchip and rabies titer test on April 5, 2026."},
+            {"role": "assistant", "content": "Recorded: Kaalu moving to Zurich with pet microchip and rabies titer completed April 5, 2026."},
+            {"role": "user", "content": "Rohan Sharma is staying in Bengaluru; he got engaged to Sneha Roy in March 2026."}
+        ]
+    },
+    {
+        "session_id": "session_11",
+        "date": "2026-07-19",
+        "title": "Technology Stack Updates and Visa Obstacle",
+        "turns": [
+            {"role": "user", "content": "I have completely phased out Redis in all my systems; I now strictly use Dragonfly and DuckDB."},
+            {"role": "assistant", "content": "Database stack update: Redis phased out, strictly using Dragonfly and DuckDB."},
+            {"role": "user", "content": "I was unable to attend MLSys 2026 in person in Santa Clara because my US B1/B2 visa was administratively delayed under 221g."},
+            {"role": "assistant", "content": "Travel constraint: US visa delayed under 221g, could not attend MLSys in person."},
+            {"role": "user", "content": "Dr. Shalini Verma traveled to California and delivered the NeuroCompact oral presentation on my behalf."},
+            {"role": "assistant", "content": "Recorded: Dr. Shalini Verma delivered the MLSys oral presentation on your behalf."},
+            {"role": "user", "content": "Ananya Bose completed her internship under my supervision and received a full-time Research Scientist offer at Aetheria AI."},
+            {"role": "assistant", "content": "Mentorship outcome: Ananya Bose completed internship and received full-time Research Scientist offer."},
+            {"role": "user", "content": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts."}
+        ]
+    },
+    {
+        "session_id": "session_12",
+        "date": "2026-10-02",
+        "title": "Life in Zurich and Current State",
+        "turns": [
+            {"role": "user", "content": "Greetings from Switzerland! I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026."},
+            {"role": "assistant", "content": "Welcome to Switzerland! Settled into Zurich Kreis 4 on September 15, 2026."},
+            {"role": "user", "content": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich."},
+            {"role": "assistant", "content": "Workplace recorded: Aetheria Europe office on Technoparkstrasse, Zurich."},
+            {"role": "user", "content": "Kaalu is loving the autumn walks around Lake Zurich."},
+            {"role": "assistant", "content": "Delighted to hear Kaalu is enjoying Lake Zurich walks."},
+            {"role": "user", "content": "I missed Bengaluru masala chai, so I bought a traditional brass tea kettle to brew authentic chai at home."},
+            {"role": "assistant", "content": "Noted: Bought a traditional brass tea kettle to brew masala chai in Zurich."},
+            {"role": "user", "content": "I am currently studying for the German B1 proficiency exam."},
+            {"role": "assistant", "content": "Language progress: Studying for German B1 exam in Zurich."},
+            {"role": "user", "content": "My current diet remains strictly vegetarian, but I eat Swiss artisanal cheeses freely."},
+            {"role": "assistant", "content": "Current dietary status: Strictly vegetarian, eats Swiss cheeses."}
+        ]
+    }
+]
+
+SESSIONS_13_TO_18 = [
+    {
+        "session_id": "session_13",
+        "date": "2026-11-20",
+        "title": "ETH Zurich Partnership and Quantum Efficiency Lab",
+        "turns": [
+            {"role": "user", "content": "Exciting collaboration update here in Zurich!"},
+            {"role": "assistant", "content": "What is the new collaboration in Zurich?"},
+            {"role": "user", "content": "I established a formal joint research initiative with Prof. Elena Vance at ETH Zurich on quantum-assisted neural compression."},
+            {"role": "assistant", "content": "Recorded: Joint research initiative with Prof. Elena Vance at ETH Zurich on quantum-assisted neural compression."},
+            {"role": "user", "content": "We hired a post-doctoral researcher named Lukas Weber to lead the PennyLane and Qiskit simulation benchmarks."},
+            {"role": "assistant", "content": "Team update: Post-doc Lukas Weber hired to work on PennyLane and Qiskit benchmarks."},
+            {"role": "user", "content": "I adopted NixOS and Devbox across our research lab workstations for 100% reproducible builds."},
+            {"role": "assistant", "content": "Tooling update: Adopted NixOS and Devbox for reproducible lab builds."},
+            {"role": "user", "content": "I prefer taking the Zurich S-Bahn and Tram Line 4 to work rather than owning a private car."},
+            {"role": "assistant", "content": "Transportation preference: Uses S-Bahn and Tram Line 4, prefers not owning a car."},
+            {"role": "user", "content": "I bought a custom mechanical keyboard with silent tactile Boba U4 switches for our shared lab space."}
+        ]
+    },
+    {
+        "session_id": "session_14",
+        "date": "2027-01-15",
+        "title": "Winter in the Swiss Alps, Skiing Injury and Physical Therapy",
+        "turns": [
+            {"role": "user", "content": "Had an eventful winter holiday in Zermatt with my family."},
+            {"role": "assistant", "content": "How was your winter holiday in Zermatt?"},
+            {"role": "user", "content": "My sister Priya Mehta visited me in Switzerland from Chicago, where she is a pediatric resident at Northwestern Memorial Hospital."},
+            {"role": "assistant", "content": "Recorded: Sister Priya Mehta visited from Chicago; she is a pediatric resident at Northwestern Memorial Hospital."},
+            {"role": "user", "content": "I had a skiing accident on the Rothorn slope in Zermatt on January 8, 2027 and tore my left medial meniscus."},
+            {"role": "assistant", "content": "Medical update: Torn left medial meniscus from skiing accident on Rothorn slope on January 8, 2027."},
+            {"role": "user", "content": "My orthopedic doctor, Dr. Hans Keller, advised against immediate surgery and prescribed 8 weeks of intensive physical therapy in Oerlikon."},
+            {"role": "assistant", "content": "Treatment plan: Dr. Hans Keller prescribed 8 weeks intensive PT in Oerlikon, no immediate surgery."},
+            {"role": "user", "content": "I replaced my standing setup with an electric motorized sit-stand desk and a Herman Miller Aeron chair to support my recovery."}
+        ]
+    },
+    {
+        "session_id": "session_15",
+        "date": "2027-03-28",
+        "title": "TensorForge Open Source Release and Conference Keynote",
+        "turns": [
+            {"role": "user", "content": "Huge open source milestone today!"},
+            {"role": "assistant", "content": "Congratulations! What milestone did you achieve?"},
+            {"role": "user", "content": "We officially open-sourced TensorForge, the production successor to NeuroCompact, under the Apache 2.0 license."},
+            {"role": "assistant", "content": "Recorded: Open-sourced TensorForge under Apache 2.0 license."},
+            {"role": "user", "content": "TensorForge surpassed 6,200 GitHub stars within three weeks of its release."},
+            {"role": "assistant", "content": "Metric recorded: TensorForge reached 6,200 GitHub stars in three weeks."},
+            {"role": "user", "content": "We received the Open Source Innovation Award at EuroSys 2027 in Geneva, and I donated the 10,000 Swiss Franc prize to STEM education in rural India."},
+            {"role": "assistant", "content": "Award recorded: EuroSys 2027 Open Source Innovation Award; donated 10,000 CHF to rural STEM education."},
+            {"role": "user", "content": "I was invited to deliver an opening keynote at PyData London scheduled for June 2027."},
+            {"role": "assistant", "content": "Speaking invitation: Keynote speaker at PyData London in June 2027."},
+            {"role": "user", "content": "I started using the Zed editor for remote real-time pair programming with Lukas Weber, but I retained my Neovim keybindings."}
+        ]
+    },
+    {
+        "session_id": "session_16",
+        "date": "2027-06-12",
+        "title": "Apartment Relocation to Zurich Enge and Second Pet Adoption",
+        "turns": [
+            {"role": "user", "content": "Major personal housing and family update!"},
+            {"role": "assistant", "content": "What is the new update?"},
+            {"role": "user", "content": "My previous landlord in Kreis 4 attempted an illegal 40 percent rent hike, which the Zurich Mieterinnenverband tenancy board overturned in my favor."},
+            {"role": "assistant", "content": "Legal victory: Zurich Mieterinnenverband overturned landlord's 40% rent hike in Kreis 4."},
+            {"role": "user", "content": "I moved on June 1, 2027 to a ground-floor garden apartment in Zurich Enge (Kreis 2), just 200 meters from Lake Zurich."},
+            {"role": "assistant", "content": "Relocation recorded: Moved on June 1, 2027 to Zurich Enge (Kreis 2) near Lake Zurich."},
+            {"role": "user", "content": "I adopted a 4-month-old rescue Bernese Mountain Dog puppy named Atlas from Tierheim Strubeli in Volketswil."},
+            {"role": "assistant", "content": "Pet adoption: Adopted Bernese Mountain Dog puppy Atlas from Tierheim Strubeli in Volketswil."},
+            {"role": "user", "content": "Kaalu and Atlas bonded immediately and sleep next to each other on the porch."},
+            {"role": "assistant", "content": "Recorded: Kaalu and Atlas bonded warmly."},
+            {"role": "user", "content": "I purchased a heavy-duty Riese & Müller Load 75 cargo e-bike to transport both dogs to the lakeside parks."}
+        ]
+    },
+    {
+        "session_id": "session_17",
+        "date": "2027-08-30",
+        "title": "AgriVision Angel Round and Advisory Board",
+        "turns": [
+            {"role": "user", "content": "Just returned from an unforgettable trip back to India!"},
+            {"role": "assistant", "content": "Welcome back! How was your trip to India?"},
+            {"role": "user", "content": "Rohan Sharma and Sneha Roy got married in Udaipur on August 20, 2027, and I served as Rohan's best man."},
+            {"role": "assistant", "content": "Celebration recorded: Rohan Sharma married Sneha Roy in Udaipur; you served as best man."},
+            {"role": "user", "content": "AgriVision, our old hackathon project, successfully closed a 2.5 million dollar seed financing round led by Peak XV Partners."},
+            {"role": "assistant", "content": "Startup milestone: AgriVision raised $2.5M seed round led by Peak XV Partners."},
+            {"role": "user", "content": "AgriVision appointed Rajesh Nair, former VP at Ninjacart, as full-time Chief Executive Officer."},
+            {"role": "assistant", "content": "Executive hire: Rajesh Nair appointed CEO of AgriVision."},
+            {"role": "user", "content": "I accepted a seat on AgriVision's Technical Advisory Board with a 1.5 percent equity grant."},
+            {"role": "assistant", "content": "Advisory appointment: Appointed to AgriVision Technical Advisory Board with 1.5% equity."},
+            {"role": "user", "content": "Meera Sen has relocated to Singapore to lead AgriVision's Southeast Asia agronomy partnerships."}
+        ]
+    },
+    {
+        "session_id": "session_18",
+        "date": "2027-11-10",
+        "title": "Dietary Shift, Meniscus Recovery, and Future Ambitions",
+        "turns": [
+            {"role": "user", "content": "Reflecting on health and life as autumn winds down in Zurich."},
+            {"role": "assistant", "content": "What reflections are on your mind?"},
+            {"role": "user", "content": "I made the ethical decision to transition from vegetarian to a 100 percent plant-based vegan diet on September 1, 2027, cutting out Swiss dairy cheeses."},
+            {"role": "assistant", "content": "Dietary evolution: Transitioned to 100% plant-based vegan on September 1, 2027, eliminating dairy."},
+            {"role": "user", "content": "My left knee meniscus has completely rehabilitated; I swam the 3km Lake Zurich Crossing event on August 15, 2027 in 58 minutes."},
+            {"role": "assistant", "content": "Health milestone: Left meniscus fully healed; completed 3km Lake Zurich Crossing in 58 min on August 15, 2027."},
+            {"role": "user", "content": "I declined a 4 million dollar buyout offer from an ad-tech analytics syndicate to acquire TensorForge for behavioral tracking."},
+            {"role": "assistant", "content": "Commercial decision: Rejected $4M buyout offer from ad-tech syndicate for TensorForge."},
+            {"role": "user", "content": "I plan to take a research sabbatical in late 2028 to pursue an external PhD at ETH Zurich under Prof. Elena Vance on provable parameter compression."}
+        ]
+    }
+]
+
+ALL_SESSIONS = SESSIONS_01_TO_12 + SESSIONS_13_TO_18
+
+print(f"Total sessions assembled: {len(ALL_SESSIONS)}")
+

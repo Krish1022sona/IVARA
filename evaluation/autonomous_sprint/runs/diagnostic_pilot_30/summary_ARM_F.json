@@ -1,0 +1,12 @@
+{
+  "arm": "ARM_F",
+  "arm_name": "Full Architecture (Graph + Temporal)",
+  "total_instances": 30,
+  "overall_accuracy": 63.33,
+  "answerable_accuracy": 62.5,
+  "abstention_accuracy": 66.67,
+  "abstentions_correct": 4,
+  "total_abstentions": 6,
+  "answerable_correct": 15,
+  "total_answerable": 24
+}

@@ -1,0 +1,585 @@
+[
+  {
+    "pair": "A_vs_B",
+    "question_id": "2a1811e2",
+    "task_type": "temporal-reasoning",
+    "is_abstention": false,
+    "question": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?",
+    "gold_answer": "21 days. 22 days (including the last day) is also acceptable.",
+    "winner_arm": "ARM_A",
+    "loser_arm": "ARM_B",
+    "winner_hypothesis": "The Hindu festival of Holi was attended on February?26,?2023. The Sunday mass at St.?Mary?s Church was attended on the p",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate correctly identifies the number of days as 21, which matches the reference gold answer.",
+    "loser_hypothesis": "There were 28 days between the Hindu festival of Holi (February?26,?2023) and the Sunday mass at St.?Mary's Church (Marc",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction states there were 28 days, which contradicts the gold answer of 21 or 22 days.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "32260d93",
+    "task_type": "single-session-preference",
+    "is_abstention": false,
+    "question": "Can you recommend a show or movie for me to watch tonight?",
+    "gold_answer": "The user would prefer recommendations for stand-up comedy specials on Netflix, especially those that are known for their storytelling. They may not prefer recommendations for other genres or platforms.",
+    "winner_arm": "ARM_A",
+    "loser_arm": "ARM_B",
+    "winner_hypothesis": "I recommend watching **Hasan?Minhaj: Homecoming?King** on Netflix. It?s a stand?up special known for its strong storytel",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_0250ae1c_c000",
+      "sess_6d3f5c68_4_c001",
+      "sess_ultrachat_507667_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate recommendation aligns perfectly with the user's specific preferences for Netflix stand-up comedy specials ",
+    "loser_hypothesis": "If you?re in the mood for comedy, try Hasan?Minhaj?s *Homecoming?King* on Netflix ? it?s a standout storytelling special",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_0250ae1c_c000",
+      "sess_6d3f5c68_4_c001",
+      "sess_ultrachat_507667_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate provides a recommendation for a BBC documentary, which violates the user's preference for Netflix and come",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "505af2f5",
+    "task_type": "single-session-preference",
+    "is_abstention": false,
+    "question": "I was thinking of trying a new coffee creamer recipe. Any recommendations?",
+    "gold_answer": "The user would prefer responses that suggest variations on their existing almond milk, vanilla extract, and honey creamer recipe or new ideas that align with their goals of reducing sugar intake and saving money. They might not prefer responses that recommend commercial creamer products or recipes that are high in sugar or expensive.",
+    "winner_arm": "ARM_A",
+    "loser_arm": "ARM_B",
+    "winner_hypothesis": "You can make a simple, healthier flavored creamer by blending unsweetened almond milk with vanilla extract and a natural",
+    "winner_retrieved_chunk_ids": [
+      "sess_4f2d6be4_2_c003",
+      "sess_answer_f3164f2c_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate provides recipe suggestions that align with the user's preferences for almond milk, vanilla, and honey, wh",
+    "loser_hypothesis": "I?m sorry, but I don?t have any recorded memories about coffee creamer recipes to share with you.",
+    "loser_retrieved_chunk_ids": [
+      "sess_4f2d6be4_2_c003",
+      "sess_4f2d6be4_2_c004"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate fails to provide any recommendations and incorrectly claims to have no memory of the user's preferences, w",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "e25c3b8d",
+    "task_type": "multi-session",
+    "is_abstention": false,
+    "question": "How much did I save on the designer handbag at TK Maxx?",
+    "gold_answer": "$300",
+    "winner_arm": "ARM_A",
+    "loser_arm": "ARM_B",
+    "winner_hypothesis": "You saved $300 on the designer handbag at TK?Maxx.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_6702277b_2_c003",
+      "sess_answer_6702277b_2_c004",
+      "sess_answer_6702277b_1_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction accurately provides the correct amount of $300 as specified in the gold answer.",
+    "loser_hypothesis": "I?m sorry, but I don?t have enough information to determine how much you saved on the designer handbag at TK?Maxx.",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_6702277b_2_c000",
+      "sess_answer_6702277b_2_c003",
+      "sess_answer_6702277b_2_c004"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate failed to provide the specific amount requested in the gold answer, which is $300.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "01493427",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "How many new postcards have I added to my collection since I started collecting again?",
+    "gold_answer": "25",
+    "winner_arm": "ARM_B",
+    "loser_arm": "ARM_A",
+    "winner_hypothesis": "You have added 25 new postcards to your collection since you started collecting again.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_a7b44747_1_c003",
+      "sess_answer_a7b44747_1_c005",
+      "sess_answer_a7b44747_2_c003"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction accurately provides the correct number of postcards as specified in the gold answer.",
+    "loser_hypothesis": "You have reported adding 17 new postcards in one session and 25 new postcards in a later session.",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_a7b44747_1_c003",
+      "sess_answer_a7b44747_1_c005",
+      "sess_answer_a7b44747_2_c003"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction provides two different numbers (17 and 25) which implies a total of 42, contradicting the gold ",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "031748ae_abs",
+    "task_type": "knowledge-update",
+    "is_abstention": true,
+    "question": "How many engineers do I lead when I just started my new role as Software Engineer Manager?",
+    "gold_answer": "The information provided is not enough. You mentioned starting the role as Senior Software Engineer but not Software Engineer Manager.",
+    "winner_arm": "ARM_B",
+    "loser_arm": "ARM_A",
+    "winner_hypothesis": "I do not have sufficient recorded memories to answer that question.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_8748f791_abs_1_c004",
+      "sess_answer_8748f791_abs_1_c005",
+      "sess_answer_8748f791_abs_2_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate correctly identifies that it lacks the necessary information to answer the question, which aligns with the",
+    "loser_hypothesis": "You lead a team of 4 engineers in your new role as Senior Software Engineer.",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_8748f791_abs_1_c004",
+      "sess_answer_8748f791_abs_1_c005",
+      "sess_answer_8748f791_abs_2_c001"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction invents a specific number of engineers instead of correctly identifying that the information is",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "7401057b",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "How many free night's stays can I redeem at any Hilton property with my accumulated points?",
+    "gold_answer": "Two",
+    "winner_arm": "ARM_B",
+    "loser_arm": "ARM_A",
+    "winner_hypothesis": "{   \"answer\": \"The user?s records show that they have accumulated enough Hilton Honors points to redeem a free night at ",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate's answer correctly identifies that the user can redeem two free nights, which matches the factual informat",
+    "loser_hypothesis": "Could not reliably synthesize an answer for 'How many free night's stays can I redeem at any Hilton property with my acc",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate failed to provide the answer 'Two' and instead provided an error message, which constitutes an improper ab",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "caf03d32",
+    "task_type": "single-session-preference",
+    "is_abstention": false,
+    "question": "I've been struggling with my slow cooker recipes. Any advice on getting better results?",
+    "gold_answer": "The user would prefer responses that provide tips and advice specifically tailored to their slow cooker experiences, utilizing their recent success with beef stew and interest in making yogurt in the slow cooker. They might not prefer general slow cooker recipes or advice unrelated to their specific experiences and interests.",
+    "winner_arm": "ARM_B",
+    "loser_arm": "ARM_A",
+    "winner_hypothesis": "Here are a few evidence?grounded tips that may help you improve your slow?cooker dishes:  1. **Start with proven recipes",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_2fc6aabb_c000",
+      "sess_answer_2fc6aabb_c001",
+      "sess_answer_2fc6aabb_c007"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction follows the gold answer's guidance by providing advice specifically tailored to the user's inte",
+    "loser_hypothesis": "Here are a few evidence?based tips that can help improve your slow?cooker dishes:  1. **Use a variety of vegetables** ? ",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_2fc6aabb_c000",
+      "sess_answer_2fc6aabb_c003"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction provides general tips and references vegetarian/vegan recipes, failing to incorporate the speci",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "A_vs_B",
+    "question_id": "dad224aa",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "What time do I wake up on Saturday mornings?",
+    "gold_answer": "7:30 am",
+    "winner_arm": "ARM_B",
+    "loser_arm": "ARM_A",
+    "winner_hypothesis": "You have mentioned that you woke up at 7:30?am on the previous Saturday and at 9:30?am on the most recent Saturday.  You",
+    "winner_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001",
+      "sess_answer_4a97ae40_2_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction correctly identifies 7:30 am as the time the user generally wakes up on Saturdays, which matche",
+    "loser_hypothesis": "You have reported waking up at 7:30?am on the previous Saturday and at 9:30?am on the last Saturday.",
+    "loser_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction includes a second time (9:30 am) that contradicts the single time provided in the gold answer.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "C_vs_D",
+    "question_id": "cc539528",
+    "task_type": "single-session-assistant",
+    "is_abstention": false,
+    "question": "I wanted to follow up on our previous conversation about front-end and back-end development. Can you remind me of the specific back-end programming languages you recommended I learn?",
+    "gold_answer": "I recommended learning Ruby, Python, or PHP as a back-end programming language.",
+    "winner_arm": "ARM_C",
+    "loser_arm": "ARM_D",
+    "winner_hypothesis": "I recommended learning back?end programming languages such as **Ruby, Python, or PHP**.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_ultrachat_374124_c000",
+      "sess_answer_ultrachat_374124_c001",
+      "sess_answer_ultrachat_374124_c002",
+      "sess_answer_ultrachat_374124_c003",
+      "sess_answer_ultrachat_374124_c004"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction accurately lists the specific back-end programming languages mentioned in the gold answer.",
+    "loser_hypothesis": "In our earlier discussion I suggested learning the following back?end programming languages: - Ruby - Python - PHP - Nod",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_ultrachat_374124_c000",
+      "sess_answer_ultrachat_374124_c001",
+      "sess_answer_ultrachat_374124_c002",
+      "sess_answer_ultrachat_374124_c003",
+      "sess_answer_ultrachat_374124_c004"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate includes additional programming languages (Node.js and Java) that were not part of the recommendation spec",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "C_vs_D",
+    "question_id": "2a1811e2",
+    "task_type": "temporal-reasoning",
+    "is_abstention": false,
+    "question": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?",
+    "gold_answer": "21 days. 22 days (including the last day) is also acceptable.",
+    "winner_arm": "ARM_D",
+    "loser_arm": "ARM_C",
+    "winner_hypothesis": "The Hindu festival of Holi was attended on February?26. The Sunday mass at St.?Mary?s Church was attended on the previou",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate correctly provides the answer of 21 days, which matches the reference gold answer.",
+    "loser_hypothesis": "The Hindu festival of Holi was attended on February?26, and the Sunday mass at St.?Mary?s Church was attended on the fol",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction states the interval is 28 days, which contradicts the gold answer of 21 or 22 days.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "C_vs_D",
+    "question_id": "6b7dfb22",
+    "task_type": "single-session-preference",
+    "is_abstention": false,
+    "question": "I've been feeling a bit stuck with my paintings lately. Do you have any ideas on how I can find new inspiration?",
+    "gold_answer": "The user would prefer responses that build upon their existing sources of inspiration, such as revisiting Instagram art accounts or exploring new techniques from online tutorials. They might also appreciate suggestions that revisit previous themes they found enjoyable, like painting flowers. The user would not prefer generic or vague suggestions for finding inspiration, and would likely appreciate responses that utilize their recent 30-day painting challenge experience.",
+    "winner_arm": "ARM_D",
+    "loser_arm": "ARM_C",
+    "winner_hypothesis": "You can try looking for fresh ideas on social media or in art communities?engage with content that excites you and keeps",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_f6502d0f_c004",
+      "sess_answer_f6502d0f_c006"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction captures the key suggestions mentioned in the gold answer, specifically regarding social media ",
+    "loser_hypothesis": "A good way to spark fresh ideas is to keep looking for inspiration outside your own routine.  The assistant suggested co",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_f6502d0f_c004",
+      "sess_answer_f6502d0f_c006"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction provides generic suggestions, whereas the gold answer specifies that the user prefers specific,",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "C_vs_D",
+    "question_id": "7401057b",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "How many free night's stays can I redeem at any Hilton property with my accumulated points?",
+    "gold_answer": "Two",
+    "winner_arm": "ARM_D",
+    "loser_arm": "ARM_C",
+    "winner_hypothesis": "You can redeem two free night's stays at any Hilton property with your accumulated points.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction accurately provides the correct number of free night's stays as specified in the gold answer.",
+    "loser_hypothesis": "{   \"answer\": \"The evidence shows that you have accumulated enough points for a free night at any Hilton property. In on",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate provides an uncertain range of possibilities ('at least one' or 'two') instead of the specific, definitive",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "C_vs_D",
+    "question_id": "dad224aa",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "What time do I wake up on Saturday mornings?",
+    "gold_answer": "7:30 am",
+    "winner_arm": "ARM_D",
+    "loser_arm": "ARM_C",
+    "winner_hypothesis": "You have mentioned waking up at 7:30?am on a recent Saturday and at 9:30?am on the preceding Saturday.",
+    "winner_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001",
+      "sess_answer_4a97ae40_2_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction includes the correct time of 7:30 am as specified in the gold answer.",
+    "loser_hypothesis": "You mentioned that on the previous Saturday you woke up at 7:30?am, and on the last Saturday you woke up at 9:30?am. Thu",
+    "loser_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001",
+      "sess_answer_4a97ae40_2_c001"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate includes a time (9:30 am) that is not present in the gold answer, contradicting the provided reference.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "2a1811e2",
+    "task_type": "temporal-reasoning",
+    "is_abstention": false,
+    "question": "How many days had passed between the Hindu festival of Holi and the Sunday mass at St. Mary's Church?",
+    "gold_answer": "21 days. 22 days (including the last day) is also acceptable.",
+    "winner_arm": "ARM_E",
+    "loser_arm": "ARM_F",
+    "winner_hypothesis": "The Hindu festival of Holi was celebrated on February?26,?2023. The Sunday mass at St.?Mary?s Church was attended on the",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate correctly calculates the number of days as 21, which matches the gold answer.",
+    "loser_hypothesis": "28 days",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_1cc3cd0c_1_c000",
+      "sess_answer_1cc3cd0c_1_c005",
+      "sess_answer_1cc3cd0c_2_c005"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction of 28 days contradicts the gold answer of 21 or 22 days.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "7401057b",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "How many free night's stays can I redeem at any Hilton property with my accumulated points?",
+    "gold_answer": "Two",
+    "winner_arm": "ARM_E",
+    "loser_arm": "ARM_F",
+    "winner_hypothesis": "You have accumulated enough Hilton Honors points to redeem two free?night stays at any Hilton property.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction accurately provides the number of free night stays specified in the gold answer.",
+    "loser_hypothesis": "Based on your own statement, you have accumulated enough Hilton Honors points for **one free night's stay at any Hilton ",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_94650bfa_1_c001",
+      "sess_answer_94650bfa_1_c002",
+      "sess_answer_94650bfa_2_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction states 'one' free night's stay, which contradicts the gold answer of 'Two'.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "dad224aa",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "What time do I wake up on Saturday mornings?",
+    "gold_answer": "7:30 am",
+    "winner_arm": "ARM_E",
+    "loser_arm": "ARM_F",
+    "winner_hypothesis": "You have mentioned waking up at 7:30?am on some Saturdays (e.g., the previous Saturday) and at 9:30?am on other Saturday",
+    "winner_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001",
+      "sess_answer_4a97ae40_2_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate accurately captures the 7:30 am time mentioned in the gold answer while providing additional context from ",
+    "loser_hypothesis": "Based on the recorded conversations, you woke up at 7:30?am on the previous Saturday and at 9:30?am on the last Saturday",
+    "loser_retrieved_chunk_ids": [
+      "sess_6de8645d_1_c000",
+      "sess_6de8645d_1_c001",
+      "sess_answer_4a97ae40_2_c001"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate provides an additional time (9:30 am) that contradicts the single time provided in the gold answer.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "f35224e0",
+    "task_type": "multi-session",
+    "is_abstention": false,
+    "question": "What is the total number of episodes I've listened to from 'How I Built This' and 'My Favorite Murder'?",
+    "gold_answer": "27",
+    "winner_arm": "ARM_E",
+    "loser_arm": "ARM_F",
+    "winner_hypothesis": "You have listened to 12 episodes of \"My Favorite Murder\" and 15 episodes of \"How I Built This,\" for a total of 27 episod",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_e9bb9500_2_c000",
+      "sess_answer_e9bb9500_2_c001",
+      "sess_answer_e9bb9500_1_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction correctly identifies the total number of episodes as 27, matching the gold answer.",
+    "loser_hypothesis": "I know you have listened to 12 episodes of *My Favorite Murder* (you just finished episode?12). I have no record of how ",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_e9bb9500_2_c000",
+      "sess_answer_e9bb9500_1_c003"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate fails to provide the total number of episodes requested, which is 27 according to the gold answer.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "gpt4_65aabe59",
+    "task_type": "temporal-reasoning",
+    "is_abstention": false,
+    "question": "Which device did I set up first, the smart thermostat or the mesh network system?",
+    "gold_answer": "Smart thermostat",
+    "winner_arm": "ARM_E",
+    "loser_arm": "ARM_F",
+    "winner_hypothesis": "You set up the smart thermostat first, and the mesh network system was installed later.",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_30dfe889_1_c002",
+      "sess_answer_30dfe889_2_c000",
+      "sess_6a7e3aec_c000"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction correctly identifies the smart thermostat as the first device set up, matching the gold answer.",
+    "loser_hypothesis": "You set up the mesh network system before the smart thermostat.",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_30dfe889_1_c002",
+      "sess_answer_30dfe889_2_c000",
+      "sess_6a7e3aec_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate prediction incorrectly identifies the mesh network system as being set up first, which contradicts the gol",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "06f04340",
+    "task_type": "single-session-preference",
+    "is_abstention": false,
+    "question": "What should I serve for dinner this weekend with my homegrown ingredients?",
+    "gold_answer": "The user would prefer dinner suggestions that incorporate their homegrown cherry tomatoes and herbs like basil and mint, highlighting recipes that showcase their garden produce. They might not prefer suggestions that do not utilize these specific ingredients or do not emphasize the use of homegrown elements.",
+    "winner_arm": "ARM_F",
+    "loser_arm": "ARM_E",
+    "winner_hypothesis": "You could serve a **grilled chicken or fish** as the main course, marinated in olive oil, lemon juice, and herbs, and pa",
+    "winner_retrieved_chunk_ids": [
+      "sess_91223fd5_1_c000",
+      "sess_91223fd5_1_c001"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate prediction provides meal suggestions that incorporate the specific homegrown ingredients (cherry tomatoes ",
+    "loser_hypothesis": "You could prepare a family?style dinner that highlights your homegrown produce. For example, use fresh vegetables in a *",
+    "loser_retrieved_chunk_ids": [
+      "sess_91223fd5_1_c000",
+      "sess_8b156015_2_c000"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate provides generic meal suggestions but fails to incorporate the specific ingredients (cherry tomatoes, basi",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  },
+  {
+    "pair": "E_vs_F",
+    "question_id": "59524333",
+    "task_type": "knowledge-update",
+    "is_abstention": false,
+    "question": "What time do I usually go to the gym?",
+    "gold_answer": "6:00 pm",
+    "winner_arm": "ARM_F",
+    "loser_arm": "ARM_E",
+    "winner_hypothesis": "Based on the most recent recorded conversation (2023?05?30), you usually go to the gym at 6:00?pm. Earlier you mentioned",
+    "winner_retrieved_chunk_ids": [
+      "sess_answer_b28f2c7a_2_c001",
+      "sess_answer_b28f2c7a_2_c002",
+      "sess_answer_b28f2c7a_1_c002"
+    ],
+    "winner_judge_verdict": true,
+    "winner_judge_reasoning": "The candidate correctly identifies the time as 6:00 pm, which matches the gold answer.",
+    "loser_hypothesis": "You usually go to the gym at 7:00?pm on Mondays, Wednesdays, and Fridays.  In a later conversation you also mentioned th",
+    "loser_retrieved_chunk_ids": [
+      "sess_answer_b28f2c7a_2_c001",
+      "sess_answer_b28f2c7a_2_c002",
+      "sess_answer_b28f2c7a_1_c002"
+    ],
+    "loser_judge_verdict": false,
+    "loser_judge_reasoning": "The candidate incorrectly identifies 7:00 pm as the usual time, whereas the gold answer states it is 6:00 pm.",
+    "flag_for_human_review": false,
+    "audit_note": "Judge verdict appears consistent with gold reference."
+  }
+]

@@ -1,0 +1,5 @@
+Config,Description,Orig_Overall_Acc,Orig_Ans_Acc,Orig_Abs_Correct,Audited_Overall_Acc,Audited_Ans_Acc,Audited_Abs_Correct,Recall@1,Recall@3,Recall@5,Pipeline_Abs_Recall,Pipeline_Abs_Prec
+Config-A,"Dense + BM25 baseline",41.67,46.15,1/8,48.33,48.08,4/8,92.31,94.23,94.23,62.50,33.33
+Config-B,"Baseline + ontology guidance",41.67,46.15,1/8,50.00,50.00,4/8,92.31,96.15,96.15,75.00,42.86
+Config-C,"Ontology + bounded graph expansion",40.00,44.23,1/8,51.67,48.08,6/8,92.31,96.15,96.15,75.00,42.86
+Config-D,"Full system with temporal reasoning",41.67,48.08,0/8,50.00,48.08,5/8,92.31,96.15,96.15,87.50,46.67

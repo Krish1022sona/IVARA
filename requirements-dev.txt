@@ -1,0 +1,16 @@
+# =============================================================================
+# IVARA — Development, Testing, and Evaluation Dependencies
+# =============================================================================
+-r requirements.txt
+
+# Test framework and runner
+pytest>=8.0.0
+
+# Scientific computing, statistical significance testing (McNemar test)
+scipy>=1.10.0
+
+# Machine learning utilities and metric evaluation
+scikit-learn>=1.3.0
+
+# Progress reporting in evaluation scripts
+tqdm>=4.66.0

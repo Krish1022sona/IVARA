@@ -1,0 +1,12 @@
+{
+  "arm": "ARM_A",
+  "arm_name": "Baseline (Dense + BM25)",
+  "total_instances": 30,
+  "overall_accuracy": 66.67,
+  "answerable_accuracy": 66.67,
+  "abstention_accuracy": 66.67,
+  "abstentions_correct": 4,
+  "total_abstentions": 6,
+  "answerable_correct": 16,
+  "total_answerable": 24
+}

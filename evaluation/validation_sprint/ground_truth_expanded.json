@@ -1,0 +1,4292 @@
+[
+  {
+    "id": "s01",
+    "category": "single_fact_retrieval",
+    "split": "dev",
+    "question": "In which city was Arjun Mehta born?",
+    "is_answerable": true,
+    "expected_answer": "Arjun was born in Chandigarh on August 14, 1999.",
+    "key_facts": [
+      "Chandigarh"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s02",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "On what date was Arjun born?",
+    "is_answerable": true,
+    "expected_answer": "Arjun was born on August 14, 1999.",
+    "key_facts": [
+      "August 14, 1999"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s03",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "From which university did Arjun earn his B.Tech degree?",
+    "is_answerable": true,
+    "expected_answer": "Arjun graduated with a B.Tech in CS from ABV IIITM Gwalior.",
+    "key_facts": [
+      "ABV IIITM Gwalior"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s04",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "In which month and year did Arjun graduate with his B.Tech?",
+    "is_answerable": true,
+    "expected_answer": "He graduated in June 2022.",
+    "key_facts": [
+      "June 2022"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s05",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "Who was Arjun's college roommate in Hostel 3?",
+    "is_answerable": true,
+    "expected_answer": "Rohan Sharma was his college roommate in Hostel 3.",
+    "key_facts": [
+      "Rohan Sharma"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s06",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What is the name and breed/type of Arjun's first pet dog?",
+    "is_answerable": true,
+    "expected_answer": "His rescue indie dog is named Kaalu.",
+    "key_facts": [
+      "Kaalu",
+      "indie"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "s07",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "Which company did Arjun join in July 2022?",
+    "is_answerable": true,
+    "expected_answer": "Arjun joined HyperScale Systems in July 2022.",
+    "key_facts": [
+      "HyperScale Systems"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "s08",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What was Arjun's initial job title at HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "He was hired as an Associate Software Engineer.",
+    "key_facts": [
+      "Associate Software Engineer"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "s09",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "Who was Arjun's engineering manager at HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "His engineering manager was Vikram Rao.",
+    "key_facts": [
+      "Vikram Rao"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "s10",
+    "category": "single_fact_retrieval",
+    "split": "dev",
+    "question": "What distributed caching system did Arjun build at HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "Arjun worked on CacheMesh.",
+    "key_facts": [
+      "CacheMesh"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "s11",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What technologies powered the CacheMesh distributed caching layer?",
+    "is_answerable": true,
+    "expected_answer": "CacheMesh was built with Redis cluster and Go.",
+    "key_facts": [
+      "Redis cluster",
+      "Go"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "s12",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What team name did Arjun and his friends use at the Smart India Hackathon?",
+    "is_answerable": true,
+    "expected_answer": "Their team name was MatrixCrafters.",
+    "key_facts": [
+      "MatrixCrafters"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "s13",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What project did team MatrixCrafters develop at SIH?",
+    "is_answerable": true,
+    "expected_answer": "They built AgriVision for edge-AI crop disease diagnosis.",
+    "key_facts": [
+      "AgriVision"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "s14",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "How much prize money did AgriVision win at SIH?",
+    "is_answerable": true,
+    "expected_answer": "They won the 2nd runner-up prize of $1,500.",
+    "key_facts": [
+      "1,500 dollars",
+      "2nd runner-up"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "s15",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "Who is the CTO at Aetheria AI who previously led research at FAIR?",
+    "is_answerable": true,
+    "expected_answer": "Dr. Shalini Verma is the CTO at Aetheria AI.",
+    "key_facts": [
+      "Dr. Shalini Verma"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "s16",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What 4-bit quantizer project did Arjun develop at Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "Arjun developed NeuroCompact.",
+    "key_facts": [
+      "NeuroCompact"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "s17",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "To which Canadian city did compiler engineer Kabir Das relocate in July 2025?",
+    "is_answerable": true,
+    "expected_answer": "Kabir Das relocated to Vancouver, Canada.",
+    "key_facts": [
+      "Vancouver"
+    ],
+    "supporting_sessions": [
+      "session_07"
+    ]
+  },
+  {
+    "id": "s18",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What time did Arjun record for the Bengaluru 10k Marathon in November 2025?",
+    "is_answerable": true,
+    "expected_answer": "Arjun finished the 10k in 54 minutes.",
+    "key_facts": [
+      "54 minutes"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "s19",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What medical condition in his right heel did Arjun develop after the marathon?",
+    "is_answerable": true,
+    "expected_answer": "Arjun developed plantar fasciitis in his right heel.",
+    "key_facts": [
+      "plantar fasciitis"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "s20",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "How much compute grant money did OpenCompute Foundation award for NeuroCompact v2?",
+    "is_answerable": true,
+    "expected_answer": "They were awarded a $25,000 research compute grant.",
+    "key_facts": [
+      "25,000 dollars"
+    ],
+    "supporting_sessions": [
+      "session_09"
+    ]
+  },
+  {
+    "id": "s21",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "Who was the research intern mentored by Arjun on memory-augmented transformers?",
+    "is_answerable": true,
+    "expected_answer": "Arjun mentored research intern Ananya Bose.",
+    "key_facts": [
+      "Ananya Bose"
+    ],
+    "supporting_sessions": [
+      "session_09"
+    ]
+  },
+  {
+    "id": "s22",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "On what street is the Aetheria Europe research office located in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "The office is on Technoparkstrasse in Zurich.",
+    "key_facts": [
+      "Technoparkstrasse"
+    ],
+    "supporting_sessions": [
+      "session_12"
+    ]
+  },
+  {
+    "id": "s23",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "With which ETH Zurich professor did Arjun establish a joint research initiative?",
+    "is_answerable": true,
+    "expected_answer": "Arjun established a joint initiative with Prof. Elena Vance.",
+    "key_facts": [
+      "Prof. Elena Vance"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "s24",
+    "category": "single_fact_retrieval",
+    "split": "test",
+    "question": "What is the name of the Bernese Mountain Dog puppy adopted by Arjun in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Arjun adopted a puppy named Atlas.",
+    "key_facts": [
+      "Atlas"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "s25",
+    "category": "single_fact_retrieval",
+    "split": "dev",
+    "question": "Who was appointed as the full-time Chief Executive Officer of AgriVision in 2027?",
+    "is_answerable": true,
+    "expected_answer": "Rajesh Nair was appointed full-time CEO.",
+    "key_facts": [
+      "Rajesh Nair"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "m01",
+    "category": "multi_hop_reasoning",
+    "split": "dev",
+    "question": "What framework did the person who managed the cloud backend for AgriVision use?",
+    "is_answerable": true,
+    "expected_answer": "Rohan Sharma was Arjun's roommate and backend engineer for AgriVision, which he built using FastAPI.",
+    "key_facts": [
+      "FastAPI"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_03"
+    ]
+  },
+  {
+    "id": "m02",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "In which city does the engineering manager who supervised Arjun's Go caching work reside?",
+    "is_answerable": true,
+    "expected_answer": "Vikram Rao managed CacheMesh in Go at HyperScale Systems located in Bengaluru.",
+    "key_facts": [
+      "Bengaluru"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "m03",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What sport did Arjun play weekly with the person who developed the backend of AgriVision?",
+    "is_answerable": true,
+    "expected_answer": "Arjun played badminton weekly with Rohan Sharma at PlayArena.",
+    "key_facts": [
+      "badminton"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_04"
+    ]
+  },
+  {
+    "id": "m04",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What dietary restriction does the engineer who assisted Arjun with Android latency testing have?",
+    "is_answerable": true,
+    "expected_answer": "Meera Sen assisted with Android latency testing and has a severe peanut allergy.",
+    "key_facts": [
+      "peanut allergy"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_07"
+    ]
+  },
+  {
+    "id": "m05",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Where did the compiler engineer who collaborated on the Mojo kernels for NeuroCompact relocate?",
+    "is_answerable": true,
+    "expected_answer": "Kabir Das collaborated on Mojo kernels and relocated to Vancouver, Canada.",
+    "key_facts": [
+      "Vancouver",
+      "Canada"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "m06",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What event caused Arjun to switch to swimming at the Padukone-Dravid Centre?",
+    "is_answerable": true,
+    "expected_answer": "Arjun developed plantar fasciitis running the Bengaluru 10k Marathon and was barred from high-impact running.",
+    "key_facts": [
+      "plantar fasciitis",
+      "10k marathon"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "m07",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "At what conference was the paper describing on-device memory compression accepted as an Oral Presentation?",
+    "is_answerable": true,
+    "expected_answer": "NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026.",
+    "key_facts": [
+      "MLSys 2026"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_09"
+    ]
+  },
+  {
+    "id": "m08",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Who presented the paper at MLSys 2026 on behalf of Arjun after his US visa was delayed?",
+    "is_answerable": true,
+    "expected_answer": "CTO Dr. Shalini Verma presented at MLSys 2026 in Santa Clara on his behalf.",
+    "key_facts": [
+      "Dr. Shalini Verma"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_11"
+    ]
+  },
+  {
+    "id": "m09",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What veterinary procedures were completed for Kaalu before moving to Switzerland?",
+    "is_answerable": true,
+    "expected_answer": "Kaalu completed a pet microchip and rabies titer test on April 5, 2026.",
+    "key_facts": [
+      "microchip",
+      "rabies titer"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_10"
+    ]
+  },
+  {
+    "id": "m10",
+    "category": "multi_hop_reasoning",
+    "split": "dev",
+    "question": "What role did the intern who was mentored on memory-augmented transformers receive at Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "Ananya Bose was offered a full-time Research Scientist position at Aetheria AI.",
+    "key_facts": [
+      "full-time Research Scientist"
+    ],
+    "supporting_sessions": [
+      "session_09",
+      "session_11"
+    ]
+  },
+  {
+    "id": "m11",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What operating system and dev tool did Arjun adopt for lab machines when collaborating with ETH Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Arjun adopted NixOS and Devbox for reproducible lab workstations.",
+    "key_facts": [
+      "NixOS",
+      "Devbox"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "m12",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "In which hospital in Chicago does Arjun's visiting sister work as a pediatric resident?",
+    "is_answerable": true,
+    "expected_answer": "Priya Mehta works at Northwestern Memorial Hospital in Chicago.",
+    "key_facts": [
+      "Northwestern Memorial Hospital"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "m13",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What orthopedic injury did Arjun suffer while skiing on the Rothorn slope?",
+    "is_answerable": true,
+    "expected_answer": "He suffered a torn left medial meniscus on the Rothorn slope.",
+    "key_facts": [
+      "torn medial meniscus",
+      "left knee"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "m14",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What license was used for the open source release of the project that reached 6,200 GitHub stars?",
+    "is_answerable": true,
+    "expected_answer": "TensorForge was released under the Apache 2.0 open-source license.",
+    "key_facts": [
+      "Apache 2.0"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "m15",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What award did the project that succeeded NeuroCompact win at EuroSys 2027?",
+    "is_answerable": true,
+    "expected_answer": "TensorForge won the EuroSys 2027 Open Source Innovation Award.",
+    "key_facts": [
+      "Open Source Innovation Award"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_15"
+    ]
+  },
+  {
+    "id": "m16",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Which organization overturned the 40 percent rent hike attempted by Arjun's Kreis 4 landlord?",
+    "is_answerable": true,
+    "expected_answer": "The Zurich Mieterinnenverband tenancy board overturned the illegal rent hike.",
+    "key_facts": [
+      "Zurich Mieterinnenverband"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "m17",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "From which animal shelter did Arjun adopt his Bernese Mountain Dog puppy?",
+    "is_answerable": true,
+    "expected_answer": "Atlas was adopted from Tierheim Strubeli in Volketswil.",
+    "key_facts": [
+      "Tierheim Strubeli",
+      "Volketswil"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "m18",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What vehicle did Arjun buy to transport Kaalu and Atlas to Lake Zurich parks?",
+    "is_answerable": true,
+    "expected_answer": "He purchased a Riese & M\u00fcller Load 75 cargo e-bike.",
+    "key_facts": [
+      "cargo e-bike",
+      "Riese & M\u00fcller"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "m19",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Who did Arjun serve as best man for at a wedding in Udaipur in August 2027?",
+    "is_answerable": true,
+    "expected_answer": "Arjun served as best man for Rohan Sharma marrying Sneha Roy in Udaipur.",
+    "key_facts": [
+      "Rohan Sharma",
+      "Sneha Roy"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_17"
+    ]
+  },
+  {
+    "id": "m20",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Which venture capital firm led the 2.5 million dollar seed round for the SIH crop disease startup?",
+    "is_answerable": true,
+    "expected_answer": "Peak XV Partners led the $2.5M seed round for AgriVision.",
+    "key_facts": [
+      "Peak XV Partners"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "m21",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "To which city did the SIH team member who developed the Flutter frontend relocate in 2027?",
+    "is_answerable": true,
+    "expected_answer": "Meera Sen relocated to Singapore to lead agronomy partnerships.",
+    "key_facts": [
+      "Singapore"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "m22",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "What percentage equity grant did Arjun receive for serving on AgriVision's Technical Advisory Board?",
+    "is_answerable": true,
+    "expected_answer": "Arjun received a 1.5% equity grant.",
+    "key_facts": [
+      "1.5 percent"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "m23",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "How far was Arjun's Lake Zurich crossing swim that proved his left meniscus had rehabilitated?",
+    "is_answerable": true,
+    "expected_answer": "Arjun swam the 3km Lake Zurich crossing in 58 minutes on August 15, 2027.",
+    "key_facts": [
+      "3km",
+      "58 minutes"
+    ],
+    "supporting_sessions": [
+      "session_14",
+      "session_18"
+    ]
+  },
+  {
+    "id": "m24",
+    "category": "multi_hop_reasoning",
+    "split": "test",
+    "question": "Why did Arjun decline a 4 million dollar acquisition offer for TensorForge?",
+    "is_answerable": true,
+    "expected_answer": "He refused the $4M offer from an ad-tech syndicate to prevent use in behavioral tracking.",
+    "key_facts": [
+      "ad-tech",
+      "behavioral tracking"
+    ],
+    "supporting_sessions": [
+      "session_15",
+      "session_18"
+    ]
+  },
+  {
+    "id": "m25",
+    "category": "multi_hop_reasoning",
+    "split": "dev",
+    "question": "Under which academic advisor does Arjun plan to take a sabbatical to pursue an external PhD?",
+    "is_answerable": true,
+    "expected_answer": "Arjun plans an external PhD under Prof. Elena Vance at ETH Zurich.",
+    "key_facts": [
+      "Prof. Elena Vance",
+      "ETH Zurich"
+    ],
+    "supporting_sessions": [
+      "session_13",
+      "session_18"
+    ]
+  },
+  {
+    "id": "e01",
+    "category": "entity_relationships",
+    "split": "dev",
+    "question": "What is the relationship between Rohan Sharma and Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Rohan was Arjun's college roommate at IIITM Gwalior, SIH teammate, and badminton partner.",
+    "key_facts": [
+      "college roommate",
+      "friend",
+      "co-founder"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_03",
+      "session_04"
+    ]
+  },
+  {
+    "id": "e02",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Deepa Nair and Arjun at HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "Deepa Nair was the senior staff engineer collaborating with Arjun on CacheMesh.",
+    "key_facts": [
+      "senior staff engineer",
+      "collaborator"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "e03",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What role did Vikram Rao hold relative to Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Vikram Rao was Arjun's engineering manager at HyperScale Systems.",
+    "key_facts": [
+      "engineering manager"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "e04",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "How is Meera Sen connected to Arjun's college and hackathon history?",
+    "is_answerable": true,
+    "expected_answer": "Meera Sen was Arjun's teammate in MatrixCrafters at SIH who built the Flutter frontend.",
+    "key_facts": [
+      "hackathon teammate",
+      "MatrixCrafters"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "e05",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Dr. Shalini Verma and Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Dr. Shalini Verma is Arjun's CTO and research supervisor at Aetheria AI.",
+    "key_facts": [
+      "CTO",
+      "manager"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_09"
+    ]
+  },
+  {
+    "id": "e06",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "How was Kabir Das affiliated with Arjun's research on NeuroCompact?",
+    "is_answerable": true,
+    "expected_answer": "Kabir Das was a compiler engineer at Aetheria AI who collaborated with Arjun on CUDA/Mojo kernels.",
+    "key_facts": [
+      "compiler engineer",
+      "co-author"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "e07",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "Who is Sneha Roy, and what is her connection to Arjun's circle?",
+    "is_answerable": true,
+    "expected_answer": "Sneha Roy is Rohan Sharma's wife; Arjun was best man at their wedding.",
+    "key_facts": [
+      "married Rohan Sharma",
+      "fiancee"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_17"
+    ]
+  },
+  {
+    "id": "e08",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the professional connection between Ananya Bose and Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Ananya Bose was Arjun's research intern whom he mentored into a full-time Research Scientist.",
+    "key_facts": [
+      "intern",
+      "mentee",
+      "research scientist"
+    ],
+    "supporting_sessions": [
+      "session_09",
+      "session_11"
+    ]
+  },
+  {
+    "id": "e09",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the institutional relationship between Prof. Elena Vance and Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Prof. Elena Vance is Arjun's research collaborator at ETH Zurich and prospective PhD advisor.",
+    "key_facts": [
+      "collaborator",
+      "ETH Zurich",
+      "prospective PhD advisor"
+    ],
+    "supporting_sessions": [
+      "session_13",
+      "session_18"
+    ]
+  },
+  {
+    "id": "e10",
+    "category": "entity_relationships",
+    "split": "dev",
+    "question": "Who is Lukas Weber and what is his connection to Arjun's Zurich lab?",
+    "is_answerable": true,
+    "expected_answer": "Lukas Weber is a post-doctoral researcher hired to work with Arjun on quantum simulations.",
+    "key_facts": [
+      "post-doctoral researcher",
+      "PennyLane"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "e11",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the familial relationship between Priya Mehta and Arjun?",
+    "is_answerable": true,
+    "expected_answer": "Priya Mehta is Arjun's sister, a doctor in Chicago.",
+    "key_facts": [
+      "sister",
+      "pediatric resident"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "e12",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Dr. Hans Keller and Arjun Mehta?",
+    "is_answerable": true,
+    "expected_answer": "Dr. Hans Keller was Arjun's treating orthopedic doctor for his knee injury.",
+    "key_facts": [
+      "orthopedic doctor"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "e13",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Kaalu and Atlas?",
+    "is_answerable": true,
+    "expected_answer": "Kaalu and Atlas are Arjun's two pet rescue dogs who live and bond together.",
+    "key_facts": [
+      "housemates",
+      "pets",
+      "dogs"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "e14",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is Rajesh Nair's relationship to Arjun's past project AgriVision?",
+    "is_answerable": true,
+    "expected_answer": "Rajesh Nair was appointed full-time CEO of AgriVision while Arjun serves on the Advisory Board.",
+    "key_facts": [
+      "Chief Executive Officer",
+      "CEO"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "e15",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What entity connected Arjun, Meera, and Rohan in 2024?",
+    "is_answerable": true,
+    "expected_answer": "Team MatrixCrafters at the Smart India Hackathon connected all three.",
+    "key_facts": [
+      "MatrixCrafters",
+      "Smart India Hackathon"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "e16",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What organization connects Dr. Shalini Verma and FAIR?",
+    "is_answerable": true,
+    "expected_answer": "Dr. Shalini Verma previously led AI research at FAIR before becoming CTO of Aetheria AI.",
+    "key_facts": [
+      "previous employer",
+      "former research lead"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "e17",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What entity connected Arjun and the OpenCompute Foundation in 2026?",
+    "is_answerable": true,
+    "expected_answer": "The OpenCompute Foundation awarded Arjun's lab a $25,000 research compute grant.",
+    "key_facts": [
+      "compute grant",
+      "25,000 dollars"
+    ],
+    "supporting_sessions": [
+      "session_09"
+    ]
+  },
+  {
+    "id": "e18",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Aetheria AI and Technoparkstrasse in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Aetheria AI's European research lab is located on Technoparkstrasse in Zurich.",
+    "key_facts": [
+      "European research office",
+      "workplace"
+    ],
+    "supporting_sessions": [
+      "session_12"
+    ]
+  },
+  {
+    "id": "e19",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the connection between Peak XV Partners and AgriVision?",
+    "is_answerable": true,
+    "expected_answer": "Peak XV Partners led AgriVision's $2.5M seed funding round.",
+    "key_facts": [
+      "lead investor",
+      "seed round"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "e20",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the relationship between Tierheim Strubeli and Arjun's pet Atlas?",
+    "is_answerable": true,
+    "expected_answer": "Tierheim Strubeli in Volketswil is the animal rescue shelter from which Arjun adopted Atlas.",
+    "key_facts": [
+      "animal rescue shelter",
+      "adoption origin"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "e21",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What connection exists between Arjun and the Zurich Mieterinnenverband?",
+    "is_answerable": true,
+    "expected_answer": "The Mieterinnenverband represented Arjun and overturned his landlord's illegal 40% rent hike.",
+    "key_facts": [
+      "tenancy legal board",
+      "overturned rent hike"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "e22",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "How is Northwestern Memorial Hospital related to Arjun's immediate family?",
+    "is_answerable": true,
+    "expected_answer": "It is the Chicago hospital where Arjun's sister Priya works as a pediatric resident.",
+    "key_facts": [
+      "workplace of sister Priya"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "e23",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What is the institutional relationship between EuroSys 2027 and TensorForge?",
+    "is_answerable": true,
+    "expected_answer": "EuroSys 2027 conferred the Open Source Innovation Award to TensorForge.",
+    "key_facts": [
+      "Open Source Innovation Award"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "e24",
+    "category": "entity_relationships",
+    "split": "test",
+    "question": "What connection exists between Padukone-Dravid Centre and Arjun's sports life?",
+    "is_answerable": true,
+    "expected_answer": "It is the sports centre in Bengaluru where Arjun switched to swimming after his plantar fasciitis.",
+    "key_facts": [
+      "swimming pool",
+      "rehabilitation"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "e25",
+    "category": "entity_relationships",
+    "split": "dev",
+    "question": "What relationship exists between PlayArena and Rohan Sharma?",
+    "is_answerable": true,
+    "expected_answer": "PlayArena is the venue where Rohan and Arjun played badminton every Tuesday evening.",
+    "key_facts": [
+      "badminton partner",
+      "Tuesday evenings"
+    ],
+    "supporting_sessions": [
+      "session_04"
+    ]
+  },
+  {
+    "id": "t01",
+    "category": "temporal_reasoning",
+    "split": "dev",
+    "question": "Did Arjun move to HSR Layout before or after joining Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "Arjun moved to HSR Layout in December 2024, whereas he joined Aetheria AI later in February 2025.",
+    "key_facts": [
+      "before",
+      "HSR Layout in Dec 2024",
+      "Aetheria AI in Feb 2025"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_05"
+    ]
+  },
+  {
+    "id": "t02",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did the EMNLP paper rejection occur before or after the Bengaluru 10k Marathon?",
+    "is_answerable": true,
+    "expected_answer": "The EMNLP rejection happened in August 2025, before the marathon in November 2025.",
+    "key_facts": [
+      "before",
+      "EMNLP August 2025",
+      "Marathon November 2025"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_08"
+    ]
+  },
+  {
+    "id": "t03",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "When did Arjun resign from HyperScale Systems relative to his start date at Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "He resigned from HyperScale in January 2025 and started at Aetheria AI on February 1, 2025.",
+    "key_facts": [
+      "January 2025",
+      "February 1, 2025"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "t04",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "How many months elapsed between Arjun's graduation in June 2022 and joining HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "One month elapsed: graduated June 2022, joined HyperScale July 2022.",
+    "key_facts": [
+      "one month",
+      "July 2022"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_02"
+    ]
+  },
+  {
+    "id": "t05",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun develop plantar fasciitis before or after his promotion to Lead Research Scientist?",
+    "is_answerable": true,
+    "expected_answer": "Plantar fasciitis occurred in November 2025, and promotion occurred in January 2026.",
+    "key_facts": [
+      "before",
+      "November 2025",
+      "January 2026"
+    ],
+    "supporting_sessions": [
+      "session_08",
+      "session_09"
+    ]
+  },
+  {
+    "id": "t06",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "In what month and year did Arjun move into his apartment in Zurich Kreis 4?",
+    "is_answerable": true,
+    "expected_answer": "He moved into Kreis 4 on September 15, 2026.",
+    "key_facts": [
+      "September 2026",
+      "September 15, 2026"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "t07",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Kabir Das leave Aetheria AI before or after the NeuroCompact paper was accepted at MLSys?",
+    "is_answerable": true,
+    "expected_answer": "Kabir Das left in July 2025, while MLSys oral acceptance happened in January 2026.",
+    "key_facts": [
+      "before",
+      "Kabir left July 2025",
+      "MLSys January 2026"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_09"
+    ]
+  },
+  {
+    "id": "t08",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun adopt Kaalu before or after adopting Atlas?",
+    "is_answerable": true,
+    "expected_answer": "Arjun had Kaalu in 2024 and adopted Atlas much later in June 2027.",
+    "key_facts": [
+      "before",
+      "Kaalu 2024",
+      "Atlas June 2027"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_16"
+    ]
+  },
+  {
+    "id": "t09",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did the Smart India Hackathon participation happen before or after the move to HSR Layout?",
+    "is_answerable": true,
+    "expected_answer": "SIH took place in September 2024, before the move to HSR Layout in December 2024.",
+    "key_facts": [
+      "before",
+      "SIH September 2024",
+      "HSR December 2024"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_04"
+    ]
+  },
+  {
+    "id": "t10",
+    "category": "temporal_reasoning",
+    "split": "dev",
+    "question": "When did Rohan Sharma get engaged to Sneha Roy relative to Arjun's move to Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Rohan got engaged in March 2026, before Arjun relocated to Zurich in September 2026.",
+    "key_facts": [
+      "before",
+      "engaged March 2026",
+      "moved September 2026"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "t11",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun suffer his torn medial meniscus before or after moving to Zurich Kreis 2?",
+    "is_answerable": true,
+    "expected_answer": "The knee injury happened in January 2027, before moving to Kreis 2 (Enge) in June 2027.",
+    "key_facts": [
+      "before",
+      "injury January 2027",
+      "moved June 2027"
+    ],
+    "supporting_sessions": [
+      "session_14",
+      "session_16"
+    ]
+  },
+  {
+    "id": "t12",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did TensorForge surpass 6,200 GitHub stars before or after Rohan's wedding in Udaipur?",
+    "is_answerable": true,
+    "expected_answer": "TensorForge achieved 6,200 stars in March 2027, whereas the wedding took place in August 2027.",
+    "key_facts": [
+      "before",
+      "March 2027",
+      "wedding August 2027"
+    ],
+    "supporting_sessions": [
+      "session_15",
+      "session_17"
+    ]
+  },
+  {
+    "id": "t13",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "In what month and year did Arjun complete his 3km Lake Zurich Crossing swim?",
+    "is_answerable": true,
+    "expected_answer": "He completed the swim on August 15, 2027.",
+    "key_facts": [
+      "August 2027",
+      "August 15, 2027"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "t14",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did the adoption of Atlas occur before or after the EuroSys 2027 conference?",
+    "is_answerable": true,
+    "expected_answer": "Atlas was adopted in June 2027, after EuroSys in March 2027.",
+    "key_facts": [
+      "after",
+      "EuroSys March 2027",
+      "Atlas June 2027"
+    ],
+    "supporting_sessions": [
+      "session_15",
+      "session_16"
+    ]
+  },
+  {
+    "id": "t15",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "When did Arjun transition to a 100 percent vegan diet relative to moving to Kreis 2?",
+    "is_answerable": true,
+    "expected_answer": "He moved to Kreis 2 in June 2027 and transitioned to vegan in September 2027.",
+    "key_facts": [
+      "after",
+      "moved June 2027",
+      "vegan September 2027"
+    ],
+    "supporting_sessions": [
+      "session_16",
+      "session_18"
+    ]
+  },
+  {
+    "id": "t16",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun's sister Priya visit him in Zermatt before or after AgriVision's 2.5 million seed round?",
+    "is_answerable": true,
+    "expected_answer": "Priya visited in January 2027, before AgriVision raised its seed round in August 2027.",
+    "key_facts": [
+      "before",
+      "Priya visit January 2027",
+      "seed round August 2027"
+    ],
+    "supporting_sessions": [
+      "session_14",
+      "session_17"
+    ]
+  },
+  {
+    "id": "t17",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "How long was Arjun prohibited from high-impact running following his plantar fasciitis diagnosis?",
+    "is_answerable": true,
+    "expected_answer": "The sports doctor forbade high-impact running for 3 months in November 2025.",
+    "key_facts": [
+      "3 months",
+      "sports doctor"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "t18",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "How long did Arjun's non-compete clause with HyperScale Systems last?",
+    "is_answerable": true,
+    "expected_answer": "The non-compete barred consulting for competing caching companies for 12 months.",
+    "key_facts": [
+      "12 months",
+      "one year"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "t19",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did the decision to pivot NeuroCompact to on-device compression happen before or after hiring intern Ananya Bose?",
+    "is_answerable": true,
+    "expected_answer": "The pivot occurred in August 2025, before intern Ananya was hired in January 2026.",
+    "key_facts": [
+      "before",
+      "pivot August 2025",
+      "intern January 2026"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_09"
+    ]
+  },
+  {
+    "id": "t20",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "On what date was Kaalu's rabies titer and pet microchip completed for travel to Switzerland?",
+    "is_answerable": true,
+    "expected_answer": "Kaalu completed his microchip and rabies titer on April 5, 2026.",
+    "key_facts": [
+      "April 5, 2026"
+    ],
+    "supporting_sessions": [
+      "session_10"
+    ]
+  },
+  {
+    "id": "t21",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun adopt Docker Compose before or after adopting NixOS and Devbox?",
+    "is_answerable": true,
+    "expected_answer": "Docker Compose was adopted in 2024, while NixOS/Devbox was adopted in late 2026.",
+    "key_facts": [
+      "before",
+      "Docker 2024",
+      "NixOS late 2026"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_13"
+    ]
+  },
+  {
+    "id": "t22",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "Did Arjun switch from Mojo back to C++ before or after MLSys 2026?",
+    "is_answerable": true,
+    "expected_answer": "He switched back to C++ in August 2025, before MLSys acceptance in January 2026.",
+    "key_facts": [
+      "before",
+      "switched August 2025",
+      "MLSys January 2026"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_09"
+    ]
+  },
+  {
+    "id": "t23",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "How long was the physical therapy program prescribed for Arjun's meniscus injury?",
+    "is_answerable": true,
+    "expected_answer": "Dr. Hans Keller prescribed 8 weeks of intensive physical therapy.",
+    "key_facts": [
+      "8 weeks",
+      "Dr. Hans Keller"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "t24",
+    "category": "temporal_reasoning",
+    "split": "test",
+    "question": "In which year did Arjun aim to take an external PhD sabbatical at ETH Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Arjun planned to take his sabbatical in late 2028.",
+    "key_facts": [
+      "2028",
+      "late 2028"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "t25",
+    "category": "temporal_reasoning",
+    "split": "dev",
+    "question": "Did Arjun decline the 4 million dollar buyout offer before or after the Udaipur wedding?",
+    "is_answerable": true,
+    "expected_answer": "The wedding occurred in August 2027, and the offer decline occurred in late 2027.",
+    "key_facts": [
+      "after",
+      "wedding August 2027",
+      "offer decline late 2027"
+    ],
+    "supporting_sessions": [
+      "session_17",
+      "session_18"
+    ]
+  },
+  {
+    "id": "h01",
+    "category": "historical_state_retrieval",
+    "split": "dev",
+    "question": "Where did Arjun live in Bengaluru before moving to HSR Layout Sector 2?",
+    "is_answerable": true,
+    "expected_answer": "Arjun lived in Indiranagar before moving to HSR Layout in December 2024.",
+    "key_facts": [
+      "Indiranagar"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_04"
+    ]
+  },
+  {
+    "id": "h02",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was Arjun's job title when he worked on CacheMesh at HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "His title was Associate Software Engineer.",
+    "key_facts": [
+      "Associate Software Engineer"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "h03",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was the initial programming language used for CUDA execution kernels in NeuroCompact before reverting to C++?",
+    "is_answerable": true,
+    "expected_answer": "The kernels were initially rewritten in Mojo before switching back to C++.",
+    "key_facts": [
+      "Mojo"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "h04",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Which primary database did Arjun use for caching before phasing it out for Dragonfly and DuckDB?",
+    "is_answerable": true,
+    "expected_answer": "Arjun used Redis cluster before replacing it with Dragonfly and DuckDB.",
+    "key_facts": [
+      "Redis"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_11"
+    ]
+  },
+  {
+    "id": "h05",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What primary code editor did Arjun use in 2024 before adopting Zed for collaborative pairing?",
+    "is_answerable": true,
+    "expected_answer": "He used Neovim configured with Lua.",
+    "key_facts": [
+      "Neovim",
+      "Lua"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_15"
+    ]
+  },
+  {
+    "id": "h06",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "In which district or Kreis of Zurich did Arjun live when he first relocated to Switzerland?",
+    "is_answerable": true,
+    "expected_answer": "He lived in Zurich Kreis 4 before moving to Kreis 2 (Enge).",
+    "key_facts": [
+      "Kreis 4"
+    ],
+    "supporting_sessions": [
+      "session_12",
+      "session_16"
+    ]
+  },
+  {
+    "id": "h07",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was Arjun's job title at Aetheria AI prior to his promotion in January 2026?",
+    "is_answerable": true,
+    "expected_answer": "He was a Research Engineer before being promoted to Lead Research Scientist.",
+    "key_facts": [
+      "Research Engineer"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_09"
+    ]
+  },
+  {
+    "id": "h08",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was the original research focus of NeuroCompact before pivoting to on-device compression?",
+    "is_answerable": true,
+    "expected_answer": "It was initially a 4-bit quantizer for server-side speculative decoding.",
+    "key_facts": [
+      "speculative decoding",
+      "server"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "h09",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What sport did Arjun practice before his plantar fasciitis forced him to switch to swimming?",
+    "is_answerable": true,
+    "expected_answer": "He practiced high-impact long-distance running before switching to swimming.",
+    "key_facts": [
+      "running",
+      "marathon"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_08"
+    ]
+  },
+  {
+    "id": "h10",
+    "category": "historical_state_retrieval",
+    "split": "dev",
+    "question": "What diet did Arjun follow in 2025 before transitioning to 100 percent vegan in 2027?",
+    "is_answerable": true,
+    "expected_answer": "He followed a strict vegetarian diet that included Swiss dairy cheeses.",
+    "key_facts": [
+      "strict vegetarian"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_18"
+    ]
+  },
+  {
+    "id": "h11",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Where did Arjun study German on Duolingo before enrolling at the Goethe-Institut Bengaluru?",
+    "is_answerable": true,
+    "expected_answer": "He used Duolingo for 40 days in 2024 before quitting and later joining Goethe-Institut.",
+    "key_facts": [
+      "Duolingo",
+      "40 days"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_10"
+    ]
+  },
+  {
+    "id": "h12",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Which laptop did Arjun buy in 2024 for local model evaluations before adopting lab workstations?",
+    "is_answerable": true,
+    "expected_answer": "He bought a 16-inch MacBook Pro M3 Max.",
+    "key_facts": [
+      "16-inch MacBook Pro M3 Max"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "h13",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What project name was TensorForge known as during its early research prototype phase?",
+    "is_answerable": true,
+    "expected_answer": "It was known as NeuroCompact and NeuroCompact v2.",
+    "key_facts": [
+      "NeuroCompact",
+      "NeuroCompact v2"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_15"
+    ]
+  },
+  {
+    "id": "h14",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was Rohan Sharma's relationship status before getting engaged in March 2026?",
+    "is_answerable": true,
+    "expected_answer": "He was single and Arjun's bachelor roommate before getting engaged to Sneha Roy.",
+    "key_facts": [
+      "single",
+      "unmarried"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_10"
+    ]
+  },
+  {
+    "id": "h15",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Where did Meera Sen live and work before moving to Singapore in 2027?",
+    "is_answerable": true,
+    "expected_answer": "She lived and worked in India (Bengaluru) before moving to Singapore.",
+    "key_facts": [
+      "Bengaluru",
+      "India"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "h16",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What desk setup did Arjun use before buying his electric sit-stand desk and Aeron chair?",
+    "is_answerable": true,
+    "expected_answer": "He had a static standing desk setup before upgrading to an electric sit-stand desk.",
+    "key_facts": [
+      "standing setup"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "h17",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Who was the full-time leader of AgriVision before Rajesh Nair was hired as CEO?",
+    "is_answerable": true,
+    "expected_answer": "It was an alumni hackathon project led by Rohan, Meera, and Arjun before bringing in CEO Rajesh Nair.",
+    "key_facts": [
+      "student team",
+      "Rohan Sharma",
+      "Meera Sen"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "h18",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Where did Arjun live immediately prior to moving to Switzerland in September 2026?",
+    "is_answerable": true,
+    "expected_answer": "He lived in HSR Layout Sector 2, Bengaluru.",
+    "key_facts": [
+      "HSR Layout Sector 2",
+      "Bengaluru"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_12"
+    ]
+  },
+  {
+    "id": "h19",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was the initial conference target for the first NeuroCompact paper submission in 2025?",
+    "is_answerable": true,
+    "expected_answer": "The initial target was EMNLP 2025, which was rejected in August 2025.",
+    "key_facts": [
+      "EMNLP 2025"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "h20",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was Arjun's salary counter-offer percentage from HyperScale Systems when he decided to leave?",
+    "is_answerable": true,
+    "expected_answer": "HyperScale offered a 30% salary raise to retain him.",
+    "key_facts": [
+      "30 percent raise"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "h21",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What tea vessel did Arjun buy in Zurich because he missed Bengaluru chai?",
+    "is_answerable": true,
+    "expected_answer": "He bought a traditional brass tea kettle to brew authentic masala chai.",
+    "key_facts": [
+      "brass tea kettle"
+    ],
+    "supporting_sessions": [
+      "session_12"
+    ]
+  },
+  {
+    "id": "h22",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was the location of Arjun's hostel room during his B.Tech days at ABV IIITM Gwalior?",
+    "is_answerable": true,
+    "expected_answer": "He lived in Hostel 3 with Rohan Sharma.",
+    "key_facts": [
+      "Hostel 3"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "h23",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "Which local sports club did Arjun frequent every Tuesday evening in 2024 and 2025?",
+    "is_answerable": true,
+    "expected_answer": "He played badminton at PlayArena in Bengaluru.",
+    "key_facts": [
+      "PlayArena"
+    ],
+    "supporting_sessions": [
+      "session_04"
+    ]
+  },
+  {
+    "id": "h24",
+    "category": "historical_state_retrieval",
+    "split": "test",
+    "question": "What was the original reason Arjun moved from Indiranagar to HSR Layout?",
+    "is_answerable": true,
+    "expected_answer": "He wanted to live closer to Rohan Sharma and their badminton club.",
+    "key_facts": [
+      "closer to Rohan",
+      "badminton club"
+    ],
+    "supporting_sessions": [
+      "session_04"
+    ]
+  },
+  {
+    "id": "h25",
+    "category": "historical_state_retrieval",
+    "split": "dev",
+    "question": "What switch type did Arjun select for his custom mechanical keyboard in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "He chose silent tactile Boba U4 switches for the shared lab.",
+    "key_facts": [
+      "Boba U4",
+      "silent tactile"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "u01",
+    "category": "knowledge_updates",
+    "split": "dev",
+    "question": "Where does Arjun currently reside as of late 2027?",
+    "is_answerable": true,
+    "expected_answer": "Arjun lives in Zurich Enge (Kreis 2), Switzerland.",
+    "key_facts": [
+      "Zurich Enge",
+      "Kreis 2",
+      "Switzerland"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "u02",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still use Redis for database and caching operations?",
+    "is_answerable": true,
+    "expected_answer": "No, he completely phased out Redis in favor of Dragonfly and DuckDB.",
+    "key_facts": [
+      "no",
+      "phased out",
+      "Dragonfly",
+      "DuckDB"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_11"
+    ]
+  },
+  {
+    "id": "u03",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still live in HSR Layout Sector 2 in Bengaluru?",
+    "is_answerable": true,
+    "expected_answer": "No, he relocated from Bengaluru to Zurich in September 2026.",
+    "key_facts": [
+      "no",
+      "relocated to Zurich"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_12"
+    ]
+  },
+  {
+    "id": "u04",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still work as a Research Engineer, or has his role changed?",
+    "is_answerable": true,
+    "expected_answer": "He was promoted to Lead Research Scientist at Aetheria AI in January 2026.",
+    "key_facts": [
+      "promoted",
+      "Lead Research Scientist"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_09"
+    ]
+  },
+  {
+    "id": "u05",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "What is Arjun's current dietary status as of late 2027?",
+    "is_answerable": true,
+    "expected_answer": "He is 100% plant-based (vegan), having eliminated dairy cheeses.",
+    "key_facts": [
+      "100 percent plant-based",
+      "vegan"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_18"
+    ]
+  },
+  {
+    "id": "u06",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is Mojo still the language used by Arjun for compiler kernels?",
+    "is_answerable": true,
+    "expected_answer": "No, he abandoned Mojo due to unstable tooling and returned to C++.",
+    "key_facts": [
+      "no",
+      "switched back to C++"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "u07",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still have only one pet dog?",
+    "is_answerable": true,
+    "expected_answer": "No, he now has two dogs: Kaalu and a puppy named Atlas.",
+    "key_facts": [
+      "no",
+      "two dogs",
+      "Kaalu and Atlas"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_16"
+    ]
+  },
+  {
+    "id": "u08",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is AgriVision still an unfunded hackathon prototype?",
+    "is_answerable": true,
+    "expected_answer": "No, it raised a $2.5M seed round led by Peak XV and operates commercially.",
+    "key_facts": [
+      "no",
+      "2.5 million seed round",
+      "Peak XV"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "u09",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is Rohan Sharma still an unmarried bachelor living in Bengaluru?",
+    "is_answerable": true,
+    "expected_answer": "No, he married Sneha Roy in Udaipur in August 2027.",
+    "key_facts": [
+      "no",
+      "married Sneha Roy"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_17"
+    ]
+  },
+  {
+    "id": "u10",
+    "category": "knowledge_updates",
+    "split": "dev",
+    "question": "What editor does Arjun now use for collaborative pair programming with Lukas Weber?",
+    "is_answerable": true,
+    "expected_answer": "He now uses the Zed editor for remote real-time pair programming.",
+    "key_facts": [
+      "Zed"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_15"
+    ]
+  },
+  {
+    "id": "u11",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is NeuroCompact still an unpublished internal research project?",
+    "is_answerable": true,
+    "expected_answer": "No, it was presented at MLSys 2026 and open-sourced as TensorForge.",
+    "key_facts": [
+      "no",
+      "MLSys 2026",
+      "open-sourced as TensorForge"
+    ],
+    "supporting_sessions": [
+      "session_09",
+      "session_15"
+    ]
+  },
+  {
+    "id": "u12",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is Kabir Das still working at Aetheria AI alongside Arjun?",
+    "is_answerable": true,
+    "expected_answer": "No, Kabir left Aetheria AI in July 2025 to relocate to Vancouver.",
+    "key_facts": [
+      "no",
+      "relocated to Vancouver",
+      "July 2025"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "u13",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Did Arjun permanently give up on learning German after dropping Duolingo?",
+    "is_answerable": true,
+    "expected_answer": "No, he revived his goal, attended Goethe-Institut, and prepared for German B1 in Zurich.",
+    "key_facts": [
+      "no",
+      "revived",
+      "Goethe-Institut",
+      "German B1"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "u14",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still live in Zurich Kreis 4?",
+    "is_answerable": true,
+    "expected_answer": "No, he moved to Zurich Enge (Kreis 2) following a rent dispute.",
+    "key_facts": [
+      "no",
+      "moved to Zurich Enge",
+      "Kreis 2"
+    ],
+    "supporting_sessions": [
+      "session_12",
+      "session_16"
+    ]
+  },
+  {
+    "id": "u15",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is Arjun's left knee still immobilized by a torn medial meniscus?",
+    "is_answerable": true,
+    "expected_answer": "No, his meniscus fully healed after physical therapy and he completed a 3km lake swim.",
+    "key_facts": [
+      "no",
+      "fully rehabilitated",
+      "3km swim"
+    ],
+    "supporting_sessions": [
+      "session_14",
+      "session_18"
+    ]
+  },
+  {
+    "id": "u16",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still work for HyperScale Systems?",
+    "is_answerable": true,
+    "expected_answer": "No, he resigned in January 2025 to join Aetheria AI.",
+    "key_facts": [
+      "no",
+      "resigned January 2025",
+      "Aetheria AI"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_05"
+    ]
+  },
+  {
+    "id": "u17",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "What package management and system environment does Arjun currently use on lab machines?",
+    "is_answerable": true,
+    "expected_answer": "He uses NixOS and Devbox for reproducible builds across workstations.",
+    "key_facts": [
+      "NixOS",
+      "Devbox"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "u18",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Is Ananya Bose still an intern at Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "No, she completed her internship and became a full-time Research Scientist.",
+    "key_facts": [
+      "no",
+      "full-time Research Scientist"
+    ],
+    "supporting_sessions": [
+      "session_09",
+      "session_11"
+    ]
+  },
+  {
+    "id": "u19",
+    "category": "knowledge_updates",
+    "split": "test",
+    "question": "Does Arjun still consume Swiss dairy cheeses as part of his diet?",
+    "is_answerable": true,
+    "expected_answer": "No, he eliminated dairy cheeses when transitioning to a vegan diet in September 2027.",
+    "key_facts": [
+      "no",
+      "vegan since September 2027"
+    ],
+    "supporting_sessions": [
+      "session_12",
+      "session_18"
+    ]
+  },
+  {
+    "id": "u20",
+    "category": "knowledge_updates",
+    "split": "dev",
+    "question": "Has Arjun sold TensorForge to a commercial analytics firm?",
+    "is_answerable": true,
+    "expected_answer": "No, he declined a $4M buyout offer to protect the project from behavioral tracking.",
+    "key_facts": [
+      "no",
+      "declined 4 million dollar buyout"
+    ],
+    "supporting_sessions": [
+      "session_15",
+      "session_18"
+    ]
+  },
+  {
+    "id": "c01",
+    "category": "contradiction_handling",
+    "split": "dev",
+    "question": "Does Arjun currently live in Indiranagar, HSR Layout, or Zurich?",
+    "is_answerable": true,
+    "expected_answer": "Arjun currently lives in Zurich, Switzerland, having left Indiranagar in 2024 and HSR Layout in 2026.",
+    "key_facts": [
+      "Zurich",
+      "moved September 2026"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_04",
+      "session_12"
+    ]
+  },
+  {
+    "id": "c02",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Arjun work for HyperScale Systems or Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "He works for Aetheria AI; he resigned from HyperScale in January 2025.",
+    "key_facts": [
+      "Aetheria AI"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_05"
+    ]
+  },
+  {
+    "id": "c03",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Arjun drink coffee or masala chai?",
+    "is_answerable": true,
+    "expected_answer": "Arjun never drinks coffee due to migraines; he strictly drinks masala chai.",
+    "key_facts": [
+      "masala chai",
+      "no coffee",
+      "migraines"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "c04",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun accept HyperScale's 30 percent salary counter-offer to stay in Bengaluru?",
+    "is_answerable": true,
+    "expected_answer": "He declined HyperScale's 30% raise counter-offer and joined Aetheria AI.",
+    "key_facts": [
+      "declined counter-offer"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "c05",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Arjun prefer Kubernetes or Docker Compose for local service development?",
+    "is_answerable": true,
+    "expected_answer": "Arjun dislikes Kubernetes complexity and strictly prefers Docker Compose for local dev.",
+    "key_facts": [
+      "Docker Compose",
+      "dislikes Kubernetes"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "c06",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did the EMNLP 2025 submission on NeuroCompact get accepted or rejected?",
+    "is_answerable": true,
+    "expected_answer": "It was rejected in August 2025 due to baseline benchmark leakage.",
+    "key_facts": [
+      "rejected",
+      "August 2025"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07"
+    ]
+  },
+  {
+    "id": "c07",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Rohan Sharma complete the Bengaluru 10k Marathon alongside Arjun?",
+    "is_answerable": true,
+    "expected_answer": "No, Rohan twisted his ankle at km 4 and could not complete the marathon.",
+    "key_facts": [
+      "did not finish",
+      "twisted ankle",
+      "DNF"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "c08",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun attend MLSys 2026 in person in California, or did someone else present?",
+    "is_answerable": true,
+    "expected_answer": "He could not attend due to a 221g US visa delay; Dr. Shalini Verma presented on his behalf.",
+    "key_facts": [
+      "did not attend",
+      "Dr. Shalini Verma presented",
+      "visa delayed 221g"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "c09",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Is Arjun's current diet omnivorous, vegetarian, or 100 percent vegan?",
+    "is_answerable": true,
+    "expected_answer": "His current diet is 100% vegan since September 2027.",
+    "key_facts": [
+      "100 percent vegan",
+      "plant-based"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_12",
+      "session_18"
+    ]
+  },
+  {
+    "id": "c10",
+    "category": "contradiction_handling",
+    "split": "dev",
+    "question": "Does Arjun own a private automobile in Zurich, or does he use public transit?",
+    "is_answerable": true,
+    "expected_answer": "He does not own a car; he uses the S-Bahn and Tram Line 4, plus a cargo e-bike.",
+    "key_facts": [
+      "public transit",
+      "S-Bahn",
+      "Tram 4",
+      "no car"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "c11",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun undergo immediate surgery for his torn meniscus or conservative physical therapy?",
+    "is_answerable": true,
+    "expected_answer": "He avoided surgery and underwent 8 weeks of intensive physical therapy.",
+    "key_facts": [
+      "physical therapy",
+      "no surgery",
+      "Dr. Hans Keller"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "c12",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun keep the 10,000 Swiss Franc EuroSys award money as personal income?",
+    "is_answerable": true,
+    "expected_answer": "He donated the entire 10,000 CHF prize to rural STEM education in India.",
+    "key_facts": [
+      "donated",
+      "STEM education"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "c13",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun's landlord in Kreis 4 succeed in enforcing the 40 percent rent increase?",
+    "is_answerable": true,
+    "expected_answer": "No, the tenancy board overturned the illegal rent hike.",
+    "key_facts": [
+      "overturned",
+      "Mieterinnenverband"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "c14",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Kaalu show aggression or hostility toward the new puppy Atlas?",
+    "is_answerable": true,
+    "expected_answer": "No, Kaalu and Atlas bonded warmly and sleep side by side.",
+    "key_facts": [
+      "bonded",
+      "sleep together"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "c15",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Is Rajesh Nair an engineering intern or the Chief Executive Officer at AgriVision?",
+    "is_answerable": true,
+    "expected_answer": "Rajesh Nair is the full-time CEO of AgriVision.",
+    "key_facts": [
+      "Chief Executive Officer",
+      "CEO"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "c16",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Did Arjun accept or reject the 4 million dollar buyout offer for TensorForge?",
+    "is_answerable": true,
+    "expected_answer": "He rejected the $4M buyout offer to prevent surveillance tracking.",
+    "key_facts": [
+      "rejected",
+      "declined buyout"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "c17",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Arjun plan to pursue his PhD at Stanford or ETH Zurich?",
+    "is_answerable": true,
+    "expected_answer": "He plans to pursue an external PhD at ETH Zurich under Prof. Elena Vance.",
+    "key_facts": [
+      "ETH Zurich",
+      "Prof. Elena Vance"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "c18",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Is TensorForge distributed under a proprietary commercial license or Apache 2.0?",
+    "is_answerable": true,
+    "expected_answer": "TensorForge is open-sourced under the Apache 2.0 license.",
+    "key_facts": [
+      "Apache 2.0",
+      "open source"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "c19",
+    "category": "contradiction_handling",
+    "split": "test",
+    "question": "Does Arjun prefer reading technical books on e-readers or physical books?",
+    "is_answerable": true,
+    "expected_answer": "Arjun prefers reading physical books over e-readers for technical subjects.",
+    "key_facts": [
+      "physical books"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "c20",
+    "category": "contradiction_handling",
+    "split": "dev",
+    "question": "Will Arjun work on military surveillance software if offered high pay?",
+    "is_answerable": true,
+    "expected_answer": "No, he has a strict professional policy refusing closed-source military or defense surveillance contracts.",
+    "key_facts": [
+      "refuses",
+      "strict policy against military"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "p01",
+    "category": "preferences_and_constraints",
+    "split": "dev",
+    "question": "What beverage does Arjun strictly consume, and why does he avoid coffee?",
+    "is_answerable": true,
+    "expected_answer": "Arjun strictly drinks masala chai because coffee gives him migraines.",
+    "key_facts": [
+      "masala chai",
+      "coffee causes migraines"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "p02",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What format does Arjun prefer for reading technical literature?",
+    "is_answerable": true,
+    "expected_answer": "He prefers physical books over electronic readers for technical topics.",
+    "key_facts": [
+      "physical books",
+      "over e-readers"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "p03",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What local development tooling does Arjun prefer over Kubernetes?",
+    "is_answerable": true,
+    "expected_answer": "He prefers lightweight Docker Compose over Kubernetes complexity.",
+    "key_facts": [
+      "Docker Compose"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "p04",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What editor and configuration language did Arjun adopt as his primary development environment in 2024?",
+    "is_answerable": true,
+    "expected_answer": "He adopted Neovim configured with Lua.",
+    "key_facts": [
+      "Neovim",
+      "Lua"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "p05",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What severe dietary allergy must be respected when dining with Meera Sen?",
+    "is_answerable": true,
+    "expected_answer": "Meera Sen has a severe, strict peanut allergy.",
+    "key_facts": [
+      "peanut allergy"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "p06",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What day and time does Arjun reserve for playing badminton?",
+    "is_answerable": true,
+    "expected_answer": "He plays badminton every Tuesday evening at PlayArena.",
+    "key_facts": [
+      "Tuesday evening",
+      "PlayArena"
+    ],
+    "supporting_sessions": [
+      "session_04"
+    ]
+  },
+  {
+    "id": "p07",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What professional constraint did Arjun's non-compete agreement with HyperScale impose?",
+    "is_answerable": true,
+    "expected_answer": "It barred him from consulting for competing database and caching companies for 12 months.",
+    "key_facts": [
+      "12-month bar on consulting for competing caching companies"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "p08",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What medical constraint was imposed on Arjun's exercise routine in late 2025?",
+    "is_answerable": true,
+    "expected_answer": "He was forbidden from high-impact running for 3 months due to plantar fasciitis.",
+    "key_facts": [
+      "no high-impact running for 3 months",
+      "plantar fasciitis"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "p09",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What brand and model of smartwatch did Arjun choose for tracking his swimming?",
+    "is_answerable": true,
+    "expected_answer": "He bought a Garmin Forerunner 265 watch.",
+    "key_facts": [
+      "Garmin Forerunner 265"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "p10",
+    "category": "preferences_and_constraints",
+    "split": "dev",
+    "question": "What strict professional ethical policy does Arjun maintain regarding defense contracts?",
+    "is_answerable": true,
+    "expected_answer": "He maintains a strict policy refusing closed-source military or defense surveillance contracts.",
+    "key_facts": [
+      "refuses military defense surveillance contracts"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "p11",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What mode of urban transport does Arjun prefer in Zurich over car ownership?",
+    "is_answerable": true,
+    "expected_answer": "He prefers taking the Zurich S-Bahn and Tram Line 4 over owning a private car.",
+    "key_facts": [
+      "S-Bahn",
+      "Tram Line 4"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "p12",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What mechanical keyboard switch type does Arjun prefer for shared office spaces?",
+    "is_answerable": true,
+    "expected_answer": "He prefers silent tactile Boba U4 switches.",
+    "key_facts": [
+      "silent tactile Boba U4"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "p13",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What ergonomic furniture did Arjun acquire following his skiing injury?",
+    "is_answerable": true,
+    "expected_answer": "He acquired an electric motorized sit-stand desk and Herman Miller Aeron chair.",
+    "key_facts": [
+      "electric sit-stand desk",
+      "Herman Miller Aeron chair"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "p14",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What keybinding scheme does Arjun insist on retaining in modern editors like Zed?",
+    "is_answerable": true,
+    "expected_answer": "He insists on retaining Neovim keybindings.",
+    "key_facts": [
+      "Neovim keybindings"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "p15",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What constraint caused Arjun's landlord dispute in Zurich Kreis 4?",
+    "is_answerable": true,
+    "expected_answer": "The landlord attempted an illegal 40% rent increase.",
+    "key_facts": [
+      "illegal 40 percent rent hike"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "p16",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What kind of bicycle does Arjun use to transport his dogs around Zurich?",
+    "is_answerable": true,
+    "expected_answer": "He uses a Riese & M\u00fcller Load 75 heavy-duty cargo e-bike.",
+    "key_facts": [
+      "Riese & M\u00fcller Load 75 cargo e-bike"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "p17",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What database technologies does Arjun strictly use after phasing out Redis?",
+    "is_answerable": true,
+    "expected_answer": "He strictly uses Dragonfly and DuckDB.",
+    "key_facts": [
+      "Dragonfly",
+      "DuckDB"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "p18",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What dietary boundary did Arjun adopt in September 2027 regarding animal products?",
+    "is_answerable": true,
+    "expected_answer": "He adopted a 100% plant-based vegan diet, cutting out all dairy products.",
+    "key_facts": [
+      "100 percent plant-based vegan",
+      "no dairy"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "p19",
+    "category": "preferences_and_constraints",
+    "split": "test",
+    "question": "What travel obstacle prevented Arjun from speaking in person at MLSys 2026?",
+    "is_answerable": true,
+    "expected_answer": "His US B1/B2 visa was administratively delayed under section 221g.",
+    "key_facts": [
+      "US visa 221g administrative delay"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "p20",
+    "category": "preferences_and_constraints",
+    "split": "dev",
+    "question": "What tea preparation item did Arjun purchase to preserve his Indian morning routine in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "He bought a traditional brass tea kettle to brew authentic masala chai at home.",
+    "key_facts": [
+      "traditional brass tea kettle"
+    ],
+    "supporting_sessions": [
+      "session_12"
+    ]
+  },
+  {
+    "id": "n01",
+    "category": "negative_information",
+    "split": "dev",
+    "question": "Does Arjun own an electric passenger car such as a Tesla in Switzerland?",
+    "is_answerable": true,
+    "expected_answer": "Arjun does not own a car; he uses the S-Bahn, Tram 4, and a cargo e-bike.",
+    "key_facts": [
+      "does not own a car",
+      "public transit",
+      "cargo e-bike"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "n02",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun accept employment with any defense or military contractors?",
+    "is_answerable": true,
+    "expected_answer": "No, he has a strict policy against working on military or defense contracts.",
+    "key_facts": [
+      "no",
+      "refuses military contracts"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "n03",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun undergo knee surgery for his torn meniscus?",
+    "is_answerable": true,
+    "expected_answer": "No, he did not have surgery; he recovered through 8 weeks of intensive physical therapy.",
+    "key_facts": [
+      "no surgery",
+      "physical therapy"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "n04",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Does Arjun drink espresso, lattes, or drip coffee?",
+    "is_answerable": true,
+    "expected_answer": "No, Arjun never drinks coffee because it triggers migraines.",
+    "key_facts": [
+      "no coffee",
+      "migraines",
+      "only masala chai"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "n05",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun accept HyperScale Systems' retention raise offer?",
+    "is_answerable": true,
+    "expected_answer": "No, he declined their 30% raise counter-offer and departed for Aetheria AI.",
+    "key_facts": [
+      "no",
+      "declined counter-offer"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "n06",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun sell the proprietary rights to TensorForge for 4 million dollars?",
+    "is_answerable": true,
+    "expected_answer": "No, he rejected the $4M acquisition offer.",
+    "key_facts": [
+      "no",
+      "declined buyout"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "n07",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Does Arjun currently eat dairy milk, butter, or cheese?",
+    "is_answerable": true,
+    "expected_answer": "No, he transitioned to a 100% plant-based vegan diet and eliminated all dairy.",
+    "key_facts": [
+      "no",
+      "vegan since September 2027"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "n08",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun attend the MLSys 2026 conference in person in California?",
+    "is_answerable": true,
+    "expected_answer": "No, he was unable to attend due to a US visa delay under 221g.",
+    "key_facts": [
+      "no",
+      "visa delayed 221g"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "n09",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Kabir Das remain at Aetheria AI through 2026?",
+    "is_answerable": true,
+    "expected_answer": "No, Kabir left Aetheria AI in July 2025 and moved to Vancouver.",
+    "key_facts": [
+      "no",
+      "left July 2025 to Vancouver"
+    ],
+    "supporting_sessions": [
+      "session_07"
+    ]
+  },
+  {
+    "id": "n10",
+    "category": "negative_information",
+    "split": "dev",
+    "question": "Did Rohan Sharma complete the Bengaluru 10k Marathon without injury?",
+    "is_answerable": true,
+    "expected_answer": "No, Rohan twisted his ankle at kilometer 4 and failed to finish.",
+    "key_facts": [
+      "no",
+      "twisted ankle at km 4",
+      "DNF"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "n11",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Does Arjun use Kubernetes for managing local development containers?",
+    "is_answerable": true,
+    "expected_answer": "No, he dislikes Kubernetes and strictly uses Docker Compose locally.",
+    "key_facts": [
+      "no",
+      "dislikes Kubernetes",
+      "uses Docker Compose"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "n12",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did the EMNLP 2025 conference accept the initial NeuroCompact paper?",
+    "is_answerable": true,
+    "expected_answer": "No, the EMNLP submission was rejected in August 2025.",
+    "key_facts": [
+      "no",
+      "rejected August 2025"
+    ],
+    "supporting_sessions": [
+      "session_07"
+    ]
+  },
+  {
+    "id": "n13",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Does Arjun use Mojo for his current compiler research kernels?",
+    "is_answerable": true,
+    "expected_answer": "No, he abandoned Mojo due to tooling instability and returned to C++.",
+    "key_facts": [
+      "no",
+      "switched back to C++"
+    ],
+    "supporting_sessions": [
+      "session_07"
+    ]
+  },
+  {
+    "id": "n14",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun keep the 10,000 Swiss Franc EuroSys prize money for personal spending?",
+    "is_answerable": true,
+    "expected_answer": "No, he donated the entire 10,000 CHF award to underprivileged STEM education.",
+    "key_facts": [
+      "no",
+      "donated to rural STEM education"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "n15",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun lose his tenancy legal battle against the Kreis 4 landlord?",
+    "is_answerable": true,
+    "expected_answer": "No, the tenancy board ruled in his favor and overturned the 40% rent increase.",
+    "key_facts": [
+      "no",
+      "won",
+      "Mieterinnenverband overturned hike"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "n16",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Does Arjun still use Redis in his modern software infrastructure?",
+    "is_answerable": true,
+    "expected_answer": "No, Redis has been completely phased out of his stack.",
+    "key_facts": [
+      "no",
+      "phased out",
+      "uses Dragonfly and DuckDB"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "n17",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun give up German permanently after stopping his Duolingo streak?",
+    "is_answerable": true,
+    "expected_answer": "No, he revived his studies at the Goethe-Institut and is preparing for the B1 exam.",
+    "key_facts": [
+      "no",
+      "enrolled Goethe-Institut",
+      "B1 exam"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "n18",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Did Arjun leave Kaalu behind in India when relocating to Switzerland?",
+    "is_answerable": true,
+    "expected_answer": "No, Kaalu was microchipped and relocated with Arjun to Zurich.",
+    "key_facts": [
+      "no",
+      "Kaalu moved with him"
+    ],
+    "supporting_sessions": [
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "n19",
+    "category": "negative_information",
+    "split": "test",
+    "question": "Is Rajesh Nair an intern or contractor at AgriVision without executive authority?",
+    "is_answerable": true,
+    "expected_answer": "No, Rajesh Nair is the appointed full-time Chief Executive Officer.",
+    "key_facts": [
+      "no",
+      "Chief Executive Officer",
+      "full-time CEO"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "n20",
+    "category": "negative_information",
+    "split": "dev",
+    "question": "Does Arjun prefer electronic Kindle readers over paper books for technical study?",
+    "is_answerable": true,
+    "expected_answer": "No, he explicitly prefers physical paper books over e-readers for technical subjects.",
+    "key_facts": [
+      "no",
+      "prefers physical books"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "x01",
+    "category": "unanswerable_questions",
+    "split": "dev",
+    "question": "What was the brand and model of the first automobile Arjun purchased in college?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Arjun's college automobile is never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x02",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What score did Arjun achieve on his GRE or GMAT exam?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Arjun's GRE or GMAT scores are not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x03",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the name of Arjun Mehta's mother and father?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The names of his parents are never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x04",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What was Arjun's cumulative GPA upon graduating from ABV IIITM Gwalior?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. His cumulative GPA is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x05",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "How much money does Arjun have invested in the stock market or Bitcoin?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Arjun's investment holdings are not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x06",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the name of the high school Arjun attended in Chandigarh?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. His high school name is never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x07",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What brand of badminton racket does Arjun use at PlayArena?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The brand of his badminton racket is not mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x08",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the blood type of Arjun Mehta?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. His blood type is never recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x09",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What was the exact numerical score Arjun obtained in his German B1 proficiency exam?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. He was studying for B1, but an exam score is never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x10",
+    "category": "unanswerable_questions",
+    "split": "dev",
+    "question": "What is the monthly rent Arjun paid for his apartment in HSR Layout Sector 2?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The rent amount for HSR Layout is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x11",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the color of the electric sit-stand desk Arjun purchased in Zurich?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The desk color is never specified.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x12",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the maiden name of Sneha Roy?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Sneha Roy's family background is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x13",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What was the title of Arjun's undergraduate senior capstone thesis at IIITM Gwalior?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. His capstone thesis title is never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x14",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "How many kilometers does Arjun ride his cargo e-bike per week?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Weekly bicycle mileage is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x15",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the favorite film or movie franchise of Arjun Mehta?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Arjun's movie preferences are never mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x16",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the name of the veterinary clinic in Zurich that treats Kaalu and Atlas?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The veterinary clinic name is not mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x17",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "How many total employees work at Aetheria AI worldwide?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Aetheria AI's total company headcount is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x18",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What was the exact model of Android phone used by Meera Sen to test NeuroCompact?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The specific Android phone model is not specified.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x19",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the name of the flight airline Arjun flew from India to Switzerland in 2026?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The flight airline is never recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x20",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What musical instruments, if any, can Arjun play?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Musical abilities are not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x21",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the name of the landlord who tried to hike Arjun's rent in Kreis 4?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The landlord's personal name is not mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x22",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the exact square footage of Arjun's apartment in Zurich Enge?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The square footage is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x23",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What grade did intern Ananya Bose achieve in her master's degree coursework?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. Ananya's academic grades are not mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x24",
+    "category": "unanswerable_questions",
+    "split": "test",
+    "question": "What is the brand of physical therapy resistance bands Arjun used for knee recovery?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The brand of resistance bands is not recorded.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "x25",
+    "category": "unanswerable_questions",
+    "split": "dev",
+    "question": "What salary figure did the commercial ad-tech consortium offer Arjun personally in the buyout bid?",
+    "is_answerable": false,
+    "expected_answer": "Insufficient evidence provided. The buyout was for the project TensorForge ($4M), but personal salary was not mentioned.",
+    "key_facts": [],
+    "supporting_sessions": []
+  },
+  {
+    "id": "xss01",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace Arjun's residential moves in chronological order from college graduation through 2027.",
+    "is_answerable": true,
+    "expected_answer": "Arjun lived in Indiranagar (2022-2024), moved to HSR Layout Sector 2 (Dec 2024), moved to Zurich Kreis 4 (Sep 2026), and moved to Zurich Enge (June 2027).",
+    "key_facts": [
+      "Indiranagar",
+      "HSR Layout Sector 2",
+      "Zurich Kreis 4",
+      "Zurich Enge"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_04",
+      "session_12",
+      "session_16"
+    ]
+  },
+  {
+    "id": "xss02",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace Arjun's complete job title progression across companies from July 2022 to 2027.",
+    "is_answerable": true,
+    "expected_answer": "He was Associate Software Engineer at HyperScale Systems (2022-2025), joined Aetheria AI as Research Engineer (Feb 2025), and was promoted to Lead Research Scientist (Jan 2026).",
+    "key_facts": [
+      "Associate Software Engineer at HyperScale",
+      "Research Engineer at Aetheria AI",
+      "Lead Research Scientist at Aetheria AI"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_05",
+      "session_09"
+    ]
+  },
+  {
+    "id": "xss03",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun's relationship with the AgriVision project evolve from a hackathon entry to 2027?",
+    "is_answerable": true,
+    "expected_answer": "It began as a 2024 hackathon project winning 2nd runner-up ($1,500), and evolved into a commercial startup raising $2.5M where Arjun sits on the Advisory Board with 1.5% equity.",
+    "key_facts": [
+      "SIH hackathon entry",
+      "2nd runner-up",
+      "seed round 2.5M",
+      "Technical Advisory Board",
+      "1.5% equity"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "xss04",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Describe the full lifecycle of the NeuroCompact research from initial kernel implementation to open-source award.",
+    "is_answerable": true,
+    "expected_answer": "NeuroCompact started as a Mojo quantizer, was rejected at EMNLP, pivoted to on-device memory compression, won an Oral at MLSys 2026, and was open-sourced as TensorForge winning EuroSys 2027.",
+    "key_facts": [
+      "4-bit quantizer",
+      "EMNLP rejection",
+      "on-device pivot",
+      "MLSys 2026 Oral",
+      "TensorForge",
+      "EuroSys 2027 award"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_07",
+      "session_09",
+      "session_15"
+    ]
+  },
+  {
+    "id": "xss05",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Detail Arjun's complete dietary evolution across the four years of recorded memory.",
+    "is_answerable": true,
+    "expected_answer": "He was non-vegetarian until November 2024, followed a strict vegetarian diet allowing cheese through 2026, and transitioned to 100% vegan in September 2027.",
+    "key_facts": [
+      "unrestricted",
+      "strict vegetarian in Nov 2024",
+      "Swiss cheeses in 2026",
+      "100% vegan in Sep 2027"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_12",
+      "session_18"
+    ]
+  },
+  {
+    "id": "xss06",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun's language learning goals regarding German develop over time?",
+    "is_answerable": true,
+    "expected_answer": "He dropped Duolingo after 40 days in 2024, revived intensive classes at Goethe-Institut in 2026, and prepared for German B1 in Zurich.",
+    "key_facts": [
+      "Duolingo 40 days dropped",
+      "Goethe-Institut Bengaluru revived",
+      "German B1 Zurich"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_10",
+      "session_12"
+    ]
+  },
+  {
+    "id": "xss07",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Explain the evolution of pets in Arjun's household between his time in Indiranagar and Zurich Enge.",
+    "is_answerable": true,
+    "expected_answer": "He lived alone with Kaalu in Indiranagar, relocated Kaalu to Zurich in 2026, and adopted a second dog Atlas in Zurich Enge in 2027.",
+    "key_facts": [
+      "Kaalu rescue indie dog",
+      "microchip travel to Zurich",
+      "adopted Atlas Bernese Mountain Dog"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_10",
+      "session_16"
+    ]
+  },
+  {
+    "id": "xss08",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace the changes in Arjun's sports and athletic pursuits following health events.",
+    "is_answerable": true,
+    "expected_answer": "He played badminton and ran a 10k, shifted to swimming due to plantar fasciitis, recovered from a ski meniscus tear, and completed a 3km lake swim.",
+    "key_facts": [
+      "badminton and marathon running",
+      "plantar fasciitis",
+      "swimming at Padukone-Dravid",
+      "skiing meniscus tear",
+      "3km Lake Zurich Crossing"
+    ],
+    "supporting_sessions": [
+      "session_04",
+      "session_08",
+      "session_14",
+      "session_18"
+    ]
+  },
+  {
+    "id": "xss09",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "What changes occurred in Arjun's database and data architecture preferences between 2024 and 2026?",
+    "is_answerable": true,
+    "expected_answer": "He initially built CacheMesh on Redis cluster, but later completely phased out Redis in favor of Dragonfly and DuckDB.",
+    "key_facts": [
+      "Redis cluster and Go for CacheMesh",
+      "phased out Redis",
+      "Dragonfly and DuckDB"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_11"
+    ]
+  },
+  {
+    "id": "xss10",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Rohan Sharma's personal and romantic life progress across Arjun's memory logs?",
+    "is_answerable": true,
+    "expected_answer": "Rohan was Arjun's college roommate and badminton partner, got engaged to Sneha Roy in March 2026, and married her in Udaipur in August 2027 with Arjun as best man.",
+    "key_facts": [
+      "college roommate",
+      "badminton partner",
+      "engaged to Sneha Roy",
+      "married in Udaipur"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_04",
+      "session_10",
+      "session_17"
+    ]
+  },
+  {
+    "id": "xss11",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Summarize all research grants, awards, and prizes won by Arjun or his projects.",
+    "is_answerable": true,
+    "expected_answer": "AgriVision won $1,500 at SIH; NeuroCompact received a $25,000 OpenCompute grant; TensorForge won 10,000 CHF at EuroSys 2027.",
+    "key_facts": [
+      "SIH 2nd runner-up $1,500",
+      "OpenCompute grant $25,000",
+      "EuroSys Innovation Award 10,000 CHF"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_09",
+      "session_15"
+    ]
+  },
+  {
+    "id": "xss12",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun's code editing and workstation development environment evolve from 2024 to 2027?",
+    "is_answerable": true,
+    "expected_answer": "He started with Neovim/Lua on an M3 MacBook, adopted NixOS/Devbox and a sit-stand desk in Zurich, and paired with Zed while retaining Neovim keys.",
+    "key_facts": [
+      "Neovim with Lua",
+      "MacBook Pro M3 Max",
+      "NixOS and Devbox",
+      "electric sit-stand desk",
+      "Zed editor"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_03",
+      "session_13",
+      "session_14",
+      "session_15"
+    ]
+  },
+  {
+    "id": "xss13",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Which research collaborators did Arjun work with across Aetheria AI, ETH Zurich, and hackathons?",
+    "is_answerable": true,
+    "expected_answer": "He collaborated with Rohan, Meera, Kabir, Dr. Shalini Verma, intern Ananya Bose, Prof. Elena Vance, and Lukas Weber.",
+    "key_facts": [
+      "Rohan Sharma",
+      "Meera Sen",
+      "Kabir Das",
+      "Dr. Shalini Verma",
+      "Ananya Bose",
+      "Prof. Elena Vance",
+      "Lukas Weber"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_06",
+      "session_09",
+      "session_13"
+    ]
+  },
+  {
+    "id": "xss14",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "What conferences and academic venues were targeted by Arjun's projects, and what were the outcomes?",
+    "is_answerable": true,
+    "expected_answer": "EMNLP 2025 rejected; MLSys 2026 accepted as Oral; EuroSys 2027 awarded prize; PyData London invited keynote.",
+    "key_facts": [
+      "EMNLP 2025 rejected",
+      "MLSys 2026 Oral Presentation",
+      "EuroSys 2027 award",
+      "PyData London keynote"
+    ],
+    "supporting_sessions": [
+      "session_07",
+      "session_09",
+      "session_15"
+    ]
+  },
+  {
+    "id": "xss15",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Summarize all instances where Arjun declined a substantial financial offer.",
+    "is_answerable": true,
+    "expected_answer": "He declined a 30% raise counter-offer from HyperScale and declined a $4M buyout offer from an ad-tech syndicate.",
+    "key_facts": [
+      "declined 30% raise counter-offer at HyperScale",
+      "declined 4 million dollar buyout for TensorForge"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_18"
+    ]
+  },
+  {
+    "id": "xss16",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Detail the complete history of Kaalu from Bengaluru to Switzerland.",
+    "is_answerable": true,
+    "expected_answer": "Kaalu was an indie rescue in Indiranagar, moved to HSR, was cleared for travel in April 2026, settled in Zurich Kreis 4, and moved to Enge with puppy Atlas.",
+    "key_facts": [
+      "rescue indie dog in Indiranagar",
+      "moved to HSR",
+      "microchip and rabies titer April 2026",
+      "moved to Kreis 4",
+      "Lake Zurich walks",
+      "Kreis 2 with Atlas"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_04",
+      "session_10",
+      "session_12",
+      "session_16"
+    ]
+  },
+  {
+    "id": "xss17",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace Meera Sen's contributions, milestones, and relocations throughout the narrative.",
+    "is_answerable": true,
+    "expected_answer": "Meera built AgriVision's Flutter app, assisted with NeuroCompact Android testing, and moved to Singapore to lead AgriVision's agronomy expansion.",
+    "key_facts": [
+      "Flutter frontend for AgriVision",
+      "SIH $1,500 prize",
+      "peanut allergy dinner",
+      "Android latency testing",
+      "relocated to Singapore"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_07",
+      "session_17"
+    ]
+  },
+  {
+    "id": "xss18",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Summarize the legal, regulatory, and tenancy challenges Arjun encountered.",
+    "is_answerable": true,
+    "expected_answer": "He managed a 12-month non-compete with HyperScale, suffered a US visa 221g delay, and defeated an illegal 40% rent hike before the Zurich tenancy board.",
+    "key_facts": [
+      "12-month non-compete with HyperScale",
+      "US visa 221g delay",
+      "Kreis 4 landlord illegal 40% hike overturned"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_11",
+      "session_16"
+    ]
+  },
+  {
+    "id": "xss19",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun maintain his Indian tea tradition across multiple homes in Bengaluru and Zurich?",
+    "is_answerable": true,
+    "expected_answer": "He strictly drinks masala chai because coffee causes migraines, and bought a traditional brass tea kettle in Zurich to brew authentic chai.",
+    "key_facts": [
+      "strictly masala chai",
+      "no coffee due to migraines",
+      "bought traditional brass kettle in Zurich"
+    ],
+    "supporting_sessions": [
+      "session_06",
+      "session_12"
+    ]
+  },
+  {
+    "id": "xss20",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace the progression of Ananya Bose from her hiring to her employment status in 2026.",
+    "is_answerable": true,
+    "expected_answer": "She was hired and mentored by Arjun as a research intern in January 2026 and earned a full-time Research Scientist offer at Aetheria AI.",
+    "key_facts": [
+      "hired as research intern",
+      "memory-augmented transformers",
+      "full-time Research Scientist offer"
+    ],
+    "supporting_sessions": [
+      "session_09",
+      "session_11"
+    ]
+  },
+  {
+    "id": "xss21",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "What role did Dr. Shalini Verma play in Arjun's career across his years at Aetheria AI?",
+    "is_answerable": true,
+    "expected_answer": "She was his CTO, co-researcher on NeuroCompact, promoted him to Lead Research Scientist, offered him the Zurich lab leadership, and presented at MLSys when his visa was delayed.",
+    "key_facts": [
+      "CTO at Aetheria AI",
+      "collaborator on NeuroCompact",
+      "promoted Arjun to Lead Research Scientist",
+      "offered Zurich leadership",
+      "presented at MLSys on his behalf"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_06",
+      "session_09",
+      "session_10",
+      "session_11"
+    ]
+  },
+  {
+    "id": "xss22",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Describe the medical diagnosis, treatment, and recovery timeline of Arjun's knee injury in 2027.",
+    "is_answerable": true,
+    "expected_answer": "Tore his medial meniscus in Zermatt on Jan 8, 2027, completed 8 weeks of PT in Oerlikon, and proved full recovery by swimming the 3km Lake Zurich crossing on Aug 15, 2027.",
+    "key_facts": [
+      "torn left medial meniscus in Zermatt",
+      "Dr. Hans Keller prescribed 8 weeks PT in Oerlikon",
+      "sit-stand desk recovery",
+      "swam 3km Lake Zurich Crossing fully healed"
+    ],
+    "supporting_sessions": [
+      "session_14",
+      "session_18"
+    ]
+  },
+  {
+    "id": "xss23",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun's philanthropic giving manifest across his research milestones?",
+    "is_answerable": true,
+    "expected_answer": "He donated his entire 10,000 CHF EuroSys award money to underprivileged STEM education in rural India.",
+    "key_facts": [
+      "donated 10,000 Swiss Francs EuroSys prize to rural STEM education in India"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "xss24",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "Trace Arjun's academic aspirations from graduating college in 2022 to his future PhD plans in 2028.",
+    "is_answerable": true,
+    "expected_answer": "Graduated with B.Tech in 2022, published at MLSys in 2026, and planned an external PhD sabbatical at ETH Zurich in late 2028 under Prof. Elena Vance.",
+    "key_facts": [
+      "B.Tech CS ABV IIITM Gwalior 2022",
+      "published MLSys Oral",
+      "planned external PhD at ETH Zurich under Prof. Elena Vance"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_09",
+      "session_18"
+    ]
+  },
+  {
+    "id": "xss25",
+    "category": "cross_session_synthesis",
+    "split": "test",
+    "question": "How did Arjun transport himself in Bengaluru versus how he transports himself in Zurich?",
+    "is_answerable": true,
+    "expected_answer": "In Bengaluru he lived near work and badminton, while in Zurich he explicitly used public transit (S-Bahn/Tram 4) and a heavy-duty cargo e-bike.",
+    "key_facts": [
+      "commuted in Bengaluru",
+      "walked Kaalu",
+      "Zurich S-Bahn and Tram 4",
+      "Riese & M\u00fcller cargo e-bike"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_12",
+      "session_13",
+      "session_16"
+    ]
+  },
+  {
+    "id": "cmf01",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "List Arjun's undergraduate university, graduation month and year, college roommate, and college hostel number.",
+    "is_answerable": true,
+    "expected_answer": "Arjun graduated from ABV IIITM Gwalior in June 2022, roomed with Rohan Sharma, and lived in Hostel 3.",
+    "key_facts": [
+      "ABV IIITM Gwalior",
+      "June 2022",
+      "Rohan Sharma",
+      "Hostel 3"
+    ],
+    "supporting_sessions": [
+      "session_01"
+    ]
+  },
+  {
+    "id": "cmf02",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the first company Arjun worked for, his job title, his engineering manager, and the caching project he built.",
+    "is_answerable": true,
+    "expected_answer": "At HyperScale Systems, he was Associate Software Engineer under Vikram Rao and built CacheMesh.",
+    "key_facts": [
+      "HyperScale Systems",
+      "Associate Software Engineer",
+      "Vikram Rao",
+      "CacheMesh"
+    ],
+    "supporting_sessions": [
+      "session_02"
+    ]
+  },
+  {
+    "id": "cmf03",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "For the Smart India Hackathon project, state the project name, the team name, the prize won, and the role Meera Sen played.",
+    "is_answerable": true,
+    "expected_answer": "Team MatrixCrafters built AgriVision, won 2nd runner-up ($1,500), and Meera Sen built the Flutter mobile frontend.",
+    "key_facts": [
+      "AgriVision",
+      "MatrixCrafters",
+      "2nd runner-up $1,500",
+      "Flutter mobile frontend"
+    ],
+    "supporting_sessions": [
+      "session_03"
+    ]
+  },
+  {
+    "id": "cmf04",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Name the neighborhood Arjun moved to in late 2024, the sport he played weekly, his teammate, and the sports venue.",
+    "is_answerable": true,
+    "expected_answer": "He moved to HSR Layout Sector 2, playing badminton weekly with Rohan Sharma at PlayArena.",
+    "key_facts": [
+      "HSR Layout Sector 2",
+      "badminton",
+      "Rohan Sharma",
+      "PlayArena"
+    ],
+    "supporting_sessions": [
+      "session_04"
+    ]
+  },
+  {
+    "id": "cmf05",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the company Arjun joined in February 2025, his starting role, the company's CTO, and the CTO's previous employer.",
+    "is_answerable": true,
+    "expected_answer": "He joined Aetheria AI as Research Engineer under CTO Dr. Shalini Verma, who previously led research at FAIR.",
+    "key_facts": [
+      "Aetheria AI",
+      "Research Engineer",
+      "Dr. Shalini Verma",
+      "FAIR"
+    ],
+    "supporting_sessions": [
+      "session_05"
+    ]
+  },
+  {
+    "id": "cmf06",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the name of the quantizer project Arjun developed at Aetheria AI, its original target conference, and the compiler engineer collaborator.",
+    "is_answerable": true,
+    "expected_answer": "Arjun developed NeuroCompact with compiler engineer Kabir Das targeting EMNLP 2025.",
+    "key_facts": [
+      "NeuroCompact",
+      "EMNLP 2025",
+      "Kabir Das"
+    ],
+    "supporting_sessions": [
+      "session_06"
+    ]
+  },
+  {
+    "id": "cmf07",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Explain why the EMNLP submission was rejected, what month Kabir Das left Aetheria AI, and what city Kabir moved to.",
+    "is_answerable": true,
+    "expected_answer": "The paper was rejected for benchmark leakage; Kabir Das left in July 2025 and moved to Vancouver.",
+    "key_facts": [
+      "baseline benchmark leakage",
+      "July 2025",
+      "Vancouver"
+    ],
+    "supporting_sessions": [
+      "session_07"
+    ]
+  },
+  {
+    "id": "cmf08",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State Arjun's 10k marathon time, the injury he sustained, the recovery duration barring high-impact running, and his replacement sport.",
+    "is_answerable": true,
+    "expected_answer": "He finished in 54 minutes, developed plantar fasciitis barring running for 3 months, and switched to swimming.",
+    "key_facts": [
+      "54 minutes",
+      "plantar fasciitis",
+      "3 months",
+      "swimming at Padukone-Dravid"
+    ],
+    "supporting_sessions": [
+      "session_08"
+    ]
+  },
+  {
+    "id": "cmf09",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the conference that accepted NeuroCompact v2 as an Oral, the compute grant amount received, and Arjun's new job title in January 2026.",
+    "is_answerable": true,
+    "expected_answer": "Accepted as an Oral at MLSys 2026, received a $25,000 compute grant, and was promoted to Lead Research Scientist.",
+    "key_facts": [
+      "MLSys 2026",
+      "$25,000",
+      "Lead Research Scientist"
+    ],
+    "supporting_sessions": [
+      "session_09"
+    ]
+  },
+  {
+    "id": "cmf10",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the destination city of Arjun's international relocation, the date Kaalu's medical travel tests were done, and the woman Rohan Sharma got engaged to.",
+    "is_answerable": true,
+    "expected_answer": "Arjun relocated to Zurich; Kaalu completed travel tests on April 5, 2026; Rohan Sharma got engaged to Sneha Roy.",
+    "key_facts": [
+      "Zurich",
+      "April 5, 2026",
+      "Sneha Roy"
+    ],
+    "supporting_sessions": [
+      "session_10"
+    ]
+  },
+  {
+    "id": "cmf11",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the two databases Arjun strictly uses after phasing out Redis, the visa section causing his travel delay, and who presented at MLSys in his place.",
+    "is_answerable": true,
+    "expected_answer": "He uses Dragonfly and DuckDB, suffered a 221g visa delay, and Dr. Shalini Verma delivered his presentation.",
+    "key_facts": [
+      "Dragonfly",
+      "DuckDB",
+      "221g",
+      "Dr. Shalini Verma"
+    ],
+    "supporting_sessions": [
+      "session_11"
+    ]
+  },
+  {
+    "id": "cmf12",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Name the street of Aetheria's Zurich lab, the Kreis where Arjun first rented an apartment, the tea vessel he bought, and the German exam he studied for.",
+    "is_answerable": true,
+    "expected_answer": "Located on Technoparkstrasse; rented in Kreis 4; bought a brass tea kettle; studied for German B1.",
+    "key_facts": [
+      "Technoparkstrasse",
+      "Kreis 4",
+      "brass tea kettle",
+      "German B1"
+    ],
+    "supporting_sessions": [
+      "session_12"
+    ]
+  },
+  {
+    "id": "cmf13",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the ETH Zurich professor Arjun collaborated with, the post-doc hired, the reproducible OS tooling adopted, and the tram line used.",
+    "is_answerable": true,
+    "expected_answer": "Collaborated with Prof. Elena Vance, hired post-doc Lukas Weber, adopted NixOS/Devbox, and used Tram Line 4.",
+    "key_facts": [
+      "Prof. Elena Vance",
+      "Lukas Weber",
+      "NixOS and Devbox",
+      "Tram Line 4"
+    ],
+    "supporting_sessions": [
+      "session_13"
+    ]
+  },
+  {
+    "id": "cmf14",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify Arjun's sister, her profession, her hospital, the slope where Arjun injured his knee, and the injury sustained.",
+    "is_answerable": true,
+    "expected_answer": "Sister Priya is a pediatric resident at Northwestern; Arjun tore his left medial meniscus on the Rothorn slope in Zermatt.",
+    "key_facts": [
+      "Priya Mehta",
+      "pediatric resident",
+      "Northwestern Memorial Hospital",
+      "Rothorn slope in Zermatt",
+      "torn left medial meniscus"
+    ],
+    "supporting_sessions": [
+      "session_14"
+    ]
+  },
+  {
+    "id": "cmf15",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the open-source project name succeeding NeuroCompact, its license, its GitHub stars milestone, and the conference award won in Geneva.",
+    "is_answerable": true,
+    "expected_answer": "TensorForge was released under Apache 2.0, reached 6,200 stars, and won the EuroSys 2027 Innovation Award.",
+    "key_facts": [
+      "TensorForge",
+      "Apache 2.0",
+      "6,200 stars",
+      "EuroSys 2027 Open Source Innovation Award"
+    ],
+    "supporting_sessions": [
+      "session_15"
+    ]
+  },
+  {
+    "id": "cmf16",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Name the new Zurich neighborhood Arjun moved to in June 2027, the puppy he adopted, the puppy's breed, and the shelter of adoption.",
+    "is_answerable": true,
+    "expected_answer": "Moved to Zurich Enge, adopted Bernese Mountain Dog puppy Atlas from Tierheim Strubeli in Volketswil.",
+    "key_facts": [
+      "Zurich Enge",
+      "Atlas",
+      "Bernese Mountain Dog",
+      "Tierheim Strubeli in Volketswil"
+    ],
+    "supporting_sessions": [
+      "session_16"
+    ]
+  },
+  {
+    "id": "cmf17",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the wedding city where Rohan married Sneha, the seed round amount raised by AgriVision, the lead VC firm, and the new CEO's name.",
+    "is_answerable": true,
+    "expected_answer": "Rohan married Sneha in Udaipur; AgriVision raised $2.5M from Peak XV Partners and appointed Rajesh Nair CEO.",
+    "key_facts": [
+      "Udaipur",
+      "$2.5 million",
+      "Peak XV Partners",
+      "Rajesh Nair"
+    ],
+    "supporting_sessions": [
+      "session_17"
+    ]
+  },
+  {
+    "id": "cmf18",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the date Arjun went vegan, the lake swimming event he completed, his swim time, and the PhD advisor he plans to study under.",
+    "is_answerable": true,
+    "expected_answer": "Went vegan September 1, 2027, swam Lake Zurich Crossing in 58 minutes, and plans an external PhD under Prof. Elena Vance.",
+    "key_facts": [
+      "September 1, 2027",
+      "Lake Zurich Crossing",
+      "58 minutes",
+      "Prof. Elena Vance"
+    ],
+    "supporting_sessions": [
+      "session_18"
+    ]
+  },
+  {
+    "id": "cmf19",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Detail the two sports injuries Arjun suffered across 2025 and 2027, specifying the body part, the activity causing each, and the rehabilitation method.",
+    "is_answerable": true,
+    "expected_answer": "Plantar fasciitis in right heel from 10k marathon treated with swimming; torn left meniscus from skiing treated with 8 weeks PT in Oerlikon.",
+    "key_facts": [
+      "plantar fasciitis in right heel from marathon",
+      "swimming",
+      "torn left medial meniscus from skiing",
+      "8 weeks physical therapy"
+    ],
+    "supporting_sessions": [
+      "session_08",
+      "session_14"
+    ]
+  },
+  {
+    "id": "cmf20",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "List the three pet animals or dogs living in Arjun's life, their names, breeds or origins, and the year each entered his narrative.",
+    "is_answerable": true,
+    "expected_answer": "Kaalu is an indie rescue dog living with Arjun since 2024; Atlas is a Bernese Mountain Dog puppy adopted in 2027.",
+    "key_facts": [
+      "Kaalu indie rescue in 2024",
+      "Atlas Bernese Mountain Dog puppy in 2027"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_16"
+    ]
+  },
+  {
+    "id": "cmf21",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the three cities where Arjun has lived or had legal residences since graduating college, and the respective years.",
+    "is_answerable": true,
+    "expected_answer": "Born in Chandigarh, lived in Bengaluru (2022-2026), and lived in Zurich (2026-present).",
+    "key_facts": [
+      "Chandigarh birth",
+      "Bengaluru 2022 to 2026",
+      "Zurich 2026 to 2027"
+    ],
+    "supporting_sessions": [
+      "session_01",
+      "session_12",
+      "session_16"
+    ]
+  },
+  {
+    "id": "cmf22",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "List the four editors, development tools, or container platforms explicitly preferred or adopted by Arjun across his career.",
+    "is_answerable": true,
+    "expected_answer": "He used Neovim/Lua, Docker Compose, NixOS/Devbox, and the Zed editor.",
+    "key_facts": [
+      "Neovim with Lua",
+      "Docker Compose",
+      "NixOS and Devbox",
+      "Zed editor"
+    ],
+    "supporting_sessions": [
+      "session_02",
+      "session_13",
+      "session_15"
+    ]
+  },
+  {
+    "id": "cmf23",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Identify the two hackathon teammates from college who built AgriVision with Arjun, their specific technical roles, and their post-2026 whereabouts.",
+    "is_answerable": true,
+    "expected_answer": "Rohan managed FastAPI backend and lives in India; Meera built Flutter frontend and moved to Singapore.",
+    "key_facts": [
+      "Rohan Sharma managed FastAPI backend married in Udaipur",
+      "Meera Sen built Flutter frontend moved to Singapore"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_17"
+    ]
+  },
+  {
+    "id": "cmf24",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "State the three distinct reasons why Arjun declined three major opportunities: HyperScale counter-offer, military contracts, and TensorForge acquisition.",
+    "is_answerable": true,
+    "expected_answer": "Declined HyperScale for research startup; refuses military work on ethics; declined TensorForge buyout to stop ad surveillance.",
+    "key_facts": [
+      "declined HyperScale to join generative AI research",
+      "refuses military contracts on ethical grounds",
+      "declined TensorForge buyout to prevent surveillance tracking"
+    ],
+    "supporting_sessions": [
+      "session_05",
+      "session_11",
+      "session_18"
+    ]
+  },
+  {
+    "id": "cmf25",
+    "category": "complex_multi_fact",
+    "split": "test",
+    "question": "Detail the exact specifications of Arjun's primary workstation hardware: his 2024 laptop model, his smartwatch model, his keyboard switch model, and his office chair model.",
+    "is_answerable": true,
+    "expected_answer": "16-inch MacBook Pro M3 Max, Garmin Forerunner 265 smartwatch, Boba U4 keyboard switches, and Herman Miller Aeron chair.",
+    "key_facts": [
+      "16-inch MacBook Pro M3 Max",
+      "Garmin Forerunner 265",
+      "silent tactile Boba U4 switches",
+      "Herman Miller Aeron chair"
+    ],
+    "supporting_sessions": [
+      "session_03",
+      "session_08",
+      "session_13",
+      "session_14"
+    ]
+  }
+]

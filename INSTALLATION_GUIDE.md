@@ -1,17 +1,17 @@
 # IVARA — Installation & Setup Guide
 ## Reproducible Local Environment Configuration
 
-This guide provides step-by-step instructions for installing and running IVARA on Windows, Linux, or macOS.
+This guide provides step-by-step instructions for installing and running IVARA on Linux, macOS, or Windows.
 
 ---
 
 ### System Requirements
 
-- **Operating System:** Windows 10/11, Ubuntu 20.04+, or macOS 12+ (Apple Silicon or Intel).
-- **Python Version:** Python 3.10, 3.11, 3.12, or 3.14.
+- **Operating System:** Ubuntu 20.04+, macOS 12+ (Apple Silicon or Intel), or Windows 10/11.
+- **Python Version:** Python 3.10, 3.11, 3.12, or 3.13.
 - **Hardware:**
-  - Minimum: 8 GB RAM, 4 CPU cores (runs CPU sentence embeddings).
-  - Recommended for Live Local LLM: 16 GB RAM + modern GPU (NVIDIA 6GB+ VRAM or Apple M-series).
+  - *Minimum:* 8 GB RAM, 4 CPU cores (runs deterministic demo and CPU sentence embeddings).
+  - *Recommended for Live Local LLM:* 16 GB RAM + modern GPU (NVIDIA 6GB+ VRAM or Apple Silicon unified memory).
 - **Storage:** ~3 GB free disk space (includes virtual environment, models, and embeddings cache).
 
 ---
@@ -19,13 +19,22 @@ This guide provides step-by-step instructions for installing and running IVARA o
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/IVARA.git
+git clone https://github.com/<your-username>/IVARA.git
 cd IVARA
 ```
 
 ---
 
 ### 2. Python Virtual Environment Setup
+
+#### On Linux / macOS (Bash / Zsh):
+```bash
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate virtual environment
+source .venv/bin/activate
+```
 
 #### On Windows (PowerShell):
 ```powershell
@@ -39,15 +48,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .venv\Scripts\Activate.ps1
 ```
 
-#### On Linux / macOS (Bash / Zsh):
-```bash
-# Create virtual environment
-python3 -m venv .venv
-
-# Activate virtual environment
-source .venv/bin/activate
-```
-
 ---
 
 ### 3. Install Python Dependencies
@@ -56,17 +56,20 @@ source .venv/bin/activate
 # Upgrade pip
 python -m pip install --upgrade pip
 
-# Install project dependencies
+# Install runtime dependencies
 pip install -r requirements.txt
+
+# (Optional) Install development and evaluation dependencies
+pip install -r requirements-dev.txt
 ```
 
-#### Key Core Dependencies Installed:
-- `faiss-cpu` (Vector index search)
-- `sentence-transformers` (Sentence embeddings)
-- `numpy`, `scipy` (Numerical operations & statistical tests)
-- `pydantic` (Data schemas and JSON validation)
-- `ollama` (Local LLM client API)
-- `pytest` (Test runner)
+#### Core Runtime Dependencies:
+- `faiss-cpu`: Vector index search for dense retrieval.
+- `sentence-transformers`: Local transformer sentence embeddings (`all-MiniLM-L6-v2`).
+- `numpy`: Fast matrix and vector distance computations.
+- `pydantic`: Robust data schemas and JSON serialization.
+- `ollama`: Local LLM API client for private, offline generation.
+- `rich`: Clean terminal user interface rendering.
 
 ---
 
@@ -82,14 +85,14 @@ IVARA uses local Ollama instances to guarantee complete data privacy:
    ```
 3. **Pull the Recommended Models:**
    ```bash
-   # Production answering model (default)
+   # Production answering model (default):
    ollama pull gpt-oss
 
-   # Optional high-parameter model for memory extraction and benchmark judging:
+   # Evaluation and benchmark judge model:
    ollama pull qwen2.5:14b
    ```
 
-*Note: For evaluation and demonstrations without Ollama, IVARA provides a 100% deterministic offline engine (`python demo.py`).*
+*Note: For demonstrations and tests without Ollama, IVARA provides a 100% deterministic offline engine (`python demo.py`).*
 
 ---
 
@@ -101,13 +104,13 @@ To verify that your installation is complete and healthy:
 ```bash
 pytest -q
 ```
-*Expected output:* `462 passed in ~19-30 seconds`.
+*Expected output:* `525 passed in ~35-45 seconds`.
 
-#### Step 2: Run Demonstration
+#### Step 2: Run Offline Demonstration
 ```bash
 python demo.py
 ```
-*Expected output:* All 5 demonstration scenarios execute with `[STATUS: ANSWERED]` and `[STATUS: INSUFFICIENT_EVIDENCE]`.
+*Expected output:* All 5 demonstration scenarios execute successfully with verified citation provenance and honest abstention.
 
 #### Step 3: Run Interactive CLI Smoke Test
 ```bash
@@ -133,8 +136,10 @@ python main.py ask "What company does Arjun work for?" --adaptive
   ```
 
 #### Issue 3: SentenceTransformers First-Run Model Download
-- On first startup, `sentence-transformers` caches `all-MiniLM-L6-v2` (~90 MB) locally in `~/.cache/huggingface/`. Ensure an active internet connection on the initial run, or copy the cache directory into an air-gapped machine.
+- On initial startup, `sentence-transformers` caches `all-MiniLM-L6-v2` (~90 MB) locally in `~/.cache/huggingface/`. Ensure an active internet connection on the initial run, or copy the cache directory into an air-gapped machine.
 
 #### Issue 4: Ollama Port Conflict
-- If port `11434` is already in use, verify with `curl http://127.0.0.1:11434/api/tags`.
-
+- If port `11434` is already in use or unreachable, verify server status with:
+  ```bash
+  curl http://127.0.0.1:11434/api/tags
+  ```

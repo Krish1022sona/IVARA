@@ -1,0 +1,47 @@
+{
+  "overall_accuracy": 0.478,
+  "task_averaged_accuracy": 0.4675,
+  "abstention_accuracy": 0.9667,
+  "answerable_accuracy": 0.4468,
+  "answerable_task_averaged_accuracy": 0.4461,
+  "counts": {
+    "total": 500,
+    "correct": 239,
+    "abstention_total": 30,
+    "abstention_correct": 29,
+    "answerable_total": 470,
+    "answerable_correct": 210
+  },
+  "by_task": {
+    "single-session-user": {
+      "accuracy": 0.7714,
+      "correct": 54,
+      "total": 70
+    },
+    "single-session-preference": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 30
+    },
+    "single-session-assistant": {
+      "accuracy": 0.6429,
+      "correct": 36,
+      "total": 56
+    },
+    "multi-session": {
+      "accuracy": 0.3835,
+      "correct": 51,
+      "total": 133
+    },
+    "temporal-reasoning": {
+      "accuracy": 0.3534,
+      "correct": 47,
+      "total": 133
+    },
+    "knowledge-update": {
+      "accuracy": 0.6538,
+      "correct": 51,
+      "total": 78
+    }
+  }
+}

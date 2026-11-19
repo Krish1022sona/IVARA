@@ -1,0 +1,3468 @@
+{
+  "q01": {
+    "question_id": "q01",
+    "category": "single_fact_recall",
+    "question": "Where was Arjun born and what is his date of birth?",
+    "expected_answer": "Arjun was born in Chandigarh on August 14, 1999.",
+    "predicted_answer": "Arjun was born in Chandigarh on August 14, 1999.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1774.27,
+    "retrieved_context": [
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03279
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03077
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03062
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.01613
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Chandigarh"
+      ],
+      "key_facts_coverage": 0.5,
+      "accuracy": 0.5,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q02": {
+    "question_id": "q02",
+    "category": "single_fact_recall",
+    "question": "What is the name and breed of Arjun's dog?",
+    "expected_answer": "Arjun's dog is a rescue indie dog named Kaalu.",
+    "predicted_answer": "The only memory that mentions Arjun’s dog gives its name as **Kaalu**. The memory does not specify the dog’s breed, so the breed is unknown.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 3649.82,
+    "retrieved_context": [
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.03477
+      },
+      {
+        "id": "m012",
+        "text": "Our team name was MatrixCrafters and we built AgriVision, an edge-AI crop disease diagnosis mobile app.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_cc7b93204ade",
+        "score": 0.03083
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03008
+      },
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.02967
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01639
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q03": {
+    "question_id": "q03",
+    "category": "single_fact_recall",
+    "question": "What watch model did Arjun purchase to track his swimming and fitness?",
+    "expected_answer": "Arjun bought a Garmin Forerunner 265 watch.",
+    "predicted_answer": "Arjun purchased a Garmin Forerunner 265 watch to track his swimming laps and heart rate.",
+    "predicted_status": "answered",
+    "citations": [
+      "m031",
+      "m031"
+    ],
+    "latency_ms": 1753.17,
+    "retrieved_context": [
+      {
+        "id": "m031",
+        "text": "I bought a Garmin Forerunner 265 watch to track my swim laps and heart rate.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_6971973afafc",
+        "score": 0.03279
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.03175
+      },
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.0315
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03031
+      },
+      {
+        "id": "m014",
+        "text": "I bought a 16-inch MacBook Pro M3 Max to run local model evaluations.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_78e074c39004",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q04": {
+    "question_id": "q04",
+    "category": "single_fact_recall",
+    "question": "What prize did team MatrixCrafters win at the Smart India Hackathon for AgriVision?",
+    "expected_answer": "Team MatrixCrafters won the 2nd runner-up prize of $1,500 for AgriVision.",
+    "predicted_answer": "Team MatrixCrafters won the 2nd runner‑up prize of 1,500 dollars at the Smart India Hackathon for their project AgriVision.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2182.32,
+    "retrieved_context": [
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.03529
+      },
+      {
+        "id": "m012",
+        "text": "Our team name was MatrixCrafters and we built AgriVision, an edge-AI crop disease diagnosis mobile app.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_cc7b93204ade",
+        "score": 0.03226
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.03058
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.02964
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.02942
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "AgriVision"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q05": {
+    "question_id": "q05",
+    "category": "single_fact_recall",
+    "question": "Who was Arjun's engineering manager at HyperScale Systems?",
+    "expected_answer": "Arjun's engineering manager at HyperScale Systems was Vikram Rao.",
+    "predicted_answer": "The evidence indicates that Arjun’s engineering manager at HyperScale Systems was Vikram Rao.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1545.95,
+    "retrieved_context": [
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03586
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03226
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03125
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03054
+      },
+      {
+        "id": "m033",
+        "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_a57833bbf280",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Vikram Rao"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q06": {
+    "question_id": "q06",
+    "category": "multi_hop",
+    "question": "Who managed the backend of the hackathon project where Arjun trained the computer vision model?",
+    "expected_answer": "Rohan Sharma managed the backend (FastAPI) of the hackathon project AgriVision.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine who managed the backend of the hackathon project where Arjun trained the computer vision model.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1984.01,
+    "retrieved_context": [
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.03154
+      },
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.03102
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.02921
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.0292
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.01639
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q07": {
+    "question_id": "q07",
+    "category": "multi_hop",
+    "question": "Which company's former research leader became Arjun's CTO when he transitioned to generative AI?",
+    "expected_answer": "Dr. Shalini Verma, who previously led research at FAIR, became Arjun's CTO at Aetheria AI.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine which company's former research leader became Arjun's CTO when he transitioned to generative AI.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 4529.09,
+    "retrieved_context": [
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03279
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03226
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03126
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03012
+      },
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.02963
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q08": {
+    "question_id": "q08",
+    "category": "multi_hop",
+    "question": "Who presented Arjun's accepted oral paper when he was unable to travel to the United States?",
+    "expected_answer": "Dr. Shalini Verma delivered the MLSys 2026 oral presentation on NeuroCompact on Arjun's behalf.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine who presented Arjun's accepted oral paper when he was unable to travel to the United States.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2798.16,
+    "retrieved_context": [
+      {
+        "id": "m038",
+        "text": "I was unable to attend MLSys 2026 in person in Santa Clara because my US B1/B2 visa was administratively delayed under 221g.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c537501eb36b",
+        "score": 0.032
+      },
+      {
+        "id": "m025",
+        "text": "Our EMNLP 2025 paper submission on NeuroCompact was rejected in August 2025 due to baseline benchmark leakage.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_7edd3da4624f",
+        "score": 0.03102
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03041
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03008
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.02921
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q09": {
+    "question_id": "q09",
+    "category": "multi_hop",
+    "question": "What sport did Arjun take up after a running injury sustained while running with his former college roommate?",
+    "expected_answer": "Arjun switched to swimming at the Padukone-Dravid Centre after injuring his heel running with Rohan Sharma.",
+    "predicted_answer": "Arjun switched to swimming after the running injury.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2663.44,
+    "retrieved_context": [
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03252
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.03252
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.02921
+      },
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.01587
+      },
+      {
+        "id": "m011",
+        "text": "Had an exciting weekend with my old college crew!",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_30a33ba4c702",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "swimming"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q10": {
+    "question_id": "q10",
+    "category": "multi_hop",
+    "question": "What full-time position was offered to the intern who was mentored on memory-augmented transformers by Arjun?",
+    "expected_answer": "Ananya Bose was offered a full-time Research Scientist position at Aetheria AI.",
+    "predicted_answer": "I do not have any recorded evidence indicating that a full‑time position was offered to the intern mentored on memory‑augmented transformers by Arjun.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2960.38,
+    "retrieved_context": [
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03279
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03054
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.01613
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.01613
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q11": {
+    "question_id": "q11",
+    "category": "entity_relationship",
+    "question": "How did Arjun and Rohan Sharma originally meet, and what activities did they do together in Bengaluru?",
+    "expected_answer": "Arjun and Rohan met as college roommates in Hostel 3 at ABV IIITM Gwalior. In Bengaluru, they lived near each other in HSR Layout, played badminton every Tuesday at PlayArena, participated in SIH (MatrixCrafters), and ran the Bengaluru 10k.",
+    "predicted_answer": "Arjun and Rohan Sharma first met as college roommates, as stated in the memory chunk that says \"My college roommate was Rohan Sharma.\" In Bengaluru, they played badminton together, which is referenced in the memory that says \"I moved to HSR Layout to be closer to Rohan and our badminton club.\"",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2575.61,
+    "retrieved_context": [
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03279
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.032
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.03126
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03078
+      },
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.03078
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "roommates",
+        "badminton"
+      ],
+      "key_facts_coverage": 0.4,
+      "accuracy": 0.4,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q12": {
+    "question_id": "q12",
+    "category": "entity_relationship",
+    "question": "In what two different projects did Arjun collaborate with Meera Sen, and what was her role in each?",
+    "expected_answer": "Arjun collaborated with Meera Sen on AgriVision (where she built the Flutter mobile frontend) and later on the pivoted NeuroCompact (where she assisted in testing on-device latency on real Android handsets).",
+    "predicted_answer": "I do not have sufficient recorded memories to determine the projects in which Arjun collaborated with Meera Sen or her roles in those projects.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1949.96,
+    "retrieved_context": [
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03178
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03154
+      },
+      {
+        "id": "m007",
+        "text": "I am working with senior staff engineer Deepa Nair on our distributed caching layer called CacheMesh.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_9e4664be85b1",
+        "score": 0.01721
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.01613
+      },
+      {
+        "id": "m038",
+        "text": "I was unable to attend MLSys 2026 in person in Santa Clara because my US B1/B2 visa was administratively delayed under 221g.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c537501eb36b",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q13": {
+    "question_id": "q13",
+    "category": "entity_relationship",
+    "question": "What was the working relationship between Arjun and Kabir Das at Aetheria AI, and why did it end?",
+    "expected_answer": "Kabir Das was a compiler engineer collaborating with Arjun on NeuroCompact CUDA/Mojo kernels. The collaboration ended when Kabir left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+    "predicted_answer": "Arjun collaborated with Kabir Das on the NeuroCompact project at Aetheria AI. Their working relationship ended when Kabir Das left the company in July 2025 to relocate to Vancouver, Canada.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2697.43,
+    "retrieved_context": [
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03529
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03332
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.0315
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03128
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03009
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Kabir Das",
+        "NeuroCompact",
+        "Vancouver",
+        "Canada"
+      ],
+      "key_facts_coverage": 0.8,
+      "accuracy": 0.8,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q14": {
+    "question_id": "q14",
+    "category": "entity_relationship",
+    "question": "What is the relationship between Dr. Shalini Verma and Arjun across his time at Aetheria AI?",
+    "expected_answer": "Dr. Shalini Verma was Arjun's CTO at Aetheria AI. She co-authored NeuroCompact, supported its pivot, promoted him to Lead Research Scientist in January 2026, presented his MLSys oral paper, and offered him the opportunity to head the Zurich research lab.",
+    "predicted_answer": "During Arjun’s tenure at Aetheria AI, Dr. Shalini Verma served as the company’s Chief Technology Officer and worked closely with Arjun on pivoting the NeuroCompact project from server‑speculative decoding to on‑device memory compression.",
+    "predicted_status": "answered",
+    "citations": [
+      "m020",
+      "m027"
+    ],
+    "latency_ms": 2315.99,
+    "retrieved_context": [
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03409
+      },
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.03378
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03151
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.0311
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03078
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.3333
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "NeuroCompact"
+      ],
+      "key_facts_coverage": 0.1667,
+      "accuracy": 0.1667,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q15": {
+    "question_id": "q15",
+    "category": "entity_relationship",
+    "question": "Who is Sneha Roy and how is she connected to Arjun's social circle?",
+    "expected_answer": "Sneha Roy is Rohan Sharma's fiancée; they got engaged in March 2026.",
+    "predicted_answer": "I do not have sufficient recorded memories to answer this question.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1750.72,
+    "retrieved_context": [
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03154
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03126
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03058
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.01639
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q16": {
+    "question_id": "q16",
+    "category": "temporal_reasoning",
+    "question": "Did Arjun move to HSR Layout before or after he resigned from HyperScale Systems?",
+    "expected_answer": "Arjun moved to HSR Layout in December 2024, BEFORE resigning from HyperScale Systems in January 2025.",
+    "predicted_answer": "There is no recorded evidence that Arjun resigned from HyperScale Systems, nor is there any timestamped record of a resignation. The available memories only indicate that he joined HyperScale in July 2022 (m005) and that he moved to HSR Layout in November 2026 (m015, m016). Without a documented resignation date, we cannot determine whether the move occurred before or after a resignation.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [
+      "m005",
+      "m015",
+      "m016"
+    ],
+    "latency_ms": 3590.83,
+    "retrieved_context": [
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03476
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03357
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.03279
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03126
+      },
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.02986
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q17": {
+    "question_id": "q17",
+    "category": "temporal_reasoning",
+    "question": "In what month and year was Arjun promoted to Lead Research Scientist, and how long was that after the Bengaluru 10k marathon?",
+    "expected_answer": "Arjun was promoted to Lead Research Scientist in January 2026, roughly two months after running the Bengaluru 10k marathon on November 9, 2025.",
+    "predicted_answer": "I do not have any recorded memory indicating when Arjun was promoted to Lead Research Scientist, nor any information linking that event to the Bengaluru 10k marathon.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1708.85,
+    "retrieved_context": [
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.03529
+      },
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.0315
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.02964
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.02921
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q18": {
+    "question_id": "q18",
+    "category": "temporal_reasoning",
+    "question": "What was the chronological sequence of Arjun's residences from university graduation to late 2026?",
+    "expected_answer": "Arjun graduated from Gwalior (June 2022), lived in Indiranagar, Bengaluru (2022-2024), moved to HSR Layout, Bengaluru (December 2024), and finally relocated to Zurich Kreis 4, Switzerland (September 2026).",
+    "predicted_answer": "From the available records, Arjun’s most recent moves are:\n1. He moved from Indiranagar to HSR Layout Sector 2 in Bengaluru in the month of November 2026 (chunk_m015_00).\n2. He decided to relocate to Zurich in September 2026 (chunk_m036_00).\n\nThese two statements conflict regarding his Bengaluru residence: one claims he was living in Indiranagar, the other that he moved to HSR Layout. The evidence does not provide a clear temporal resolution to resolve which statement is accurate, so both possibilities remain.\n\nNo other residences are documented between university graduation and late 2026, so the sequence before November 2026 is unknown.",
+    "predicted_status": "partial",
+    "citations": [
+      "m015",
+      "m036"
+    ],
+    "latency_ms": 6357.85,
+    "retrieved_context": [
+      {
+        "id": "m036",
+        "text": "I decided to relocate to Zurich in September 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_576673ddd42e_msg_257aa43c086e",
+        "score": 0.03054
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.02991
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.01639
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.01639
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.5,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q19": {
+    "question_id": "q19",
+    "category": "temporal_reasoning",
+    "question": "When did Kabir Das leave Aetheria AI relative to the rejection of the EMNLP paper?",
+    "expected_answer": "Kabir Das left Aetheria AI in July 2025, just before the EMNLP paper was rejected in August 2025.",
+    "predicted_answer": "Kabir Das left Aetheria AI in July 2025, which is one month before the EMNLP 2025 paper was rejected in August 2025.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1848.94,
+    "retrieved_context": [
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03529
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03284
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.03173
+      },
+      {
+        "id": "m025",
+        "text": "Our EMNLP 2025 paper submission on NeuroCompact was rejected in August 2025 due to baseline benchmark leakage.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_7edd3da4624f",
+        "score": 0.03126
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03125
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "before"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q20": {
+    "question_id": "q20",
+    "category": "temporal_reasoning",
+    "question": "When did Arjun decide to relocate to Zurich versus when did he actually move into his apartment there?",
+    "expected_answer": "Arjun decided to relocate to Zurich in April 2026, and actually moved into his apartment in Zurich Kreis 4 on September 15, 2026.",
+    "predicted_answer": "Arjun decided to relocate to Zurich in September 2026, and he actually moved into his apartment in Zurich Kreis 4 on September 15 2026.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2156.39,
+    "retrieved_context": [
+      {
+        "id": "m040",
+        "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+        "score": 0.03591
+      },
+      {
+        "id": "m036",
+        "text": "I decided to relocate to Zurich in September 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_576673ddd42e_msg_257aa43c086e",
+        "score": 0.03586
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03175
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03078
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03031
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q21": {
+    "question_id": "q21",
+    "category": "historical_state",
+    "question": "Where did Arjun live when he first joined HyperScale Systems in 2022?",
+    "expected_answer": "When Arjun joined HyperScale Systems in 2022, he lived in Indiranagar, Bengaluru.",
+    "predicted_answer": "Arjun first joined HyperScale Systems in July 2022 while living in Bengaluru.  However, the evidence does not specify which Bengaluru neighbourhood he resided in at that time.  One record indicates he lived in Indiranagar, while another record (from the same date) states he moved from Indiranagar to HSR Layout Sector 2 this month, creating an unresolved conflict about his exact residential location.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 4580.56,
+    "retrieved_context": [
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03382
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03279
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03054
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03016
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.02899
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Indiranagar",
+        "Bengaluru"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q22": {
+    "question_id": "q22",
+    "category": "historical_state",
+    "question": "What database technology did Arjun initially use for CacheMesh before updating his database stack?",
+    "expected_answer": "Arjun initially used Redis (cluster) for CacheMesh at HyperScale.",
+    "predicted_answer": "Arjun initially built CacheMesh using a Redis cluster (alongside Go).",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1663.01,
+    "retrieved_context": [
+      {
+        "id": "m007",
+        "text": "I am working with senior staff engineer Deepa Nair on our distributed caching layer called CacheMesh.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_9e4664be85b1",
+        "score": 0.03227
+      },
+      {
+        "id": "m008",
+        "text": "We built CacheMesh using Redis cluster and Go.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_2bb619c3e40d",
+        "score": 0.03226
+      },
+      {
+        "id": "m037",
+        "text": "I have completely phased out Redis in all my systems; I now strictly use Dragonfly and DuckDB.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c8f44cd4e2f4",
+        "score": 0.03101
+      },
+      {
+        "id": "m032",
+        "text": "Huge milestone for our research work!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_591b31a89ca5",
+        "score": 0.02988
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.01639
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Redis",
+        "CacheMesh"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q23": {
+    "question_id": "q23",
+    "category": "historical_state",
+    "question": "What was Arjun's job title when he initially joined Aetheria AI in February 2025?",
+    "expected_answer": "Arjun's job title was Research Engineer when he joined Aetheria AI in February 2025.",
+    "predicted_answer": "Arjun was a Research Engineer when he initially joined Aetheria AI in February 2025.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1618.32,
+    "retrieved_context": [
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03618
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03252
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03175
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03031
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.02964
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Research Engineer",
+        "Aetheria AI"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q24": {
+    "question_id": "q24",
+    "category": "historical_state",
+    "question": "What language did Arjun try to use for CUDA execution kernels on NeuroCompact before reverting to C++?",
+    "expected_answer": "Arjun tried using Mojo for CUDA execution kernels before switching back to C++ and PyTorch C++ API.",
+    "predicted_answer": "The available memory indicates that the team decided to rewrite the CUDA execution kernels in **Mojo** instead of Python. There is no direct evidence that Arjun himself tried Mojo before reverting to C++.",
+    "predicted_status": "partial",
+    "citations": [
+      "m023"
+    ],
+    "latency_ms": 5254.12,
+    "retrieved_context": [
+      {
+        "id": "m023",
+        "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+        "score": 0.03252
+      },
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.03151
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.03148
+      },
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.03102
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03089
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Mojo"
+      ],
+      "key_facts_coverage": 0.5,
+      "accuracy": 0.5,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q25": {
+    "question_id": "q25",
+    "category": "historical_state",
+    "question": "What was the initial research goal and target venue of the NeuroCompact project in mid-2025?",
+    "expected_answer": "The initial goal was 4-bit quantization for server speculative decoding targeted at EMNLP 2025.",
+    "predicted_answer": "The initial research goal for the NeuroCompact project was to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+    "predicted_status": "answered",
+    "citations": [
+      "m024"
+    ],
+    "latency_ms": 1649.39,
+    "retrieved_context": [
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.03227
+      },
+      {
+        "id": "m025",
+        "text": "Our EMNLP 2025 paper submission on NeuroCompact was rejected in August 2025 due to baseline benchmark leakage.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_7edd3da4624f",
+        "score": 0.0308
+      },
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.03031
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01639
+      },
+      {
+        "id": "m033",
+        "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_a57833bbf280",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q26": {
+    "question_id": "q26",
+    "category": "contradiction_handling",
+    "question": "Does Arjun currently live in Bengaluru or Zurich?",
+    "expected_answer": "Arjun currently lives in Zurich (Kreis 4), Switzerland, having moved there on September 15, 2026 from Bengaluru.",
+    "predicted_answer": "The available memories contain conflicting statements about Arjun’s current residence. One set of memories (m003, m015) records that he lives in Bengaluru – first in Indiranagar and then in HSR Layout – while another set (m036, m040) records that he relocated to Zurich in September 2026 and has moved into an apartment there. Because the evidence does not provide a clear temporal resolution that resolves which of these claims is current, we cannot definitively say whether Arjun is presently living in Bengaluru or in Zurich.",
+    "predicted_status": "partial",
+    "citations": [
+      "m003",
+      "m015",
+      "m036",
+      "m040"
+    ],
+    "latency_ms": 5274.69,
+    "retrieved_context": [
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.0356
+      },
+      {
+        "id": "m036",
+        "text": "I decided to relocate to Zurich in September 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_576673ddd42e_msg_257aa43c086e",
+        "score": 0.03252
+      },
+      {
+        "id": "m040",
+        "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+        "score": 0.03078
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03037
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.03031
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Zurich"
+      ],
+      "key_facts_coverage": 0.5,
+      "accuracy": 0.5,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q27": {
+    "question_id": "q27",
+    "category": "contradiction_handling",
+    "question": "Does Arjun currently use Redis or Dragonfly for his systems?",
+    "expected_answer": "Arjun completely phased out Redis and now strictly uses Dragonfly and DuckDB.",
+    "predicted_answer": "The evidence contains two conflicting statements about Arjun’s current use of Redis and Dragonfly. One source (chunk_m037_00) says he has completely phased out Redis in all his systems and now strictly uses Dragonfly and DuckDB. Another source (chunk_m008_00) says he built CacheMesh using a Redis cluster and Go. Because both claims are recorded on the same date (2026‑11‑14) and there is no temporal resolution indicating which is more recent, the evidence does not allow us to determine definitively whether he currently uses Redis or Dragonfly.",
+    "predicted_status": "partial",
+    "citations": [
+      "m037",
+      "m008"
+    ],
+    "latency_ms": 4354.06,
+    "retrieved_context": [
+      {
+        "id": "m037",
+        "text": "I have completely phased out Redis in all my systems; I now strictly use Dragonfly and DuckDB.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c8f44cd4e2f4",
+        "score": 0.03586
+      },
+      {
+        "id": "m008",
+        "text": "We built CacheMesh using Redis cluster and Go.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_2bb619c3e40d",
+        "score": 0.03175
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.03126
+      },
+      {
+        "id": "m043",
+        "text": "I am currently studying for the German B1 proficiency exam.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_468668c95389",
+        "score": 0.01613
+      },
+      {
+        "id": "m023",
+        "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Dragonfly",
+        "DuckDB",
+        "phased out Redis"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q28": {
+    "question_id": "q28",
+    "category": "contradiction_handling",
+    "question": "Did Arjun abandon learning German or is he currently learning it?",
+    "expected_answer": "Arjun initially dropped German on Duolingo in late 2024, but revived his studies at the Goethe-Institut in April 2026 and is currently studying for the German B1 proficiency exam in Zurich.",
+    "predicted_answer": "{\n  \"answer\": \"The evidence contains two contradictory statements about Arjun’s German studies. One record says he tried learning German on Duolingo for 40 days but gave up due to work overload (chunk_m018). Another record says he is currently studying for the German B1 proficiency exam (chunk_m043). The evidence does not resolve which of these is accurate, so both facts are reported.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The two records conflict regarding whether Arjun abandoned German or is still learning it; no additional information is available to determine which statement is correct at the present time. The conflict remains unresolved due to lack of temporal resolution or further corroborating evidence in the provided memory set. The user’s current status regarding German study is therefore uncertain based on the available evidence alone. The conflicting claims are: 1) abandonment of German learning (chunk_m018) and 2) ongoing study for the B1 exam (chunk_m043). No further evidence is present to resolve this discrepancy. The user’s current German learning status remains indeterminate within the scope of the provided memories. The user’s question cannot be answered definitively without additional evidence that resolves the conflict. The user should be advised that the evidence is contradictory and no definitive conclusion can be drawn at this time. The user should seek further clarification or additional records to determine the current status of Arjun’s German studies. The user should also be informed that the conflicting claims are recorded on the same date (2026‑11‑14) and thus no temporal precedence can be established. The user should be aware that the evidence does not provide a clear resolution. The user should be advised to consult more recent or additional records if available. The user should also be informed that the evidence does not provide any additional context that might explain why the conflict exists (e.g., a change of mind, a new learning method, or a different time frame). The user should be advised that the evidence is limited to the two contradictory statements and no further inference can be made. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain why the conflict exists. The user should be advised that the evidence does not provide any additional context that might explain",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 12291.1,
+    "retrieved_context": [
+      {
+        "id": "m018",
+        "text": "I tried learning German on Duolingo for 40 days, but I gave up and dropped it due to work overload.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_ab50ece2326d",
+        "score": 0.03529
+      },
+      {
+        "id": "m043",
+        "text": "I am currently studying for the German B1 proficiency exam.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_468668c95389",
+        "score": 0.03226
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03054
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.02963
+      },
+      {
+        "id": "m039",
+        "text": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_2048b7a7c3ba",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "B1"
+      ],
+      "key_facts_coverage": 0.2,
+      "accuracy": 0.2,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q29": {
+    "question_id": "q29",
+    "category": "contradiction_handling",
+    "question": "Is NeuroCompact designed for server speculative decoding or on-device memory compression?",
+    "expected_answer": "While originally designed for server speculative decoding, NeuroCompact was pivoted in August 2025 to on-device memory compression.",
+    "predicted_answer": "The evidence contains two mutually contradictory statements about NeuroCompact’s intended use. One source (m027) says that the project was pivoted from server‑side speculative decoding to on‑device memory compression. Another source (m021) describes NeuroCompact as a 4‑bit quantizer for speculative decoding. Both claims are recorded on the same date (2026‑11‑14) and there is no additional temporal information to resolve which description reflects the current design.",
+    "predicted_status": "partial",
+    "citations": [
+      "m027",
+      "m021"
+    ],
+    "latency_ms": 3083.93,
+    "retrieved_context": [
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.03644
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.03533
+      },
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.03126
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.02964
+      },
+      {
+        "id": "m033",
+        "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_a57833bbf280",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "pivoted",
+        "memory compression"
+      ],
+      "key_facts_coverage": 0.6667,
+      "accuracy": 0.6667,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q30": {
+    "question_id": "q30",
+    "category": "contradiction_handling",
+    "question": "Is Arjun currently programming CUDA kernels in Mojo or C++?",
+    "expected_answer": "Arjun no longer uses Mojo; he switched back to C++ and PyTorch C++ API due to unstable tooling.",
+    "predicted_answer": "The evidence contains two conflicting statements about Arjun’s current CUDA kernel implementation. One source says Arjun has stopped using Mojo and is now writing kernels in C++ and the PyTorch C++ API because Mojo tooling was unstable. Another source says the team decided to rewrite the CUDA execution kernels in Mojo instead of Python. The records do not resolve which of these approaches is currently in use.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 3868.27,
+    "retrieved_context": [
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.0345
+      },
+      {
+        "id": "m023",
+        "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+        "score": 0.03279
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.0303
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.02899
+      },
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "C++"
+      ],
+      "key_facts_coverage": 0.5,
+      "accuracy": 0.5,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q31": {
+    "question_id": "q31",
+    "category": "preference_constraint",
+    "question": "What is Arjun's stance on drinking coffee, and what does he drink instead?",
+    "expected_answer": "Arjun never drinks coffee because it triggers migraines; he strictly drinks masala chai.",
+    "predicted_answer": "The evidence indicates that Arjun drinks chai, as he owns a traditional brass tea kettle to brew authentic chai at home. There is no recorded information about his stance on drinking coffee.",
+    "predicted_status": "partial",
+    "citations": [
+      "m042"
+    ],
+    "latency_ms": 5947.81,
+    "retrieved_context": [
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03078
+      },
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.03037
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.01639
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.01639
+      },
+      {
+        "id": "m023",
+        "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.5
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 0.0,
+      "hallucinated_citations": 1
+    }
+  },
+  "q32": {
+    "question_id": "q32",
+    "category": "preference_constraint",
+    "question": "What dietary restrictions does Arjun follow, and does he eat dairy or cheese?",
+    "expected_answer": "Arjun has followed a strict vegetarian diet since November 2024; he eats Swiss artisanal dairy and cheeses freely.",
+    "predicted_answer": "I do not have any recorded memories that describe Arjun's dietary restrictions or whether he consumes dairy or cheese.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2234.44,
+    "retrieved_context": [
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03125
+      },
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.03008
+      },
+      {
+        "id": "m039",
+        "text": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_2048b7a7c3ba",
+        "score": 0.01639
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.01639
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q33": {
+    "question_id": "q33",
+    "category": "preference_constraint",
+    "question": "What code editor and configuration does Arjun prefer?",
+    "expected_answer": "Arjun prefers Neovim configured with Lua.",
+    "predicted_answer": "Arjun prefers Neovim configured with Lua as his primary code editor.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1604.49,
+    "retrieved_context": [
+      {
+        "id": "m010",
+        "text": "I decided to adopt Neovim configured with Lua as my primary code editor.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_1d0a375090f2",
+        "score": 0.03279
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03151
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03008
+      },
+      {
+        "id": "m009",
+        "text": "I dislike Kubernetes complexity and prefer lightweight Docker Compose for local service development.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_511171402d6a",
+        "score": 0.01613
+      },
+      {
+        "id": "m028",
+        "text": "I no longer use Mojo for kernel development; I switched back to C++ and PyTorch C++ API because the Mojo tooling was unstable.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_3b1da84e9c82",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Neovim",
+        "Lua"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q34": {
+    "question_id": "q34",
+    "category": "preference_constraint",
+    "question": "What contractual restriction did Arjun have after resigning from HyperScale Systems?",
+    "expected_answer": "Arjun signed a 12-month non-compete clause barring him from consulting for competing database and caching companies.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine what contractual restriction, if any, Arjun had after resigning from HyperScale Systems.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 3705.15,
+    "retrieved_context": [
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03405
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03279
+      },
+      {
+        "id": "m039",
+        "text": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_2048b7a7c3ba",
+        "score": 0.0303
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.02967
+      },
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.0292
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "mrr": 0.0,
+      "evidence_coverage": 0.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q35": {
+    "question_id": "q35",
+    "category": "preference_constraint",
+    "question": "What ethical constraint does Arjun maintain regarding his research and engineering contracts?",
+    "expected_answer": "Arjun strictly refuses to work on closed-source military or defense surveillance contracts.",
+    "predicted_answer": "Arjun maintains a strict professional policy in which he refuses to work on closed‑source military or defense surveillance contracts.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 1672.41,
+    "retrieved_context": [
+      {
+        "id": "m039",
+        "text": "I have a strict professional policy: I refuse to work on closed-source military or defense surveillance contracts.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_2048b7a7c3ba",
+        "score": 0.03252
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03202
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03101
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03058
+      },
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.02986
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "refuses",
+        "military",
+        "defense",
+        "surveillance"
+      ],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q36": {
+    "question_id": "q36",
+    "category": "negative_fact",
+    "question": "Did Rohan Sharma complete the Bengaluru 10k Marathon?",
+    "expected_answer": "No, Rohan Sharma twisted his ankle at kilometer 4 and did not finish the marathon.",
+    "predicted_answer": "There is no evidence that Rohan Sharma completed the Bengaluru 10k Marathon. The only marathon completion record in the evidence is from the user themselves, who states they ran the event on November 9, 2025.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 4416.91,
+    "retrieved_context": [
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.03279
+      },
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.03226
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03175
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03101
+      },
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.0303
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "No"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q37": {
+    "question_id": "q37",
+    "category": "negative_fact",
+    "question": "Did Arjun accept HyperScale's salary raise counter-offer when leaving for Aetheria AI?",
+    "expected_answer": "No, Arjun declined HyperScale's 30 percent salary raise counter-offer.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine whether Arjun accepted HyperScale's salary raise counter‑offer when leaving for Aetheria AI.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2029.17,
+    "retrieved_context": [
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03382
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.03319
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03202
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.032
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.03102
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q38": {
+    "question_id": "q38",
+    "category": "negative_fact",
+    "question": "Did Arjun attend the MLSys 2026 conference in person in California?",
+    "expected_answer": "No, Arjun could not attend in person because his US visa was delayed under 221g.",
+    "predicted_answer": "No, Arjun did not attend the MLSys 2026 conference in person in California.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2192.67,
+    "retrieved_context": [
+      {
+        "id": "m038",
+        "text": "I was unable to attend MLSys 2026 in person in Santa Clara because my US B1/B2 visa was administratively delayed under 221g.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c537501eb36b",
+        "score": 0.03279
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03058
+      },
+      {
+        "id": "m005",
+        "text": "I joined HyperScale Systems in Bengaluru as an Associate Software Engineer back in July 2022.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_c3564028014c",
+        "score": 0.02985
+      },
+      {
+        "id": "m033",
+        "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_a57833bbf280",
+        "score": 0.01837
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "No"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q39": {
+    "question_id": "q39",
+    "category": "negative_fact",
+    "question": "Did Rohan Sharma move to Zurich with Arjun?",
+    "expected_answer": "No, Rohan Sharma stayed in Bengaluru and got engaged to Sneha Roy.",
+    "predicted_answer": "I do not have sufficient evidence to determine whether Rohan Sharma moved to Zurich with Arjun.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 3019.87,
+    "retrieved_context": [
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03425
+      },
+      {
+        "id": "m040",
+        "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+        "score": 0.03328
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03279
+      },
+      {
+        "id": "m036",
+        "text": "I decided to relocate to Zurich in September 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_576673ddd42e_msg_257aa43c086e",
+        "score": 0.03226
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.02988
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.25,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q40": {
+    "question_id": "q40",
+    "category": "negative_fact",
+    "question": "Was Arjun allowed to continue high-impact marathon running after November 2025?",
+    "expected_answer": "No, Arjun developed plantar fasciitis and the doctor forbade high-impact running for 3 months.",
+    "predicted_answer": "The evidence confirms that Arjun ran a 10‑k marathon on November 9, 2025 (chunk_m029_00). There is no record in the provided memories indicating whether he was permitted or prohibited from continuing high‑impact marathon running after that date. Therefore, we cannot determine if he was allowed to continue such activity post‑November 2025.",
+    "predicted_status": "partial",
+    "citations": [
+      "m029"
+    ],
+    "latency_ms": 2919.25,
+    "retrieved_context": [
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.03586
+      },
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.03226
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.0315
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03078
+      },
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.02967
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "No"
+      ],
+      "key_facts_coverage": 0.3333,
+      "accuracy": 0.3333,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q41": {
+    "question_id": "q41",
+    "category": "cross_session_synthesis",
+    "question": "Trace the complete evolution of Arjun's athletic and fitness activities from 2024 through late 2026.",
+    "expected_answer": "In 2024, Arjun played badminton every Tuesday at PlayArena with Rohan and set a goal to run a 10k. In November 2025, he ran the Bengaluru 10k in 54 minutes, but injured his heel (plantar fasciitis). His doctor forbade running, so he switched to swimming at the Padukone-Dravid Centre with a Garmin 265. After moving to Zurich in 2026, he hikes Uetliberg and does cold water swimming in Lake Zurich.",
+    "predicted_answer": "From the available evidence, Arjun’s athletic and fitness trajectory can be outlined as follows:\n\n- **2024‑2025**: At some point before the end of 2025, Arjun set a personal fitness goal to complete a 10‑kilometre marathon by late 2025. (chunk_m017_00)\n- **November 9 2025**: He ran the Bengaluru 10‑k Marathon and finished in 54 minutes. (chunk_m029_00)\n- **Late 2025 onward**: After completing the marathon, Arjun switched his focus from running to swimming at the Padukone‑Dravid Centre for Sports Excellence. (chunk_m030_00)\n\nNo further specific athletic or fitness activities are recorded for 2026 in the provided evidence.\n\n**Limitations**: The evidence does not contain any explicit records of Arjun’s activities in 2024, nor does it detail any subsequent training or competitions beyond the switch to swimming in late 2025. Therefore, the timeline is incomplete for the full 2024‑2026 period.\n\n**Status**: partial",
+    "predicted_status": "partial",
+    "citations": [
+      "m017",
+      "m029",
+      "m030"
+    ],
+    "latency_ms": 5917.21,
+    "retrieved_context": [
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.03252
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.03175
+      },
+      {
+        "id": "m029",
+        "text": "I ran the Bengaluru 10k Marathon on November 9, 2025 and finished in 54 minutes!",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_5c38251a742f",
+        "score": 0.03132
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01613
+      },
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.01562
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "marathon",
+        "swimming"
+      ],
+      "key_facts_coverage": 0.25,
+      "accuracy": 0.25,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q42": {
+    "question_id": "q42",
+    "category": "cross_session_synthesis",
+    "question": "Summarize all the software and research projects Arjun worked on, including their technical domains and primary collaborators.",
+    "expected_answer": "1. CacheMesh: Distributed caching in Redis and Go at HyperScale with Deepa Nair. 2. AgriVision: Edge-AI crop disease diagnosis mobile app with PyTorch Mobile, collaborating with Meera Sen (Flutter) and Rohan Sharma (FastAPI). 3. NeuroCompact: 4-bit quantizer for speculative decoding, later pivoted to on-device memory compression in C++, collaborating with Kabir Das, Dr. Shalini Verma, and Meera Sen.",
+    "predicted_answer": "Arjun has worked on the following software and research projects:\n\n1. **NeuroCompact** – a 4‑bit quantizer for speculative decoding.  Technical domain: model quantization and speculative decoding.  Primary collaborators: compiler engineer Kabir Das and Dr. (the CTO of Aetheria AI).  (Supported by chunk_m022_00 and the verified relationship that Dr. is CTO of Aetheria AI.)\n\n2. **Memory‑augmented transformers** – a research effort led by Arjun with intern Ananya Bose.  Technical domain: transformer models enhanced with memory augmentation.  Primary collaborator: Arjun (self).  (Supported by chunk_m035_00 and the verified relationship that Arjun employs Ananya Bose.)\n\n3. **Research compute grant from the OpenCompute Foundation** – a $25,000 grant awarded to Arjun’s team.  Technical domain: research computing resources.  Primary collaborator: Arjun (self).  (Supported by chunk_m034_00.)\n\n4. **System architecture updates at Aetheria AI** – Arjun phased out Redis in all systems, adopting Dragonfly and DuckDB.  Technical domain: database and caching infrastructure.  Primary collaborator: Arjun (self).  (Supported by chunk_m037_00.)\n\nArjun’s employment context (joining Aetheria AI on 1 Feb 2025 and working at the Aetheria Europe research office) provides the organizational backdrop for these projects but is not itself a project.\n\n**Unresolved contradictions**: The evidence contains conflicting claims about Arjun’s place of residence (Indiranagar vs. HSR Layout).  These contradictions do not affect the project information above, but they are noted as unresolved in the evidence.",
+    "predicted_status": "answered",
+    "citations": [
+      "m022",
+      "m035",
+      "m034",
+      "m037"
+    ],
+    "latency_ms": 9495.7,
+    "retrieved_context": [
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.03128
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.0311
+      },
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03037
+      },
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.02985
+      },
+      {
+        "id": "m037",
+        "text": "I have completely phased out Redis in all my systems; I now strictly use Dragonfly and DuckDB.",
+        "timestamp": "2026-11-14",
+        "source": "conv_38894e4e69a2_msg_c8f44cd4e2f4",
+        "score": 0.01639
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.4
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "NeuroCompact"
+      ],
+      "key_facts_coverage": 0.1429,
+      "accuracy": 0.1429,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q43": {
+    "question_id": "q43",
+    "category": "cross_session_synthesis",
+    "question": "Describe Arjun's language learning journey with German from his initial attempt to his current status.",
+    "expected_answer": "In late 2024, Arjun tried learning German on Duolingo for 40 days but dropped it due to work overload. In April 2026, after deciding to relocate to Zurich, he revived his goal by taking intensive classes at Goethe-Institut Bengaluru. By October 2026 in Zurich, he is actively studying for the German B1 proficiency exam.",
+    "predicted_answer": "Arjun first attempted to learn German by using Duolingo for 40 days, but he stopped and dropped the course because of work overload.  At present, he is preparing for the German B1 proficiency exam.",
+    "predicted_status": "partial",
+    "citations": [],
+    "latency_ms": 2204.62,
+    "retrieved_context": [
+      {
+        "id": "m018",
+        "text": "I tried learning German on Duolingo for 40 days, but I gave up and dropped it due to work overload.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_ab50ece2326d",
+        "score": 0.03529
+      },
+      {
+        "id": "m043",
+        "text": "I am currently studying for the German B1 proficiency exam.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_468668c95389",
+        "score": 0.032
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.03041
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.03016
+      },
+      {
+        "id": "m003",
+        "text": "I currently live in Indiranagar, Bengaluru with my rescue indie dog named Kaalu.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_a049e3a7310b",
+        "score": 0.01699
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6667
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "Duolingo",
+        "dropped",
+        "B1"
+      ],
+      "key_facts_coverage": 0.6,
+      "accuracy": 0.6,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q44": {
+    "question_id": "q44",
+    "category": "cross_session_synthesis",
+    "question": "How did the life and career paths of college roommates Arjun and Rohan diverge by late 2026?",
+    "expected_answer": "Arjun transitioned from HyperScale to Aetheria AI, became Lead Research Scientist, pivoted research, ran a marathon, and relocated to Zurich, Switzerland with his dog Kaalu. Rohan stayed in Bengaluru, worked on backend systems, got engaged to Sneha Roy in March 2026, and remained in India.",
+    "predicted_answer": "Could not reliably synthesize an answer for 'How did the life and career paths of college roommates Arjun and Rohan diverge by late 2026?'.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 7677.87,
+    "retrieved_context": [
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03279
+      },
+      {
+        "id": "m016",
+        "text": "I moved to HSR Layout to be closer to Rohan and our badminton club.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_82149b2939d7",
+        "score": 0.03175
+      },
+      {
+        "id": "m011",
+        "text": "Had an exciting weekend with my old college crew!",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_30a33ba4c702",
+        "score": 0.02986
+      },
+      {
+        "id": "m040",
+        "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+        "score": 0.02967
+      },
+      {
+        "id": "m017",
+        "text": "I have set a personal fitness goal to complete a 10k marathon by late 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_3a1cdcbaa7e5",
+        "score": 0.01613
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.6
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": true,
+      "correct_abstention": false,
+      "key_facts_found": [],
+      "key_facts_coverage": 0.0,
+      "accuracy": 0.0,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q45": {
+    "question_id": "q45",
+    "category": "cross_session_synthesis",
+    "question": "Synthesize the complete life cycle of the NeuroCompact project from inception to MLSys presentation.",
+    "expected_answer": "NeuroCompact began at Aetheria AI in mid-2025 as a 4-bit quantizer for speculative decoding in Mojo with Kabir Das and Dr. Shalini Verma. After EMNLP rejection and Kabir's departure in summer 2025, Arjun and Shalini pivoted it to on-device memory compression in C++ with Meera Sen testing Android latency. NeuroCompact v2 won oral presentation at MLSys 2026 and a $25k grant, and Dr. Shalini delivered the oral presentation in California.",
+    "predicted_answer": "The NeuroCompact project began at Aetheria AI, where the author was developing a 4‑bit quantizer for speculative decoding (m021).  Together with Shalini Verma, the team pivoted the project from server‑side speculative decoding to on‑device memory compression (m027).  The research received a $25,000 compute grant from the OpenCompute Foundation, which supported the development of the revised NeuroCompact v2 (m034).  The updated paper was accepted as an oral presentation at MLSys 2026 (m033).",
+    "predicted_status": "answered",
+    "citations": [
+      "m021",
+      "m027",
+      "m034",
+      "m033"
+    ],
+    "latency_ms": 6010.12,
+    "retrieved_context": [
+      {
+        "id": "m033",
+        "text": "Our revised paper on NeuroCompact v2 was accepted as an Oral Presentation at MLSys 2026!",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_a57833bbf280",
+        "score": 0.0356
+      },
+      {
+        "id": "m027",
+        "text": "Shalini Verma and I decided to pivot NeuroCompact from server speculative decoding to on-device memory compression.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_a834abac4388",
+        "score": 0.03351
+      },
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.03033
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01639
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.01631
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 0.75
+    },
+    "answer_metrics": {
+      "is_answerable": true,
+      "abstained": false,
+      "correct_abstention": true,
+      "key_facts_found": [
+        "speculative decoding",
+        "pivot"
+      ],
+      "key_facts_coverage": 0.2857,
+      "accuracy": 0.2857,
+      "exact_match": 0.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q46": {
+    "question_id": "q46",
+    "category": "unanswerable",
+    "question": "What was the exact GPA or percentage Arjun graduated with from ABV IIITM Gwalior?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's college GPA is not mentioned.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine Arjun's exact GPA or percentage from ABV IIITM Gwalior.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1864.05,
+    "retrieved_context": [
+      {
+        "id": "m034",
+        "text": "We were awarded a 25,000 dollar research compute grant from the OpenCompute Foundation.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_d4a4b6013d2e",
+        "score": 0.032
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03105
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.03077
+      },
+      {
+        "id": "m030",
+        "text": "I switched from running to swimming at the Padukone-Dravid Centre for Sports Excellence.",
+        "timestamp": "2026-11-14",
+        "source": "conv_90aa3a5204a7_msg_1db94bed493b",
+        "score": 0.03068
+      },
+      {
+        "id": "m022",
+        "text": "I am collaborating on NeuroCompact directly with compiler engineer Kabir Das and Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_74abbda0d24f",
+        "score": 0.02899
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q47": {
+    "question_id": "q47",
+    "category": "unanswerable",
+    "question": "What brand and model of car does Arjun drive in Zurich?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's car is not mentioned.",
+    "predicted_answer": "I do not have any recorded memory indicating the brand or model of the car that Arjun drives in Zurich.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 3083.12,
+    "retrieved_context": [
+      {
+        "id": "m040",
+        "text": "I successfully landed and moved into my apartment in Zurich Kreis 4 on September 15, 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_47d4a5aeb1ad",
+        "score": 0.03227
+      },
+      {
+        "id": "m036",
+        "text": "I decided to relocate to Zurich in September 2026.",
+        "timestamp": "2026-11-14",
+        "source": "conv_576673ddd42e_msg_257aa43c086e",
+        "score": 0.03226
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03202
+      },
+      {
+        "id": "m023",
+        "text": "We decided to rewrite our CUDA execution kernels in Mojo instead of Python.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_79c8e3500aba",
+        "score": 0.01587
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.01562
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q48": {
+    "question_id": "q48",
+    "category": "unanswerable",
+    "question": "What is Sneha Roy's profession and company?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Sneha Roy's profession is not recorded.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine Sneha Roy's profession and company.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 3417.07,
+    "retrieved_context": [
+      {
+        "id": "m035",
+        "text": "I hired and started mentoring a research intern named Ananya Bose who is working on memory-augmented transformers.",
+        "timestamp": "2026-11-14",
+        "source": "conv_acfada7f2873_msg_5c62aea617e2",
+        "score": 0.03279
+      },
+      {
+        "id": "m006",
+        "text": "My engineering manager at HyperScale is Vikram Rao.",
+        "timestamp": "2026-11-14",
+        "source": "conv_df71ddcc754e_msg_3d69f989d806",
+        "score": 0.03226
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.0308
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.01587
+      },
+      {
+        "id": "m024",
+        "text": "Our research goal is to submit our empirical findings on NeuroCompact to EMNLP 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_6a31eb392c1e",
+        "score": 0.01562
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q49": {
+    "question_id": "q49",
+    "category": "unanswerable",
+    "question": "How much equity percentage did Arjun receive upon joining Aetheria AI?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's equity percentage was never disclosed.",
+    "predicted_answer": "I do not have any recorded memory indicating the equity percentage that Arjun received upon joining Aetheria AI.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 1986.5,
+    "retrieved_context": [
+      {
+        "id": "m019",
+        "text": "I joined Aetheria AI, a generative AI research startup in Koramangala, as a Research Engineer on February 1, 2025.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_8ca2ae52a94e",
+        "score": 0.03252
+      },
+      {
+        "id": "m020",
+        "text": "My new CTO at Aetheria AI is Dr.",
+        "timestamp": "2026-11-14",
+        "source": "conv_47590b1b55fb_msg_4c81ab70c71e",
+        "score": 0.03227
+      },
+      {
+        "id": "m026",
+        "text": "My collaborator Kabir Das left Aetheria AI in July 2025 to relocate to Vancouver, Canada.",
+        "timestamp": "2026-11-14",
+        "source": "conv_4cf36601951b_msg_fd17a14cc8f2",
+        "score": 0.03175
+      },
+      {
+        "id": "m041",
+        "text": "I work at the Aetheria Europe research office located on Technoparkstrasse in Zurich.",
+        "timestamp": "2026-11-14",
+        "source": "conv_321234af5eb5_msg_3b4d428a075e",
+        "score": 0.03031
+      },
+      {
+        "id": "m021",
+        "text": "At Aetheria AI, I am working on NeuroCompact, a 4-bit quantizer for speculative decoding.",
+        "timestamp": "2026-11-14",
+        "source": "conv_de7758cbb5f6_msg_2b5369302efb",
+        "score": 0.03016
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  },
+  "q50": {
+    "question_id": "q50",
+    "category": "unanswerable",
+    "question": "What was the name of Arjun's high school in Chandigarh?",
+    "expected_answer": "I do not have sufficient recorded memories to answer this question. Arjun's high school name is not recorded.",
+    "predicted_answer": "I do not have sufficient recorded memories to determine the name of Arjun's high school in Chandigarh.",
+    "predicted_status": "insufficient_evidence",
+    "citations": [],
+    "latency_ms": 2283.07,
+    "retrieved_context": [
+      {
+        "id": "m001",
+        "text": "I was born in Chandigarh on August 14, 1999.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_b5ca37eb9d33",
+        "score": 0.03279
+      },
+      {
+        "id": "m002",
+        "text": "My college roommate was Rohan Sharma.",
+        "timestamp": "2026-11-14",
+        "source": "conv_ef30f29ef2e3_msg_d3e153be47d3",
+        "score": 0.03041
+      },
+      {
+        "id": "m012",
+        "text": "Our team name was MatrixCrafters and we built AgriVision, an edge-AI crop disease diagnosis mobile app.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_cc7b93204ade",
+        "score": 0.01613
+      },
+      {
+        "id": "m013",
+        "text": "Our project AgriVision won the 2nd runner-up prize of 1,500 dollars at SIH.",
+        "timestamp": "2026-11-14",
+        "source": "conv_e71c5b956c6b_msg_16514c3a95ed",
+        "score": 0.01587
+      },
+      {
+        "id": "m015",
+        "text": "I moved from Indiranagar to HSR Layout Sector 2 in Bengaluru this month.",
+        "timestamp": "2026-11-14",
+        "source": "conv_774e7356733e_msg_a49f3684aac9",
+        "score": 0.01587
+      }
+    ],
+    "retrieval_metrics": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "evidence_coverage": 1.0
+    },
+    "answer_metrics": {
+      "is_answerable": false,
+      "abstained": true,
+      "correct_abstention": true,
+      "key_facts_found": [],
+      "key_facts_coverage": 1.0,
+      "accuracy": 1.0,
+      "exact_match": 1.0
+    },
+    "citation_metrics": {
+      "citation_validity": 1.0,
+      "hallucinated_citations": 0
+    }
+  }
+}

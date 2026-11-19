@@ -1,0 +1,632 @@
+{
+  "baseline_pipeline": {
+    "extraction_model": "gpt-oss:latest",
+    "answering_model": "gpt-oss:latest",
+    "scenarios": {
+      "scenario_1_ingestion": {
+        "text": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos.",
+        "ingest_result": {
+          "turn_id": "turn_b6af666a1a44",
+          "content": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos.",
+          "extraction_latency_ms": 5463.0,
+          "entities_count": 5,
+          "relationships_count": 1,
+          "extracted_entities": [
+            {
+              "mention": "Dr. Elena Rostova",
+              "entity_id": null,
+              "canonical_name": "Dr. Elena Rostova",
+              "types": [
+                "Person"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Aetheria Labs",
+              "entity_id": null,
+              "canonical_name": "Aetheria Labs",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Project Chronos",
+              "entity_id": null,
+              "canonical_name": "Project Chronos",
+              "types": [
+                "Project"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "March 2024",
+              "entity_id": null,
+              "canonical_name": "March 2024",
+              "types": [
+                "Date"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Chief Scientist",
+              "entity_id": null,
+              "canonical_name": "Chief Scientist",
+              "types": [
+                "Role"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            }
+          ],
+          "extracted_relationships": [
+            {
+              "source": {
+                "type": "candidate",
+                "mention": "Dr. Elena Rostova",
+                "types": [
+                  "Person"
+                ]
+              },
+              "predicate": "employed_by",
+              "raw_predicate": "joined",
+              "predicate_status": "canonical",
+              "target": {
+                "type": "candidate",
+                "mention": "Aetheria Labs",
+                "types": [
+                  "Organization"
+                ]
+              },
+              "confidence": 1.0,
+              "origin": "explicit",
+              "evidence": "joined Aetheria Labs"
+            }
+          ],
+          "stored_memory_id": null
+        },
+        "graph_nodes": [
+          {
+            "id": "m001",
+            "type": "memory",
+            "label": "Memory m001"
+          },
+          {
+            "id": "chunk_m001_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m001"
+          },
+          {
+            "id": "Dr. Elena Rostova",
+            "type": "entity",
+            "label": "Dr. Elena Rostova"
+          },
+          {
+            "id": "Aetheria Labs",
+            "type": "entity",
+            "label": "Aetheria Labs"
+          },
+          {
+            "id": "Chief Scientist",
+            "type": "entity",
+            "label": "Chief Scientist"
+          },
+          {
+            "id": "Project Chronos",
+            "type": "entity",
+            "label": "Project Chronos"
+          },
+          {
+            "id": "March 2024",
+            "type": "entity",
+            "label": "March 2024"
+          }
+        ],
+        "graph_edges": [
+          {
+            "source": "m001",
+            "relation": "contains_chunk",
+            "target": "chunk_m001_00"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Dr. Elena Rostova"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Aetheria Labs"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Chief Scientist"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Project Chronos"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "March 2024"
+          },
+          {
+            "source": "Dr. Elena Rostova",
+            "relation": "employed_by",
+            "target": "Aetheria Labs"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "grounds_employed_by",
+            "target": "Aetheria Labs"
+          }
+        ]
+      },
+      "scenario_2_alias_dedup": {
+        "text": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers.",
+        "ingest_result": {
+          "turn_id": "turn_cbaabc51deb5",
+          "content": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers.",
+          "extraction_latency_ms": 3479.4,
+          "entities_count": 3,
+          "relationships_count": 0,
+          "extracted_entities": [
+            {
+              "mention": "Dr. Rostova",
+              "entity_id": null,
+              "canonical_name": "Dr. Rostova",
+              "types": [
+                "Person"
+              ],
+              "confidence": 0.95,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Aetheria",
+              "entity_id": null,
+              "canonical_name": "Aetheria",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 0.9,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Vanguard Robotics",
+              "entity_id": null,
+              "canonical_name": "Vanguard Robotics",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 0.9,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            }
+          ],
+          "extracted_relationships": [],
+          "stored_memory_id": null
+        },
+        "total_nodes": 12,
+        "total_edges": 12,
+        "nodes": [
+          {
+            "id": "m001",
+            "type": "memory",
+            "label": "Memory m001"
+          },
+          {
+            "id": "chunk_m001_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m001"
+          },
+          {
+            "id": "Dr. Elena Rostova",
+            "type": "entity",
+            "label": "Dr. Elena Rostova"
+          },
+          {
+            "id": "Aetheria Labs",
+            "type": "entity",
+            "label": "Aetheria Labs"
+          },
+          {
+            "id": "Chief Scientist",
+            "type": "entity",
+            "label": "Chief Scientist"
+          },
+          {
+            "id": "Project Chronos",
+            "type": "entity",
+            "label": "Project Chronos"
+          },
+          {
+            "id": "March 2024",
+            "type": "entity",
+            "label": "March 2024"
+          },
+          {
+            "id": "m002",
+            "type": "memory",
+            "label": "Memory m002"
+          },
+          {
+            "id": "chunk_m002_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m002"
+          },
+          {
+            "id": "Dr. Rostova",
+            "type": "entity",
+            "label": "Dr. Rostova"
+          },
+          {
+            "id": "Aetheria",
+            "type": "entity",
+            "label": "Aetheria"
+          },
+          {
+            "id": "Vanguard Robotics",
+            "type": "entity",
+            "label": "Vanguard Robotics"
+          }
+        ]
+      },
+      "scenario_3_temporal": {
+        "query": "What code editor does Arjun currently use for software development, and what did he use previously in 2023?",
+        "answer_status": "answered",
+        "answer": "Arjun currently uses **Neovim** for software development, and in 2023 he used **VS\u202fCode** as his primary code editor.",
+        "citations": [
+          {
+            "memory_id": "turn_419dbb810661",
+            "turn_id": "turn_419dbb810661",
+            "chunk_id": null,
+            "text": "In November 2025, Arjun switched completely to Neovim for all software development and abandoned VS Code.",
+            "timestamp": "2026-11-16T10:57:39.996510+00:00",
+            "source": "conv_dd2193effdf3",
+            "score": 0.6073786020278931,
+            "direct_facts": [],
+            "evidence_spans": []
+          },
+          {
+            "memory_id": "turn_8541a51233f3",
+            "turn_id": "turn_8541a51233f3",
+            "chunk_id": null,
+            "text": "In 2023, Arjun used VS Code as his primary code editor for all backend projects.",
+            "timestamp": "2026-11-16T10:57:36.816076+00:00",
+            "source": "conv_809de16af688",
+            "score": 0.7848290205001831,
+            "direct_facts": [],
+            "evidence_spans": []
+          }
+        ],
+        "latency_ms": 16300.4
+      },
+      "scenario_4_contradiction": {
+        "query": "Was Project Hyperion deployed to production or cancelled?",
+        "answer_status": "conflicting_evidence",
+        "answer": "The evidence contains conflicting statements about Project Hyperion. One record indicates that executive leadership cancelled the project on June\u202f12,\u202f2025 and no code was deployed, while another record states that Marcus Vance announced the project was approved for production deployment in July\u202f2025.",
+        "citations": [],
+        "latency_ms": 14591.0
+      },
+      "scenario_5_multihop": {
+        "query": "Which database system is utilized by the project managed by David Thorne at CloudMatrix?",
+        "answer_status": "answered",
+        "answer": "Neo4j",
+        "citations": [
+          {
+            "memory_id": "m008",
+            "turn_id": null,
+            "chunk_id": null,
+            "text": "The VectorFlow project utilizes Neo4j as its core graph persistence database.",
+            "timestamp": "2024-05-20",
+            "source": "conv_conv_2179cd367095_turn_7cc86bbf1ac2",
+            "score": 0.4218,
+            "direct_facts": [],
+            "evidence_spans": []
+          },
+          {
+            "memory_id": "m007",
+            "turn_id": null,
+            "chunk_id": null,
+            "text": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc.",
+            "timestamp": "2024-05-15",
+            "source": "conv_conv_7c7b76cbc448_turn_3aef9cbb5f0b",
+            "score": 0.6163,
+            "direct_facts": [],
+            "evidence_spans": []
+          }
+        ],
+        "latency_ms": 13271.9
+      },
+      "scenario_6_unanswerable": {
+        "query": "What is Arjun's mother's maiden name, and what was his SAT math score?",
+        "answer_status": "insufficient_evidence",
+        "answer": "I do not have sufficient recorded memory to answer 'What is Arjun's mother's maiden name, and what was his SAT math score?'. Based on the recorded conversations, there is no record of Arjun's mother's maiden name, and there is no record of his SAT math score.",
+        "citations": [],
+        "latency_ms": 6102.7
+      }
+    }
+  },
+  "hybrid_pipeline": {
+    "extraction_model": "qwen2.5:14b",
+    "answering_model": "gpt-oss:latest",
+    "scenarios": {
+      "scenario_1_ingestion": {
+        "text": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos.",
+        "ingest_result": {
+          "turn_id": "turn_8fe7accf1e5a",
+          "content": "Dr. Elena Rostova joined Aetheria Labs in March 2024 as Chief Scientist to direct Project Chronos.",
+          "extraction_latency_ms": 12760.4,
+          "entities_count": 3,
+          "relationships_count": 0,
+          "extracted_entities": [
+            {
+              "mention": "Dr. Elena Rostova",
+              "entity_id": null,
+              "canonical_name": "Dr. Elena Rostova",
+              "types": [
+                "Person"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Aetheria Labs",
+              "entity_id": null,
+              "canonical_name": "Aetheria Labs",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Project Chronos",
+              "entity_id": null,
+              "canonical_name": "Project Chronos",
+              "types": [
+                "Project"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            }
+          ],
+          "extracted_relationships": [],
+          "stored_memory_id": null
+        },
+        "graph_nodes": [
+          {
+            "id": "m001",
+            "type": "memory",
+            "label": "Memory m001"
+          },
+          {
+            "id": "chunk_m001_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m001"
+          },
+          {
+            "id": "Dr. Elena Rostova",
+            "type": "entity",
+            "label": "Dr. Elena Rostova"
+          },
+          {
+            "id": "Project Chronos",
+            "type": "entity",
+            "label": "Project Chronos"
+          },
+          {
+            "id": "Aetheria Labs",
+            "type": "entity",
+            "label": "Aetheria Labs"
+          }
+        ],
+        "graph_edges": [
+          {
+            "source": "m001",
+            "relation": "contains_chunk",
+            "target": "chunk_m001_00"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Dr. Elena Rostova"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Project Chronos"
+          },
+          {
+            "source": "chunk_m001_00",
+            "relation": "mentions_entity",
+            "target": "Aetheria Labs"
+          }
+        ]
+      },
+      "scenario_2_alias_dedup": {
+        "text": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers.",
+        "ingest_result": {
+          "turn_id": "turn_84f19be7d4b1",
+          "content": "Dr. Rostova announced that Aetheria is collaborating directly with Vanguard Robotics on hardware drivers.",
+          "extraction_latency_ms": 6927.0,
+          "entities_count": 3,
+          "relationships_count": 0,
+          "extracted_entities": [
+            {
+              "mention": "Dr. Rostova",
+              "entity_id": null,
+              "canonical_name": "Dr. Rostova",
+              "types": [
+                "Person"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Aetheria",
+              "entity_id": null,
+              "canonical_name": "Aetheria",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            },
+            {
+              "mention": "Vanguard Robotics",
+              "entity_id": null,
+              "canonical_name": "Vanguard Robotics",
+              "types": [
+                "Organization"
+              ],
+              "confidence": 1.0,
+              "resolution_score": 0.0,
+              "method": "new",
+              "status": "candidate"
+            }
+          ],
+          "extracted_relationships": [],
+          "stored_memory_id": null
+        },
+        "total_nodes": 10,
+        "total_edges": 8,
+        "nodes": [
+          {
+            "id": "m001",
+            "type": "memory",
+            "label": "Memory m001"
+          },
+          {
+            "id": "chunk_m001_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m001"
+          },
+          {
+            "id": "Dr. Elena Rostova",
+            "type": "entity",
+            "label": "Dr. Elena Rostova"
+          },
+          {
+            "id": "Project Chronos",
+            "type": "entity",
+            "label": "Project Chronos"
+          },
+          {
+            "id": "Aetheria Labs",
+            "type": "entity",
+            "label": "Aetheria Labs"
+          },
+          {
+            "id": "m002",
+            "type": "memory",
+            "label": "Memory m002"
+          },
+          {
+            "id": "chunk_m002_00",
+            "type": "chunk",
+            "label": "Chunk 0 of m002"
+          },
+          {
+            "id": "Dr. Rostova",
+            "type": "entity",
+            "label": "Dr. Rostova"
+          },
+          {
+            "id": "Aetheria",
+            "type": "entity",
+            "label": "Aetheria"
+          },
+          {
+            "id": "Vanguard Robotics",
+            "type": "entity",
+            "label": "Vanguard Robotics"
+          }
+        ]
+      },
+      "scenario_3_temporal": {
+        "query": "What code editor does Arjun currently use for software development, and what did he use previously in 2023?",
+        "answer_status": "insufficient_evidence",
+        "answer": "Could not reliably synthesize an answer for 'What code editor does Arjun currently use for software development, and what did he use previously in 2023?'.",
+        "citations": [],
+        "latency_ms": 18787.0
+      },
+      "scenario_4_contradiction": {
+        "query": "Was Project Hyperion deployed to production or cancelled?",
+        "answer_status": "partial",
+        "answer": "{\n  \"answer\": \"The evidence contains contradictory statements about Project Hyperion. One record (m006) states that executive leadership officially cancelled Project Hyperion on June\u202f12,\u202f2025 and that no code was deployed. Another record (m005) indicates that Marcus Vance announced Project Hyperion was officially approved for production deployment in July\u202f2025.\",\n  \"status\": \"conflicting_evidence\",\n  \"limitations\": \"The two records conflict regarding whether Project Hyperion was ultimately deployed to production or cancelled, and no additional evidence is provided to resolve the contradiction. Therefore, the current evidence does not allow a definitive conclusion about the project's final status. The answer reflects the presence of both claims without arbitrarily selecting one over the other. The conflict is noted and both supporting memory IDs are cited below. No further inference or assumption is made beyond the recorded statements. The answer is limited to the facts presented in the evidence and does not speculate on any unrecorded events or outcomes. The user is advised that the evidence is inconclusive and that further information would be required to determine the definitive outcome of Project Hyperion. The answer does not provide any additional context or speculation beyond the recorded facts. The user should consult additional sources or records to resolve the contradiction if needed. The answer is consistent with the system rules for handling conflicting evidence and does not violate any constraints regarding the use of untrusted data or the prohibition on inventing facts. The answer is fully grounded in the provided evidence and includes citations for each claim. The answer does not mention any other facts or details not present in the evidence. The answer is concise and directly addresses the user's question. The answer is structured as a JSON object with the required fields. The answer does not contain any extraneous information or speculation. The answer is consistent with the guidelines for evidence-grounded responses. The answer is provided in the required format. The answer is final. The answer is ready for the user. The answer is complete. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer is final. The answer",
+        "citations": [],
+        "latency_ms": 22654.4
+      },
+      "scenario_5_multihop": {
+        "query": "Which database system is utilized by the project managed by David Thorne at CloudMatrix?",
+        "answer_status": "answered",
+        "answer": "Neo4j",
+        "citations": [
+          {
+            "memory_id": "m008",
+            "turn_id": null,
+            "chunk_id": null,
+            "text": "The VectorFlow project utilizes Neo4j as its core graph persistence database.",
+            "timestamp": "2024-05-20",
+            "source": "conv_conv_2ed5299d902a_turn_ab8d03074484",
+            "score": 0.4218,
+            "direct_facts": [],
+            "evidence_spans": []
+          },
+          {
+            "memory_id": "m007",
+            "turn_id": null,
+            "chunk_id": null,
+            "text": "David Thorne is the engineering manager leading the VectorFlow project at CloudMatrix Inc.",
+            "timestamp": "2024-05-15",
+            "source": "conv_conv_474462db09ca_turn_9d531546df60",
+            "score": 0.6163,
+            "direct_facts": [],
+            "evidence_spans": []
+          }
+        ],
+        "latency_ms": 13218.2
+      },
+      "scenario_6_unanswerable": {
+        "query": "What is Arjun's mother's maiden name, and what was his SAT math score?",
+        "answer_status": "insufficient_evidence",
+        "answer": "I do not have sufficient recorded memory to answer 'What is Arjun's mother's maiden name, and what was his SAT math score?'. Based on the recorded conversations, there is no information about Arjun's mother's maiden name or his SAT math score.",
+        "citations": [],
+        "latency_ms": 3261.8
+      }
+    }
+  }
+}

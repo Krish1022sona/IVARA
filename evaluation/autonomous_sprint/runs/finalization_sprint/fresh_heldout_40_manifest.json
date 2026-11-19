@@ -1,0 +1,136 @@
+{
+  "sample_name": "fresh_heldout_40",
+  "source_dataset": "evaluation\\data\\longmemeval\\longmemeval_s_cleaned.json",
+  "source_dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "sampling_method": "deterministic_stratified_fresh_held_out",
+  "random_seed": 2026,
+  "total_instances": 40,
+  "overlap_with_step7_pilot_60": 0,
+  "overlap_with_diagnostic_sample_100": 0,
+  "task_breakdown": {
+    "multi-session": {
+      "total": 8,
+      "answerable": 7,
+      "abstention": 1,
+      "qids": [
+        "00ca467f",
+        "6c49646a",
+        "ba358f49_abs",
+        "d23cf73b",
+        "d905b33f",
+        "gpt4_372c3eed",
+        "gpt4_59c863d7",
+        "gpt4_d84a3211"
+      ]
+    },
+    "temporal-reasoning": {
+      "total": 8,
+      "answerable": 8,
+      "abstention": 0,
+      "qids": [
+        "8c18457d",
+        "b46e15ed",
+        "bbf86515",
+        "gpt4_385a5000",
+        "gpt4_483dd43c",
+        "gpt4_4929293b",
+        "gpt4_93159ced",
+        "gpt4_c27434e8"
+      ]
+    },
+    "knowledge-update": {
+      "total": 8,
+      "answerable": 8,
+      "abstention": 0,
+      "qids": [
+        "07741c45",
+        "10e09553",
+        "42ec0761",
+        "50635ada",
+        "71315a70",
+        "945e3d21",
+        "c7dc5443",
+        "e61a7584"
+      ]
+    },
+    "single-session-user": {
+      "total": 6,
+      "answerable": 5,
+      "abstention": 1,
+      "qids": [
+        "0862e8bf_abs",
+        "29f2956b",
+        "3f1e9474",
+        "577d4d32",
+        "58bf7951",
+        "c8c3f81d"
+      ]
+    },
+    "single-session-assistant": {
+      "total": 5,
+      "answerable": 5,
+      "abstention": 0,
+      "qids": [
+        "2bf43736",
+        "5809eb10",
+        "7a8d0b71",
+        "8b9d4367",
+        "c8f1aeed"
+      ]
+    },
+    "single-session-preference": {
+      "total": 5,
+      "answerable": 5,
+      "abstention": 0,
+      "qids": [
+        "06878be2",
+        "1d4e3b97",
+        "95228167",
+        "b6025781",
+        "d24813b1"
+      ]
+    }
+  },
+  "selected_question_ids": [
+    "00ca467f",
+    "06878be2",
+    "07741c45",
+    "0862e8bf_abs",
+    "10e09553",
+    "1d4e3b97",
+    "29f2956b",
+    "2bf43736",
+    "3f1e9474",
+    "42ec0761",
+    "50635ada",
+    "577d4d32",
+    "5809eb10",
+    "58bf7951",
+    "6c49646a",
+    "71315a70",
+    "7a8d0b71",
+    "8b9d4367",
+    "8c18457d",
+    "945e3d21",
+    "95228167",
+    "b46e15ed",
+    "b6025781",
+    "ba358f49_abs",
+    "bbf86515",
+    "c7dc5443",
+    "c8c3f81d",
+    "c8f1aeed",
+    "d23cf73b",
+    "d24813b1",
+    "d905b33f",
+    "e61a7584",
+    "gpt4_372c3eed",
+    "gpt4_385a5000",
+    "gpt4_483dd43c",
+    "gpt4_4929293b",
+    "gpt4_59c863d7",
+    "gpt4_93159ced",
+    "gpt4_c27434e8",
+    "gpt4_d84a3211"
+  ]
+}

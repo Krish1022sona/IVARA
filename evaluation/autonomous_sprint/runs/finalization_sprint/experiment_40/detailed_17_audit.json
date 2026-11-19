@@ -1,0 +1,484 @@
+[
+  {
+    "question_id": "00ca467f",
+    "task_type": "multi-session",
+    "question": "How many doctor's appointments did I go to in March?",
+    "gold_answer": "2",
+    "generated_answer": "",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_39900a0a_1_c003",
+      "sess_answer_39900a0a_1_c004",
+      "sess_ultrachat_145200_c005"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_39900a0a_2",
+      "answer_39900a0a_1",
+      "answer_39900a0a_3"
+    ],
+    "target_chunks_text": [
+      "User: I've been dealing with this lingering cough for weeks, and I'm getting a bit frustrated. Can you help me find some information on bronchitis and its common symptoms? By the way, I recently had a follow-up appointment with my orthopedic surgeon, Dr. Thompson, on March 20th, and it was a relief ",
+      "User: I've been taking some over-the-counter medications, but they don't seem to be working as well as I'd like. Can you tell me more about expectorants and how they work?\nAssistant: I'd be happy to help you understand more about expectorants and how they can help with your cough.\n\n**What are expect"
+    ],
+    "retrieved_chunks_text": [
+      "User: That's a great point. I'm also concerned about the numbness in my left hand, which I noticed around March 15th. Do you think it could be related to my bronchitis or is it a separate issue that I should discuss with Dr. Smith or maybe even my neurologist, Dr. Johnson?\nAssistant: The numbness in",
+      "User: I'll schedule an appointment with Dr. Smith and Dr. Johnson to discuss the numbness in my left hand. I'll also make sure to keep a symptom journal to track the numbness and any other symptoms I'm experiencing. Thanks for the advice!\nAssistant: You're welcome! I'm glad I could help. It's great ",
+      "User: Did any Muslim scholars or leaders speak out against Bin Laden's propaganda and extremist ideology?\nAssistant: Yes, many Muslim scholars and leaders have spoken out against Osama Bin Laden's propaganda and extremist ideology. They have denounced his actions and rhetoric as a violation of Islam"
+    ],
+    "gemma_rationale": "The candidate prediction is empty and fails to provide the requested information."
+  },
+  {
+    "question_id": "07741c45",
+    "task_type": "knowledge-update",
+    "question": "Where do I currently keep my old sneakers?",
+    "gold_answer": "in a shoe rack in my closet",
+    "generated_answer": "You currently keep your old sneakers under your bed.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_7e9ad7b4_2_c002",
+      "sess_answer_7e9ad7b4_2_c005",
+      "sess_answer_7e9ad7b4_1_c001"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_7e9ad7b4_2",
+      "answer_7e9ad7b4_1"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some good quality sandals with sturdy straps. Do you know of any brands that are known for their durability?\nAssistant: Finding the right sandals with sturdy straps can make all the difference in comfort and longevity. Yes, there are several brands known for their durable and h",
+      "User: I've heard of Teva and Merrell, they're great brands. I'll check out their latest collections. By the way, I need to take care of my old sneakers, I've been keeping them under my bed for storage, and they're starting to smell.\nAssistant: Great choice! Teva and Merrell are both excellent brands"
+    ],
+    "retrieved_chunks_text": [
+      "User: That's really helpful! I'll definitely check out those online review platforms and ask around for recommendations. By the way, do you have any tips on how to keep the sneakers clean and fresh while they're stored?\nAssistant: To keep your sneaker clean and fresh while they're stored, here are s",
+      "User: I'm thinking of getting a new pair of sandals with better quality straps. Can you recommend some good brands or stores that offer durable sandals? By the way, I need to organize my closet this weekend, and I'm looking forward to storing my old sneakers in a shoe rack, they're currently taking ",
+      "User: I've heard of Teva and Merrell, they're great brands. I'll check out their latest collections. By the way, I need to take care of my old sneakers, I've been keeping them under my bed for storage, and they're starting to smell.\nAssistant: Great choice! Teva and Merrell are both excellent brands"
+    ],
+    "gemma_rationale": "The candidate prediction contradicts the gold answer by stating the sneakers are under the bed instead of in a shoe rack in the closet."
+  },
+  {
+    "question_id": "10e09553",
+    "task_type": "knowledge-update",
+    "question": "How many largemouth bass did I catch with Alex on the earlier fishing trip to Lake Michigan before the 7/22 trip?",
+    "gold_answer": "7",
+    "generated_answer": "I do not have sufficient recorded memories to determine how many largemouth bass you caught with Alex on the earlier fishing trip to Lake Michigan before the 7/22 trip.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_67be2c38_2_c000",
+      "sess_answer_67be2c38_2_c001",
+      "sess_answer_67be2c38_2_c004"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_67be2c38_1",
+      "answer_67be2c38_2"
+    ],
+    "target_chunks_text": [
+      "User: I've been getting back into fishing and hunting, and I'm trying to keep track of my gear and experiences. Can you recommend some good apps or tools to help me organize my fishing and hunting trips, like logging my catches and noting what worked well?\nAssistant: Getting back into the great outd",
+      "User: I was thinking of getting a tree stand for deer hunting this season. Can you tell me what to consider when buying one, and do you have any recommendations for a good beginner stand? Oh, and by the way, I caught 7 largemouth bass on my trip to Lake Michigan with Alex on 7/10 - that was a great "
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm thinking of planning another fishing trip to Lake Michigan, what's the current water temperature and fishing forecast for the area?\nAssistant: Lake Michigan fishing! I'd be happy to help you with that.\n\nTo provide you with the most up-to-date information, I'll need to know a bit more about",
+      "User: I'm planning to fish from Illinois, probably around the Waukegan harbor area. By the way, I'm thinking of using spinnerbaits and plastic worms as lures again, since they worked so well when I was there with Alex on 7/22 - we caught 9 largemouth bass that day.\nAssistant: Waukegan harbor is a gr",
+      "User: I'm planning to try out some of those deer calls during our next hunting trip. By the way, speaking of hunting, I've been watching some YouTube videos on deer hunting strategies and tactics, just like I did before our last fishing trip to Lake Michigan. Remember that trip when we caught 9 larg"
+    ],
+    "gemma_rationale": "The question is answerable, but the candidate prediction failed to provide the correct number and improperly abstained."
+  },
+  {
+    "question_id": "1d4e3b97",
+    "task_type": "single-session-preference",
+    "question": "I noticed my bike seems to be performing even better during my Sunday group rides. Could there be a reason for this?",
+    "gold_answer": "The user would prefer responses that reference specific details from their previous interactions, such as the replacement of the bike's chain and cassette, and the use of a new Garmin bike computer. They might prefer explanations that connect these details to the observed improvement in bike performance. The user may not prefer responses that fail to acknowledge these specific details or provide vague, general explanations for the improvement.",
+    "generated_answer": "I don't have any recorded memories that explain why your bike might be performing better during your Sunday group rides.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_ecb24dd8_2_c001",
+      "sess_ecb24dd8_2_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_in_retrieved": false,
+    "target_session_ids": [
+      "answer_e6b6353d"
+    ],
+    "target_chunks_text": [
+      "User: I'm planning a 20-mile bike ride this weekend and want to make sure I'm prepared. Can you give me some tips on how to stay hydrated during long rides?\nAssistant: Staying hydrated is crucial during long bike rides to maintain your performance, prevent dehydration, and reduce the risk of heat-re",
+      "User: I'm also planning to track my ride with my new Garmin bike computer. Can you tell me how to set it up to get the most accurate distance and speed readings?\nAssistant: Congratulations on your new Garmin bike computer! To get the most accurate distance and speed readings, follow these steps to s"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm interested in trying out indoor cycling. Can you recommend any good spin classes or YouTube channels that provide a similar workout experience?\nAssistant: Indoor cycling is an excellent way to stay active during the winter months, and there are many great spin classes and YouTube channels ",
+      "User: I'm excited to try SoulCycle out. Since I just finished the \"Run for the Cure\" in 35 minutes, I'm feeling pretty confident about my cardiovascular endurance. Do you think I should start with a beginner's class or jump right into a more challenging ride?\nAssistant: Congratulations again on your"
+    ],
+    "gemma_rationale": "The candidate incorrectly claims to have no recorded memories, whereas the gold answer indicates that specific details about a new chain, cassette, and Garmin computer exist in the user's history."
+  },
+  {
+    "question_id": "50635ada",
+    "task_type": "knowledge-update",
+    "question": "What was my previous frequent flyer status on United Airlines before I got the current status?",
+    "gold_answer": "Premier Silver",
+    "generated_answer": "I do not have sufficient recorded memories to determine your previous frequent flyer status on United Airlines.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_dcd74827_1_c001",
+      "sess_answer_dcd74827_1_c002",
+      "sess_answer_dcd74827_2_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_dcd74827_1",
+      "answer_dcd74827_2"
+    ],
+    "target_chunks_text": [
+      "User: I'm trying to plan a trip to LA and I want to know the best ways to get to LAX from downtown LA. Also, do you think I can use my United miles to book a flight to LA?\nAssistant: LA bound!\n\n**Getting to LAX from Downtown LA:**\n\nYou have several options to get to LAX from Downtown LA, depending o",
+      "User: I'm thinking of using my United miles to book a flight to LA, but I'm not sure how many miles I need. Can you tell me what my current frequent flyer status is on United Airlines?\nAssistant: I'm happy to help! However, I'm a large language model, I don't have direct access to your personal Unit"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm thinking of using my United miles to book a flight to LA, but I'm not sure how many miles I need. Can you tell me what my current frequent flyer status is on United Airlines?\nAssistant: I'm happy to help! However, I'm a large language model, I don't have direct access to your personal Unit",
+      "User: I actually just hit 20,000 miles on United Airlines, which means I'm finally eligible for Premier Silver status. Can you tell me how many miles I need to book a one-way economy ticket to LA from DC?\nAssistant: Congratulations on reaching 20,000 miles and earning Premier Silver status! As a Sil",
+      "User: I'm planning a trip to San Francisco in a few weeks and I'm considering flying with United Airlines. Can you help me find the best deals on round-trip tickets?\nAssistant: San Francisco bound! I'd be happy to help you find the best deals on round-trip tickets with United Airlines.\n\nTo get start"
+    ],
+    "gemma_rationale": "The candidate failed to provide the specific information requested in the gold answer, claiming it could not be determined."
+  },
+  {
+    "question_id": "95228167",
+    "task_type": "single-session-preference",
+    "question": "I'm getting excited about my visit to the music store this weekend. Any tips on what to look for in a new guitar?",
+    "gold_answer": "The user would prefer responses that highlight the differences between Fender Stratocaster and Gibson Les Paul electric guitars, such as the feel of the neck, weight, and sound profile. They might not prefer general tips on buying an electric guitar or suggestions that do not take into account their current guitar and desired upgrade.",
+    "generated_answer": "I\u2019m sorry, but I don\u2019t have any recorded memories that provide specific tips for choosing a new guitar.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_b916da64_2_c000",
+      "sess_b916da64_2_c004",
+      "sess_answer_5e613445_c001"
+    ],
+    "gold_retrieval_rank": 3,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_5e613445"
+    ],
+    "target_chunks_text": [
+      "User: I'm considering upgrading from a Fender Stratocaster to a Gibson Les Paul. Can you tell me the main differences between these two guitars?\nAssistant: What a great question! The Fender Stratocaster and Gibson Les Paul are two of the most iconic electric guitars in the world, and they have many ",
+      "User: What are the most common types of music that people play on a Les Paul?\nAssistant: The Gibson Les Paul is a versatile guitar that can be used to play a wide range of music genres, but it's particularly well-suited to certain styles that benefit from its warm, rich, and sustainful tone. Here ar"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm looking for some advice on how to style my new jeans from Levi's. I just got them last weekend and I'm not sure what shoes to wear with them.\nAssistant: Congratulations on your new Levi's jeans! Styling them can be a bit overwhelming, but don't worry, I'm here to help.\n\nTo give you the bes",
+      "User: I think I'm going to try out the outfit tomorrow for work. I'm really excited to see how it all comes together. Thanks for the advice! I have another question - do you have any tips on how to take care of my new Dr. Martens?\nAssistant: I'm so glad I could help. You're going to rock that outfit",
+      "User: What are the most common types of music that people play on a Les Paul?\nAssistant: The Gibson Les Paul is a versatile guitar that can be used to play a wide range of music genres, but it's particularly well-suited to certain styles that benefit from its warm, rich, and sustainful tone. Here ar"
+    ],
+    "gemma_rationale": "The candidate improperly abstains by claiming it has no information, whereas the gold answer provides specific guidance on what the user is looking for."
+  },
+  {
+    "question_id": "b46e15ed",
+    "task_type": "temporal-reasoning",
+    "question": "How many months have passed since I participated in two charity events in a row, on consecutive days?",
+    "gold_answer": "2",
+    "generated_answer": "I do not have sufficient recorded memories to determine how many months have passed since you participated in two charity events on consecutive days.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_4bfcc250_1_c004",
+      "sess_answer_4bfcc250_1_c005"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_4bfcc250_1",
+      "answer_4bfcc250_4",
+      "answer_4bfcc250_2",
+      "answer_4bfcc250_3"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some information on cancer research and the latest developments in the field. By the way, I attended a charity gala organized by the Cancer Research Foundation at a fancy hotel in downtown today, where the event raises over $100,000 for cancer research. Can you tell me what are",
+      "User: Can you tell me more about immunotherapy and its current success rates in treating various types of cancer?\nAssistant: Immunotherapy is a type of cancer treatment that harnesses the power of the immune system to fight cancer. It has revolutionized the way we approach cancer treatment, and its "
+    ],
+    "retrieved_chunks_text": [
+      "User: Thanks for these helpful tips! I'll definitely keep them in mind for my next charity walk. By the way, I was thinking of organizing a charity bake sale at my office to raise money for the local animal shelter. Do you have any ideas for some easy-to-make and delicious baked goods that I could s",
+      "User: That's a great idea! I'll definitely consider those options. By the way, do you have any tips on how to stay organized and manage my time effectively when volunteering for multiple charity events? I've been participating in a lot of events lately, and it can get overwhelming at times.\nAssistan"
+    ],
+    "gemma_rationale": "The question is marked as answerable, but the candidate failed to provide the correct answer and instead improperly abstained."
+  },
+  {
+    "question_id": "bbf86515",
+    "task_type": "temporal-reasoning",
+    "question": "How many days before the 'Rack Fest' did I participate in the 'Turbocharged Tuesdays' event?",
+    "gold_answer": "4 days.",
+    "generated_answer": "I do not have sufficient recorded memories to determine how many days before the 'Rack Fest' you participated in the 'Turbocharged Tuesdays' event.",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_b3763b6b_1_c001",
+      "sess_answer_b3763b6b_1_c004"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_b3763b6b_1",
+      "answer_b3763b6b_2"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some recommendations on performance air filters for my 2018 Ford Mustang GT. I recently modified my exhaust system and I'm looking to squeeze out some more power. By the way, I just participated in the \"Turbocharged Tuesdays\" auto racking event at the local racing track on June",
+      "User: I'm also looking for some advice on how to optimize my car's performance for auto racking events. Do you have any tips on how to improve my car's suspension and braking system? By the way, I received a free can of NitroFuel's premium fuel additive at the \"Turbocharged Tuesdays\" event, which I'"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm also looking for some advice on how to optimize my car's performance for auto racking events. Do you have any tips on how to improve my car's suspension and braking system? By the way, I received a free can of NitroFuel's premium fuel additive at the \"Turbocharged Tuesdays\" event, which I'",
+      "User: I'm thinking of getting a new set of wheels and tires for my 2018 Ford Mustang GT. I've been looking at some lightweight wheels with high-performance tires, but I'm not sure what would be the best fit for my car. Do you have any recommendations? By the way, I drove my car at the \"Turbocharged "
+    ],
+    "gemma_rationale": "The candidate fails to provide the specific number of days requested in the gold answer, improperly abstaining from an answerable question."
+  },
+  {
+    "question_id": "c7dc5443",
+    "task_type": "knowledge-update",
+    "question": "What is my current record in the recreational volleyball league?",
+    "gold_answer": "5-2",
+    "generated_answer": "Your current record in the recreational volleyball league is 3 wins and 2 losses (3-2).",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_0cdbca92_1_c000",
+      "sess_answer_0cdbca92_1_c003"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_0cdbca92_2",
+      "answer_0cdbca92_1"
+    ],
+    "target_chunks_text": [
+      "User: I'm thinking about signing up for a triathlon in the fall, but I need to get a better sense of my fitness level. Can you help me track my progress and maybe provide some training plans? By the way, I've been doing pretty well in the volleyball league, we're 3-2 so far!\nAssistant: Congratulatio",
+      "User: I've been doing a mix of cardio and strength training at the gym, and also playing sports like volleyball and soccer. I'm decent at swimming, I can do laps but my pace is pretty slow. I don't have a bike yet, but I'm planning to get one soon. My running experience is limited, but I did a 5K re"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm thinking about signing up for a triathlon in the fall, but I need to get a better sense of my fitness level. Can you help me track my progress and maybe provide some training plans? By the way, I've been doing pretty well in the volleyball league, we're 3-2 so far!\nAssistant: Congratulatio",
+      "User: That sounds like a good plan. I think I can make it work. I'm also thinking about organizing a recreational basketball league at my office. Do you think that would be a good idea, considering my current schedule and triathlon training?\nAssistant: Organizing a recreational basketball league at "
+    ],
+    "gemma_rationale": "The candidate prediction provides a record of 3-2, which contradicts the gold answer of 5-2."
+  },
+  {
+    "question_id": "d23cf73b",
+    "task_type": "multi-session",
+    "question": "How many different cuisines have I learned to cook or tried out in the past few months?",
+    "gold_answer": "4",
+    "generated_answer": "{\n  \"answer\": \"You have tried one cuisine in the past few months: Ethiopian.\",\n  \"status\": \"partial\",\n  \"limitations\": \"The evidence only confirms that you have tried Ethiopian food. It does not provide evidence that you have learned to cook or tried other cuisines such as Korean, Japanese, or Indian in that timeframe. Therefore, the total number of cuisines you have tried is known only for Ethiopian, and the count for other cuisines remains unknown based on the provided evidence. If you have tried additional cuisines, that information is not captured in the evidence given here. If you would like to confirm whether you have tried other cuisines, please provide additional evidence or details. If you have any other questions or need further clarification, let me know! I\u2019m happy to help. I can also provide more detailed cooking suggestions for Ethiopian dishes if you\u2019d like. I\u2019m here to help you explore new culinary adventures. Let me know how I can assist you further! I\u2019m ready to help you plan your next cooking session or recommend recipes. I\u2019m excited to help you expand your culinary repertoire. Let me know what you\u2019d like to do next! I\u2019m here to help. I can also share more about Ethiopian cuisine if you\u2019re interested. I\u2019m happy to help you with that. I\u2019m ready to help you with any cooking questions you have. I\u2019m here to help you explore more cuisines. I\u2019m excited to help you learn new recipes. I\u2019m ready to help you with any cooking advice you need. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with any cooking questions. I\u2019m here to help you with your cooking plans. I\u2019m excited to help you with your cooking adventures. I\u2019m ready to help you with any cooking queries. I\u2019m happy to help you with your cooking goals. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m excited to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m happy to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m excited to help you with your cooking journey. I\u2019m ready to help you with your cooking needs. I\u2019m happy to help you with your cooking projects. I\u2019m ready to help you with your cooking ideas. I\u2019m excited to help you with your cooking plans. I\u2019m ready to help you with your cooking questions. I\u2019m happy",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_5a0d28f8_4_c000",
+      "sess_b124e4a1_1_c002"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_5a0d28f8_3",
+      "answer_5a0d28f8_1",
+      "answer_5a0d28f8_2",
+      "answer_5a0d28f8_4"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some recipe ideas for meal prep. I've been doing a lot of rice and roasted veggies lately, but I want to mix it up. Oh, and by the way, I tried out a new Ethiopian restaurant in town last week and loved it!\nAssistant: Ethiopian food is amazing! I'm glad you discovered a new fav",
+      "User: That's a lot of great ideas! I think I'll try out the Ethiopian-inspired dishes, especially the misir wot. Do you have a simple recipe for that?\nAssistant: Misir wot is a staple Ethiopian dish, and it's actually quite easy to make. Here's a simple recipe to get you started:\n\n**Misir Wot (Red L"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm looking for some recipe ideas for meal prep. I've been doing a lot of rice and roasted veggies lately, but I want to mix it up. Oh, and by the way, I tried out a new Ethiopian restaurant in town last week and loved it!\nAssistant: Ethiopian food is amazing! I'm glad you discovered a new fav",
+      "User: I think kitchenware and cookware are good ideas. My friends got me a nice set of kitchen utensils and a cookbook from Williams-Sonoma when they got married, and I really appreciated it. Do you have any recommendations for a cookbook that would be suitable for newlyweds?\nAssistant: Kitchenware "
+    ],
+    "gemma_rationale": "The candidate prediction states the user has tried one cuisine, whereas the gold answer specifies the correct number is 4."
+  },
+  {
+    "question_id": "d24813b1",
+    "task_type": "single-session-preference",
+    "question": "I'm thinking of inviting my colleagues over for a small gathering. Any tips on what to bake?",
+    "gold_answer": "The user would prefer baking suggestions that take into account their previous success with the lemon poppyseed cake, such as variations of that recipe or other desserts that share similar qualities. They might prefer suggestions that balance impressiveness with manageability, considering their previous experience. The user may not prefer overly complex or unfamiliar recipes, or suggestions that do not build upon their existing baking experience.",
+    "generated_answer": "For a small gathering with colleagues, consider baking a simple roasted chicken and vegetable dish or roasted chickpeas. \n\n\u2022 **Roasted Chicken and Vegetables**: Toss chicken breast or thighs with olive oil, salt, and pepper, then roast in the oven with your favorite vegetables (e.g., carrots, broccoli, Brussels sprouts, sweet potatoes) until cooked through. This is a straightforward, oven\u2011baked meal that\u2019s easy to prepare and serves a crowd.\n\n\u2022 **Roasted Chickpeas**: Rinse and dry a can of chickpeas, toss with olive oil and spices such as cumin, chili powder, or garlic powder, and roast in the oven at 400\u202f\u00b0F (200\u202f\u00b0C) for 30\u201140 minutes until crispy. These are a tasty, protein\u2011rich snack that can be served alongside other baked items.\n\nBoth options are oven\u2011baked, require minimal prep, and can be made in advance, making them ideal for a casual gathering.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_61a46ff7_3_c000",
+      "sess_446173bb_1_c000",
+      "sess_ultrachat_494027_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_in_retrieved": false,
+    "target_session_ids": [
+      "answer_7c0ade93"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for a recipe for a chocolate cake with a caramel ganache frosting. Do you have any good ones?\nAssistant: You're speaking to my sweet tooth! I'd be delighted to share a recipe for a rich, mocha-flavored chocolate cake with a decadent caramel ganache frosting. Here's a recipe that's ",
+      "User: I'm thinking of making a cake for my friend's birthday. Do you have any suggestions for a lemon flavored cake, like my lemon poppyseed cake that I made for a colleague's going-away party?\nAssistant: Lemon poppyseed cake is a great choice! I'd be happy to help you with some suggestions for a de"
+    ],
+    "retrieved_chunks_text": [
+      "User: I was thinking of trying out a new recipe for dinner tonight, something with chicken and vegetables. Do you have any suggestions? By the way, I've been reheating a big pot of chili I made last week for dinner, and it's been really convenient.\nAssistant: Reheating a big pot of chili is a great ",
+      "User: I'm trying to get some inspiration for new snack ideas, especially healthier ones. I've been making a lot of popcorn lately, usually with olive oil and a bit of salt, and I'm looking for some variations or other snacks that are just as easy to make.\nAssistant: Popcorn is an excellent snack cho",
+      "User: I'll make sure my Sim works hard and networks with their colleagues. Do you have any tips for balancing work and personal life in The Sims 2? I don't want my Sim to get burned out.\nAssistant: Yes, balancing work and personal life is important in The Sims 2 to prevent your Sim from getting burn"
+    ],
+    "gemma_rationale": "The candidate suggests savory dishes like roasted chicken and chickpeas, failing to provide the dessert-based baking suggestions (like variations of lemon poppyseed cake) that the user's profile requires."
+  },
+  {
+    "question_id": "gpt4_372c3eed",
+    "task_type": "multi-session",
+    "question": "How many years in total did I spend in formal education from high school to the completion of my Bachelor's degree?",
+    "gold_answer": "10 years",
+    "generated_answer": "You spent a total of 8 years in formal education from high school through the completion of your Bachelor's degree.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_35c5419d_1_c000",
+      "sess_answer_35c5419d_3_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_35c5419d_2",
+      "answer_35c5419d_3",
+      "answer_35c5419d_1"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking to learn more about the latest developments in AI and machine learning. I've been taking online courses to improve my skills, but I'd like to stay updated on the latest research and breakthroughs. By the way, I graduated with a Bachelor's in Computer Science from UCLA in 2020, whic",
+      "User: I'm interested in staying updated on the latest research and breakthroughs in AI and machine learning. I'm particularly interested in the applications of AI in robotics, as I was part of the robotics team in high school and enjoyed it.\nAssistant: Robotics is a fascinating field that combines A"
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm considering pursuing a Master's degree in Computer Science, and I was wondering if you could help me with some information on the top CS programs in California. By the way, I'm from Arcadia, California.\nAssistant: A fellow Californian! I'd be happy to help you with that.\n\nCalifornia is hom",
+      "User: I'm looking to learn more about the latest developments in AI and machine learning. I've been taking online courses to improve my skills, but I'd like to stay updated on the latest research and breakthroughs. By the way, I graduated with a Bachelor's in Computer Science from UCLA in 2020, whic"
+    ],
+    "gemma_rationale": "The candidate predicted 8 years, which contradicts the gold answer of 10 years."
+  },
+  {
+    "question_id": "gpt4_483dd43c",
+    "task_type": "temporal-reasoning",
+    "question": "Which show did I start watching first, 'The Crown' or 'Game of Thrones'?",
+    "gold_answer": "'Game of Thrones'",
+    "generated_answer": "The evidence shows that you began watching *Game of Thrones* about a month ago (as of the 29\u202fMay\u202f2023 session).  In a later session you said you started *The Crown* on a Sunday afternoon, but the exact date of that Sunday is not recorded.  Because the start date for *The Crown* is unspecified, the records do not allow us to determine definitively which series you began first.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_fb793c87_2_c000",
+      "sess_answer_fb793c87_1_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_fb793c87_2",
+      "answer_fb793c87_1"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some new shows to watch on HBO Max. I've been meaning to check out \"Game of Thrones\" for a while, and I finally started it about a month ago. I've finished the first four seasons so far, and I'm really enjoying it. Do you have any other recommendations similar to \"Game of Thron",
+      "User: That's a great list! I'll definitely check some of them out. I've also been watching some documentaries on Hulu, particularly the ones on true crime and science. Do you have any recommendations for documentaries on HBO Max?\nAssistant: HBO Max has an impressive collection of documentaries, and "
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm looking for some new shows to watch on HBO Max. I've been meaning to check out \"Game of Thrones\" for a while, and I finally started it about a month ago. I've finished the first four seasons so far, and I'm really enjoying it. Do you have any other recommendations similar to \"Game of Thron",
+      "User: I just finished binge-watching the third season of \"The Crown\" on Netflix, and I'm looking for some new shows to watch. I started it on a Sunday afternoon and finished the entire season in just 14 days, watching at least 2-3 episodes every day. Do you have any recommendations for shows similar"
+    ],
+    "gemma_rationale": "The candidate prediction fails to provide the correct answer and incorrectly claims the information is unanswerable, despite its own reasoning suggesting 'Game of Thrones' was watched first."
+  },
+  {
+    "question_id": "gpt4_4929293b",
+    "task_type": "temporal-reasoning",
+    "question": "What was the the life event of one of my relatives that I participated in a week ago?",
+    "gold_answer": "my cousin's wedding",
+    "generated_answer": "The life event you participated in a week ago was your niece\u2019s kindergarten graduation ceremony.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_4090cbea_c001",
+      "sess_sharegpt_rqvR1Ep_0_c002",
+      "sess_sharegpt_KFhIUCO_0_c003"
+    ],
+    "gold_retrieval_rank": null,
+    "gold_evidence_in_retrieved": false,
+    "target_session_ids": [
+      "answer_add9b013_2",
+      "answer_add9b013_1"
+    ],
+    "target_chunks_text": [
+      "User: I'm thinking of planning a small ceremony for my own wedding next year. Can you give me some tips on how to choose the right venue? By the way, I just came back from Michael's engagement party at a trendy rooftop bar today, and it got me thinking about my own wedding plans.\nAssistant: Congratu",
+      "User: I'm currently considering two options: a cozy bed and breakfast in the countryside or a beautiful art museum in the city. Do you have any advice on how to make the final decision between these two venues?\nAssistant: What a lovely dilemma! Both options sound unique and charming in their own way"
+    ],
+    "retrieved_chunks_text": [
+      "User: I like those suggestions, especially the mac 'n cheese and fruit salad. Speaking of family gatherings, I was just thinking about my niece's kindergarten graduation ceremony last week, and how my sister had a small reception afterwards with cupcakes and juice boxes for the kids.\nAssistant: What",
+      "User: Now create a one-year action plan based on that chart. Divide it into four segments.\nAssistant: Sure, here is a one-year action plan based on the SMART plan chart I created earlier. I will divide it into four segments, each spanning three months:\n\nFirst Three Months\n------------------\n\n* Apply",
+      "User: Could you give me a more detailed background story for this character. Including his life as a human and drug dealer, his embrace, and his first nights as a vampire.\nAssistant: Of course! Here's a potential background story for your Gangrel character:\n\nBefore the embrace, your character's name"
+    ],
+    "gemma_rationale": "The candidate prediction provides a different life event (niece's graduation) than the one specified in the gold answer (cousin's wedding)."
+  },
+  {
+    "question_id": "gpt4_59c863d7",
+    "task_type": "multi-session",
+    "question": "How many model kits have I worked on or bought?",
+    "gold_answer": "I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.",
+    "generated_answer": "You have bought two model kits: a 1/72\u2011scale B\u201129 bomber and a 1/24\u2011scale \u201969 Camaro.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_593bdffd_1_c001",
+      "sess_answer_593bdffd_4_c000"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_593bdffd_1",
+      "answer_593bdffd_2",
+      "answer_593bdffd_3",
+      "answer_593bdffd_4"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking for some tips on photo-etching for my new 1/72 scale B-29 bomber model kit. I've never tried it before, but I've seen some amazing results online. By the way, I just got this kit and a 1/24 scale '69 Camaro at a model show last weekend.\nAssistant: Nice scores! Congratulations on th",
+      "User: I'm planning to use Vallejo acrylics for painting the B-29, do you think they'll work well with the photo-etching details?\nAssistant: Vallejo acrylics are a popular choice among modelers, and they'll work well with photo-etched details. Here's what you can expect:\n\n1. **Adhesion**: Vallejo acr"
+    ],
+    "retrieved_chunks_text": [
+      "User: I've been experimenting with Vallejo acrylics and AK Interactive weathering products, and I'm looking for more advanced techniques to take my models to the next level. Can you recommend any tutorials or online resources for learning photo-etching and wire details?\nAssistant: You're already wor",
+      "User: I'm looking for some tips on photo-etching for my new 1/72 scale B-29 bomber model kit. I've never tried it before, but I've seen some amazing results online. By the way, I just got this kit and a 1/24 scale '69 Camaro at a model show last weekend.\nAssistant: Nice scores! Congratulations on th"
+    ],
+    "gemma_rationale": "The candidate prediction incorrectly states the number of model kits as two, whereas the gold answer specifies five."
+  },
+  {
+    "question_id": "gpt4_93159ced",
+    "task_type": "temporal-reasoning",
+    "question": "How long have I been working before I started my current job at NovaTech?",
+    "gold_answer": "4 years and 9 months",
+    "generated_answer": "",
+    "status": "insufficient_evidence",
+    "retrieved_chunk_ids": [
+      "sess_answer_e5131a1b_2_c002",
+      "sess_answer_e5131a1b_2_c005",
+      "sess_ultrachat_475376_c001"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_e5131a1b_1",
+      "answer_e5131a1b_2"
+    ],
+    "target_chunks_text": [
+      "User: I'm looking to get some advice on managing my time more efficiently. Lately, I've been working long hours on a high-priority project and my commute has increased, leaving me with little time for personal life. Do you have any tips on how to prioritize tasks and make the most out of my time?\nAs",
+      "User: I'll definitely try to implement these tips. One thing I'm struggling with is keeping track of my tasks and projects. I've been working professionally for 9 years and I'm currently using a physical notebook to jot down notes and reminders, but I'm not sure if that's the most efficient way. Do "
+    ],
+    "retrieved_chunks_text": [
+      "User: I'm a software engineer, specifically a backend developer, and I've been in this field since I graduated with a degree in Computer Science from the University of California, Berkeley. I've been working at NovaTech for about 4 years and 3 months now. Given my experience, I'm looking for a tool ",
+      "User: I'll start by saying that I'm a software engineer, specifically a backend developer, and I've been in this field since I graduated with a degree in Computer Science from the University of California, Berkeley. I've been working at NovaTech for about 4 years and 3 months now.\nAssistant: A Cal B",
+      "User: It seems like rail transportation could be a good option for businesses looking to transport large amounts of goods over long distances. Do you know if there are any current advancements or improvements being made in rail technology?\nAssistant: Yes, there are several advancements and improveme"
+    ],
+    "gemma_rationale": "The candidate prediction is empty and fails to provide the requested information."
+  },
+  {
+    "question_id": "gpt4_d84a3211",
+    "task_type": "multi-session",
+    "question": "How much total money have I spent on bike-related expenses since the start of the year?",
+    "gold_answer": "$185",
+    "generated_answer": "Based on the recorded memories, you have spent $40 on bike lights since the start of the year.",
+    "status": "partial",
+    "retrieved_chunk_ids": [
+      "sess_answer_2880eb6c_3_c001",
+      "sess_answer_2880eb6c_4_c002"
+    ],
+    "gold_retrieval_rank": 1,
+    "gold_evidence_in_retrieved": true,
+    "target_session_ids": [
+      "answer_2880eb6c_3",
+      "answer_2880eb6c_1",
+      "answer_2880eb6c_2",
+      "answer_2880eb6c_4"
+    ],
+    "target_chunks_text": [
+      "User: I'm planning a road trip to the mountains in June and I want to make sure my bike is in good condition. Can you remind me when I last had my bike serviced and what was done during that service?\nAssistant: I'm happy to help! However, I'm a large language model, I don't have access to your perso",
+      "User: Actually, I remember taking my bike in for a tune-up on April 20th because the gears were getting stuck. The mechanic told me I needed to replace the chain, which I did, and it cost me $25. While I was there, I also got a new set of bike lights installed, which were $40. Can you help me create"
+    ],
+    "retrieved_chunks_text": [
+      "User: I've been keeping track of my bike mileage and I'm currently at 347 miles since the start of the year. Can you give me some tips on how to track my bike mileage more accurately, and also, do you know any way to calculate my average speed?\nAssistant: Congratulations on keeping track of your bik",
+      "User: I've been using my bike for my daily commutes to work, which is about 10 miles round trip. Do you think I should consider getting some kind of bike insurance to protect my investment, especially since I'll be taking it on longer trips?\nAssistant: As a responsible bike owner, it's great that yo"
+    ],
+    "gemma_rationale": "The candidate provides the amount spent on bike lights ($40) instead of the total bike-related expenses ($185) requested."
+  }
+]

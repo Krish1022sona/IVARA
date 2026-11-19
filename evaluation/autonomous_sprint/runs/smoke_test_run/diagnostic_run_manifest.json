@@ -1,0 +1,70 @@
+{
+  "evaluation_title": "IVARA 6-Arm Controlled Diagnostic Evaluation",
+  "evaluation_tier": "diagnostic_sample",
+  "benchmark_status": "diagnostic_only_not_official_longmemeval",
+  "timestamp": "2026-10-28 21:12:48",
+  "git_branch": "research/evaluation-baseline",
+  "git_commit": "885298c73cd0257653c49cb81d958f49ad8a0da4",
+  "sample_path": "evaluation\\autonomous_sprint\\diagnostic_sample_100.json",
+  "sample_sha256": "cef499da6e68cae8f8e8df61351261a2c652074986063acade0c1330331de338",
+  "answering_model": "gpt-oss:latest",
+  "judge_model": "VladimirGav/gemma4-26b-16GB-VRAM:latest",
+  "retrieval_k": 5,
+  "max_context_tokens": 1500,
+  "arms_evaluated": {
+    "ARM_A": {
+      "name": "Baseline (Dense + BM25)",
+      "use_ontology": false,
+      "use_chunk_graph": false,
+      "min_edge_relevance": 0.0,
+      "direct_seed_temporal": false,
+      "enable_temporal": false,
+      "description": "Baseline hybrid retriever without ontology, graph, or temporal modules."
+    },
+    "ARM_B": {
+      "name": "Ontology Guidance Only",
+      "use_ontology": true,
+      "use_chunk_graph": false,
+      "min_edge_relevance": 0.0,
+      "direct_seed_temporal": false,
+      "enable_temporal": false,
+      "description": "Baseline plus domain ontology query concept and entity matching."
+    },
+    "ARM_C": {
+      "name": "Ontology + Raw Graph Expansion",
+      "use_ontology": true,
+      "use_chunk_graph": true,
+      "min_edge_relevance": 0.0,
+      "direct_seed_temporal": false,
+      "enable_temporal": false,
+      "description": "Ontology plus 1-hop bounded graph expansion without edge relevance filtering."
+    },
+    "ARM_D": {
+      "name": "Ontology + Relevance-Filtered Graph (Prototype B)",
+      "use_ontology": true,
+      "use_chunk_graph": true,
+      "min_edge_relevance": 0.5,
+      "direct_seed_temporal": false,
+      "enable_temporal": false,
+      "description": "Ontology plus 1-hop graph expansion pruned by min_edge_relevance=0.50."
+    },
+    "ARM_E": {
+      "name": "Ontology + Direct Seed Temporal (Prototype C)",
+      "use_ontology": true,
+      "use_chunk_graph": false,
+      "min_edge_relevance": 0.0,
+      "direct_seed_temporal": true,
+      "enable_temporal": true,
+      "description": "Ontology guidance plus temporal claim extraction directly from top seed chunks."
+    },
+    "ARM_F": {
+      "name": "Full Architecture (Graph + Temporal)",
+      "use_ontology": true,
+      "use_chunk_graph": true,
+      "min_edge_relevance": 0.0,
+      "direct_seed_temporal": false,
+      "enable_temporal": true,
+      "description": "Full IVARA architecture with raw 1-hop graph expansion and graph temporal claims."
+    }
+  }
+}

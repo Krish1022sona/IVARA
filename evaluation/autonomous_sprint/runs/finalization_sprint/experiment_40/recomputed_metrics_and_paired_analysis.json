@@ -1,0 +1,329 @@
+{
+  "metrics": {
+    "ARM_1_BASELINE": {
+      "total": 40,
+      "overall_correct": 21,
+      "overall_acc": 0.525,
+      "overall_ci95": [
+        0.375,
+        0.6706
+      ],
+      "answerable_total": 38,
+      "answerable_correct": 19,
+      "answerable_acc": 0.5,
+      "answerable_ci95": [
+        0.3485,
+        0.6515
+      ],
+      "unanswerable_total": 2,
+      "unanswerable_correct": 2,
+      "unanswerable_acc": 1.0,
+      "unanswerable_ci95": [
+        0.3424,
+        1.0
+      ],
+      "avg_latency_sec": 6.56,
+      "by_task_type": {
+        "knowledge-update": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "acc": 1.0
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "acc": 0.4
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "acc": 1.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 2,
+          "acc": 0.25
+        }
+      }
+    },
+    "ARM_2_ONTOLOGY": {
+      "total": 40,
+      "overall_correct": 22,
+      "overall_acc": 0.55,
+      "overall_ci95": [
+        0.3983,
+        0.6929
+      ],
+      "answerable_total": 38,
+      "answerable_correct": 20,
+      "answerable_acc": 0.5263,
+      "answerable_ci95": [
+        0.3726,
+        0.6752
+      ],
+      "unanswerable_total": 2,
+      "unanswerable_correct": 2,
+      "unanswerable_acc": 1.0,
+      "unanswerable_ci95": [
+        0.3424,
+        1.0
+      ],
+      "avg_latency_sec": 6.08,
+      "by_task_type": {
+        "knowledge-update": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "acc": 1.0
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "acc": 0.4
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "acc": 1.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        }
+      }
+    },
+    "ARM_3_DIRECT_TEMPORAL": {
+      "total": 40,
+      "overall_correct": 22,
+      "overall_acc": 0.55,
+      "overall_ci95": [
+        0.3983,
+        0.6929
+      ],
+      "answerable_total": 38,
+      "answerable_correct": 20,
+      "answerable_acc": 0.5263,
+      "answerable_ci95": [
+        0.3726,
+        0.6752
+      ],
+      "unanswerable_total": 2,
+      "unanswerable_correct": 2,
+      "unanswerable_acc": 1.0,
+      "unanswerable_ci95": [
+        0.3424,
+        1.0
+      ],
+      "avg_latency_sec": 6.56,
+      "by_task_type": {
+        "knowledge-update": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "multi-session": {
+          "total": 8,
+          "correct": 4,
+          "acc": 0.5
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "acc": 1.0
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "acc": 0.4
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "acc": 1.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 2,
+          "acc": 0.25
+        }
+      }
+    },
+    "ARM_4_UNIFIED_HYBRID": {
+      "total": 40,
+      "overall_correct": 23,
+      "overall_acc": 0.575,
+      "overall_ci95": [
+        0.422,
+        0.7149
+      ],
+      "answerable_total": 38,
+      "answerable_correct": 21,
+      "answerable_acc": 0.5526,
+      "answerable_ci95": [
+        0.3971,
+        0.6985
+      ],
+      "unanswerable_total": 2,
+      "unanswerable_correct": 2,
+      "unanswerable_acc": 1.0,
+      "unanswerable_ci95": [
+        0.3424,
+        1.0
+      ],
+      "avg_latency_sec": 6.86,
+      "by_task_type": {
+        "knowledge-update": {
+          "total": 8,
+          "correct": 4,
+          "acc": 0.5
+        },
+        "multi-session": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        },
+        "single-session-assistant": {
+          "total": 5,
+          "correct": 5,
+          "acc": 1.0
+        },
+        "single-session-preference": {
+          "total": 5,
+          "correct": 2,
+          "acc": 0.4
+        },
+        "single-session-user": {
+          "total": 6,
+          "correct": 6,
+          "acc": 1.0
+        },
+        "temporal-reasoning": {
+          "total": 8,
+          "correct": 3,
+          "acc": 0.375
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "ARM_1_BASELINE__vs__ARM_2_ONTOLOGY": {
+      "arm_a": "ARM_1_BASELINE",
+      "arm_b": "ARM_2_ONTOLOGY",
+      "both_correct": 21,
+      "both_wrong": 18,
+      "arm_a_wins": 0,
+      "arm_b_wins": 1,
+      "arm_a_win_qids": [],
+      "arm_b_win_qids": [
+        "gpt4_483dd43c"
+      ],
+      "discordant_pairs": 1,
+      "mcnemar_exact_pvalue": 1.0,
+      "statistically_significant": false
+    },
+    "ARM_1_BASELINE__vs__ARM_3_DIRECT_TEMPORAL": {
+      "arm_a": "ARM_1_BASELINE",
+      "arm_b": "ARM_3_DIRECT_TEMPORAL",
+      "both_correct": 21,
+      "both_wrong": 18,
+      "arm_a_wins": 0,
+      "arm_b_wins": 1,
+      "arm_a_win_qids": [],
+      "arm_b_win_qids": [
+        "00ca467f"
+      ],
+      "discordant_pairs": 1,
+      "mcnemar_exact_pvalue": 1.0,
+      "statistically_significant": false
+    },
+    "ARM_1_BASELINE__vs__ARM_4_UNIFIED_HYBRID": {
+      "arm_a": "ARM_1_BASELINE",
+      "arm_b": "ARM_4_UNIFIED_HYBRID",
+      "both_correct": 21,
+      "both_wrong": 17,
+      "arm_a_wins": 0,
+      "arm_b_wins": 2,
+      "arm_a_win_qids": [],
+      "arm_b_win_qids": [
+        "945e3d21",
+        "gpt4_c27434e8"
+      ],
+      "discordant_pairs": 2,
+      "mcnemar_exact_pvalue": 0.5,
+      "statistically_significant": false
+    },
+    "ARM_2_ONTOLOGY__vs__ARM_3_DIRECT_TEMPORAL": {
+      "arm_a": "ARM_2_ONTOLOGY",
+      "arm_b": "ARM_3_DIRECT_TEMPORAL",
+      "both_correct": 21,
+      "both_wrong": 17,
+      "arm_a_wins": 1,
+      "arm_b_wins": 1,
+      "arm_a_win_qids": [
+        "gpt4_483dd43c"
+      ],
+      "arm_b_win_qids": [
+        "00ca467f"
+      ],
+      "discordant_pairs": 2,
+      "mcnemar_exact_pvalue": 1.0,
+      "statistically_significant": false
+    },
+    "ARM_2_ONTOLOGY__vs__ARM_4_UNIFIED_HYBRID": {
+      "arm_a": "ARM_2_ONTOLOGY",
+      "arm_b": "ARM_4_UNIFIED_HYBRID",
+      "both_correct": 21,
+      "both_wrong": 16,
+      "arm_a_wins": 1,
+      "arm_b_wins": 2,
+      "arm_a_win_qids": [
+        "gpt4_483dd43c"
+      ],
+      "arm_b_win_qids": [
+        "945e3d21",
+        "gpt4_c27434e8"
+      ],
+      "discordant_pairs": 3,
+      "mcnemar_exact_pvalue": 1.0,
+      "statistically_significant": false
+    },
+    "ARM_3_DIRECT_TEMPORAL__vs__ARM_4_UNIFIED_HYBRID": {
+      "arm_a": "ARM_3_DIRECT_TEMPORAL",
+      "arm_b": "ARM_4_UNIFIED_HYBRID",
+      "both_correct": 21,
+      "both_wrong": 16,
+      "arm_a_wins": 1,
+      "arm_b_wins": 2,
+      "arm_a_win_qids": [
+        "00ca467f"
+      ],
+      "arm_b_win_qids": [
+        "945e3d21",
+        "gpt4_c27434e8"
+      ],
+      "discordant_pairs": 3,
+      "mcnemar_exact_pvalue": 1.0,
+      "statistically_significant": false
+    }
+  }
+}
