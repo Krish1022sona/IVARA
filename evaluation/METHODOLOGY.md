@@ -12,13 +12,13 @@ IVARA is benchmarked using **LongMemEval** (*Wu et al., ICLR 2025*), the standar
 - **Official Source:** Hosted on Hugging Face at [`xiaowu0162/longmemeval-cleaned`](https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned).
 - **Core Dataset (LongMemEval-S):** `longmemeval_s_cleaned.json` (264.5 MB, 500 questions, ~40–80 dialogue sessions per question). Excluded from Git tracking via `.gitignore` due to GitHub's 100 MB file limit.
 - **Oracle Variant:** `longmemeval_oracle.json` (15.38 MB, 500 questions with only the gold evidence sessions provided).
-- **Task Distribution:**
-  1. *Single-Session Assistant:* 64 questions.
-  2. *Single-Session User:* 70 questions.
-  3. *Knowledge Update (Supersession):* 78 questions.
-  4. *Temporal Reasoning:* 133 questions (including 41 Category H relative calendar questions).
-  5. *Multi-Session Reasoning:* 125 questions.
-  6. *Negative Controls (Abstention):* 30 unanswerable questions.
+- **Task Distribution (500 questions; 30 `_abs` negative controls pooled across 4 tasks):**
+  1. *Single-Session User:* 70 questions (64 answerable, 6 `_abs`).
+  2. *Single-Session Assistant:* 56 questions (all answerable).
+  3. *Single-Session Preference:* 30 questions (all answerable).
+  4. *Multi-Session Reasoning:* 133 questions (121 answerable, 12 `_abs`).
+  5. *Knowledge Update (Supersession):* 78 questions (72 answerable, 6 `_abs`).
+  6. *Temporal Reasoning:* 133 questions (127 answerable including 41 Category H multi-session temporal questions, 6 `_abs`).
 
 ---
 

@@ -56,12 +56,15 @@ coverage.xml
 
 # 5. Local Databases & Personal State
 *.db
+*.db-shm
+*.db-wal
 *.sqlite
 *.sqlite3
 data/*.db
 data/backups/
 data/chat_sessions/
 data/conversations.db
+data/memories.json
 
 # Whitelist synthetic evaluation test fixtures
 !evaluation/long_context/multi_episode/graph.db
