@@ -116,7 +116,9 @@ class UnifiedRetriever:
         episodic_window_size: int = 1,
         conversation_id: Optional[str] = None,
         session_id: Optional[str] = None,
-        use_adaptive_routing: Optional[bool] = None
+        use_adaptive_routing: Optional[bool] = None,
+        exclude_turn_ids: Optional[set[str] | list[str]] = None,
+        include_assistant_turns: bool = True
     ) -> UnifiedRetrievalResult:
         """
         Execute unified multi-source retrieval across all enabled channels.
@@ -168,7 +170,9 @@ class UnifiedRetriever:
                 min_score=min_episodic_score,
                 conversation_id=conversation_id,
                 session_id=session_id,
-                window_size=episodic_window_size
+                window_size=episodic_window_size,
+                exclude_turn_ids=exclude_turn_ids,
+                include_assistant_turns=include_assistant_turns
             )
         diagnostics["episodic_hit_count"] = len(episodic_hits)
 

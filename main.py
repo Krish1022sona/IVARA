@@ -51,8 +51,47 @@ def get_default_engine() -> ChatEngine:
 # Chat Subcommands
 # ---------------------------------------------------------------------------
 
+def run_sandbox_chat(conv_id: Optional[str] = None):
+    """Run an interactive chat session in an isolated temporary directory without touching production data."""
+    import tempfile
+    import shutil
+    temp_dir = Path(tempfile.mkdtemp(prefix="ivara_sandbox_"))
+    try:
+        temp_data = temp_dir / "data"
+        temp_data.mkdir(parents=True, exist_ok=True)
+
+        sandbox_conv_db = temp_data / "conversations.db"
+        sandbox_memories = temp_data / "memories.json"
+        sandbox_entities = temp_data / "entities.json"
+        sandbox_graph_db = temp_data / "memory_graph.db"
+
+        sandbox_memories.write_text("[]", encoding="utf-8")
+        sandbox_entities.write_text("{}", encoding="utf-8")
+
+        conv_store = ConversationStore(sandbox_conv_db)
+        graph_store = SQLiteGraphStore(sandbox_graph_db)
+        engine = ChatEngine(
+            conversation_store=conv_store,
+            graph_store=graph_store,
+            memories_path=sandbox_memories,
+            entities_path=sandbox_entities,
+        )
+        print("=" * 80)
+        print(" [IVARA SANDBOX MODE]")
+        print(f" Isolated runtime storage: {temp_dir}")
+        print(" Production databases and memories will NOT be modified or read.")
+        print("=" * 80)
+        run_interactive_chat(engine=engine, conversation_id=conv_id)
+    finally:
+        shutil.rmtree(temp_dir, ignore_errors=True)
+
+
 def cmd_chat(args):
     """Launch interactive conversational session."""
+    sandbox = getattr(args, "sandbox", False)
+    if sandbox:
+        run_sandbox_chat(conv_id=getattr(args, "id", None))
+        return
     engine = get_default_engine()
     conv_id = getattr(args, "id", None)
     run_interactive_chat(engine=engine, conversation_id=conv_id)
@@ -313,6 +352,7 @@ def build_parser() -> argparse.ArgumentParser:
     # chat command
     chat_parser = subparsers.add_parser("chat", help="Start or resume interactive conversational assistant")
     chat_parser.add_argument("--id", dest="id", type=str, default=None, help="Resume an existing conversation ID")
+    chat_parser.add_argument("--sandbox", "-s", action="store_true", help="Run with isolated temporary runtime storage (does not touch production data)")
     chat_parser.set_defaults(func=cmd_chat)
 
     # chats command group

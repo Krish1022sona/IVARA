@@ -124,3 +124,8 @@ evaluation/archive/
 evaluation/hybrid_validation/hybrid_validation_results.json
 evaluation/story_benchmark/results/
 evaluation/validation_sprint/results/
+
+# 14. Graphify Tooling & Generated Knowledge Graph Artifacts
+.tools/
+graphify-out/
+

@@ -1,0 +1,19 @@
+# Graphify Ingestion Ignore Configuration
+# Exclude runtime databases, evaluation corpora, research archives, logs, temp data, and non-code assets
+data/
+evaluation/
+IVARA_ARCHIVE/
+IVARA_REVIEW/
+.tools/
+.venv/
+scratch/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+*.json
+*.csv
+*.txt
+*.md
+*.html
+graphify-out/

@@ -125,6 +125,18 @@ class ConversationStore:
             self._conn.close()
             self._conn = None
 
+    def __enter__(self) -> "ConversationStore":
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        self.close()
+
+    def __del__(self):
+        try:
+            self.close()
+        except Exception:
+            pass
+
     def _init_db(self):
         """Idempotently initialize tables, indexes, FTS, and migrations."""
         conn = self._get_connection()
@@ -692,6 +704,59 @@ class ConversationStore:
             for r in rows
         ]
 
+    @staticmethod
+    def _estimate_tokens(text: str) -> int:
+        return max(1, (len(text) // 4) + 6)
+
+    def get_recent_turns(
+        self,
+        conversation_id: str,
+        limit: Optional[int] = 12,
+        max_tokens: Optional[int] = 2000,
+        exclude_turn_id: Optional[str] = None
+    ) -> list[EpisodicTurn]:
+        """Fetch the most recent episodic turns in chronological order, bounded by count and token budget."""
+        conn = self._get_connection()
+        where = "conversation_id = ?"
+        params: list[Any] = [conversation_id]
+        if exclude_turn_id:
+            where += " AND turn_id != ?"
+            params.append(exclude_turn_id)
+
+        if limit is not None:
+            if limit <= 0:
+                return []
+            query = f"SELECT * FROM episodic_turns WHERE {where} ORDER BY sequence_num DESC LIMIT ?"
+            params.append(limit)
+        else:
+            query = f"SELECT * FROM episodic_turns WHERE {where} ORDER BY sequence_num DESC"
+
+        rows = conn.execute(query, tuple(params)).fetchall()
+        selected = []
+        used_tokens = 0
+        for r in rows:
+            toks = self._estimate_tokens(r["content"])
+            if max_tokens is not None and selected and (used_tokens + toks > max_tokens):
+                break
+            selected.append(
+                EpisodicTurn(
+                    turn_id=r["turn_id"],
+                    conversation_id=r["conversation_id"],
+                    speaker=r["speaker"],
+                    speaker_role=r["speaker_role"],
+                    content=r["content"],
+                    timestamp=r["timestamp"],
+                    sequence_num=r["sequence_num"],
+                    prev_turn_id=r["prev_turn_id"],
+                    next_turn_id=r["next_turn_id"],
+                    session_id=r["session_id"],
+                    metadata=json.loads(r["metadata"])
+                )
+            )
+            used_tokens += toks
+        selected.reverse()
+        return selected
+
     def search_turns(
         self,
         query: str,
@@ -925,6 +990,51 @@ class ConversationStore:
             )
             for r in rows
         ]
+
+    def get_recent_messages(
+        self,
+        conversation_id: str,
+        limit: Optional[int] = 12,
+        max_tokens: Optional[int] = 2000,
+        exclude_message_id: Optional[str] = None
+    ) -> list[Message]:
+        """Fetch the most recent messages in chronological order, bounded by count and token budget."""
+        conn = self._get_connection()
+        where = "conversation_id = ?"
+        params: list[Any] = [conversation_id]
+        if exclude_message_id:
+            where += " AND id != ?"
+            params.append(exclude_message_id)
+
+        if limit is not None:
+            if limit <= 0:
+                return []
+            query = f"SELECT * FROM messages WHERE {where} ORDER BY sequence_num DESC LIMIT ?"
+            params.append(limit)
+        else:
+            query = f"SELECT * FROM messages WHERE {where} ORDER BY sequence_num DESC"
+
+        rows = conn.execute(query, tuple(params)).fetchall()
+        selected = []
+        used_tokens = 0
+        for r in rows:
+            toks = self._estimate_tokens(r["content"])
+            if max_tokens is not None and selected and (used_tokens + toks > max_tokens):
+                break
+            selected.append(
+                Message(
+                    id=r["id"],
+                    conversation_id=r["conversation_id"],
+                    role=r["role"],
+                    content=r["content"],
+                    created_at=r["created_at"],
+                    sequence_num=r["sequence_num"],
+                    metadata=json.loads(r["metadata"])
+                )
+            )
+            used_tokens += toks
+        selected.reverse()
+        return selected
 
     def get_message(self, message_id: str) -> Optional[Message]:
         """Fetch a single message by ID."""

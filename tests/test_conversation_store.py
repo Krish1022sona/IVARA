@@ -204,3 +204,48 @@ def test_long_term_memories_and_graph_remain_untouched(tmp_path):
     assert mem_sha_before == mem_sha_after
     assert ent_sha_before == ent_sha_after
 
+
+def test_recent_history_exceeding_six_messages_and_token_budget(tmp_path):
+    """Verify get_recent_messages returns the newest tail in chronological order without breaking legacy get_messages."""
+    db_file = tmp_path / "recent_hist.db"
+    with ConversationStore(db_file) as store:
+        c1 = store.create_conversation("Long Chat")
+        c2 = store.create_conversation("Other Session")
+        store.add_message(c2.id, "user", "Isolated other session message")
+
+        msgs = []
+        for i in range(1, 17):
+            role = "user" if i % 2 == 1 else "assistant"
+            msgs.append(store.add_message(c1.id, role, f"Message {i}"))
+
+        # Legacy forward pagination remains intact
+        oldest_six = store.get_messages(c1.id, limit=6, chronological=True)
+        assert [m.sequence_num for m in oldest_six] == [1, 2, 3, 4, 5, 6]
+        offset_slice = store.get_messages(c1.id, limit=2, offset=4, chronological=True)
+        assert [m.sequence_num for m in offset_slice] == [5, 6]
+
+        # Recent-history method returns latest 6 in chronological order
+        recent_six = store.get_recent_messages(c1.id, limit=6, max_tokens=None)
+        assert [m.sequence_num for m in recent_six] == [11, 12, 13, 14, 15, 16]
+
+        # Exclude current message id ensures current turn is not duplicated
+        without_last = store.get_recent_messages(
+            c1.id, limit=6, max_tokens=None, exclude_message_id=msgs[-1].id
+        )
+        assert [m.sequence_num for m in without_last] == [10, 11, 12, 13, 14, 15]
+
+        # Token budget caps history cleanly while keeping chronological order
+        tight_budget = store.get_recent_messages(c1.id, limit=16, max_tokens=20)
+        assert 1 <= len(tight_budget) < 16
+        assert tight_budget[-1].sequence_num == 16
+        assert [m.sequence_num for m in tight_budget] == sorted(m.sequence_num for m in tight_budget)
+
+        # Session isolation
+        assert len(store.get_recent_messages(c2.id, limit=6)) == 1
+
+    # Session resumption across a reopened store
+    with ConversationStore(db_file) as reopened:
+        resumed = reopened.get_recent_messages(c1.id, limit=4, max_tokens=None)
+        assert [m.sequence_num for m in resumed] == [13, 14, 15, 16]
+
+

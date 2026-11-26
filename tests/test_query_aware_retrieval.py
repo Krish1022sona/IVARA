@@ -256,11 +256,21 @@ class TestEndToEndAnsweringIntegration:
         chunks = _create_mock_chunks()
         query = "How many days passed between my visit to MoMA and the Metropolitan Museum of Art?"
 
+        def mock_llm(prompt, system_prompt):
+            import json
+            return json.dumps({
+                "status": "answered",
+                "answer": "7 days passed between your visit to MoMA and the Metropolitan Museum of Art.",
+                "cited_memory_ids": [chunks[0].chunk_id],
+                "limitations": None,
+            })
+
         result = answer_question(
             query=query,
             chunks=chunks,
             use_chunking=True,
-            retrieval_strategy="query_aware"
+            retrieval_strategy="query_aware",
+            llm_caller=mock_llm,
         )
         assert "status" in result
         assert "answer" in result

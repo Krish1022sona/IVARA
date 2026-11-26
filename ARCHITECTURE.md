@@ -1,6 +1,6 @@
 # IVARA — System Architecture
 
-This document describes IVARA's **actual implemented architecture** as of Phase 1A, distinguishing active interactive runtime paths from batch benchmark paths and clearly identifying known limitations.
+This document describes IVARA's **actual implemented architecture** as of Phase 1C, distinguishing active interactive runtime paths from batch benchmark paths and clearly identifying known limitations.
 
 ---
 
@@ -41,17 +41,23 @@ IVARA currently executes **two distinct retrieval paths** depending on entry poi
 
 ```mermaid
 flowchart TD
-    User([CLI User]) --> Main["main.py (chat / ask / chats / memories)"]
-    Main -->|chat| Term["src/chat/terminal.py"]
+    User([CLI User]) --> Main["main.py (chat [--sandbox] / ask / chats / memories)"]
+    Main -->|chat| Term["src/chat/terminal.py (slash commands, /debug diagnostics toggle, & exit)"]
     Term --> Engine["src/chat/engine.py: ChatEngine.process_turn()"]
-    Engine -->|1. Writes user turn BEFORE retrieval| DB["ConversationStore (data/conversations.db)"]
-    Engine -->|2. Unconditional call on EVERY turn| Ans["src/answering.py: answer_question(use_unified=True)"]
+    Engine -->|1. Persist user turn immediately| DB["ConversationStore (data/conversations.db)"]
+    Engine -->|2. Unified context + intent| Ctx["TurnContext (_assemble_turn_context, history_limit=16, budget=2400 tok) -> classify_turn_intent()"]
+    Ctx -->|memory_management| MemMgmt["Local memory stats / CLI guidance"]
+    Ctx -->|exact prev msg| Det["Deterministic ConversationStore lookup (0 LLM calls)"]
+    Ctx -->|dialogue_recall| Dlg["Unified TurnContext -> Dialogue-History LLM Synthesis"]
+    Ctx -->|personal_recall| Ans["answer_question(use_unified=True, recent_conversation_context, question_date=local_today)"]
     Ans --> UR["UnifiedRetriever (unchunked turns + memories.json + SQLiteGraphStore)"]
     UR --> Gen["Ollama chat(gpt-oss, temp=0, num_ctx=8192, num_predict=1024)"]
-    Gen -->|answered / partial + citations| Reply([User Reply])
-    Gen -->|missing / conflicting_evidence + pure_question?| Insuff([insufficient_evidence])
-    Gen -->|fallback| Conv["get_messages(limit=6, chronological=True) -> Ollama(num_predict=256)"]
-    Reply & Insuff & Conv --> Policy["evaluate_memory_formation() -> extract_knowledge() -> memories.json + memory_graph.db"]
+    Gen -->|answered / partial / conflicting_evidence + citations| Reply([Grounded Reply])
+    Gen -->|insufficient_evidence / unanswerable| Insuff([Abstention Reply / Dialogue Fallback if meta-cue])
+    Ctx -->|mixed_personal_reasoning| Mix["Retrieve untrusted memory snippets -> Conversational LLM"]
+    Ctx -->|general_knowledge / general_conversation| Conv["Unified TurnContext + AssistantPersona -> Ollama(num_predict=2048, temp=0.7/0.85)"]
+    Reply & Insuff & Mix & Conv & MemMgmt & Dlg & Det --> Safe["Metadata check (done_reason, thinking-exhaustion retry, truncation note)"]
+    Safe --> Policy["evaluate_memory_formation() (non-recall, non-dialogue user turns only) -> memories.json + memory_graph.db"]
 
     Bench["evaluation/runners/run_longmemeval.py (Config D)"] -->|use_chunking=True, question_date| AnsB["answer_question()"]
     AnsB --> Chunk["src/chunking/retrieval.py: ChunkRetriever (W=3,O=1 + FAISS + BM25 + Session-MMR)"]
@@ -83,17 +89,20 @@ flowchart TD
   - `data/memories.json`: Untracked runtime JSON array (`src/memory.py`); initialized empty if absent.
   - `data/entities.json`, `data/memories.example.json`: Tracked sanitized seed fixtures.
 - **Inference (`Ollama` at `http://localhost:11434`):**
-  - Default generator model: `gpt-oss` (`num_ctx=8192`, `num_predict=1024`, `temperature=0` in `answering.py`; `num_ctx=16384`, `num_predict=4096` in `extractor.py`; `num_predict=256`, `temperature=0.3` in `_generate_conversational_response`).
+  - Default generator model: `gpt-oss` (`num_ctx=8192`, `num_predict=1024`, `temperature=0` in `answering.py`; `num_ctx=16384`, `num_predict=4096` in `extractor.py`; `num_ctx=8192`, `num_predict=2048`, `temperature=0.7` in `_generate_conversational_response`).
   - Dense embeddings: `sentence-transformers/all-MiniLM-L6-v2` (384-dim, offline cache-first).
+- **Developer Tooling & Sandbox:**
+  - Graphify Code Graph: Official Graphify tool integrated in isolated virtual environment (`.tools/graphify_env/`). Generates deterministic code AST map in `graphify-out/` (2,038 nodes, 5,430 edges) without LLM/paid APIs.
+  - Safe Manual Testing: `python main.py chat --sandbox` or `python scripts/run_isolated_chat.py` provisions a temporary isolated directory for manual testing with live Ollama, ensuring zero contamination of production user memories or conversations.
 
 ---
 
 ## 5. Foundational Associative Memory Direction & Implemented Limitations
 
 - **Associative Memory Vision:** IVARA preserves its graph, ontology, traversal, and safeguard modules to support future query-dependent multi-hop discovery, weighted/typed relationships, spreading activation / Personalized PageRank, hub-noise suppression, and separation of observed facts from inferred hypotheses.
-- **Verified Implemented Limitations (Phase 0 Audit):**
-  1. `ChatEngine` lacks pre-retrieval intent routing (`is_general_knowledge_query` is imported at `engine.py:27` but unused), causing general questions to fail into `insufficient_evidence` or waste 2–3 LLM calls.
-  2. `add_turn()` runs before retrieval, allowing `EpisodicRetriever` to retrieve the user's current utterance and prior assistant errors.
-  3. `ConversationStore.get_messages(limit=6, chronological=True)` (`store.py:904-906`) executes `ORDER BY sequence_num ASC LIMIT 6`, returning the **oldest** 6 messages after turn 3.
-  4. `ChatEngine` (`engine.py:162`) omits `"conflicting_evidence"` from accepted `qa_status` values, discarding valid answers.
-  5. `_generate_conversational_response` (`num_predict=256`) risks exhausting reasoning tokens on `gpt-oss`.
+- **Verified Remaining Limitations (Post-Phase 1B):**
+  1. `ChatEngine` uses unchunked `UnifiedRetriever` rather than Candidate B's `ChunkRetriever` (Phase 3).
+  2. `src/extraction/policy.py` remains regex/heuristic-based without cross-turn coreference resolution (`"It has an RTX 5080."`), and `src/memory.py` is strictly append-only without `UPDATE`/`DELETE` supersession (Phase 2).
+  3. `EpisodicRetriever` embeds SQLite turns on the fly per query without a persistent vector index (Phase 2).
+  4. `src/unified_retrieval/router.py` still contains legacy synthetic entity lists from earlier test fixtures (Phase 3).
+  5. Live Ollama multi-turn inference validation remains pending whenever the local Ollama daemon is stopped.

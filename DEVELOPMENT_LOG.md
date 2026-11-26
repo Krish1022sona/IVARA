@@ -37,3 +37,39 @@ Single authoritative development history consolidating verified milestones, expe
   - Removed `IVARA_FILE_TREE.txt`, `scratch/`, and caches; archived 5 zero-test pre-Antigravity scripts, `data/backups/`, `archive/`, 11 redundant docs, and superseded legacy evaluation artifacts to `IVARA_ARCHIVE/`.
   - Reconciled `evaluation/FINAL_RESULTS.md`, `evaluation/METHODOLOGY.md`, and `README.md` directly against raw `final_bakeoff` JSONLs; established `ARCHITECTURE.md`, `DEVELOPMENT_LOG.md`, `ROADMAP.md`, and `AGENTS.md`.
 - **Tests & Remaining Limitations:** Offline `pytest` baseline remains `523 passed, 2 failed` (both failures due to unmocked Ollama calls when daemon is off). Conversational routing, pagination, and memory-policy bugs are documented in `ROADMAP.md` for Phase 1B.
+
+## 6. Phase 1B — Core Conversational Reliability (`2026-11-26`)
+- **Objective:** Resolve the Phase 0 interactive chat defects (`ConversationStore` pagination, unconditional QA lookup, self-retrieval/assistant-claim contamination, `conflicting_evidence` dropping, `num_predict=256` budget, question/hypothetical policy false positives) and bring the offline test suite to 100% pass.
+- **Important Decisions:**
+  - Introduced `get_recent_messages()` and `get_recent_turns()` (token-aware tail queries) rather than breaking forward pagination in `get_messages()`/`get_turns()`.
+  - Routed utterances pre-retrieval with `classify_turn_intent()` (5 categories) without adding an extra LLM routing call.
+  - Preserved `include_assistant_turns=False` by default for factual recall while enabling `include_assistant_turns=True` for explicit assistant-recall questions.
+- **Key Affected Files:** `src/conversations/store.py`, `src/chat/engine.py`, `src/chat/terminal.py`, `src/unified_retrieval/episodic.py`, `src/unified_retrieval/pipeline.py`, `src/answering.py`, `src/extraction/policy.py`, `tests/test_query_aware_retrieval.py`, `tests/test_unified_retrieval.py`, `tests/test_conversation_store.py`, `tests/test_conversational_reliability.py`.
+- **Tests & Measured Results:** Offline `pytest -q` passed **`533 passed, 0 failed`** in `15.05s` (fixed the 2 prior Ollama-dependent failures and added 8 regression tests). Live Ollama multi-turn validation could not be executed because the local Ollama server (`v0.33.2`) failed to initialize in this environment (`Unable to init instance`).
+- **Remaining Limitations:** Live Ollama generation/latency validation remains pending; `policy.py` lacks cross-turn coreference; `memories.json` remains append-only (Phase 2); `ChatEngine` still uses `UnifiedRetriever` instead of `ChunkRetriever` (Phase 3).
+- **Commit References:** Phase 1A committed at `e71f3fd` (`refactor/repo-cleanup`).
+
+## 7. Phase 1B Follow-Up & Live Corrective Patch (`2026-11-26`)
+- **Objective:** Address Developer Tooling requirements and fix failures identified in live user terminal transcript (`ivara_smoke_test.txt`):
+  1. *Dialogue History Recall vs Memory QA:* Queries about ongoing dialogue ("what were teh last two topics we discussed", "what was my last chat to you") routed to memory QA and searched `data/memories.json` instead of active conversation history.
+  2. *Dialogue Recall Route & Context Disambiguation:* Added `dialogue_recall` intent in `classify_turn_intent()` with typo resilience (`teh`). Provided chronological synthesis prompt instructions differentiating current query from preceding turn.
+  3. *Memory Formation Safety on Questions:* Question starters without trailing `?` ("what was my last chat to you just now") previously triggered spurious memory `m004` due to `was` matching declarative verbs. Updated `is_pure_question_or_recall()` and `has_personal_declarative_content()` in `policy.py` to identify question clauses regardless of punctuation. Preserved existing owner memories (`m001`–`m004`) untouched in `data/memories.json`.
+  4. *Slash Command Error Handling & Alias:* Unknown `/` commands in `src/chat/terminal.py` now output a command error and never pass to the LLM; added `/memory` alias for `/memories`.
+  5. *Generation Reliability & Truncation Safeguard:* Prevented empty strings from being silently persisted or returned; increased `conversational_num_predict` to 2048; added thinking-token budget exhaustion fallback.
+  6. *Developer Tooling & Sandbox:* Installed official Graphify tool in isolated environment (`.tools/graphify_env/`) and generated deterministic code graph (`graphify-out/`, 2,038 nodes, 5,430 edges) without LLM. Added `--sandbox` / `-s` mode to `main.py chat` and created `scripts/run_isolated_chat.py` for safe manual testing using temporary isolated runtime directories.
+  7. *Operating Rules:* Added Rules 16, 17, and 18 to `AGENTS.md` covering Graphify navigation, tiered verification discipline, and mandatory owner manual acceptance testing.
+- **Tests & Measured Results:** Full offline test suite passed with `538 passed, 0 failed` in `22.31s`.
+
+## 8. Phase 1C — Conversational Intelligence, Context Unification & Runtime Reliability (`2026-11-26`)
+- **Objective:** Replace brittle phrase-list routing with unified context assembly, generalised conversational understanding, configurable assistant personality, creative diversity, and robust Ollama metadata/error handling.
+- **Key Architectural Decisions:**
+  - **Unified Context Assembly (`TurnContext`):** Assembled `recent_messages` (bounded by `history_message_limit=16`, `history_token_budget=2400`) once per turn and passed it across conversational, mixed-reasoning, and `personal_recall` routes (`<active_conversation_context>` in `src/answering.py` for pronoun/reference resolution without weakening `<evidence_context>` grounding).
+  - **Generalised Routing & Deterministic Fast-Path:** Replaced phrase-specific `DIALOGUE_HISTORY_PATTERNS` with structural `DIALOGUE_META_PATTERNS` + `FOLLOWUP_ANAPHORA_PATTERNS`; added deterministic `ConversationStore` lookup for exact previous-message requests (0 LLM calls) and active-dialogue recovery if `personal_recall` abstains on a meta-conversational cue.
+  - **Configurable Personality (`AssistantPersona`) & Creative Diversity:** Separated tone/conciseness/anti-clutter rules from factual grounding; added `_is_creative_request()` detection with novelty instructions and `temperature >= 0.85` for creative turns while keeping factual QA at `0.0`.
+  - **Ollama Metadata & Thinking-Exhaustion Recovery:** Live diagnosis of `gpt-oss:latest` and `VladimirGav/gemma4-26b-16GB-VRAM:latest` confirmed both are thinking models whose `num_predict` budget is shared with internal `thinking` tokens (explaining empty `content=""` when `done_reason="length"`). Added `_call_ollama_with_metadata()` with a single bounded retry on empty output, explicit `[Note: Response reached the output token limit...]` on `done_reason="length"`, and optional `/debug` diagnostics (`ChatTurnResult.diagnostics`).
+- **Key Affected Files:** `src/chat/engine.py`, `src/chat/terminal.py`, `src/answering.py`, `src/extraction/policy.py`, `tests/test_conversational_reliability.py`.
+- **Verification Status:**
+  - *Implementation:* Complete.
+  - *Offline Verification:* `pytest -q` passed **`543 passed, 0 failed`** in `27.29s`.
+  - *Live Inference Validation (Isolated Temp Store):* Verified 10-turn sequence on `gpt-oss:latest` (concise explanations, non-stock jokes, `"What subjects have we covered so far?"` answered accurately, deterministic `0.00s` exact previous-message recall, Sherlock Holmes memory formation/recall, Ferrari hypothetical rejection/abstention).
+  - *Owner Acceptance Testing:* Pending owner interactive session.

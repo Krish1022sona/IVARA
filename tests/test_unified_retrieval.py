@@ -336,13 +336,26 @@ def test_11_answer_question_with_unified_retrieval(sample_conversation_store, sa
 
 def test_12_answer_question_abstention_on_unrecorded_facts(sample_conversation_store, sample_semantic_memories, sample_graph_store):
     """answer_question strictly abstains when unified retrieval discovers no evidence."""
+    def mock_abstaining_llm(prompt, system_prompt):
+        import json
+        evidence_section = prompt.split("</evidence_context>")[0]
+        body_after_query = evidence_section.split("\n", 2)[-1].lower()
+        assert "star wars" not in body_after_query
+        return json.dumps({
+            "status": "insufficient_evidence",
+            "answer": "I do not have enough information in my recorded memories to answer that.",
+            "cited_memory_ids": [],
+            "limitations": "No Star Wars spaceship preference is recorded.",
+        })
+
     ans = answer_question(
         query="What is Arjun's favorite spaceship in Star Wars?",
         use_unified=True,
         conversation_store=sample_conversation_store,
         memories=sample_semantic_memories,
         graph_store=sample_graph_store,
-        min_score=0.35
+        min_score=0.35,
+        llm_caller=mock_abstaining_llm,
     )
     assert ans["status"] == "insufficient_evidence"
     ans_lower = ans["answer"].lower()

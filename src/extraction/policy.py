@@ -78,17 +78,20 @@ GENERAL_KNOWLEDGE_PATTERNS = [
 
 # Instructions / System commands
 INSTRUCTION_PATTERNS = [
-    r"^(summarize|format|reformat|translate|convert|rewrite|refactor|debug|list)\b",
-    r"^(write a|generate a|create a|give me a list of)\b",
+    r"^(summarize|format|reformat|translate|convert|rewrite|refactor|debug|list|repeat|restate|recap|elaborate|expand)\b",
+    r"^(write a|generate a|create a|give me a|tell me a|make that|make it)\b",
     r"^(show me|help me with|help me write)\b"
 ]
 
 # Pure memory recall questions asking IVARA to check its memory
 MEMORY_RECALL_PATTERNS = [
-    r"^(when did i|where did i|what did i|who did i|why did i)\b",
+    r"^(when did i|where did i|what did i|who did i|why did i|how did i)\b",
     r"^(do you remember|do you know|what do you know about me|what more do you know)\b",
-    r"^(tell me what you know|what are my|list my|what is my|who is my|where do i)\b",
-    r"^(did i (ever )?(mention|say|tell|learn|start|work|go|live|build))\b"
+    r"^(tell me what you know|what are my|list my|what is my|what was my|what were my|who is my|where do i)\b",
+    r"^(what were (?:the |teh )?last|what was my last|what was the last|what did i last|what did i just)\b",
+    r"^(did i (ever )?(mention|say|tell|learn|start|work|go|live|build|eat|have))\b",
+    r"^(when did i (?:have|had|eat|go|start|meet))\b",
+    r"^(what did you|what was your|what were the topics)\b",
 ]
 
 # First-person personal indicators (requiring word boundaries)
@@ -177,18 +180,17 @@ def is_pure_question_or_recall(text: str) -> bool:
         if re.search(pat, trimmed, re.IGNORECASE):
             return True
 
-    # If it ends with ? and starts with an interrogative word without personal declarative clause
-    if trimmed.endswith("?"):
-        q_starters = (
-            "what", "when", "where", "why", "who", "which", "how",
-            "is ", "are ", "was ", "were ", "can ", "could ", "did ", "do ", "does ", "have ", "has ", "will ", "would "
-        )
-        lower = trimmed.lower()
-        if any(lower.startswith(w) for w in q_starters):
-            clauses = split_clauses(trimmed)
-            declarative_clauses = [c for c in clauses if has_personal_declarative_content(c)]
-            if not declarative_clauses:
-                return True
+    # If it ends with ? or starts with an interrogative/auxiliary word without personal declarative clause
+    q_starters = (
+        "what", "when", "where", "why", "who", "which", "how",
+        "is ", "are ", "was ", "were ", "can ", "could ", "did ", "do ", "does ", "have ", "has ", "had ", "will ", "would ", "should "
+    )
+    lower = trimmed.lower()
+    if trimmed.endswith("?") or any(lower.startswith(w) for w in q_starters):
+        clauses = split_clauses(trimmed)
+        declarative_clauses = [c for c in clauses if has_personal_declarative_content(c)]
+        if not declarative_clauses:
+            return True
     return False
 
 
@@ -216,18 +218,38 @@ def split_clauses(text: str) -> list[str]:
     return clauses
 
 
+def is_hypothetical_or_speculative(text: str) -> bool:
+    """Check if a clause expresses a hypothetical, conditional, or uncertain scenario rather than a fact."""
+    trimmed = text.strip()
+    hypo_patterns = [
+        r"^(?:what if|suppose|imagine|hypothetically|assuming|let's say|say that)\b",
+        r"^(?:if\s+(?:i|we|my)\b)",
+        r"\b(?:might|may|could|would|possibly|perhaps|maybe)\s+(?:move|live|buy|get|start|switch|have|be|work|study|visit|travel)\b",
+        r"\b(?:just\s+suppose|for\s+example\s+if|in\s+theory)\b",
+    ]
+    return any(re.search(p, trimmed, re.IGNORECASE) for p in hypo_patterns)
+
+
 def has_personal_declarative_content(clause: str) -> bool:
-    """Check if a clause asserts a personal statement (not just a question about oneself)."""
+    """Check if a clause asserts a personal statement (not just a question or hypothetical)."""
     trimmed = clause.strip()
     if not has_first_person(trimmed):
         return False
 
-    # If the clause itself is a pure question starter ("What do you know about me?", "When did I start?")
+    if is_hypothetical_or_speculative(trimmed):
+        return False
+
+    # If the clause itself is a pure question starter ("What do you know about me?", "Which GPU does my laptop have?")
     for pat in MEMORY_RECALL_PATTERNS:
         if re.search(pat, trimmed, re.IGNORECASE):
             return False
 
-    if trimmed.endswith("?") and re.match(r'^(what|when|where|why|who|how|did|do|can|could|should|am)\b', trimmed, re.IGNORECASE):
+    # Check for question/inquiry starter words regardless of trailing punctuation
+    if re.match(
+        r'^(what|when|where|why|who|which|whose|whom|how|did|do|does|can|could|should|am|is|are|was|were|have|has|had|will|would)\b',
+        trimmed,
+        re.IGNORECASE
+    ):
         return False
 
     # Declarative personal verbs / patterns

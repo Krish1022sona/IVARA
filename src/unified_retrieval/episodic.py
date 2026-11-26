@@ -210,7 +210,9 @@ class EpisodicRetriever:
         speaker_role: Optional[str] = None,
         start_time: Optional[str] = None,
         end_time: Optional[str] = None,
-        window_size: int = 1
+        window_size: int = 1,
+        exclude_turn_ids: Optional[set[str] | list[str]] = None,
+        include_assistant_turns: bool = True
     ) -> list[EpisodicEvidenceItem]:
         """
         Execute filtered hybrid retrieval over episodic conversation turns.
@@ -219,6 +221,7 @@ class EpisodicRetriever:
         clean_q = query.strip()
         if not clean_q or not self.turns or self.faiss_index is None:
             return []
+        excluded = set(exclude_turn_ids) if exclude_turn_ids else set()
 
         # 1. Vector Search
         q_emb = np.array([get_embedding(clean_q)], dtype="float32")
@@ -250,7 +253,11 @@ class EpisodicRetriever:
         for doc_idx in all_candidate_indices:
             turn = self.turns[doc_idx]
 
-            # Apply metadata filters
+            # Apply exclusion & metadata filters
+            if turn.turn_id in excluded:
+                continue
+            if not include_assistant_turns and speaker_role is None and turn.speaker_role == "assistant":
+                continue
             if conversation_id and turn.conversation_id != conversation_id:
                 continue
             if session_id and turn.session_id != session_id:
@@ -301,6 +308,10 @@ class EpisodicRetriever:
                     # Use store's transactional window query
                     window_turns = self.store.get_context_window(turn.turn_id, window_size=window_size)
                     for wt in window_turns:
+                        if wt.turn_id in excluded:
+                            continue
+                        if not include_assistant_turns and speaker_role is None and wt.speaker_role == "assistant":
+                            continue
                         rel_tag = "target" if wt.turn_id == turn.turn_id else (
                             "preceding" if wt.sequence_num < turn.sequence_num else "succeeding"
                         )

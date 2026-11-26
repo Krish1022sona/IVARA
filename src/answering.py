@@ -104,7 +104,8 @@ def format_user_prompt(
     gate_report: EvidenceGateReport | None = None,
     max_prompt_tokens: int = 3000,
     question_date: str | None = None,
-    calendar_fact: str | None = None
+    calendar_fact: str | None = None,
+    recent_conversation_context: str | None = None
 ) -> str:
     """
     Format the evidence block and user query. Isolates memory text in an
@@ -171,10 +172,21 @@ def format_user_prompt(
     if len(context_text) > max_chars:
         context_text = context_text[:max_chars - 80] + "\n[... Context truncated to preserve model token limit ...]"
 
+    conv_block = ""
+    if recent_conversation_context and recent_conversation_context.strip():
+        conv_text = recent_conversation_context.strip()
+        if len(conv_text) > 2000:
+            conv_text = conv_text[-2000:]
+        conv_block = (
+            f"\n<active_conversation_context>\n{conv_text}\n</active_conversation_context>\n"
+            "Note: Use <active_conversation_context> to resolve pronouns or conversational references "
+            "(such as 'it', 'that', or 'earlier'); personal factual claims must still be grounded in <evidence_context>.\n"
+        )
+
     return f"""<evidence_context>
 {context_text}
 </evidence_context>
-
+{conv_block}
 User Question: {query}{special_guidance}
 
 Please provide an evidence-grounded answer adhering strictly to the system rules."""
@@ -407,7 +419,10 @@ def answer_question(
     enable_calendar_arithmetic: bool = True,
     retrieval_strategy: str = "flat",
     top_m_sessions: int = 6,
-    user_name: str | None = None
+    user_name: str | None = None,
+    exclude_turn_ids: set[str] | list[str] | None = None,
+    include_assistant_turns: bool = True,
+    recent_conversation_context: str | None = None
 ) -> dict[str, Any]:
     """
     Answer a personal-memory question with verifiable evidence grounding and abstention.
@@ -477,7 +492,9 @@ def answer_question(
             min_semantic_score=min_score if min_score is not None else 0.30,
             min_episodic_score=min_score if min_score is not None else 0.30,
             episodic_window_size=episodic_window_size,
-            use_adaptive_routing=use_adaptive_routing
+            use_adaptive_routing=use_adaptive_routing,
+            exclude_turn_ids=exclude_turn_ids,
+            include_assistant_turns=include_assistant_turns
         )
         context = {
             "query": clean_query,
@@ -874,7 +891,8 @@ def answer_question(
         context,
         gate_report=gate_report,
         question_date=question_date,
-        calendar_fact=calendar_fact
+        calendar_fact=calendar_fact,
+        recent_conversation_context=recent_conversation_context
     )
 
     # 5. Invoke LLM (via mock caller if provided, or Ollama chat)
